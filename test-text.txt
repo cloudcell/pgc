@@ -1,0 +1,48 @@
+@@@SOF@@@
+1. For C-terminal tagging of the POI, identify the genomic DNA
+sequence around the STOP codon using ENSMBL (www.
+ensembl.org/index.html) (see Note 3).
+2. Design specific primers to amplify approximately 500 bp
+upstream and downstream of the STOP codon (Fig. 1(1)).
+3. Isolate genomic DNA from cultured HCT116 TET-ON/
+CMV cell line.
+4. Amplify the sequence of interest using a standard PCR proto-
+col. Verify the PCR product size with standard agarose gel
+electrophoresis.
+5. Clone the PCR product into a pGEM®-T Easy Vector (Pro-
+mega, Cat# A1360) and subsequently Sanger sequence to
+confirm the genomic DNA sequence (Fig. 1(1)). This step is
+essential due to allelic polymorphisms that can affect the target-
+ing efficiency. Screen the region around the STOP codon for
+suitable guide RNA binding sequences using the CRISPOR
+website (http://crispor.tefor.net) (see Note 4) (Fig. 1(4)).
+6. Introduce silent mutations within the chosen protospacer adja-
+cent motif (PAM) sequences to prevent future Cas9 re-cutting
+at the same location once the genome was edited (Fig. 1(2)).
+To generate the recipient plasmid containing the homology
+arm sequence of POI and to insert the AID or APEX2 tag,
+change the STOP codon to a BamHI restriction enzyme digest
+sequence (Fig. 1(2)). Synthesize the modified PCR product in
+a plasmid vector of choice (see Note 5).
+7. To insert the AID or APEX2 tag into the plasmid with the
+synthesised PCR product (recipient plasmid), digest the plas-
+mids using 10 units of BamHI (see Note 6) (Fig. 1(3)). Incu-
+bate digest for 1 h at 37 °C.
+8. Add 1 unit of CIP directly to the digestion mix of the recipient
+plasmid to prevent plasmid self-ligation. Incubate for 1 h at
+37 °C. Verify the digestion with standard agarose gel electro-
+phoresis. Isolate and purify the desired bands from the agarose
+gel using a standard gel purification kit.
+9. Ligate the AID or APEX2 tag plasmid fragments into the line-
+arised recipient plasmid using 400 units of T4 ligase overnight
+at 16 °C (see Note 7) (Fig. 1(3)).
+10. Verify the successful generation of CRISPR gene editing donor
+plasmids by Sanger sequencing.
+3.2 Generation of the
+guideRNA
+1. Synthesize the guideRNA sequences (sense and antisense) best
+suited to the last exon of your POI with BbsI overhangs (Fig. 1
+(4)).
+2. To insert the guideRNA sequence into the plasmid carrying the
+Cas9 gene, digest the plasmid pX330-U6-Chimeric-BB-CBh-
+@@@EOF@@@

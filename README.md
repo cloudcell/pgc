@@ -1,5 +1,25 @@
-init
+# Code for Paper: "Polymorphic Graph Classifier"
+### http://dx.doi.org/10.13140/RG.2.2.15744.55041
 
+| Design | Implementation | IDE | Dates | License |
+| ------ | -------------- | ---- | ---- | ------- |
+| Alexander Bikeyev | Inception Labs + Sonnet 3.7 | Windsurf |2025-04-17/present | AGPL v3 |
+
+### Running the Example
+```
+# Create a virtual environment
+python3 -m venv venv
+
+# Activate the virtual environment
+source ./venv/bin/activate
+
+# Encode a file
+python3 pcg.py any_file_to_pack
+
+# Decode a file using standard header (98 '@'s)
+python3 675_pgc_reader.py
+ 
+```
 
 ---
 # Research Log

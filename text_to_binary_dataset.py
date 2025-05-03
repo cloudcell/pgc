@@ -11,6 +11,7 @@ from torch.utils.data import Dataset
 import numpy as np
 import pickle
 from tqdm import tqdm
+import sys
 
 class TextBinaryDataset(Dataset):
     def __init__(self, features, labels):
@@ -31,7 +32,7 @@ def char_to_binary(char):
 
 def process_text_file(file_path):
     """Process text file and convert to binary sequences with sliding windows."""
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, 'r', encoding='utf-8', errors='replace') as f:
         text = f.read()
     
     # Convert all valid ASCII characters to binary
@@ -68,14 +69,14 @@ def process_text_file(file_path):
     return features, labels
 
 def main():
-    # Input and output paths
-    # input_file = 'data/NLP/gutenberg/data/art_of_war_pg132.txt'
-    # input_file = 'data/NLP/gutenberg/data/corpus_fgmtw/corpus_fgmtw.txt'
-    input_file = 'data/IMAGES/Kobokumeigekizu.txt'
-    output_dir = 'data/NLP/raw'
+    # Check if command-line arguments are provided
+    if len(sys.argv) < 3:
+        print("Usage: python text_to_binary_dataset.py input_file output_file")
+        sys.exit(1)
     
-    # Create output directory if it doesn't exist
-    os.makedirs(output_dir, exist_ok=True)
+    # Get input and output files from command-line arguments
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
     
     # Process the text file
     features, labels = process_text_file(input_file)
@@ -84,15 +85,11 @@ def main():
     dataset = TextBinaryDataset(features, labels)
     
     # Save the dataset
-    output_path = os.path.join(output_dir, 'corpus_fgmtw_dataset.pkl')
-    with open(output_path, 'wb') as f:
+    with open(output_file, 'wb') as f:
         pickle.dump({'features': dataset.features, 'labels': dataset.labels}, f)
     
     print(f"Dataset created with {len(dataset)} samples")
-    print(f"Sample entry:")
-    print(f"Features shape: {dataset.features[0].shape}")
-    print(f"Label (ASCII value): {dataset.labels[0].item()}")
-    print(f"Label as character: {chr(dataset.labels[0].item())}")
+    print(f"Saved dataset to {output_file}")
 
 if __name__ == "__main__":
     main()

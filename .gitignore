@@ -1,3 +1,5 @@
 /venv/
 /data/
 __pycache__
+*.pt
+*.pkl

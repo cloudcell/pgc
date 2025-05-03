@@ -84,7 +84,7 @@ input_size = 784  # Flatten the 28x28 images
 embedding_size = 784 # 784  #512  # Size of the embedding space
 num_heads = 1
 address_space_dim = 3  # Dimensionality of the address space (configurable)
-address_space_size = 8 # 14 # 8 #6  # Size of each dimension in the address space
+address_space_size = 4 # 8 # 14 # 8 #6  # Size of each dimension in the address space
 brain_size = address_space_size  # Size of each dimension in the brain grid
 num_jumps = 14 # 7 #5 # 3 # Number of steps through the brain
 
@@ -105,37 +105,40 @@ class TextDataset(Dataset):
     def __getitem__(self, idx):
         return self.features[idx], self.labels[idx]
 
-# Load NLP dataset
-print("Loading NLP dataset...")
-dataset_path = os.path.join('data', 'NLP', 'raw', 'text_binary_dataset.pkl')
-with open(dataset_path, 'rb') as f:
-    data = pickle.load(f)
+if 0: 
+    # Load NLP dataset
+    print("Loading NLP dataset...")
+    dataset_path = os.path.join('data', 'NLP', 'raw', 'text_binary_dataset.pkl')
+    with open(dataset_path, 'rb') as f:
+        data = pickle.load(f)
 
-features = data['features']
-labels = data['labels']
+    features = data['features']
+    labels = data['labels']
 
-# Normalize features to [-1, 1] range like MNIST
-features = features * 2 - 1
+    # Normalize features to [-1, 1] range like MNIST
+    features = features * 2 - 1
 
-dataset = TextDataset(features, labels)
+    dataset = TextDataset(features, labels)
+
 num_classes = 128  # ASCII values
 
+if 0:
 # Create data loaders
-train_size = int(len(dataset) * 0.80)
-val_size = int(len(dataset) * 0.10)
-test_size = len(dataset) - train_size - val_size
+    train_size = int(len(dataset) * 0.80)
+    val_size = int(len(dataset) * 0.10)
+    test_size = len(dataset) - train_size - val_size
 
-train_dataset, val_dataset, test_dataset = torch.utils.data.random_split(dataset, [train_size, val_size, test_size])
+    train_dataset, val_dataset, test_dataset = torch.utils.data.random_split(dataset, [train_size, val_size, test_size])
 
-# Calculate optimal number of workers - 2 workers per GPU is usually sufficient
-num_workers = min(4 * len(CUDA_DEVICES), os.cpu_count() or 1)
-logger.info(f'Using {num_workers} DataLoader workers')
+    # Calculate optimal number of workers - 2 workers per GPU is usually sufficient
+    num_workers = min(4 * len(CUDA_DEVICES), os.cpu_count() or 1)
+    logger.info(f'Using {num_workers} DataLoader workers')
 
-train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, 
-                         num_workers=num_workers, pin_memory=True)
-val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False,
-                       num_workers=num_workers, pin_memory=True)
-test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False,
+    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, 
+                            num_workers=num_workers, pin_memory=True)
+    val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False,
+                        num_workers=num_workers, pin_memory=True)
+    test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False,
                         num_workers=num_workers, pin_memory=True)
 
 

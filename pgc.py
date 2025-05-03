@@ -5,8 +5,8 @@ PGC Packer Utility
 This script processes files in the following order:
 1. Uuencode the input file
 2. Prepend 98 '@' characters to the encoded data
-3. Process the modified data with text_to_binary_dataset
-4. Pack the resulting dataset with pgc_packer
+3. Launch text_to_binary_dataset.py with the modified data as input
+4. Launch 673_pgc_packer.py to pack things and copy the latest model from checkpoint
 
 Usage:
     pgc.py filename_to_pack [output_filename]
@@ -19,7 +19,9 @@ import os
 import binascii
 import pickle
 import tempfile
-from text_to_binary_dataset import process_text_file, TextBinaryDataset
+import subprocess
+import shutil
+import glob
 
 def uuencode_file(input_file):
     """
@@ -44,62 +46,61 @@ def uuencode_file(input_file):
     
     return encoded_data
 
-def process_to_binary_dataset(text_content):
+def run_text_to_binary_dataset(input_file):
     """
-    Process text content using text_to_binary_dataset functionality.
+    Launch text_to_binary_dataset.py as a separate process with the input file.
     
     Args:
-        text_content (str): Text content to process
-        
-    Returns:
-        bytes: Pickled binary dataset
+        input_file (str): Path to the input file
     """
-    print("Processing to binary dataset...")
+    print(f"Running text_to_binary_dataset.py on {input_file}...")
     
-    # Create a temporary file with the text content
-    with tempfile.NamedTemporaryFile(mode='w', delete=False) as temp_file:
-        temp_file_path = temp_file.name
-        temp_file.write(text_content)
+    # Ensure the output directory exists
+    output_dir = os.path.join('data', 'NLP', 'raw')
+    os.makedirs(output_dir, exist_ok=True)
     
-    try:
-        # Process the text file
-        features, labels = process_text_file(temp_file_path)
-        
-        # Create the dataset
-        dataset = TextBinaryDataset(features, labels)
-        
-        # Serialize the dataset to bytes
-        dataset_dict = {'features': dataset.features, 'labels': dataset.labels}
-        serialized_data = pickle.dumps(dataset_dict)
-        
-        print(f"Dataset created with {len(dataset)} samples")
-        return serialized_data
-    finally:
-        # Clean up the temporary file
-        if os.path.exists(temp_file_path):
-            os.unlink(temp_file_path)
+    # The output path that 673_pgc_packer.py expects
+    output_file = os.path.join(output_dir, 'corpus_fgmtw_dataset.pkl')
+    
+    # Run text_to_binary_dataset.py as a separate process
+    subprocess.run([sys.executable, 'text_to_binary_dataset.py', input_file, output_file], check=True)
+    
+    print(f"Dataset created at {output_file}")
 
-def pgc_pack(input_data, output_file):
+def run_pgc_packer(output_file):
     """
-    Implement the pgc_packer functionality directly.
+    Launch 673_pgc_packer.py to pack the dataset and copy the latest model.
     
     Args:
-        input_data (bytes): The binary data to pack
         output_file (str): Path to the output file
     """
-    # Write the data directly to the output file
-    with open(output_file, 'wb') as f:
-        f.write(input_data)
+    print(f"Running 673_pgc_packer.py...")
     
-    print(f"Successfully packed file to {output_file}")
+    # Create a checkpoint directory if it doesn't exist
+    checkpoint_dir = os.path.join(os.path.dirname(output_file), 'checkpoints')
+    os.makedirs(checkpoint_dir, exist_ok=True)
+    
+    # Run 673_pgc_packer.py
+    subprocess.run([sys.executable, '673_pgc_packer.py', '--checkpoints', checkpoint_dir], check=True)
+    
+    # Find the latest model in the checkpoint directory
+    model_files = glob.glob(os.path.join(checkpoint_dir, 'model_*.pt'))
+    if model_files:
+        latest_model = max(model_files, key=os.path.getctime)
+        # Copy the latest model to the output file
+        shutil.copy(latest_model, output_file)
+        print(f"Copied latest model {latest_model} to {output_file}")
+    else:
+        print(f"No model files found in {checkpoint_dir}")
+        sys.exit(1)
 
 def pack_file(input_file, output_file=None):
     """
     Process a file in the following order:
     1. Uuencode the input file
     2. Prepend 98 '@' characters to the encoded data
-    3. Process the modified data with text_to_binary_dataset
-    4. Pack the resulting dataset with pgc_packer
+    3. Launch text_to_binary_dataset.py with the modified data as input
+    4. Launch 673_pgc_packer.py to pack things and copy the latest model
     
     Args:
         input_file (str): Path to the input file
@@ -125,13 +126,22 @@ def pack_file(input_file, output_file=None):
         print("Step 2: Prepending 98 '@' characters...")
         modified_content = '@' * 98 + encoded_content
         
-        # Step 3: Process with text_to_binary_dataset
-        print("Step 3: Processing with text_to_binary_dataset...")
-        binary_dataset = process_to_binary_dataset(modified_content)
+        # Create a temporary file with the modified content (keep this file)
+        uu_file = input_file + '.uu'
+        with open(uu_file, 'w') as f:
+            f.write(modified_content)
+        print(f"Created uuencoded file: {uu_file}")
         
-        # Step 4: Pack with pgc_packer
-        print("Step 4: Packing with pgc_packer...")
-        pgc_pack(binary_dataset, output_file)
+        # Step 3: Run text_to_binary_dataset.py on the modified file
+        print("Step 3: Running text_to_binary_dataset.py...")
+        run_text_to_binary_dataset(uu_file)
+        
+        # Step 4: Run 673_pgc_packer.py and copy the latest model
+        print("Step 4: Running 673_pgc_packer.py and copying latest model...")
+        run_pgc_packer(output_file)
+        
+        print(f"Successfully packed file to {output_file}")
+        print(f"Temporary file kept: {uu_file}")
             
     except Exception as e:
         print(f"Error: {str(e)}")

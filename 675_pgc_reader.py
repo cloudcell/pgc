@@ -91,6 +91,7 @@ num_jumps = 14 # 7 #5 # 3 # Number of steps through the brain
 JUMP_OUT_IF_REVISITED = False
 
 unpacking_header = "@" * (784//8)  # Header for unpacking
+bytes_to_generate_max = 1024*1024 * 128  # megabytes
 
 
 # Address range constants for semi-free movement
@@ -1504,16 +1505,16 @@ def main():
         elif choice == '4':
             while True:
                 try:
-                    new_tokens = session.prompt("\nEnter number of tokens to generate (1-1024*16): ")
+                    new_tokens = session.prompt("\nEnter number of tokens to generate: ")
                     new_tokens = int(new_tokens)
-                    if 1 <= new_tokens <= 1024*16:
+                    if 1 <= new_tokens <= bytes_to_generate_max:
                         num_tokens = new_tokens
                         record_interaction(f"Set tokens to: {num_tokens}")
                         print(f"\nSet number of tokens to: {num_tokens}")
                         break
                     else:
                         record_interaction(f"Invalid token count: {new_tokens}")
-                        print("Number must be between 1 and 1024*16!")
+                        print(f"Number must be between 1 and {bytes_to_generate_max}!")
                 except ValueError:
                     record_interaction("Invalid token input")
                     print("Please enter a valid number!")

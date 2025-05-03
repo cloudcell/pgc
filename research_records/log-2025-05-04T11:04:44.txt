@@ -299,3 +299,11 @@ M('1H90IM86-H:6YE+7)E861A8FQE($-O<G)E<W!O;F1I;F<@4V]U<F-E('5N
 M9&5R('1H92!T97)M<R!O9B!T:&ES($QI8V5N<V4L"FEN(&]N92!O9B!T:&5S
 M92!W87ES.@H*("`@(&$I($-O;G9E>2!T:&4@;V)J96-T(&-O9&4@:6XL(&]<|eot|>
 2025-05-04 11:08:38 - Generation stats - Model calls: 16384, Time: 157.68s, Speed: 103.91 calls/s
+2025-05-04 11:18:02 - User selected option: 6
+2025-05-04 11:18:02 - 
+Final Generation Statistics:
+2025-05-04 11:18:02 - Total model calls: 17408
+2025-05-04 11:18:02 - Total generation time: 167.36s
+2025-05-04 11:18:02 - Average time per model call: 9.61ms
+2025-05-04 11:18:02 - Average model call speed: 104.02 calls/second
+2025-05-04 11:18:02 - === Ending session ===

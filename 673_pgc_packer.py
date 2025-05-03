@@ -1003,14 +1003,15 @@ def validate(model, val_loader, criterion, writer=None, epoch=None, global_stats
     # Calculate final metrics
     final_loss = val_loss / len(val_loader)
     final_acc = 100. * correct / total
+    incorrect = total - correct
     
     # Log validation results
-    logger.info(f'Validation - Loss: {final_loss:.3f} | Acc: {final_acc:.2f}%')
+    logger.info(f'Validation - Loss: {final_loss:.4f}, Accuracy: {final_acc:.2f}%, Correct: {correct}/{total}, Incorrect: {incorrect}/{total}')
     
-    # Log to TensorBoard if provided
+    # Log to TensorBoard
     if writer is not None and epoch is not None:
-        writer.add_scalar('Loss/val', final_loss, epoch)
-        writer.add_scalar('Accuracy/val', final_acc, epoch)
+        writer.add_scalar('Epoch/ValLoss', final_loss, epoch)
+        writer.add_scalar('Epoch/ValAccuracy', final_acc, epoch)
     
     # Analyze brain statistics after validation
     if epoch is not None and stats_dir is not None:
@@ -1137,7 +1138,8 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
         # Log epoch statistics
         epoch_loss = running_loss / len(train_loader)
         epoch_acc = 100 * correct / total
-        logger.info(f'Epoch {epoch+1}/{epochs} - Loss: {epoch_loss:.4f}, Accuracy: {epoch_acc:.2f}%')
+        incorrect = total - correct
+        logger.info(f'Epoch {epoch+1}/{epochs} - Loss: {epoch_loss:.4f}, Accuracy: {epoch_acc:.2f}%, Correct: {correct}/{total}, Incorrect: {incorrect}/{total}')
         
         # Update global statistics aggregator with training stats
         if global_stats_aggregator is not None:
@@ -1161,7 +1163,7 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
         entropy = -np.sum(pathway_probs * np.log2(pathway_probs + 1e-10))
         writer.add_scalar('Brain/PathwayEntropy', entropy, epoch)
         
-        # Log detailed statistics to TensorBoard
+        # Log detailed brain statistics to TensorBoard
         log_stats_to_tensorboard(model, writer, epoch, phase='train')
         
         # Run validation to get a better measure of model performance
@@ -1309,8 +1311,9 @@ def evaluate(model, test_loader, stats_dir=None):
                 'acc': f'{100 * correct / total:.2f}%'
             })
     
+    incorrect = total - correct
     final_accuracy = 100 * correct / total
-    logger.info(f'Evaluation complete - Accuracy: {final_accuracy:.2f}%')
+    logger.info(f'Evaluation complete - Accuracy: {final_accuracy:.2f}%, Correct: {correct}/{total}, Incorrect: {incorrect}/{total}')
     
     # Create and save confusion matrix
     try:

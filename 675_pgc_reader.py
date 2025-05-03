@@ -90,6 +90,9 @@ num_jumps = 14 # 7 #5 # 3 # Number of steps through the brain
 
 JUMP_OUT_IF_REVISITED = False
 
+unpacking_header = "@" * (784//8)  # Header for unpacking
+
+
 # Address range constants for semi-free movement
 # JUMP_MIN = -2  # Minimum address shift (negative for backward movement)
 # JUMP_MAX = +2   # Maximum address shift (positive for forward movement)
@@ -1359,7 +1362,7 @@ def print_menu():
     print("2. Generate text from input")
     print("3. Generate text from empty input")
     print("4. Set number of tokens to generate")
-    print("5. Generate test response")
+    print("5. Unpack specified file using the default header")
     print("6. Exit")
     print("=========================")
 
@@ -1520,13 +1523,13 @@ def main():
         
         elif choice == '5':
             if not current_model:
-                record_interaction("Attempted to generate test response without model")
+                record_interaction("Attempted to generate/unpack response without model")
                 print("\nPlease select a checkpoint folder first!")
                 continue
                 
-            test_input = "The chief goal is to"
-            record_interaction(f"Generating test response with input: {test_input}")
-            print("\nGenerating test response...")
+            test_input = unpacking_header
+            record_interaction(f"Generating/unpacking response with input: {test_input}")
+            print("\nGenerating/unpacking response...")
             
             start_time = time.time()
             generated, calls = generate_text(current_model, test_input, num_tokens)

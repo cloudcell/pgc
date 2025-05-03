@@ -16,8 +16,6 @@ If output_filename is not provided, the input filename with '.pgc' appended will
 
 import sys
 import os
-import binascii
-import pickle
 import tempfile
 import subprocess
 import shutil
@@ -25,7 +23,7 @@ import glob
 
 def uuencode_file(input_file):
     """
-    Read a file and uuencode its contents.
+    Read a file and uuencode its contents using the standard uuencode utility.
     
     Args:
         input_file (str): Path to the input file
@@ -33,16 +31,20 @@ def uuencode_file(input_file):
     Returns:
         str: uuencoded content
     """
-    with open(input_file, 'rb') as f:
-        file_data = f.read()
+    # Create a temporary file to store the uuencoded output
+    uu_file = input_file + '.uu'
     
-    # Process the data in chunks of 45 bytes (binascii.b2a_uu limitation)
-    encoded_data = ""
-    chunk_size = 45
-    for i in range(0, len(file_data), chunk_size):
-        chunk = file_data[i:i+chunk_size]
-        encoded_chunk = binascii.b2a_uu(chunk)
-        encoded_data += encoded_chunk.decode('ascii')
+    # Use the standard uuencode utility
+    # The format is: uuencode input_file output_name > output_file
+    subprocess.run(['uuencode', input_file, os.path.basename(input_file), '>', uu_file], 
+                  shell=True, check=True)
+    
+    # Read the uuencoded content
+    with open(uu_file, 'r') as f:
+        encoded_data = f.read()
+    
+    # Remove the temporary file
+    os.remove(uu_file)
     
     return encoded_data
 
@@ -118,18 +120,25 @@ def pack_file(input_file, output_file=None):
             print(f"Error: Input file '{input_file}' not found.")
             sys.exit(1)
         
-        # Step 1: Uuencode the input file
+        # Step 1: Uuencode the input file directly to a .uu file
         print("Step 1: Uuencoding the input file...")
-        encoded_content = uuencode_file(input_file)
+        uu_file = input_file + '.uu'
+        
+        # Run uuencode command: uuencode input_file output_name > output_file
+        subprocess.run(f"uuencode {input_file} {os.path.basename(input_file)} > {uu_file}", 
+                      shell=True, check=True)
         
         # Step 2: Prepend 98 '@' characters
         print("Step 2: Prepending 98 '@' characters...")
+        with open(uu_file, 'r') as f:
+            encoded_content = f.read()
+        
         modified_content = '@' * 98 + encoded_content
         
-        # Create a temporary file with the modified content (keep this file)
-        uu_file = input_file + '.uu'
+        # Write the modified content back to the file
         with open(uu_file, 'w') as f:
             f.write(modified_content)
+        
         print(f"Created uuencoded file: {uu_file}")
         
         # Step 3: Run text_to_binary_dataset.py on the modified file

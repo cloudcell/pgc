@@ -20,6 +20,9 @@ python3 pcg.py any_file_to_pack
 python3 675_pgc_reader.py
  
 ```
+### More Info:
+
+https://github.com/cloudcell/prj.pgc-paper-code-public
 
 ---
 # Research Log

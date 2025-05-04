@@ -325,3 +325,11 @@ M<R1V8V9@<&]U;E;G(&!U:6-E:7!@<F5@=&5E=&1T:&%N("!P:'`N:65N9'1I
 M2$4U82Y&9')D:W:M:61D(&=N8&UM;&-O<&`@:W4@=&%E;'1E=2!I;2!E;7,@
 M:@0&\D<<|eot|>
 2025-05-04 07:46:21 - Generation stats - Model calls: 16384, Time: 158.56s, Speed: 103.33 calls/s
+2025-05-04 11:55:53 - User selected option: 6
+2025-05-04 11:55:53 - 
+Final Generation Statistics:
+2025-05-04 11:55:53 - Total model calls: 16384
+2025-05-04 11:55:53 - Total generation time: 158.56s
+2025-05-04 11:55:53 - Average time per model call: 9.68ms
+2025-05-04 11:55:53 - Average model call speed: 103.33 calls/second
+2025-05-04 11:55:53 - === Ending session ===

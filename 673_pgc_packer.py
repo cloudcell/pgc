@@ -1195,6 +1195,10 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
         checkpoint_path = os.path.join(checkpoint_dir, f'model_{timestamp}_epoch_{epoch+1}.pt')
         save_model_checkpoint(model, optimizer, scheduler, epoch + 1, val_loss, checkpoint_dir, timestamp)
         logger.info(f'Saved checkpoint at epoch {epoch+1} to {checkpoint_path}')
+
+        # if the number of incorrect predictions is equal to 0, break
+        if incorrect == 0:
+            break
     
     writer.close()
     return model

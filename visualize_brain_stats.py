@@ -121,7 +121,7 @@ def visualize_top_blocks(data, epoch, ax=None):
     
     return ax
 
-def visualize_top_pathways(data, epoch, ax=None):
+def visualize_top_pathways(data, epoch, ax=None, top_n=5):
     """Visualize the top pathways as 3D lines."""
     if ax is None:
         fig = plt.figure(figsize=(10, 8))
@@ -146,13 +146,13 @@ def visualize_top_pathways(data, epoch, ax=None):
     else:
         max_x = max_y = max_z = 4  # Default if no pathways
     
-    # Plot each pathway
-    for i, pathway_data in enumerate(data['top_pathways'][:5]):  # Limit to top 5 for clarity
+    # Plot each pathway (up to top_n)
+    for i, pathway_data in enumerate(data['top_pathways'][:top_n]):
         pathway = np.array(pathway_data['pathway'])
         count = pathway_data['count']
         
         # Normalize count for color
-        color = cmap(i / min(5, len(data['top_pathways'])))
+        color = cmap(i / max(1, top_n))
         
         # Plot the pathway as a line
         ax.plot(pathway[:, 0], pathway[:, 1], pathway[:, 2], 
@@ -163,7 +163,7 @@ def visualize_top_pathways(data, epoch, ax=None):
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
-    ax.set_title(f'Top Pathways - Epoch {epoch}')
+    ax.set_title(f'Top Pathways - Epoch {epoch} (Top {top_n})')
     
     # Set axis limits based on the maximum values found
     ax.set_xlim(0, max_x)
@@ -175,14 +175,83 @@ def visualize_top_pathways(data, epoch, ax=None):
     
     return ax
 
+
 class BrainStatsVisualizer:
     def __init__(self, files=None):
         self.files = files or []
         self.current_frame = 0
         self.is_playing = False
         self.interval = 500  # Default interval in ms (2 fps)
+        self.last_loaded_folder = None  # Track the last loaded folder
+        self.top_n_pathways = 5  # Default value for top pathways
         self.setup_ui()
-        
+
+    def on_frame_change(self, value):
+        """Called when the frame slider value changes."""
+        frame_idx = int(float(value))
+        if frame_idx != self.current_frame:
+            self.update_frame(frame_idx)
+
+    def on_top_pathways_change(self, value):
+        self.top_n_pathways = int(value)
+        self.update_frame(self.current_frame)
+
+    def update_frame(self, frame_idx):
+        """Update the visualization with the given frame index."""
+        if not self.files or frame_idx < 0 or frame_idx >= len(self.files):
+            self.status_label.config(text="No data loaded or frame out of range.")
+            return
+        self.current_frame = frame_idx
+        # Clear the figure completely, including colorbars
+        self.fig.clear()
+        # Recreate the axes with 3D projection
+        self.ax1 = self.fig.add_subplot(121, projection='3d')
+        self.ax2 = self.fig.add_subplot(122, projection='3d')
+        # Load the data for the current frame
+        file_path = self.files[frame_idx]
+        data = load_json_data(file_path)
+        if data:
+            epoch = data.get('epoch', extract_epoch_number(file_path))
+            # Update the frame slider if it's not the source of the update
+            if self.frame_slider.get() != frame_idx:
+                self.frame_slider.set(frame_idx)
+            # Update the top pathways slider range
+            num_pathways = len(data.get('top_pathways', []))
+            if num_pathways > 0:
+                self.top_pathways_slider.config(from_=1, to=num_pathways)
+                if self.top_n_pathways > num_pathways:
+                    self.top_n_pathways = num_pathways
+                self.top_pathways_slider.set(self.top_n_pathways)
+            else:
+                self.top_pathways_slider.config(from_=1, to=1)
+                self.top_n_pathways = 1
+                self.top_pathways_slider.set(1)
+            # Visualize the data
+            visualize_top_blocks(data, epoch, self.ax1)
+            visualize_top_pathways(data, epoch, self.ax2, top_n=self.top_n_pathways)
+            # Update the status label
+            self.status_label.config(text=f"Showing epoch {epoch} ({frame_idx+1}/{len(self.files)})")
+        # Redraw the canvas
+        self.fig.tight_layout()
+        self.canvas.draw()
+
+    def on_speed_change(self, value):
+        self.interval = int(1000 / int(value))  # Convert to interval in ms and ensure integer
+
+    def reload_current_folder(self):
+        """Reload the currently loaded folder and update the UI."""
+        if not self.last_loaded_folder:
+            self.status_label.config(text="No folder to reload. Please load a folder first.")
+            return
+        files = load_stats_files(self.last_loaded_folder)
+        if not files:
+            self.status_label.config(text=f"No brain_stats_train_epoch_*.json files found in {self.last_loaded_folder}")
+            return
+        self.files = files
+        self.frame_slider.config(from_=0, to=len(self.files)-1)
+        self.update_frame(0)
+        self.status_label.config(text=f"Reloaded folder: {self.last_loaded_folder}")
+
     def setup_ui(self):
         # Create the main window
         self.root = tk.Tk()
@@ -238,6 +307,14 @@ class BrainStatsVisualizer:
         self.speed_display = Label(self.control_frame, text="2.0 fps")
         self.speed_display.pack(side=tk.LEFT, padx=(0, 20))
         
+        # Add slider for top N pathways
+        self.top_n_pathways = 5
+        self.top_pathways_label = Label(self.control_frame, text="Top Pathways:")
+        self.top_pathways_label.pack(side=tk.LEFT, padx=(0, 5))
+        self.top_pathways_slider = Scale(self.control_frame, from_=1, to=5, orient=HORIZONTAL, length=150, command=self.on_top_pathways_change)
+        self.top_pathways_slider.set(self.top_n_pathways)
+        self.top_pathways_slider.pack(side=tk.LEFT, padx=(0, 20))
+        
         # Add play/pause button
         self.play_button = Button(self.control_frame, text="Play", 
                                  command=self.toggle_play)
@@ -247,6 +324,10 @@ class BrainStatsVisualizer:
         self.record_button = Button(self.control_frame, text="Record GIF", 
                                    command=self.record_gif)
         self.record_button.pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Add reload folder button
+        self.reload_button = Button(self.control_frame, text="Reload Folder", command=self.reload_current_folder)
+        self.reload_button.pack(side=tk.LEFT, padx=(0, 10))
         
         # Add status label
         self.status_label = Label(self.root, text="")
@@ -260,6 +341,7 @@ class BrainStatsVisualizer:
             self.update_frame(0)
         else:
             self.status_label.config(text="No data loaded. Use File > Open to load brain stats files.")
+
             
     def create_menu_bar(self):
         """Create the menu bar with File and Help menus."""
@@ -294,6 +376,7 @@ class BrainStatsVisualizer:
         
         # Update the visualizer with the new files
         self.files = files
+        self.last_loaded_folder = stats_dir  # Store the last loaded folder path
         
         # Update the frame slider range
         self.frame_slider.config(from_=0, to=len(self.files)-1)
@@ -363,50 +446,8 @@ Created: April 2025
         text_widget.pack(fill=tk.BOTH, expand=True)
         text_widget.insert(tk.END, about_text)
         text_widget.config(state=tk.DISABLED)  # Make read-only
-        
-        close_button = Button(about_window, text="Close", command=about_window.destroy)
-        close_button.pack(pady=10)
     
-    def update_frame(self, frame_idx):
-        """Update the visualization with the given frame index."""
-        self.current_frame = frame_idx
-        
-        # Clear the figure completely, including colorbars
-        self.fig.clear()
-        
-        # Recreate the axes with 3D projection
-        self.ax1 = self.fig.add_subplot(121, projection='3d')
-        self.ax2 = self.fig.add_subplot(122, projection='3d')
-        
-        # Load the data for the current frame
-        file_path = self.files[frame_idx]
-        data = load_json_data(file_path)
-        
-        if data:
-            epoch = data.get('epoch', extract_epoch_number(file_path))
-            
-            # Update the frame slider if it's not the source of the update
-            if self.frame_slider.get() != frame_idx:
-                self.frame_slider.set(frame_idx)
-            
-            # Visualize the data
-            visualize_top_blocks(data, epoch, self.ax1)
-            visualize_top_pathways(data, epoch, self.ax2)
-            
-            # Update the status label
-            self.status_label.config(text=f"Showing epoch {epoch} ({frame_idx+1}/{len(self.files)})")
-        
-        # Redraw the canvas
-        self.fig.tight_layout()
-        self.canvas.draw()
-    
-    def on_frame_change(self, value):
-        """Called when the frame slider value changes."""
-        frame_idx = int(float(value))
-        if frame_idx != self.current_frame:
-            self.update_frame(frame_idx)
-    
-    def on_speed_change(self, value):
+
         """Called when the speed slider value changes."""
         # Convert the slider value (1-100) to a logarithmic scale for better control
         # This gives finer control at lower speeds and broader adjustments at higher speeds

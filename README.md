@@ -19,6 +19,9 @@ pip install -r requirements.txt
 # Install uuencode
 sudo apt-get install sharutils
 
+# Start TensorBoard
+tensorboard --logdir ./runs/ --port 6006
+
 # Encode a file
 python3 pcg.py any_file_to_pack
 

@@ -49,7 +49,7 @@ logger = logging.getLogger('SelfOrganizingBrain')
 
 
 # CUDA devices
-CUDA_DEVICES = [0, 1, 2, 3]  # List of CUDA devices to use for parallelization
+CUDA_DEVICES = [0]  #, 1, 2, 3]  # List of CUDA devices to use for parallelization
 
 # Set up device
 device = torch.device('cpu')

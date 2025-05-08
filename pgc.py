@@ -74,12 +74,13 @@ def run_text_to_binary_dataset(input_file):
     
     print(f"Dataset created at {output_file}")
 
-def run_pgc_packer(output_file):
+def run_pgc_packer(output_file, float16=False):
     """
     Launch 673_pgc_packer.py to pack the dataset and copy the latest model.
     
     Args:
         output_file (str): Path to the output file
+        float16 (bool): Whether to enable float16/mixed precision training
     """
     print(f"Running 673_pgc_packer.py...")
     
@@ -87,8 +88,11 @@ def run_pgc_packer(output_file):
     checkpoint_dir = os.path.join(os.path.dirname(output_file), 'checkpoints')
     os.makedirs(checkpoint_dir, exist_ok=True)
     
-    # Run 673_pgc_packer.py
-    subprocess.run([sys.executable, '673_pgc_packer.py', '--checkpoints', checkpoint_dir], check=True)
+    # Build command
+    cmd = [sys.executable, '673_pgc_packer.py', '--checkpoints', checkpoint_dir]
+    if float16:
+        cmd.append('--float16')
+    subprocess.run(cmd, check=True)
     
     # Find the latest model in the checkpoint directory
     model_files = glob.glob(os.path.join(checkpoint_dir, 'model_*.pt'))
@@ -101,7 +105,7 @@ def run_pgc_packer(output_file):
         print(f"No model files found in {checkpoint_dir}")
         sys.exit(1)
 
-def pack_file(input_file, output_file=None):
+def pack_file(input_file, output_file=None, float16=False):
     """
     Process a file in the following order:
     1. Uuencode the input file
@@ -112,6 +116,7 @@ def pack_file(input_file, output_file=None):
     Args:
         input_file (str): Path to the input file
         output_file (str, optional): Path to the output file
+        float16 (bool): Whether to enable float16/mixed precision training
     """
     # Determine output filename if not provided
     if output_file is None:
@@ -152,7 +157,7 @@ def pack_file(input_file, output_file=None):
         
         # Step 4: Run 673_pgc_packer.py and copy the latest model
         print("Step 4: Running 673_pgc_packer.py and copying latest model...")
-        run_pgc_packer(output_file)
+        run_pgc_packer(output_file, float16=float16)
         
         print(f"Successfully packed file to {output_file}")
         print(f"Temporary file kept: {uu_file}")
@@ -162,15 +167,14 @@ def pack_file(input_file, output_file=None):
         sys.exit(1)
 
 def main():
-    # Check arguments
-    if len(sys.argv) < 2:
-        print("Usage: pgc.py filename_to_pack [output_filename]")
-        sys.exit(1)
-    
-    input_file = sys.argv[1]
-    output_file = sys.argv[2] if len(sys.argv) > 2 else None
-    
-    pack_file(input_file, output_file)
+    import argparse
+    parser = argparse.ArgumentParser(description='PGC Packer Utility')
+    parser.add_argument('filename_to_pack', type=str, help='Input file to pack')
+    parser.add_argument('output_filename', type=str, nargs='?', default=None, help='Optional output filename')
+    parser.add_argument('--float16', action='store_true', help='Enable float16/mixed precision training for 673_pgc_packer.py')
+    args = parser.parse_args()
+
+    pack_file(args.filename_to_pack, args.output_filename, float16=args.float16)
 
 if __name__ == "__main__":
     main()

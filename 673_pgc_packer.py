@@ -35,6 +35,7 @@ parser.add_argument('--checkpoints', type=str, help='Path to checkpoints directo
 parser.add_argument('--cpu', action='store_true', help='Force using CPU even if CUDA is available')
 parser.add_argument('--tensorboard', type=str, default='runs', help='Path to TensorBoard log directory')
 parser.add_argument('--stats_dir', type=str, default='brain_stats', help='Directory to save brain usage statistics')
+parser.add_argument('--float16', action='store_true', help='Enable float16/mixed precision training')
 # parser.add_argument('--address_dim', type=int, default=4, help='Dimensionality of the address space (default: 4)')
 args = parser.parse_args()
 
@@ -1084,19 +1085,26 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
             try:
                 # Move data to device
                 images, labels = images.to(device), labels.to(device)
-                
+
                 # Zero the parameter gradients
                 optimizer.zero_grad()
-                
-                # Forward pass with collect_stats=True to collect statistics
-                outputs = model(images, collect_stats=True, labels=labels)
-                
-                # Calculate loss
-                loss = criterion(outputs, labels)
-                
-                # Backward pass and optimize
-                loss.backward()
-                optimizer.step()
+
+                # Mixed precision logic
+                if args.float16 and torch.cuda.is_available():
+                    if 'scaler' not in locals():
+                        scaler = torch.cuda.amp.GradScaler()
+                    with torch.cuda.amp.autocast():
+                        outputs = model(images, collect_stats=True, labels=labels)
+                        loss = criterion(outputs, labels)
+                    scaler.scale(loss).backward()
+                    scaler.step(optimizer)
+                    scaler.update()
+                else:
+                    # Standard precision
+                    outputs = model(images, collect_stats=True, labels=labels)
+                    loss = criterion(outputs, labels)
+                    loss.backward()
+                    optimizer.step()
                 
                 # Calculate accuracy
                 _, predicted = torch.max(outputs.data, 1)

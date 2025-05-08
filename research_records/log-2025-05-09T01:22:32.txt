@@ -1,0 +1,18 @@
+2025-05-09 01:22:32 - === Starting new text generation session ===
+2025-05-09 01:22:38 - User selected option: 1
+2025-05-09 01:22:40 - Selected checkpoint folder: checkpoints_20250509_010036
+2025-05-09 01:22:43 - Successfully loaded model from: model_20250509_010037_epoch_41.pt
+2025-05-09 01:22:46 - User selected option: 5
+2025-05-09 01:22:46 - Generating/unpacking response with input: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+2025-05-09 01:22:47 - Generated: <|sot|>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@bbbbb  66   eqiiremnnts.txt
+M86)S;"UP>3T],BXR+C(*8V]N=&]U<G!Y/3TQ+C,N,@IC>6-L97(]/3`N,3(N
+M,0IF:6QE;<|eot|>
+2025-05-09 01:22:47 - Generation stats - Model calls: 100, Time: 0.84s, Speed: 119.65 calls/s
+2025-05-09 01:33:25 - User selected option: 6
+2025-05-09 01:33:25 - 
+Final Generation Statistics:
+2025-05-09 01:33:25 - Total model calls: 100
+2025-05-09 01:33:25 - Total generation time: 0.84s
+2025-05-09 01:33:25 - Average time per model call: 8.36ms
+2025-05-09 01:33:25 - Average model call speed: 119.65 calls/second
+2025-05-09 01:33:25 - === Ending session ===

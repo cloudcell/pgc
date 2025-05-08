@@ -1,0 +1,22 @@
+2025-05-09 00:26:09 - === Starting new text generation session ===
+2025-05-09 00:26:39 - User selected option: 1
+2025-05-09 00:26:40 - Selected checkpoint folder: checkpoints
+2025-05-09 00:26:40 - Failed to load model
+2025-05-09 00:27:08 - User selected option: 1
+2025-05-09 00:27:10 - Selected checkpoint folder: checkpoints
+2025-05-09 00:27:10 - Failed to load model
+2025-05-09 00:27:14 - User selected option: 1
+2025-05-09 00:27:36 - Selected checkpoint folder: checkpoints_20250509_001504
+2025-05-09 00:27:39 - Successfully loaded model from: model_20250509_001506_epoch_1.pt
+2025-05-09 00:27:42 - User selected option: 5
+2025-05-09 00:27:42 - Generating/unpacking response with input: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+2025-05-09 00:27:43 - Generated: <|sot|>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE<|eot|>
+2025-05-09 00:27:43 - Generation stats - Model calls: 100, Time: 0.91s, Speed: 109.92 calls/s
+2025-05-09 00:28:02 - User selected option: 6
+2025-05-09 00:28:02 - 
+Final Generation Statistics:
+2025-05-09 00:28:02 - Total model calls: 100
+2025-05-09 00:28:02 - Total generation time: 0.91s
+2025-05-09 00:28:02 - Average time per model call: 9.10ms
+2025-05-09 00:28:02 - Average model call speed: 109.92 calls/second
+2025-05-09 00:28:02 - === Ending session ===

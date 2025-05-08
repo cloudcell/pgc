@@ -1,0 +1,21 @@
+2025-05-09 00:58:24 - === Starting new text generation session ===
+2025-05-09 00:58:28 - User selected option: 1
+2025-05-09 00:58:30 - Selected checkpoint folder: checkpoints_20250509_002823
+2025-05-09 00:58:32 - Successfully loaded model from: model_20250509_002824_epoch_26.pt
+2025-05-09 00:58:38 - User selected option: 5
+2025-05-09 00:58:38 - Generating/unpacking response with input: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+2025-05-09 00:58:39 - Generated: <|sot|>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@begin 775 pgc.py
+M(R$O=7-R+V)I;B]E;G8@<'ET:&]N,PHB(B(*4$=#(%!A8VME<B!5=&EL:71Y
+M"@I4:&ES('-C<FEP="!P<|eot|>
+2025-05-09 00:58:39 - Generation stats - Model calls: 100, Time: 0.87s, Speed: 114.90 calls/s
+2025-05-09 01:00:08 - User selected option: 1
+2025-05-09 01:00:10 - Selected checkpoint folder: checkpoints_20250508_230157
+2025-05-09 01:00:12 - Successfully loaded model from: model_20250508_230158_epoch_25.pt
+2025-05-09 01:00:17 - User selected option: 6
+2025-05-09 01:00:17 - 
+Final Generation Statistics:
+2025-05-09 01:00:17 - Total model calls: 100
+2025-05-09 01:00:17 - Total generation time: 0.87s
+2025-05-09 01:00:17 - Average time per model call: 8.70ms
+2025-05-09 01:00:17 - Average model call speed: 114.90 calls/second
+2025-05-09 01:00:17 - === Ending session ===

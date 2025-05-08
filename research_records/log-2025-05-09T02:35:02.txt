@@ -1,0 +1,101 @@
+2025-05-09 02:35:02 - === Starting new text generation session ===
+2025-05-09 02:35:04 - User selected option: 1
+2025-05-09 02:35:06 - Selected checkpoint folder: checkpoints_20250509_022533
+2025-05-09 02:35:09 - Successfully loaded model from: model_20250509_022535_epoch_37.pt
+2025-05-09 02:35:23 - User selected option: 5
+2025-05-09 02:35:23 - Generating/unpacking response with input: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+2025-05-09 02:35:24 - Generated: <|sot|>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@begin 664 requirements.txt
+M86)S;"UP>3T],BXR+C(*8V]N=&]U<G!Y/3TQ+C,N,@IC>6-L97(]/3`N,3(N
+M,0IF:6QE;&<|eot|>
+2025-05-09 02:35:24 - Generation stats - Model calls: 100, Time: 0.96s, Speed: 104.14 calls/s
+2025-05-09 02:35:39 - User selected option: 4
+2025-05-09 02:35:47 - Set tokens to: 4096
+2025-05-09 02:35:49 - User selected option: 5
+2025-05-09 02:35:49 - Generating/unpacking response with input: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+2025-05-09 02:36:17 - Generated: <|sot|>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@begin 664 requirements.txt
+M86)S;"UP>3T],BXR+C(*8V]N=&]U<G!Y/3TQ+C,N,@IC>6-L97(]/3`N,3(N
+M,0IF:6QE;&]C:ST],RXQ."XP"F9O;G1T;V]L<ST]-"XU-RXP"F9S<W!E8ST]
+M,C`R-2XS+C(*9W)P8VEO/3TQ+C<Q+C`*:6UA9V5I;ST],BXS-RXP"DII;FIA
+M,CT],RXQ+C8*:F]B;&EB/3TQ+C0N,@IK:7=I<V]L=F5R/3TQ+C0N.`IL87IY
+M7VQO861E<CT],"XT"DUA<FMD;W=N/3TS+C@*36%R:W5P4V%F93T],RXP+C(*
+M;6%T<&QO=&QI8CT],RXQ,"XQ"FUP;6%T:#T],2XS+C`*;F5T=V]R:W@]/3,N
+M-"XR"FYU;7!Y/3TR+C(N-0IP86-K86=I;F<]/3(U+C`*<&EL;&]W/3TQ,2XR
+M+C$*<')O;7!T7W1O;VQK:70]/3,N,"XU,0IP<F]T;V)U9CT]-BXS,"XR"G!Y
+M<&%R<VEN9ST],RXR+C,*<'ET:&]N+61A=&5U=&EL/3TR+CDN,"YP;W-T,`IS
+M8VEK:70M:6UA9V4]/3`N,C4N,@IS8VEK:70M;&5A<FX]/3$N-BXQ"G-C:7!Y
+M/3TQ+C$U+C(*<VEX/3TQ+C$W+C`*<WEM<'D]/3$N,3,N,PIT96YS;W)B;V%R
+M9#T],BXQ.2XP"G1E;G-O<F)O87)D+61A=&$M<V5R=F5R/3TP+C<N,@IT:')E
+M861P;V]L8W1L/3TS+C8N,`IT:69F9FEL93T],C`R-2XS+C,P"G1O<F-H/3TR
+M+C<N,`IT;W)C:'9I<VEO;CT],"XR,BXP"G1Q9&T]/30N-C<N,0IT>7!I;F=?
+M97AT96YS:6]N<ST]-"XQ,RXR"G=C=VED=&@]/3`N,BXQ,PI797)K>F5U9ST]
+C,RXQ+C,*4&EL;&]W/CTX+C`N,`II;6%G96EO/CTR+CDN,`H`
+`
+end
+I;6)T<WT]/M<`-`X7"B/3UF=VQT;W)P:VT],"XN"CXR"F]P:V]";V<]-CTN-BXS8"!C:6]I9ST]9RT],RXS"C-C"G-CIT,WQM/CTQ+CXQ,CX*;WEB86EI/CTQ+C<Q,CX*
+`IL8F5I;V]R/3TN+RIS+CIC"MI&
+M<6QO/3TQ+CXN,`IT;W=B8FEO/3TR+C<N,`IP=6IP8F5Q;3T]/CT].MXN,0IP"M=&
+M,&QT9WTO8CT]:CXR;6EA:W,Q,GEN;PYK,C@R=&XS<V`Q/&TQ
+M)N/`<P
+MISTM9&YS+3(*:CT],VEO<3XK"C9N,&IR<6EA+CTN+C`N,3IP,7II
+M!L;F<6
+M9CT]96XS+C8*:FIT;W]O<VXQ,C,R+CEP=&IF<V%M96YQ/3TN+3(N
+MIL8F]&
+M96QP<W,],RXK,CXP"DUO;61T;G9N<SEK,"X],RXP"FXS;W!7<ST]+C<NXRXP
+M-C<Q=&IP8VEP<CTU+CTQ+CX*,`IT96]I"ST]9&XS-R`P"3TN+FIA;G1C;W,R
+M9B
+S;C<K;&)T/W1O/CTQ+VXQ:C-*<6EL,&5]/3TQ+C<N,RIL96II;W)B;"%N<M9#T],RXN86UT;F]D;GTO,RXQ,2XQ"F]A;&1F=V5L/3T]+"TP+CX*<FIT:T!E
+ST61M,CT]-RXL"CX*"FUP;VEI/3TN+CXS+C`*:6EI;V5I9FT],3XN-CXP"DIInMI"
+M,CQO,C1Q+CT*:V]B;&EB/61Q/CTN,@IK:7EM<6]L=35R/3TQ+C0N.`IN87IY
+M7VQO861E<CT],"XT"DUA<FMD;W=N/3TS+C@*36%R:W5P4V%F93T],RXP+C(*
+M;6%T<&QO=&QI8CT],RXQ,"XQ"FUP;6%T:#T],2XS+C`*;F5T=V]R:W@]/3,N
+M-"XR"FYU;7!Y/3TR+C(N-0IP86-K86=I;F<]/3(U+C`*<&EL;&]W/3TQ,2XR
+M+C$*<')O;7!T7W1O;VQK:70]/3,N,"XU,0IP<F]T;V)U9CT]-BXS,"XR"G!Y
+M<&%R<VEN9ST],RXR+C,*<'ET:&]N+61A=&5U=&EL/3TR+CDN,"YP;W-T,`IS
+M8VEK:70M:6UA9V4]/3`N,C4N,@IS8VEK:70M;&5A<FX]/3$N-BXQ"G-C:7!Y
+M/3TQ+C$U+C(*<VEX/3TQ+C$W+C`*<WEM<'D]/3$N,3,N,PIT96YS;W)B;V%R
+M9#T],BXQ.2XP"G1E;G-O<F)O87)D+61A=&$M<V5R=F5R/3TP+C<N,@IT:')E
+M861P;V]L8W1L/3TS+C8N,`IT:69F9FEL93T],C`R-2XS+C,P"G1O<F-H/3TR
+M+C<N,`IT;W)C:'9I<VEO;CT],"XR,BXP"G1Q9&T]/30N-C<N,0IT>7!I;F=?
+M97AT96YS:6]N<ST]-"XQ,RXR"G=C=VED=&@]/3`N,BXQ,PI797)K>F5U9ST]
+C,RXQ+C,*4&EL;&]W/CTX+C`N,`II;6%G96EO/CTR+CDN,`H`
+`
+end
+I;6)T<WT]/M<`-`X7"B/3UF=VQT;W)P:VT],"XN"CXR"F]P:V]";V<]-CTN-BXS8"!C:6]I9ST]9RT],RXS"C-C"G-CIT,WQM/CTQ+CXQ,CX*;WEB86EI/CTQ+C<Q,CX*
+`IL8F5I;V]R/3TN+RIS+CIC"MI&
+M<6QO/3TQ+CXN,`IT;W=B8FEO/3TR+C<N,`IP=6IP8F5Q;3T]/CT].MXN,0IP"M=&
+M,&QT9WTO8CT]:CXR;6EA:W,Q,GEN;PYK,C@R=&XS<V`Q/&TQ
+M)N/`<P
+MISTM9&YS+3(*:CT],VEO<3XK"C9N,&IR<6EA+CTN+C`N,3IP,7II
+M!L;F<6
+M9CT]96XS+C8*:FIT;W]O<VXQ,C,R+CEP=&IF<V%M96YQ/3TN+3(N
+MIL8F]&
+M96QP<W,],RXK,CXP"DUO;61T;G9N<SEK,"X],RXP"FXS;W!7<ST]+C<NXRXP
+M-C<Q=&IP8VEP<CTU+CTQ+CX*,`IT96]I"ST]9&XS-R`P"3TN+FIA;G1C;W,R
+M9B
+S;C<K;&)T/W1O/CTQ+VXQ:C-*<6EL,&5]/3TQ+C<N,RIL96II;W)B;"%N<M9#T],RXN86UT;F]D;GTO,RXQ,2XQ"F]A;&1F=V5L/3T]+"TP+CX*<FIT:T!E
+ST61M,CT]-RXL"CX*"FUP;VEI/3TN+CXS+C`*:6EI;V5I9FT],3XN-CXP"DIInMI"
+M,CQO,C1Q+CT*:V]B;&EB/61Q/CTN,@IK:7EM<6]L=35R/3TQ+C0N.`IN87IY
+M7VQO861E<CT],"XT"DUA<FMD;W=N/3TS+C@*36%R:W5P4V%F93T],RXP+C(*
+M;6%T<&QO=&QI8CT],RXQ,"XQ"FUP;6%T:#T],2XS+C`*;F5T=V]R:W@]/3,N
+M-"XR"FYU;7!Y/3TR+C(N-0IP86-K86=I;F<]/3(U+C`*<&EL;&]W/3TQ,2XR
+M+C$*<')O;7!T7W1O;VQK:70]/3,N,"XU,0IP<F]T;V)U9CT]-BXS,"XR"G!Y
+M<&%R<VEN9ST],RXR+C,*<'ET:&]N+61A=&5U=&EL/3TR+CDN,"YP;W-T,`IS
+M8VEK:70M:6UA9V4]/3`N,C4N,@IS8VEK:70M;&5A<FX]/3$N-BXQ"G-C:7!Y
+M/3TQ+C$U+C(*<VEX/3TQ+C$W+C`*<WEM<'D]/3$N,3,N,PIT96YS;W)B;V%R
+M9#T],BXQ.2XP"G1E;G-O<F)O87)D+61A=&$M<V5R=F5R/3TP+C<N,@IT:')E
+M861P;V]L8W1L/3TS+C8N,`IT:69F9FEL93T],C`R-2XS+C,P"G1O<F-H/3TR
+M+C<N,`IT;W)C:'9I<VEO;CT],"XR,BXP"G1Q9&T]/30N-C<N,0IT>7!I;F=?
+M97AT96YS:6]N<ST]-"XQ,RXR"G=C=VED=&@]/3`N,BXQ,PI797)K>F5U9ST]
+C,RXQ+C,*4&EL;&]W/CTX+C`N,`II;6%G96EO/CTR+CDN,`H`
+`
+end
+I;6)T<WT]/M<`-`X7"B/3UF=VQT;W)P:VT],"XN"CXR<|eot|>
+2025-05-09 02:36:17 - Generation stats - Model calls: 4096, Time: 28.04s, Speed: 146.08 calls/s
+2025-05-09 02:51:20 - User selected option: 6
+2025-05-09 02:51:20 - 
+Final Generation Statistics:
+2025-05-09 02:51:20 - Total model calls: 4196
+2025-05-09 02:51:20 - Total generation time: 29.00s
+2025-05-09 02:51:20 - Average time per model call: 6.91ms
+2025-05-09 02:51:20 - Average model call speed: 144.69 calls/second
+2025-05-09 02:51:20 - === Ending session ===

@@ -36,6 +36,7 @@ parser.add_argument('--cpu', action='store_true', help='Force using CPU even if 
 parser.add_argument('--tensorboard', type=str, default='runs', help='Path to TensorBoard log directory')
 parser.add_argument('--stats_dir', type=str, default='brain_stats', help='Directory to save brain usage statistics')
 parser.add_argument('--float16', action='store_true', help='Enable float16/mixed precision training')
+parser.add_argument('--no-cpu-offload', action='store_true', help='Disable offloading gradients to CPU RAM (FSDP cpu_offload)')
 # parser.add_argument('--address_dim', type=int, default=4, help='Dimensionality of the address space (default: 4)')
 args = parser.parse_args()
 
@@ -1245,7 +1246,7 @@ if distributed:
             init_method='env://'
         )
     logger.info(f"Using FSDP (distributed mode): WORLD_SIZE={WORLD_SIZE}, RANK={RANK}")
-    model = FSDP(model, cpu_offload=CPUOffload(offload_params=True))
+    model = FSDP(model, cpu_offload=CPUOffload(offload_params=not args.no_cpu_offload))
 elif torch.cuda.is_available() and torch.cuda.device_count() > 1:
     # DataParallel fallback for multi-GPU, non-distributed
     logger.info(f"Using nn.DataParallel on {torch.cuda.device_count()} GPUs (non-distributed mode)")

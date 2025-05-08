@@ -1262,6 +1262,8 @@ def text_to_binary(text, pad_to_length=98):
     
     return binary
 
+from contextlib import nullcontext
+
 def generate_text(model, input_text, num_chars=100):
     device = next(model.parameters()).device
     # For binary conversion, use the input text as is
@@ -1273,29 +1275,34 @@ def generate_text(model, input_text, num_chars=100):
     # Track if we're generating the first character
     is_first_character = True
     
+    use_float16 = getattr(args, 'float16', False) and torch.cuda.is_available() and device.type == 'cuda'
+    if use_float16:
+        logger.info('Using float16/mixed precision inference (torch.cuda.amp.autocast)')
     with torch.no_grad():
-        # show progress using tqdm
-        for i in tqdm.tqdm(range(num_chars)):
-            # Convert input text to binary (without the start token)
-            binary_input = text_to_binary(generated_text)
-            
-            # Convert to tensor
-            x = torch.FloatTensor(binary_input).view(1, -1).to(device)
-            
-            # Get model prediction
-            output = model(x)
-            model_calls += 1
-            
-            # Get the predicted character
-            _, predicted = output.max(1)
-            predicted_char = chr(predicted.item())
-            # print(f"{predicted_char}", end='\n')
-            
-            # No special case handling - let the model generate any character
-            
-            # Append to both generated text (for binary conversion) and output text
-            generated_text += predicted_char
-            output_text += predicted_char
+        autocast_ctx = torch.cuda.amp.autocast() if use_float16 else nullcontext()
+        with autocast_ctx:
+            # show progress using tqdm
+            for i in tqdm.tqdm(range(num_chars)):
+                # Convert input text to binary (without the start token)
+                binary_input = text_to_binary(generated_text)
+                
+                # Convert to tensor
+                x = torch.FloatTensor(binary_input).view(1, -1).to(device)
+                
+                # Get model prediction
+                output = model(x)
+                model_calls += 1
+                
+                # Get the predicted character
+                _, predicted = output.max(1)
+                predicted_char = chr(predicted.item())
+                # print(f"{predicted_char}", end='\n')
+                
+                # No special case handling - let the model generate any character
+                
+                # Append to both generated text (for binary conversion) and output text
+                generated_text += predicted_char
+                output_text += predicted_char
     
     # Add end token
     output_text += "<|eot|>"

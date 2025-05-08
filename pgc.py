@@ -74,13 +74,14 @@ def run_text_to_binary_dataset(input_file):
     
     print(f"Dataset created at {output_file}")
 
-def run_pgc_packer(output_file, float16=False):
+def run_pgc_packer(output_file, float16=False, no_cpu_offload=False):
     """
     Launch 673_pgc_packer.py to pack the dataset and copy the latest model.
     
     Args:
         output_file (str): Path to the output file
         float16 (bool): Whether to enable float16/mixed precision training
+        no_cpu_offload (bool): Whether to disable gradient offloading to CPU RAM
     """
     print(f"Running 673_pgc_packer.py...")
     
@@ -92,6 +93,8 @@ def run_pgc_packer(output_file, float16=False):
     cmd = [sys.executable, '673_pgc_packer.py', '--checkpoints', checkpoint_dir]
     if float16:
         cmd.append('--float16')
+    if no_cpu_offload:
+        cmd.append('--no-cpu-offload')
     subprocess.run(cmd, check=True)
     
     # Find the latest model in the checkpoint directory
@@ -105,7 +108,7 @@ def run_pgc_packer(output_file, float16=False):
         print(f"No model files found in {checkpoint_dir}")
         sys.exit(1)
 
-def pack_file(input_file, output_file=None, float16=False):
+def pack_file(input_file, output_file=None, float16=False, no_cpu_offload=False):
     """
     Process a file in the following order:
     1. Uuencode the input file
@@ -117,6 +120,7 @@ def pack_file(input_file, output_file=None, float16=False):
         input_file (str): Path to the input file
         output_file (str, optional): Path to the output file
         float16 (bool): Whether to enable float16/mixed precision training
+        no_cpu_offload (bool): Whether to disable gradient offloading to CPU RAM
     """
     # Determine output filename if not provided
     if output_file is None:
@@ -157,7 +161,7 @@ def pack_file(input_file, output_file=None, float16=False):
         
         # Step 4: Run 673_pgc_packer.py and copy the latest model
         print("Step 4: Running 673_pgc_packer.py and copying latest model...")
-        run_pgc_packer(output_file, float16=float16)
+        run_pgc_packer(output_file, float16=float16, no_cpu_offload=no_cpu_offload)
         
         print(f"Successfully packed file to {output_file}")
         print(f"Temporary file kept: {uu_file}")
@@ -172,9 +176,10 @@ def main():
     parser.add_argument('filename_to_pack', type=str, help='Input file to pack')
     parser.add_argument('output_filename', type=str, nargs='?', default=None, help='Optional output filename')
     parser.add_argument('--float16', action='store_true', help='Enable float16/mixed precision training for 673_pgc_packer.py')
+    parser.add_argument('--no-cpu-offload', action='store_true', help='Disable offloading gradients to CPU RAM (FSDP cpu_offload) for 673_pgc_packer.py')
     args = parser.parse_args()
 
-    pack_file(args.filename_to_pack, args.output_filename, float16=args.float16)
+    pack_file(args.filename_to_pack, args.output_filename, float16=args.float16, no_cpu_offload=args.no_cpu_offload)
 
 if __name__ == "__main__":
     main()

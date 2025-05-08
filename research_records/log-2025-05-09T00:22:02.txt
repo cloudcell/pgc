@@ -1,0 +1,10 @@
+2025-05-09 00:22:02 - === Starting new text generation session ===
+2025-05-09 00:22:11 - User selected option: 1
+2025-05-09 00:22:13 - Selected checkpoint folder: checkpoints_20250508_174309
+2025-05-09 00:22:28 - Successfully loaded model from: model_20250508_174314_epoch_31.pt
+2025-05-09 00:22:29 - User selected option: 5
+2025-05-09 00:22:29 - Generating/unpacking response with input: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+2025-05-09 00:22:30 - Generated: <|sot|>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@begin 775 pgc.py
+M(R$O=7-R+V)I;B]E;G8@<'ET:&]N,PHB(B(*4$=#(%!A8VME<B!5=&EL:71Y
+M"@I4:&ES('-C<FEP="!P<|eot|>
+2025-05-09 00:22:30 - Generation stats - Model calls: 100, Time: 1.69s, Speed: 59.19 calls/s

@@ -16,9 +16,14 @@ If output_filename is not provided, the input filename with '.pgc' appended will
 
 import sys
 import os
-import tempfile
 import subprocess
 import shutil
+from datetime import datetime
+
+# Set CUDA_VISIBLE_DEVICES to match CUDA_DEVICES in 673_pgc_packer.py
+CUDA_DEVICES = [0]  # <-- Keep in sync with 673_pgc_packer.py
+os.environ['CUDA_VISIBLE_DEVICES'] = ','.join(str(i) for i in CUDA_DEVICES)
+
 import glob
 
 def uuencode_file(input_file):

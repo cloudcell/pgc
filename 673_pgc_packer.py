@@ -6,6 +6,9 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
+from torch.distributed.fsdp import FullyShardedDataParallel as FSDP, CPUOffload
+import torch.distributed as dist
+import os
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 import tqdm
@@ -49,7 +52,7 @@ logger = logging.getLogger('SelfOrganizingBrain')
 
 
 # CUDA devices
-CUDA_DEVICES = [0]  #, 1, 2, 3]  # List of CUDA devices to use for parallelization
+CUDA_DEVICES = [0]  #, 0, 2, 3]  # List of CUDA devices to use for parallelization
 
 # Set up device
 device = torch.device('cpu')
@@ -79,7 +82,7 @@ input_size = 784  # Flatten the 28x28 images
 embedding_size = 784  #512  # Size of the embedding space
 num_heads = 1
 address_space_dim = 3  # Dimensionality of the address space (configurable)
-address_space_size = 4 #8 #6  # Size of each dimension in the address space
+address_space_size = 5  #4 #8 #6  # Size of each dimension in the address space
 brain_size = address_space_size  # Size of each dimension in the brain grid
 num_jumps = 14 #5 # 3 # Number of steps through the brain
 JUMP_OUT_IF_REVISITED = False
@@ -1203,16 +1206,10 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
     writer.close()
     return model
 
-# Create checkpoint directory with timestamp
-if args.checkpoints:
-    checkpoint_dir = args.checkpoints
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    logger.info(f'Using checkpoint directory: {checkpoint_dir}')
-else:
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    checkpoint_dir = f'checkpoints_{timestamp}'
-    logger.info(f'Created new checkpoint directory: {checkpoint_dir}')
-
+# Always use a checkpoints folder with timestamp suffix _yyyymmdd_hhmmss
+current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
+checkpoint_dir = f'checkpoints_{current_time}'
+logger.info(f'Using checkpoint directory: {checkpoint_dir}')
 os.makedirs(checkpoint_dir, exist_ok=True)
 
 # Step 4: Initialize the Model
@@ -1228,15 +1225,25 @@ model = SelfOrganizingBrain(
 # Move model to primary device first
 model = model.to(device)
 
-# Wrap the model with DataParallel if multiple GPUs are available
-if not args.cpu and torch.cuda.is_available() and len(CUDA_DEVICES) > 1:
-    # Get available devices from the specified list
-    available_devices = [CUDA_DEVICES[i] for i in range(len(CUDA_DEVICES)) 
-                        if i < torch.cuda.device_count()]
-    
-    if len(available_devices) > 1:
-        logger.info(f'Parallelizing model across {len(available_devices)} GPUs')
-        model = nn.DataParallel(model, device_ids=available_devices)
+# Flexible distributed/single-GPU logic
+WORLD_SIZE = int(os.environ.get('WORLD_SIZE', '1'))
+RANK = int(os.environ.get('RANK', '0'))
+distributed = WORLD_SIZE > 1 or 'RANK' in os.environ
+
+if distributed:
+    if not dist.is_initialized():
+        dist.init_process_group(
+            backend='nccl' if torch.cuda.is_available() else 'gloo',
+            init_method='env://'
+        )
+    logger.info(f"Using FSDP (distributed mode): WORLD_SIZE={WORLD_SIZE}, RANK={RANK}")
+    model = FSDP(model, cpu_offload=CPUOffload(offload_params=True))
+elif torch.cuda.is_available() and torch.cuda.device_count() > 1:
+    # DataParallel fallback for multi-GPU, non-distributed
+    logger.info(f"Using nn.DataParallel on {torch.cuda.device_count()} GPUs (non-distributed mode)")
+    model = nn.DataParallel(model)
+else:
+    logger.info("Using single GPU or CPU (no parallelism)")
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
@@ -1264,8 +1271,15 @@ if latest_checkpoint:
 # Create global statistics aggregator
 global_stats_aggregator = GlobalStatisticsAggregator()
 
+# Track training start time
+train_start_time = datetime.now()
+
 # Train the model
 trained_model = train(model, train_loader, val_loader, criterion, optimizer, scheduler, epochs=NUM_EPOCHS, start_epoch=start_epoch, global_stats_aggregator=global_stats_aggregator)
+
+# Track training end time
+train_end_time = datetime.now()
+train_elapsed = train_end_time - train_start_time
 
 # Print final statistics summary
 logger.info("Training complete. Final statistics summary:")
@@ -1274,6 +1288,16 @@ for epoch, stats in summary.items():
     logger.info(f"Epoch {epoch}:")
     logger.info(f"  Training: {stats['train']['unique_blocks']} unique blocks, {stats['train']['unique_pathways']} unique pathways")
     logger.info(f"  Validation: {stats['val']['unique_blocks']} unique blocks, {stats['val']['unique_pathways']} unique pathways")
+
+# Log overall run time and average epoch time
+num_epochs_run = len(summary)
+if num_epochs_run > 0:
+    avg_epoch_time = train_elapsed.total_seconds() / num_epochs_run
+    logger.info(f"Overall training run time: {train_elapsed}")
+    logger.info(f"Average time per epoch: {avg_epoch_time:.2f} seconds")
+else:
+    logger.info(f"Overall training run time: {train_elapsed}")
+    logger.info("Average time per epoch: N/A (no epochs run)")
 
 # Step 5: Evaluate the Model
 # Create evaluation stats directory with timestamp
@@ -1352,3 +1376,7 @@ def evaluate(model, test_loader, stats_dir=None):
     return final_accuracy
 
 evaluate(trained_model, test_loader, stats_dir=eval_stats_dir)
+
+# Clean up process group for FSDP if distributed
+if 'distributed' in locals() and distributed and dist.is_initialized():
+    dist.destroy_process_group()

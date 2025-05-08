@@ -13,6 +13,12 @@ python3 -m venv venv
 # Activate the virtual environment
 source ./venv/bin/activate
 
+# Install dependencies
+pip install -r requirements.txt
+
+# Install uuencode
+sudo apt-get install sharutils
+
 # Encode a file
 python3 pcg.py any_file_to_pack
 

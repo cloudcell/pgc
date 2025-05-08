@@ -79,7 +79,7 @@ input_size = 784  # Flatten the 28x28 images
 embedding_size = 784  #512  # Size of the embedding space
 num_heads = 1
 address_space_dim = 3  # Dimensionality of the address space (configurable)
-address_space_size = 4 #8 #6  # Size of each dimension in the address space
+address_space_size = 5  # 4 #8 #6  # Size of each dimension in the address space
 brain_size = address_space_size  # Size of each dimension in the brain grid
 num_jumps = 24 #5 # 3 # Number of steps through the brain
 JUMP_OUT_IF_REVISITED = False
@@ -1063,7 +1063,9 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
     # Get the base model if using DataParallel
     base_model = model.module if isinstance(model, nn.DataParallel) else model
     
-    for epoch in range(start_epoch, epochs):
+    epoch = start_epoch
+    while epoch < epochs:
+
         model.train()
         running_loss = 0.0
         correct = 0
@@ -1196,24 +1198,35 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
         save_model_checkpoint(model, optimizer, scheduler, epoch + 1, val_loss, checkpoint_dir, timestamp)
         logger.info(f'Saved checkpoint at epoch {epoch+1} to {checkpoint_path}')
 
-        # if the number of incorrect predictions is equal to 0, break
-        if incorrect == 0:
+        # Stop only if BOTH incorrect == 0 AND epoch_loss < 0.001
+        if incorrect == 0 and epoch_loss < 0.001:
+            logger.info(f"Stopping training: incorrect == 0 and loss < 0.001 (loss={epoch_loss:.4f})")
             break
+        elif incorrect == 0:
+            logger.info(f"Not stopping: incorrect == 0 but loss >= 0.001 (loss={epoch_loss:.4f})")
+        elif epoch_loss < 0.001:
+            logger.info(f"Not stopping: loss < 0.001 but incorrect > 0 (incorrect={incorrect})")
+        epoch += 1
     
     writer.close()
     return model
 
 # Create checkpoint directory with timestamp
+from datetime import datetime
+import re
+# Dynamically generate the timestamp for the checkpoints folder at run time
+checkpoint_timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
 if args.checkpoints:
-    checkpoint_dir = args.checkpoints
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    # Remove any existing timestamp suffix from the provided path
+    base_ckpt_dir = re.sub(r'_\d{8}_\d{6}$', '', args.checkpoints)
+    checkpoint_dir = f'{base_ckpt_dir}_{checkpoint_timestamp}'
     logger.info(f'Using checkpoint directory: {checkpoint_dir}')
 else:
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    checkpoint_dir = f'checkpoints_{timestamp}'
+    checkpoint_dir = f'checkpoints_{checkpoint_timestamp}'
     logger.info(f'Created new checkpoint directory: {checkpoint_dir}')
 
 os.makedirs(checkpoint_dir, exist_ok=True)
+
 
 # Step 4: Initialize the Model
 model = SelfOrganizingBrain(

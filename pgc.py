@@ -21,7 +21,7 @@ import shutil
 from datetime import datetime
 
 # Set CUDA_VISIBLE_DEVICES to match CUDA_DEVICES in 673_pgc_packer.py
-CUDA_DEVICES = [0]  # <-- Keep in sync with 673_pgc_packer.py
+CUDA_DEVICES = [0, 1, 2, 3]  # <-- Keep in sync with 673_pgc_packer.py
 os.environ['CUDA_VISIBLE_DEVICES'] = ','.join(str(i) for i in CUDA_DEVICES)
 
 import glob

@@ -84,13 +84,13 @@ input_size = 784  # Flatten the 28x28 images
 embedding_size = 784 # 784  #512  # Size of the embedding space
 num_heads = 1
 address_space_dim = 3  # Dimensionality of the address space (configurable)
-address_space_size = 4 # 8 # 14 # 8 #6  # Size of each dimension in the address space
+address_space_size = 5 # 8 # 14 # 8 #6  # Size of each dimension in the address space
 brain_size = address_space_size  # Size of each dimension in the brain grid
 num_jumps = 14 # 7 #5 # 3 # Number of steps through the brain
 
 JUMP_OUT_IF_REVISITED = False
 
-unpacking_header = "@" * (784//8)  # Header for unpacking
+unpacking_header = "@" * 98  # Exactly 98 '@' characters
 bytes_to_generate_max = 1024*1024 * 128  # megabytes
 
 
@@ -1236,7 +1236,11 @@ def text_to_binary(text, pad_to_length=98):
     if len(text) < pad_to_length:
         text = ' ' * (pad_to_length - len(text)) + text
     elif len(text) > pad_to_length:
-        text = text[-pad_to_length:]
+        # For exactly 98 '@' characters, make sure we don't truncate
+        if text.endswith('@' * 98):
+            text = text[-98:]
+        else:
+            text = text[-pad_to_length:]
     
     # Convert to binary
     binary = []
@@ -1252,15 +1256,19 @@ def text_to_binary(text, pad_to_length=98):
 
 def generate_text(model, input_text, num_chars=100):
     device = next(model.parameters()).device
-    # Add start token to input
-    input_text = "<|sot|>" + input_text
+    # For binary conversion, use the input text as is
     generated_text = input_text
+    # For output, we'll include the start token
+    output_text = input_text
     model_calls = 0
+    
+    # Track if we're generating the first character
+    is_first_character = True
     
     with torch.no_grad():
         # show progress using tqdm
-        for _ in tqdm.tqdm(range(num_chars)):
-            # Convert last 98 characters to binary
+        for i in tqdm.tqdm(range(num_chars)):
+            # Convert input text to binary (without the start token)
             binary_input = text_to_binary(generated_text)
             
             # Convert to tensor
@@ -1273,13 +1281,21 @@ def generate_text(model, input_text, num_chars=100):
             # Get the predicted character
             _, predicted = output.max(1)
             predicted_char = chr(predicted.item())
+            # print(f"{predicted_char}", end='\n')
             
-            # Append to generated text
+            # No special case handling - let the model generate any character
+            
+            # Append to both generated text (for binary conversion) and output text
             generated_text += predicted_char
+            output_text += predicted_char
     
     # Add end token
-    generated_text += "<|eot|>"
-    return generated_text, model_calls
+    output_text += "<|eot|>"
+
+    # Add beginning token
+    output_text = "<|sot|>" + output_text
+
+    return output_text, model_calls
 
 def load_model_from_checkpoint(checkpoint_dir):
     """Load the latest model checkpoint from the specified directory"""

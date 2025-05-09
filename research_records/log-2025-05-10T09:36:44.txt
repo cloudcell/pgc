@@ -1,0 +1,7 @@
+2025-05-10 09:36:44 - === Starting new text generation session ===
+2025-05-10 09:36:49 - User selected option: 1
+2025-05-10 09:36:51 - Selected checkpoint folder: checkpoints_20250510_092644
+2025-05-10 09:36:54 - Successfully loaded model from: model_20250510_092645_epoch_5.pt
+2025-05-10 09:36:54 - Warning: get_config_from_model not available on SelfOrganizingBrain!
+2025-05-10 09:39:01 - User selected option: 6
+2025-05-10 09:39:01 - === Ending session ===

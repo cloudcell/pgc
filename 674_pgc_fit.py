@@ -41,6 +41,8 @@ parser.add_argument('--train_acc_stop', type=float, default=0.99, required=True,
 parser.add_argument('--train_loss_stop', type=float, default=0.001, required=True, help='Training loss stopping criteria')
 # add stopping criteria for epochs (mandatory, i.e. required)
 parser.add_argument('--epochs_stop', type=int, default=1024, required=True, help='Epochs stopping criteria')
+# two modes: jam and fit
+parser.add_argument('--mode', type=str, default='fit', required=True, help='Mode: fit or jam')
 
 args = parser.parse_args()
 
@@ -148,9 +150,11 @@ test_size = len(dataset) - train_size - val_size
 
 train_dataset, val_dataset, test_dataset = torch.utils.data.random_split(dataset, [train_size, val_size, test_size])
 
-# override train_dataset with the initial dataset
-# train_dataset = dataset  # for fitting, this has to be disabled
-
+# override train_dataset with the initial dataset for the mode jam
+if args.mode == 'jam':
+    train_dataset = dataset
+else:
+    pass
 
 # Calculate optimal number of workers - 2 workers per GPU is usually sufficient
 num_workers = min(4 * 2 * len(CUDA_DEVICES), os.cpu_count() or 1)

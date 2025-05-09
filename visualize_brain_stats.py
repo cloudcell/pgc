@@ -197,7 +197,11 @@ class BrainStatsVisualizer:
         self.current_frame = 0
         self.is_playing = False
         self.interval = 500  # Default interval in ms (2 fps)
-        self.last_loaded_folder = None  # Track the last loaded folder
+        # Set last_loaded_folder if files and folder_name are provided
+        if files and folder_name:
+            self.last_loaded_folder = folder_name
+        else:
+            self.last_loaded_folder = None  # Track the last loaded folder
         self.top_n_pathways = 5  # Default value for top pathways
         self.folder_name = folder_name
         self.setup_ui()
@@ -492,6 +496,8 @@ class BrainStatsVisualizer:
             title += f" - {self.folder_name}"
         self.root.title(title)
         self.root.geometry("1200x800")
+        # Set proper shutdown behavior for the close button
+        self.root.protocol("WM_DELETE_WINDOW", self.on_close)
         
         # Create menu bar
         self.create_menu_bar()
@@ -569,12 +575,12 @@ class BrainStatsVisualizer:
         self.stereo_button.pack(side=tk.LEFT, padx=(0, 10))
 
         # Add tickbox for legend
-        self.show_legend = tk.BooleanVar(value=True)
+        self.show_legend = tk.BooleanVar(value=False)
         self.legend_checkbox = tk.Checkbutton(self.control_frame, text="Show Legend", variable=self.show_legend, command=lambda: self.update_frame(self.current_frame))
         self.legend_checkbox.pack(side=tk.LEFT, padx=(0, 10))
 
         # Add tickbox for line thickness
-        self.vary_line_thickness = tk.BooleanVar(value=False)
+        self.vary_line_thickness = tk.BooleanVar(value=True)
         self.thickness_checkbox = tk.Checkbutton(self.control_frame, text="Vary Line Thickness", variable=self.vary_line_thickness, command=lambda: self.update_frame(self.current_frame))
         self.thickness_checkbox.pack(side=tk.LEFT, padx=(0, 10))
         
@@ -808,6 +814,12 @@ Created: April 2025
     def run(self):
         """Run the visualizer."""
         self.root.mainloop()
+
+    def on_close(self):
+        """Handle application close event for proper shutdown."""
+        self.root.quit()
+        self.root.destroy()
+
 
 def visualize_stats_folder(stats_dir, output_file=None, show_animation=True):
     """Visualize all brain stats files in the given directory."""

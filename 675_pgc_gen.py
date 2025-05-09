@@ -1326,18 +1326,21 @@ def load_model_from_checkpoint(checkpoint_dir):
     print(f"Loading checkpoint: {os.path.basename(latest_checkpoint)}")
     
     try:
-        # Create model
-        model = SelfOrganizingBrain(
-            input_size=input_size,
-            embedding_size=embedding_size,
-            brain_size=brain_size,
-            address_dim=address_space_dim,
-            num_heads=num_heads,
-            num_jumps=num_jumps
-        )
-        
-        # Load the checkpoint
+        # Load the checkpoint first
         checkpoint = torch.load(latest_checkpoint)
+        if 'model_config' in checkpoint:
+            model_config = checkpoint['model_config']
+            model = SelfOrganizingBrain(**model_config)
+        else:
+            # Fallback to old checkpoints (not recommended)
+            model = SelfOrganizingBrain(
+                input_size=input_size,
+                embedding_size=embedding_size,
+                brain_size=brain_size,
+                address_dim=address_space_dim,
+                num_heads=num_heads,
+                num_jumps=num_jumps
+            )
         model.load_state_dict(checkpoint['model_state_dict'])
         
         # Move to GPU if available
@@ -1347,7 +1350,6 @@ def load_model_from_checkpoint(checkpoint_dir):
         
         print("Model loaded successfully!")
         return model, latest_checkpoint
-        
     except Exception as e:
         print(f"Error loading model: {str(e)}")
         return None, None

@@ -1,0 +1,6 @@
+2025-05-10 11:19:11 - === Starting new text generation session ===
+2025-05-10 11:19:17 - User selected option: 1
+2025-05-10 11:19:19 - Selected checkpoint folder: checkpoints_20250510_094658
+2025-05-10 11:19:21 - Failed to load model
+2025-05-10 11:22:47 - User selected option: 6
+2025-05-10 11:22:47 - === Ending session ===

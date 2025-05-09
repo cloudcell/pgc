@@ -291,16 +291,11 @@ class BrainStatsVisualizer:
         show_legend = self.show_legend.get()
         vary_line_thickness = self.vary_line_thickness.get()
 
-        # Start with identical data for both eyes (no rotation)
-        def get_rotated_data(angle):
-            # Returns (left_data, right_data) with the given angle (degrees)
-            left_data = self._rotate_pathways_about_y(data, -angle/2)
-            right_data = self._rotate_pathways_about_y(data, +angle/2)
-            return left_data, right_data
-
-        # Initial angle
-        stereo_angle = 0
-        data_left, data_right = get_rotated_data(stereo_angle)
+        # Use the same data for both eyes (no rotation)
+        DEFAULT_STEREO_ANGLE = 10
+        stereo_angle = DEFAULT_STEREO_ANGLE
+        center_azim = 45  # Default azimuth for center view
+        elev = 30         # Default elevation
 
         # Create window and layout
         stereo_win = tk.Toplevel(self.root)
@@ -333,43 +328,55 @@ class BrainStatsVisualizer:
         right_canvas = FigureCanvasTkAgg(fig_right, master=right_frame)
         right_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
 
+        # Axis sync state
+        sync_axes_var = tk.BooleanVar(value=True)
+
         def draw_stereo(angle):
-            left_data, right_data = get_rotated_data(angle)
             ax_left.clear()
             ax_right.clear()
-            visualize_top_pathways(left_data, epoch, ax_left, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
-            visualize_top_pathways(right_data, epoch, ax_right, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
-            # Synchronize axis limits
-            xlims = ax_left.get_xlim()
-            ax_right.set_xlim(xlims)
-            ylims = ax_left.get_ylim()
-            ax_right.set_ylim(ylims)
-            zlims = ax_left.get_zlim()
-            ax_right.set_zlim(zlims)
-            # Synchronize view angles
-            default_elev = ax_left.elev
-            default_azim = ax_left.azim
-            ax_left.view_init(elev=default_elev, azim=default_azim)
-            ax_right.view_init(elev=default_elev, azim=default_azim)
+            # Draw the same data for both eyes
+            visualize_top_pathways(data, epoch, ax_left, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
+            visualize_top_pathways(data, epoch, ax_right, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
+            # Set stereoscopic viewpoints
+            ax_left.view_init(elev=elev, azim=center_azim - angle/2)
+            ax_right.view_init(elev=elev, azim=center_azim + angle/2)
+            if sync_axes_var.get():
+                # Synchronize axis limits
+                xlims = ax_left.get_xlim()
+                ax_right.set_xlim(xlims)
+                ylims = ax_left.get_ylim()
+                ax_right.set_ylim(ylims)
+                zlims = ax_left.get_zlim()
+                ax_right.set_zlim(zlims)
             left_canvas.draw()
             right_canvas.draw()
 
         # Initial draw
         draw_stereo(stereo_angle)
 
-        # Stereo angle slider
+        # Stereo angle slider and controls
         slider_frame = tk.Frame(stereo_win)
         slider_frame.pack(side=tk.BOTTOM, pady=5)
         angle_label = tk.Label(slider_frame, text="Stereo Angle (degrees):")
         angle_label.pack(side=tk.LEFT)
         angle_slider = tk.Scale(slider_frame, from_=0, to=30, orient=tk.HORIZONTAL, length=300)
-        angle_slider.set(0)
+        angle_slider.set(DEFAULT_STEREO_ANGLE)
         angle_slider.pack(side=tk.LEFT)
 
         def on_slider(val):
             angle = float(val)
             draw_stereo(angle)
         angle_slider.config(command=on_slider)
+
+        # Reset button
+        def reset_angle():
+            angle_slider.set(DEFAULT_STEREO_ANGLE)
+        reset_btn = tk.Button(slider_frame, text="Reset", command=reset_angle)
+        reset_btn.pack(side=tk.LEFT, padx=10)
+
+        # Axis sync checkbox
+        sync_axes_cb = tk.Checkbutton(slider_frame, text="Sync Axes", variable=sync_axes_var, command=lambda: draw_stereo(angle_slider.get()))
+        sync_axes_cb.pack(side=tk.LEFT, padx=10)
 
         # Track which canvas is on which side
         state = {'left_canvas': left_canvas, 'right_canvas': right_canvas, 'left_frame': left_frame, 'right_frame': right_frame}

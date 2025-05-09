@@ -121,7 +121,7 @@ def visualize_top_blocks(data, epoch, ax=None):
     
     return ax
 
-def visualize_top_pathways(data, epoch, ax=None, top_n=5):
+def visualize_top_pathways(data, epoch, ax=None, top_n=5, show_legend=True, vary_line_thickness=False):
     """Visualize the top pathways as 3D lines."""
     if ax is None:
         fig = plt.figure(figsize=(10, 8))
@@ -146,17 +146,28 @@ def visualize_top_pathways(data, epoch, ax=None, top_n=5):
     else:
         max_x = max_y = max_z = 4  # Default if no pathways
     
+    # Compute thickness normalization if needed
+    counts = [pathway_data['count'] for pathway_data in data['top_pathways'][:top_n]]
+    if vary_line_thickness and counts:
+        min_thick = 1.5
+        max_thick = 7
+        min_count = min(counts)
+        max_count = max(counts)
+        if max_count > min_count:
+            norm = lambda c: min_thick + (max_thick - min_thick) * (c - min_count) / (max_count - min_count)
+        else:
+            norm = lambda c: (min_thick + max_thick) / 2
+    else:
+        norm = lambda c: 2
+    
     # Plot each pathway (up to top_n)
     for i, pathway_data in enumerate(data['top_pathways'][:top_n]):
         pathway = np.array(pathway_data['pathway'])
         count = pathway_data['count']
-        
-        # Normalize count for color
         color = cmap(i / max(1, top_n))
-        
-        # Plot the pathway as a line
+        linewidth = norm(count)
         ax.plot(pathway[:, 0], pathway[:, 1], pathway[:, 2], 
-                marker='o', linestyle='-', linewidth=2, 
+                marker='o', linestyle='-', linewidth=linewidth, 
                 color=color, label=f'Pathway {i+1} (count: {count})')
     
     # Set labels and title
@@ -170,10 +181,12 @@ def visualize_top_pathways(data, epoch, ax=None, top_n=5):
     ax.set_ylim(0, max_y)
     ax.set_zlim(0, max_z)
     
-    # Add legend
-    ax.legend()
+    # Add legend if requested
+    if show_legend:
+        ax.legend()
     
     return ax
+
 
 
 class BrainStatsVisualizer:
@@ -228,7 +241,11 @@ class BrainStatsVisualizer:
                 self.top_pathways_slider.set(1)
             # Visualize the data
             visualize_top_blocks(data, epoch, self.ax1)
-            visualize_top_pathways(data, epoch, self.ax2, top_n=self.top_n_pathways)
+            visualize_top_pathways(
+                data, epoch, self.ax2, 
+                top_n=self.top_n_pathways, 
+                show_legend=self.show_legend.get(), 
+                vary_line_thickness=self.vary_line_thickness.get())
             # Update the status label
             self.status_label.config(text=f"Showing epoch {epoch} ({frame_idx+1}/{len(self.files)})")
         # Redraw the canvas
@@ -328,6 +345,16 @@ class BrainStatsVisualizer:
         # Add reload folder button
         self.reload_button = Button(self.control_frame, text="Reload Folder", command=self.reload_current_folder)
         self.reload_button.pack(side=tk.LEFT, padx=(0, 10))
+
+        # Add tickbox for legend
+        self.show_legend = tk.BooleanVar(value=True)
+        self.legend_checkbox = tk.Checkbutton(self.control_frame, text="Show Legend", variable=self.show_legend, command=lambda: self.update_frame(self.current_frame))
+        self.legend_checkbox.pack(side=tk.LEFT, padx=(0, 10))
+
+        # Add tickbox for line thickness
+        self.vary_line_thickness = tk.BooleanVar(value=False)
+        self.thickness_checkbox = tk.Checkbutton(self.control_frame, text="Vary Line Thickness", variable=self.vary_line_thickness, command=lambda: self.update_frame(self.current_frame))
+        self.thickness_checkbox.pack(side=tk.LEFT, padx=(0, 10))
         
         # Add status label
         self.status_label = Label(self.root, text="")
@@ -341,6 +368,7 @@ class BrainStatsVisualizer:
             self.update_frame(0)
         else:
             self.status_label.config(text="No data loaded. Use File > Open to load brain stats files.")
+
 
             
     def create_menu_bar(self):

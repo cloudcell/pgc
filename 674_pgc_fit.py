@@ -670,7 +670,8 @@ def save_model_checkpoint(model, optimizer, scheduler, epoch, loss, checkpoint_d
         'scheduler_state_dict': scheduler.state_dict() if scheduler else None,
         # 'shift_sequence': model.shift_sequence,
         'epoch': epoch,
-        'loss': loss
+        'loss': loss,
+        'model_config': base_model.model_config  # Save model config
     }
     
     # Save checkpoint
@@ -688,6 +689,10 @@ def load_model_checkpoint(model, optimizer, scheduler, checkpoint_path):
     
     # Load state dict into the base model
     base_model.load_state_dict(checkpoint['model_state_dict'])
+    
+    # Restore model config if present
+    if 'model_config' in checkpoint:
+        base_model.model_config = checkpoint['model_config']
     
     # If using DataParallel, update the wrapped model
     if isinstance(model, nn.DataParallel):
@@ -1332,6 +1337,17 @@ model = SelfOrganizingBrain(
     num_heads=num_heads,
     num_jumps=num_jumps
 )
+
+# Ensure model_config is set for checkpoint saving/loading
+model.model_config = {
+    'input_size': input_size,
+    'num_classes': num_classes,
+    'embedding_size': embedding_size,
+    'brain_size': brain_size,
+    'address_dim': address_space_dim,
+    'num_heads': num_heads,
+    'num_jumps': num_jumps
+}
 
 # Move model to primary device first
 model = model.to(device)

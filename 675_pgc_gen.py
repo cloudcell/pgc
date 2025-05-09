@@ -1435,6 +1435,18 @@ def main():
                     else:
                         current_checkpoint_file = checkpoint_file
                         record_interaction(f"Successfully loaded model from: {os.path.basename(checkpoint_file)}")
+                        # Extract model config after loading
+                        if hasattr(SelfOrganizingBrain, 'get_config_from_model'):
+                            current_model_config = SelfOrganizingBrain.get_config_from_model(current_model)
+                            record_interaction(f"Loaded model config: {current_model_config}")
+                            print(f"Loaded model config: {current_model_config}")
+                            print("Model parameters:")
+                            for k, v in current_model_config.items():
+                                print(f"  {k}: {v}")
+                        else:
+                            current_model_config = None
+                            record_interaction("Warning: get_config_from_model not available on SelfOrganizingBrain!")
+                            print("Warning: get_config_from_model not available on SelfOrganizingBrain!")
                 except Exception as e:
                     record_interaction(f"Error loading model: {str(e)}")
                     print(f"Error loading model: {str(e)}")

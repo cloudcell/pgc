@@ -33,6 +33,15 @@ parser.add_argument('--cpu', action='store_true', help='Force using CPU even if 
 parser.add_argument('--tensorboard', type=str, default='runs', help='Path to TensorBoard log directory')
 parser.add_argument('--stats_dir', type=str, default='brain_stats', help='Directory to save brain usage statistics')
 # parser.add_argument('--address_dim', type=int, default=4, help='Dimensionality of the address space (default: 4)')
+# add stopping criteria for validation accuracy (mandatory, i.e. required)
+parser.add_argument('--val_acc_stop', type=float, default=0.99, required=True, help='Validation accuracy stopping criteria')
+# add stopping criteria for training accuracy (mandatory, i.e. required)
+parser.add_argument('--train_acc_stop', type=float, default=0.99, required=True, help='Training accuracy stopping criteria')
+# add stopping criteria for loss (mandatory, i.e. required)
+parser.add_argument('--train_loss_stop', type=float, default=0.001, required=True, help='Training loss stopping criteria')
+# add stopping criteria for epochs (mandatory, i.e. required)
+parser.add_argument('--epochs_stop', type=int, default=1024, required=True, help='Epochs stopping criteria')
+
 args = parser.parse_args()
 
 
@@ -1064,6 +1073,12 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
     base_model = model.module if isinstance(model, nn.DataParallel) else model
     
     epoch = start_epoch
+    # Early stopping thresholds from command-line args
+    val_acc_stop = getattr(args, 'val_acc_stop', None)
+    train_acc_stop = getattr(args, 'train_acc_stop', None)
+    train_loss_stop = getattr(args, 'train_loss_stop', None)
+    epochs_stop = getattr(args, 'epochs_stop', None)
+    
     while epoch < epochs:
 
         model.train()
@@ -1198,7 +1213,30 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
         save_model_checkpoint(model, optimizer, scheduler, epoch + 1, val_loss, checkpoint_dir, timestamp)
         logger.info(f'Saved checkpoint at epoch {epoch+1} to {checkpoint_path}')
 
-        # Stop only if BOTH incorrect == 0 AND epoch_loss < 0.001
+        # --- EARLY STOPPING LOGIC ---
+        stop_training = False
+        stop_reasons = []
+        # Stop if specified number of epochs (epochs_stop) reached
+        if epochs_stop is not None and (epoch + 1) >= epochs_stop:
+            stop_training = True
+            stop_reasons.append(f"Reached user-specified maximum epochs ({epochs_stop})")
+        # Stop if validation accuracy threshold met
+        if val_acc_stop is not None and val_acc >= val_acc_stop:
+            stop_training = True
+            stop_reasons.append(f"Validation accuracy {val_acc:.4f} >= threshold {val_acc_stop}")
+        # Stop if training accuracy threshold met
+        if train_acc_stop is not None and epoch_acc >= train_acc_stop:
+            stop_training = True
+            stop_reasons.append(f"Training accuracy {epoch_acc:.4f} >= threshold {train_acc_stop}")
+        # Stop if training loss threshold met
+        if train_loss_stop is not None and epoch_loss <= train_loss_stop:
+            stop_training = True
+            stop_reasons.append(f"Training loss {epoch_loss:.6f} <= threshold {train_loss_stop}")
+        if stop_training:
+            logger.info("Early stopping triggered. Reasons:")
+            for reason in stop_reasons:
+                logger.info(f"  - {reason}")
+            break
         if incorrect == 0 and epoch_loss < 0.001:
             logger.info(f"Stopping training: incorrect == 0 and loss < 0.001 (loss={epoch_loss:.4f})")
             break

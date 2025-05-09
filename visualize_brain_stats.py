@@ -331,17 +331,36 @@ class BrainStatsVisualizer:
         # Axis sync state
         sync_axes_var = tk.BooleanVar(value=True)
 
+        def set_axes_equal(ax, data):
+            import numpy as np
+            # data: dict with 'top_pathways', each is a dict with 'pathway': list of [x, y, z]
+            all_points = np.concatenate([np.array(p['pathway']) for p in data['top_pathways']], axis=0)
+            x_mid = (all_points[:,0].max() + all_points[:,0].min()) * 0.5
+            y_mid = (all_points[:,1].max() + all_points[:,1].min()) * 0.5
+            z_mid = (all_points[:,2].max() + all_points[:,2].min()) * 0.5
+            max_range = np.array([
+                all_points[:,0].max() - all_points[:,0].min(),
+                all_points[:,1].max() - all_points[:,1].min(),
+                all_points[:,2].max() - all_points[:,2].min()
+            ]).max() / 2.0
+            ax.set_xlim(x_mid - max_range, x_mid + max_range)
+            ax.set_ylim(y_mid - max_range, y_mid + max_range)
+            ax.set_zlim(z_mid - max_range, z_mid + max_range)
+
         def draw_stereo(angle):
             ax_left.clear()
             ax_right.clear()
             # Draw the same data for both eyes
             visualize_top_pathways(data, epoch, ax_left, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
             visualize_top_pathways(data, epoch, ax_right, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
+            # Center and equalize axes for true symmetry
+            set_axes_equal(ax_left, data)
+            set_axes_equal(ax_right, data)
             # Set stereoscopic viewpoints
             ax_left.view_init(elev=elev, azim=center_azim - angle/2)
             ax_right.view_init(elev=elev, azim=center_azim + angle/2)
             if sync_axes_var.get():
-                # Synchronize axis limits
+                # Synchronize axis limits (optional, but should already be equal)
                 xlims = ax_left.get_xlim()
                 ax_right.set_xlim(xlims)
                 ylims = ax_left.get_ylim()
@@ -359,7 +378,7 @@ class BrainStatsVisualizer:
         slider_frame.pack(side=tk.BOTTOM, pady=5)
         angle_label = tk.Label(slider_frame, text="Stereo Angle (degrees):")
         angle_label.pack(side=tk.LEFT)
-        angle_slider = tk.Scale(slider_frame, from_=0, to=30, orient=tk.HORIZONTAL, length=300)
+        angle_slider = tk.Scale(slider_frame, from_=-30, to=30, orient=tk.HORIZONTAL, length=300)
         angle_slider.set(DEFAULT_STEREO_ANGLE)
         angle_slider.pack(side=tk.LEFT)
 

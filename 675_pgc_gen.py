@@ -84,7 +84,7 @@ input_size = 784  # Flatten the 28x28 images
 embedding_size = 784 # 784  #512  # Size of the embedding space
 num_heads = 1
 address_space_dim = 3  # Dimensionality of the address space (configurable)
-address_space_size = 4 # 8 # 14 # 8 #6  # Size of each dimension in the address space
+address_space_size = 5 # 8 # 14 # 8 #6  # Size of each dimension in the address space
 brain_size = address_space_size  # Size of each dimension in the brain grid
 num_jumps = 24 # 7 #5 # 3 # Number of steps through the brain
 

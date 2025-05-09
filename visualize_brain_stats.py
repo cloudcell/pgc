@@ -291,9 +291,16 @@ class BrainStatsVisualizer:
         show_legend = self.show_legend.get()
         vary_line_thickness = self.vary_line_thickness.get()
 
-        # Prepare rotated data for each eye
-        data_left = self._rotate_pathways_about_y(data, -self.STEREO_OFFSET)
-        data_right = self._rotate_pathways_about_y(data, self.STEREO_OFFSET)
+        # Start with identical data for both eyes (no rotation)
+        def get_rotated_data(angle):
+            # Returns (left_data, right_data) with the given angle (degrees)
+            left_data = self._rotate_pathways_about_y(data, -angle/2)
+            right_data = self._rotate_pathways_about_y(data, +angle/2)
+            return left_data, right_data
+
+        # Initial angle
+        stereo_angle = 0
+        data_left, data_right = get_rotated_data(stereo_angle)
 
         # Create window and layout
         stereo_win = tk.Toplevel(self.root)
@@ -319,20 +326,50 @@ class BrainStatsVisualizer:
         ax_left = fig_left.add_subplot(111, projection='3d')
         fig_right = plt.figure(figsize=(6, 6))
         ax_right = fig_right.add_subplot(111, projection='3d')
-        visualize_top_pathways(data_left, epoch, ax_left, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
-        visualize_top_pathways(data_right, epoch, ax_right, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
-        default_elev = ax_left.elev
-        default_azim = ax_left.azim
-        ax_left.view_init(elev=default_elev, azim=default_azim)
-        ax_right.view_init(elev=default_elev, azim=default_azim)
 
         # Canvases
         left_canvas = FigureCanvasTkAgg(fig_left, master=left_frame)
-        left_canvas.draw()
         left_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
         right_canvas = FigureCanvasTkAgg(fig_right, master=right_frame)
-        right_canvas.draw()
         right_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+
+        def draw_stereo(angle):
+            left_data, right_data = get_rotated_data(angle)
+            ax_left.clear()
+            ax_right.clear()
+            visualize_top_pathways(left_data, epoch, ax_left, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
+            visualize_top_pathways(right_data, epoch, ax_right, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
+            # Synchronize axis limits
+            xlims = ax_left.get_xlim()
+            ax_right.set_xlim(xlims)
+            ylims = ax_left.get_ylim()
+            ax_right.set_ylim(ylims)
+            zlims = ax_left.get_zlim()
+            ax_right.set_zlim(zlims)
+            # Synchronize view angles
+            default_elev = ax_left.elev
+            default_azim = ax_left.azim
+            ax_left.view_init(elev=default_elev, azim=default_azim)
+            ax_right.view_init(elev=default_elev, azim=default_azim)
+            left_canvas.draw()
+            right_canvas.draw()
+
+        # Initial draw
+        draw_stereo(stereo_angle)
+
+        # Stereo angle slider
+        slider_frame = tk.Frame(stereo_win)
+        slider_frame.pack(side=tk.BOTTOM, pady=5)
+        angle_label = tk.Label(slider_frame, text="Stereo Angle (degrees):")
+        angle_label.pack(side=tk.LEFT)
+        angle_slider = tk.Scale(slider_frame, from_=0, to=30, orient=tk.HORIZONTAL, length=300)
+        angle_slider.set(0)
+        angle_slider.pack(side=tk.LEFT)
+
+        def on_slider(val):
+            angle = float(val)
+            draw_stereo(angle)
+        angle_slider.config(command=on_slider)
 
         # Track which canvas is on which side
         state = {'left_canvas': left_canvas, 'right_canvas': right_canvas, 'left_frame': left_frame, 'right_frame': right_frame}

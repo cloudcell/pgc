@@ -148,13 +148,24 @@ if 0:
 
 # Step 3: Define the Self-Organizing Brain Model
 class SelfOrganizingBrain(nn.Module):
-    def __init__(self, input_size=784, embedding_size=256, brain_size=3, address_dim=2, num_heads=1, num_jumps=2):
+    def __init__(self, input_size=784, embedding_size=256, brain_size=3, address_dim=2, num_heads=1, num_jumps=2, num_classes=128):
         super().__init__()
         self.embedding_size = embedding_size
         self.brain_size = brain_size
         self.address_dim = address_dim
         self.num_heads = num_heads
         self.num_jumps = num_jumps
+        self.num_classes = num_classes
+        # Store model config for checkpointing and loading
+        self.model_config = {
+            'input_size': input_size,
+            'embedding_size': embedding_size,
+            'brain_size': brain_size,
+            'address_dim': address_dim,
+            'num_heads': num_heads,
+            'num_jumps': num_jumps,
+            'num_classes': num_classes
+        }
         
         # Initial embedding of input
         self.embedding = nn.Linear(input_size, embedding_size)
@@ -198,6 +209,23 @@ class SelfOrganizingBrain(nn.Module):
         
         # Additional transformation for absolute addressing
         self.absolute_transform = nn.Linear(embedding_size, self.address_dim * brain_size)
+
+    @classmethod
+    def get_config_from_model(cls, model):
+        """Retrieve model config from an instance (including DataParallel-wrapped)."""
+        base_model = model.module if hasattr(model, 'module') else model
+        if hasattr(base_model, 'model_config'):
+            return base_model.model_config
+        # Fallback: try to get from attributes
+        return {
+            'input_size': getattr(base_model, 'input_size', None),
+            'num_classes': getattr(base_model, 'num_classes', None),
+            'embedding_size': getattr(base_model, 'embedding_size', None),
+            'brain_size': getattr(base_model, 'brain_size', None),
+            'address_dim': getattr(base_model, 'address_dim', None),
+            'num_heads': getattr(base_model, 'num_heads', None),
+            'num_jumps': getattr(base_model, 'num_jumps', None)
+        }
     
     def get_block_index(self, *coords):
         """Convert n-dimensional coordinates to flat index"""

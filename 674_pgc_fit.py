@@ -79,12 +79,26 @@ if not args.cpu and torch.cuda.is_available():
 else:
     logger.info('Using CPU')
 
-# Constants
+# --- Utility to retrieve model config and set globals ---
+def set_globals_from_model(model):
+    """Set global hyperparameter variables from a model instance."""
+    config = SelfOrganizingBrain.get_config_from_model(model)
+    globals()['input_size'] = config['input_size']
+    globals()['num_classes'] = config['num_classes']
+    globals()['embedding_size'] = config['embedding_size']
+    globals()['address_space_dim'] = config['address_dim']
+    globals()['address_space_size'] = config['brain_size']
+    globals()['num_jumps'] = config['num_jumps']
+    # Optionally: num_heads, etc.
+    logger.info(f"Loaded model config: {config}")
+
+# Constants (will be overwritten by set_globals_from_model if loading a model)
 NUM_EPOCHS = 1024 #40
 BATCH_SIZE = 64 * len(CUDA_DEVICES) * 8 # * 4
 CHUNK_SIZE = 32 * 4 * 4  # Adjust based on GPU memory
 
 input_size = 784  # Flatten the 28x28 images
+num_classes = 128
 embedding_size = 784  #512  # Size of the embedding space
 num_heads = 1
 address_space_dim = 3  # Dimensionality of the address space (configurable)
@@ -152,14 +166,27 @@ test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False,
 
 # Step 3: Define the Self-Organizing Brain Model
 class SelfOrganizingBrain(nn.Module):
-    def __init__(self, input_size=784, embedding_size=256, brain_size=3, address_dim=2, num_heads=1, num_jumps=2):
+    def __init__(self, input_size=784, num_classes=128, embedding_size=256, brain_size=3, address_dim=2, num_heads=1, num_jumps=2):
         super().__init__()
+        self.input_size = input_size
+        self.num_classes = num_classes
         self.embedding_size = embedding_size
         self.brain_size = brain_size
         self.address_dim = address_dim
         self.num_heads = num_heads
         self.num_jumps = num_jumps
         
+        # Store config for later retrieval
+        self.model_config = {
+            'input_size': input_size,
+            'num_classes': num_classes,
+            'embedding_size': embedding_size,
+            'brain_size': brain_size,
+            'address_dim': address_dim,
+            'num_heads': num_heads,
+            'num_jumps': num_jumps
+        }
+
         # Initial embedding of input
         self.embedding = nn.Linear(input_size, embedding_size)
         
@@ -193,6 +220,32 @@ class SelfOrganizingBrain(nn.Module):
             nn.ReLU(),
             nn.Linear(embedding_size, num_classes)  # 128 classes for ASCII values
         )
+        
+        # Initialize statistics tracking
+        self.reset_stats()
+        
+        # Fixed start address
+        self.start_address = nn.Parameter(torch.zeros(1, self.address_dim, dtype=torch.long), requires_grad=False)
+        
+        # Additional transformation for absolute addressing
+        self.absolute_transform = nn.Linear(embedding_size, self.address_dim * brain_size)
+
+    @classmethod
+    def get_config_from_model(cls, model):
+        """Retrieve model config from an instance (including DataParallel-wrapped)."""
+        base_model = model.module if hasattr(model, 'module') else model
+        if hasattr(base_model, 'model_config'):
+            return base_model.model_config
+        # Fallback: try to get from attributes
+        return {
+            'input_size': getattr(base_model, 'input_size', None),
+            'num_classes': getattr(base_model, 'num_classes', None),
+            'embedding_size': getattr(base_model, 'embedding_size', None),
+            'brain_size': getattr(base_model, 'brain_size', None),
+            'address_dim': getattr(base_model, 'address_dim', None),
+            'num_heads': getattr(base_model, 'num_heads', None),
+            'num_jumps': getattr(base_model, 'num_jumps', None)
+        }
         
         # Initialize statistics tracking
         self.reset_stats()

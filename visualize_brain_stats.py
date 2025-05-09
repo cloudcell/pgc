@@ -382,6 +382,31 @@ class BrainStatsVisualizer:
         angle_slider.set(DEFAULT_STEREO_ANGLE)
         angle_slider.pack(side=tk.LEFT)
 
+        # Mouse wheel support for angle slider
+        def on_mousewheel(event):
+            # For Windows/Mac, event.delta is a multiple of 120; for Linux, event.num is 4/5
+            if hasattr(event, 'delta') and event.delta:
+                delta = int(event.delta / 120)
+            elif hasattr(event, 'num'):
+                # Linux: 4 is up, 5 is down
+                if event.num == 4:
+                    delta = 1
+                elif event.num == 5:
+                    delta = -1
+                else:
+                    delta = 0
+            else:
+                delta = 0
+            if delta != 0:
+                new_val = angle_slider.get() + delta
+                angle_slider.set(max(-30, min(30, new_val)))
+                draw_stereo(angle_slider.get())
+
+        # Bind mouse wheel events (cross-platform)
+        angle_slider.bind("<MouseWheel>", on_mousewheel)      # Windows and Mac
+        angle_slider.bind("<Button-4>", on_mousewheel)        # Linux scroll up
+        angle_slider.bind("<Button-5>", on_mousewheel)        # Linux scroll down
+
         def on_slider(val):
             angle = float(val)
             draw_stereo(angle)

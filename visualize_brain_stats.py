@@ -192,13 +192,14 @@ def visualize_top_pathways(data, epoch, ax=None, top_n=5, show_legend=True, vary
 class BrainStatsVisualizer:
     STEREO_OFFSET = 5  # degrees for stereo separation
 
-    def __init__(self, files=None):
+    def __init__(self, files=None, folder_name=None):
         self.files = files or []
         self.current_frame = 0
         self.is_playing = False
         self.interval = 500  # Default interval in ms (2 fps)
         self.last_loaded_folder = None  # Track the last loaded folder
         self.top_n_pathways = 5  # Default value for top pathways
+        self.folder_name = folder_name
         self.setup_ui()
 
     def on_frame_change(self, value):
@@ -486,7 +487,10 @@ class BrainStatsVisualizer:
     def setup_ui(self):
         # Create the main window
         self.root = tk.Tk()
-        self.root.title("Brain Stats Visualizer")
+        title = "PGC Training Stats Visualizer"
+        if getattr(self, 'folder_name', None):
+            title += f" - {self.folder_name}"
+        self.root.title(title)
         self.root.geometry("1200x800")
         
         # Create menu bar
@@ -922,6 +926,7 @@ def main():
             print(f"No brain_stats_train_epoch_*.json files found in {args.stats_dir}")
             return
         
+        folder_name = os.path.basename(os.path.normpath(args.stats_dir))
         if args.no_animation:
             # Just show the first and last epoch
             first_data = load_json_data(files[0])
@@ -950,10 +955,25 @@ def main():
                 plt.show()
         else:
             # Use the interactive visualizer with pre-loaded files
-            visualizer = BrainStatsVisualizer(files)
+            visualizer = BrainStatsVisualizer(files, folder_name=folder_name)
             visualizer.run()
     else:
-        # Start the visualizer without files, user can open them from the menu
+        # Try to find the latest stats_* subfolder in ./brain_stats/
+        stats_root = os.path.join(os.path.dirname(__file__), "brain_stats")
+        if os.path.isdir(stats_root):
+            subfolders = [d for d in os.listdir(stats_root) if d.startswith("stats_") and os.path.isdir(os.path.join(stats_root, d))]
+            if subfolders:
+                # Sort lexicographically (timestamp format is sortable)
+                latest_subfolder = sorted(subfolders)[-1]
+                stats_dir = os.path.join(stats_root, latest_subfolder)
+                print(f"Auto-loading latest stats folder: {stats_dir}")
+                files = load_stats_files(stats_dir)
+                if files:
+                    folder_name = os.path.basename(os.path.normpath(stats_dir))
+                    visualizer = BrainStatsVisualizer(files, folder_name=folder_name)
+                    visualizer.run()
+                    return
+        # If not found, fall back to interactive
         visualizer = BrainStatsVisualizer()
         visualizer.run()
 

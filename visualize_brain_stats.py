@@ -190,6 +190,8 @@ def visualize_top_pathways(data, epoch, ax=None, top_n=5, show_legend=True, vary
 
 
 class BrainStatsVisualizer:
+    STEREO_OFFSET = 5  # degrees for stereo separation
+
     def __init__(self, files=None):
         self.files = files or []
         self.current_frame = 0
@@ -255,6 +257,114 @@ class BrainStatsVisualizer:
     def on_speed_change(self, value):
         self.interval = int(1000 / int(value))  # Convert to interval in ms and ensure integer
 
+    def _rotate_pathways_about_y(self, data, angle_deg):
+        """Return a deep copy of data with all pathway coordinates rotated about the 3D Y axis by angle_deg."""
+        import copy
+        angle_rad = np.deg2rad(angle_deg)
+        rot_matrix = np.array([
+            [np.cos(angle_rad), 0, np.sin(angle_rad)],
+            [0, 1, 0],
+            [-np.sin(angle_rad), 0, np.cos(angle_rad)]
+        ])
+        data_rot = copy.deepcopy(data)
+        for pathway in data_rot.get('top_pathways', []):
+            arr = np.array(pathway['pathway'])
+            arr_rot = arr @ rot_matrix.T
+            pathway['pathway'] = arr_rot.tolist()
+        return data_rot
+
+    def open_stereo_view(self):
+        # --- Stereo view logic fully inside this method ---
+        import matplotlib.pyplot as plt
+        from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+        import tkinter as tk
+
+        # Get data for current frame
+        if not self.files or self.current_frame < 0 or self.current_frame >= len(self.files):
+            return
+        file_path = self.files[self.current_frame]
+        data = load_json_data(file_path)
+        if not data:
+            return
+        epoch = data.get('epoch', extract_epoch_number(file_path))
+        top_n = self.top_n_pathways
+        show_legend = self.show_legend.get()
+        vary_line_thickness = self.vary_line_thickness.get()
+
+        # Prepare rotated data for each eye
+        data_left = self._rotate_pathways_about_y(data, -self.STEREO_OFFSET)
+        data_right = self._rotate_pathways_about_y(data, self.STEREO_OFFSET)
+
+        # Create window and layout
+        stereo_win = tk.Toplevel(self.root)
+        stereo_win.title("Stereo Pathway View")
+        stereo_win.geometry("1500x800")
+        instruction = tk.Label(
+            stereo_win,
+            text="To see 3D: cross your eyes or look through the images until they overlap. Use 'Swap Left/Right' for parallel/cross-eyed mode.",
+            font=("Arial", 12)
+        )
+        instruction.pack(side=tk.TOP, pady=10)
+        main_frame = tk.Frame(stereo_win)
+        main_frame.pack(fill=tk.BOTH, expand=True)
+        left_frame = tk.Frame(main_frame)
+        left_frame.pack(side=tk.LEFT, padx=(30, 10), pady=10, fill=tk.BOTH, expand=True)
+        gap_frame = tk.Frame(main_frame, width=40)
+        gap_frame.pack(side=tk.LEFT, fill=tk.Y)
+        right_frame = tk.Frame(main_frame)
+        right_frame.pack(side=tk.LEFT, padx=(10, 30), pady=10, fill=tk.BOTH, expand=True)
+
+        # Create figures and axes
+        fig_left = plt.figure(figsize=(6, 6))
+        ax_left = fig_left.add_subplot(111, projection='3d')
+        fig_right = plt.figure(figsize=(6, 6))
+        ax_right = fig_right.add_subplot(111, projection='3d')
+        visualize_top_pathways(data_left, epoch, ax_left, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
+        visualize_top_pathways(data_right, epoch, ax_right, top_n=top_n, show_legend=show_legend, vary_line_thickness=vary_line_thickness)
+        default_elev = ax_left.elev
+        default_azim = ax_left.azim
+        ax_left.view_init(elev=default_elev, azim=default_azim)
+        ax_right.view_init(elev=default_elev, azim=default_azim)
+
+        # Canvases
+        left_canvas = FigureCanvasTkAgg(fig_left, master=left_frame)
+        left_canvas.draw()
+        left_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+        right_canvas = FigureCanvasTkAgg(fig_right, master=right_frame)
+        right_canvas.draw()
+        right_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+
+        # Track which canvas is on which side
+        state = {'left_canvas': left_canvas, 'right_canvas': right_canvas, 'left_frame': left_frame, 'right_frame': right_frame}
+
+        def swap_left_right():
+            # Remove both canvases
+            state['left_canvas'].get_tk_widget().pack_forget()
+            state['right_canvas'].get_tk_widget().pack_forget()
+            # Swap frames
+            state['left_canvas'], state['right_canvas'] = state['right_canvas'], state['left_canvas']
+            # Re-pack in swapped frames
+            state['left_canvas'].get_tk_widget().pack(fill=tk.BOTH, expand=True)
+            state['right_canvas'].get_tk_widget().pack(fill=tk.BOTH, expand=True)
+
+        swap_btn = tk.Button(stereo_win, text="Swap Left/Right", command=swap_left_right)
+        swap_btn.pack(side=tk.BOTTOM, pady=10)
+
+        # Synchronize rotation
+        def sync_rotation(event):
+            src_ax, dst_ax = None, None
+            if event.inaxes == ax_left:
+                src_ax, dst_ax = ax_left, ax_right
+            elif event.inaxes == ax_right:
+                src_ax, dst_ax = ax_right, ax_left
+            if src_ax and dst_ax:
+                dst_ax.view_init(elev=src_ax.elev, azim=src_ax.azim)
+                state['left_canvas'].draw()
+                state['right_canvas'].draw()
+
+        fig_left.canvas.mpl_connect('button_release_event', sync_rotation)
+        fig_right.canvas.mpl_connect('button_release_event', sync_rotation)
+
     def reload_current_folder(self):
         """Reload the currently loaded folder and update the UI."""
         if not self.last_loaded_folder:
@@ -268,6 +378,22 @@ class BrainStatsVisualizer:
         self.frame_slider.config(from_=0, to=len(self.files)-1)
         self.update_frame(0)
         self.status_label.config(text=f"Reloaded folder: {self.last_loaded_folder}")
+
+    def open_stats_folder(self):
+        """Open a stats folder and load the brain stats files."""
+        stats_dir = select_stats_folder()
+        if not stats_dir:
+            return
+        # Load the files
+        files = load_stats_files(stats_dir)
+        if not files:
+            self.status_label.config(text=f"No brain_stats_train_epoch_*.json files found in {stats_dir}")
+            return
+        self.files = files
+        self.last_loaded_folder = stats_dir
+        self.frame_slider.config(from_=0, to=len(self.files)-1)
+        self.update_frame(0)
+        self.status_label.config(text=f"Loaded folder: {stats_dir}")
 
     def setup_ui(self):
         # Create the main window
@@ -346,6 +472,10 @@ class BrainStatsVisualizer:
         self.reload_button = Button(self.control_frame, text="Reload Folder", command=self.reload_current_folder)
         self.reload_button.pack(side=tk.LEFT, padx=(0, 10))
 
+        # Add stereo view button
+        self.stereo_button = Button(self.control_frame, text="Stereo View", command=self.open_stereo_view)
+        self.stereo_button.pack(side=tk.LEFT, padx=(0, 10))
+
         # Add tickbox for legend
         self.show_legend = tk.BooleanVar(value=True)
         self.legend_checkbox = tk.Checkbutton(self.control_frame, text="Show Legend", variable=self.show_legend, command=lambda: self.update_frame(self.current_frame))
@@ -374,43 +504,20 @@ class BrainStatsVisualizer:
     def create_menu_bar(self):
         """Create the menu bar with File and Help menus."""
         menu_bar = tk.Menu(self.root)
-        
+
         # File menu
         file_menu = tk.Menu(menu_bar, tearoff=0)
         file_menu.add_command(label="Open Stats Folder...", command=self.open_stats_folder)
         file_menu.add_separator()
         file_menu.add_command(label="Exit", command=self.root.quit)
         menu_bar.add_cascade(label="File", menu=file_menu)
-        
+
         # Help menu
         help_menu = tk.Menu(menu_bar, tearoff=0)
         help_menu.add_command(label="Usage Guide", command=self.show_usage_guide)
-        help_menu.add_command(label="About", command=self.show_about)
         menu_bar.add_cascade(label="Help", menu=help_menu)
-        
+
         self.root.config(menu=menu_bar)
-    
-    def open_stats_folder(self):
-        """Open a stats folder and load the brain stats files."""
-        stats_dir = select_stats_folder()
-        if not stats_dir:
-            return
-        
-        # Load the files
-        files = load_stats_files(stats_dir)
-        if not files:
-            self.status_label.config(text=f"No brain_stats_train_epoch_*.json files found in {stats_dir}")
-            return
-        
-        # Update the visualizer with the new files
-        self.files = files
-        self.last_loaded_folder = stats_dir  # Store the last loaded folder path
-        
-        # Update the frame slider range
-        self.frame_slider.config(from_=0, to=len(self.files)-1)
-        
-        # Draw the first frame
-        self.update_frame(0)
     
     def show_usage_guide(self):
         """Show a usage guide dialog."""

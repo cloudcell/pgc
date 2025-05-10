@@ -24,6 +24,10 @@ import glob
 import base64
 from datetime import datetime
 
+# temporary file to be used to feed the data
+tmp_file = '/tmp/pgc_tmp_file.pkl'
+
+
 def uuencode_file(input_file):
     """
     Read a file and uuencode its contents using the standard uuencode utility.
@@ -61,11 +65,13 @@ def run_text_to_binary_dataset(input_file):
     print(f"Running text_to_binary_dataset.py on {input_file}...")
     
     # Ensure the output directory exists
-    output_dir = os.path.join('data', 'NLP', 'raw')
-    os.makedirs(output_dir, exist_ok=True)
+    # output_dir = os.path.join('data', 'NLP', 'raw')
+    # os.makedirs(output_dir, exist_ok=True)
     
     # The output path that 674_pgc_fit.py expects
-    output_file = os.path.join(output_dir, 'corpus_fgmtw_dataset.pkl')
+    # output_file = os.path.join(output_dir, 'corpus_fgmtw_dataset.pkl')
+    output_file = tmp_file
+
     
     # Run text_to_binary_dataset.py as a separate process
     subprocess.run([sys.executable, 'text_to_binary_dataset.py', input_file, output_file], check=True)
@@ -90,7 +96,8 @@ def run_pgc_jam(output_file, mode='jam', fit_args=None):
     os.makedirs(checkpoint_dir, exist_ok=True)
     # Build base args
     base_args = [
-        sys.executable, '674_pgc_fit.py', '--checkpoints', checkpoint_dir,
+        sys.executable, '674_pgc_fit.py', 
+        '--checkpoints', checkpoint_dir,
         '--mode', mode
     ]
     # If user provided extra fit_args, append them
@@ -102,8 +109,21 @@ def run_pgc_jam(output_file, mode='jam', fit_args=None):
     else:
         # Provide defaults if nothing specified
         base_args += [
-            '--val_acc_stop', '100.1', '--train_acc_stop', '100.1', '--train_loss_stop', '0.001', '--epochs_stop', '1024',
-            '--train_incorrect_stop', '0'
+            '--val_acc_stop', '100.1', 
+            '--train_acc_stop', '100.1', 
+            '--train_loss_stop', '0.001', 
+            '--epochs_stop', '1024',
+            '--train_incorrect_stop', '0',
+            '--dataset_path', os.path.join('data', 'NLP', 'raw', 'corpus_fgmtw_dataset.pkl'),  # to be fed from pgc.py
+            '--input_size', '784',
+            '--num_classes', '256',
+            '--embedding_size', '784',
+            '--address_space_dim', '3',
+            '--address_space_size', '3',
+            '--num_jumps', '8',
+            '--batch_size', '2048',
+            '--chunk_size', '256',
+            '--learning_rate_factor', '0.9999999',
         ]
     subprocess.run(base_args, check=True)
     # Find the latest model in the checkpoint directory

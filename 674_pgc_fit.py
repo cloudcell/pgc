@@ -1139,7 +1139,7 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
     
     # Create TensorBoard writer
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    writer_dir = os.path.join(args.tensorboard, f'{os.path.basename(__file__)}_{timestamp}_{embedding_size}e_{address_space_dim}d_{brain_size}s_{num_jumps}i')
+    writer_dir = os.path.join(args.tensorboard, f'{os.path.basename(__file__)}_{timestamp}_{embedding_size}e_{num_classes}c_{address_space_dim}d_{brain_size}s_{num_jumps}i')
     writer = SummaryWriter(writer_dir)
     logger.info(f'TensorBoard logs will be saved to {writer_dir}')
     

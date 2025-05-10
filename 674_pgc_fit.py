@@ -80,6 +80,9 @@ logging.basicConfig(
 logger = logging.getLogger('SelfOrganizingBrain')
 
 
+# Number of digits to show per epoch in file name
+EPOCH_ID_DIGITS = 5
+
 # CUDA devices
 CUDA_DEVICES = [0, 1, 2, 3]  # List of CUDA devices to use for parallelization
 
@@ -681,7 +684,7 @@ def save_model_checkpoint(model, optimizer, scheduler, epoch, loss, checkpoint_d
     base_model = model.module if isinstance(model, nn.DataParallel) else model
     
     # Create checkpoint filename with timestamp and epoch
-    checkpoint_path = os.path.join(checkpoint_dir, f'model_{timestamp}_epoch_{epoch}.pt')
+    checkpoint_path = os.path.join(checkpoint_dir, f'model_{timestamp}_epoch_{epoch:0{EPOCH_ID_DIGITS}d}.pt')
     
     # Save model state, optimizer state, epoch, and loss
     checkpoint = {
@@ -1300,9 +1303,9 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
                 logger.info(f'Current learning rate: {new_lr:.6f}')
         
         # Save checkpoint
-        checkpoint_path = os.path.join(checkpoint_dir, f'model_{timestamp}_epoch_{epoch+1}.pt')
+        checkpoint_path = os.path.join(checkpoint_dir, f'model_{timestamp}_epoch_{epoch+1:0{EPOCH_ID_DIGITS}d}.pt')  
         save_model_checkpoint(model, optimizer, scheduler, epoch + 1, val_loss, checkpoint_dir, timestamp)
-        logger.info(f'Saved checkpoint at epoch {epoch+1} to {checkpoint_path}')
+        logger.info(f'Saved checkpoint at epoch {epoch+1} to {checkpoint_path}') #TODO: cleanup: this is a duplicate message (redundant)
 
         # --- EARLY STOPPING LOGIC ---
         # for mode 'fit' use the default stopping criteria

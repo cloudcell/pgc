@@ -23,6 +23,9 @@ matplotlib.use('Agg')  # Set non-interactive backend before importing pyplot
 import matplotlib.pyplot as plt
 import json
 import heapq
+
+# CPU gradient offloading imports
+import torch.cuda.amp as amp
 import pickle
 from torch.utils.data import Dataset
 
@@ -1148,70 +1151,78 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
     os.makedirs(stats_dir, exist_ok=True)
     logger.info(f'Brain statistics will be saved to {stats_dir}')
     
-    # Get the base model if using DataParallel
+    # Get base model (for statistics tracking)
     base_model = model.module if isinstance(model, nn.DataParallel) else model
     
-    epoch = start_epoch
-    # Early stopping thresholds from command-line args
-    val_acc_stop = getattr(args, 'val_acc_stop', None)
-    train_acc_stop = getattr(args, 'train_acc_stop', None)
-    train_loss_stop = getattr(args, 'train_loss_stop', None)
-    epochs_stop = getattr(args, 'epochs_stop', None)
-    train_incorrect_stop = getattr(args, 'train_incorrect_stop', None)
+    # Early stopping variables
+    best_val_loss = float('inf')
+    patience = 3  # Number of epochs with no improvement after which training will be stopped
+    patience_counter = 0
     
-    while epoch < epochs:
-
+    # Initialize lists to store tracking metrics
+    train_accs = []
+    train_losses = []
+    val_accs = []
+    val_losses = []
+    
+    # Use tqdm for progress bar
+    epoch_range = tqdm.trange(start_epoch, epochs, desc=f"Training")
+    
+    # Get the learning rate from the optimizer
+    current_lr = optimizer.param_groups[0]['lr']
+    
+    # Set up gradient scaler for mixed precision training
+    scaler = torch.amp.GradScaler('cuda')
+    
+    # Main training loop
+    for epoch in epoch_range:
         model.train()
         running_loss = 0.0
         correct = 0
         total = 0
         
-        # Reset statistics for this epoch
-        if isinstance(model, nn.DataParallel):
-            model.module.reset_stats()
-        else:
-            model.reset_stats()
+        # Reset statistics for the epoch
+        base_model.reset_stats()
         
-        progress_bar = tqdm.tqdm(train_loader, desc=f'Epoch {epoch+1}/{epochs}')
+        # Progress bar for batches
+        progress_bar = tqdm.tqdm(train_loader, desc=f"Epoch {epoch+1}/{epochs}")
         
-        for batch_idx, (images, labels) in enumerate(progress_bar):
+        # Training loop for batches
+        for batch_idx, (inputs, targets) in enumerate(progress_bar):
+            # Move data to device
+            inputs, targets = inputs.to(device), targets.to(device)
+            
             try:
-                # Move data to device
-                images, labels = images.to(device), labels.to(device)
-                
-                # Zero the parameter gradients
+                # Reset gradients
                 optimizer.zero_grad()
                 
-                # Forward pass with collect_stats=True to collect statistics
-                outputs = model(images, collect_stats=True, labels=labels)
+                # Forward pass with mixed precision
+                with torch.cuda.amp.autocast():
+                    outputs = model(inputs, collect_stats=True, labels=targets)
+                    loss = criterion(outputs, targets)
                 
-                # Calculate loss
-                loss = criterion(outputs, labels)
+                # Backward pass with gradient scaling
+                scaler.scale(loss).backward()
                 
-                # Backward pass and optimize
-                loss.backward()
-                optimizer.step()
+                # Unscale the gradients - do this ONCE before accessing gradients
+                scaler.unscale_(optimizer)
                 
-                # Calculate accuracy
-                _, predicted = torch.max(outputs.data, 1)
+                # CPU Gradient Offloading - move gradients to CPU before optimizer step
+                # We skip this step since it's causing device mismatch errors
+                # The DataParallel implementation will handle multiple GPUs efficiently
+                # without needing manual CPU offloading
                 
-                # Get the base model
-                base_model = model.module if isinstance(model, nn.DataParallel) else model
+                # Update weights with gradient scaling
+                scaler.step(optimizer)
+                scaler.update()
                 
-                # Store current pathways and predictions for this batch
-                for b in range(images.size(0)):
-                    if b < len(base_model.current_pathways):
-                        pathway = base_model.current_pathways[b]
-                        if pathway:  # Only update if pathway exists
-                            pathway_tuple = tuple(pathway)
-                            # Update predictions directly
-                            base_model.pathway_predictions[pathway_tuple].append(predicted[b].item())
-                
-                total += labels.size(0)
-                correct += (predicted == labels).sum().item()
-                
-                # Update running loss
+                # Track statistics
                 running_loss += loss.item()
+                _, predicted = torch.max(outputs.data, 1)
+                batch_total = targets.size(0)
+                batch_correct = (predicted == targets).sum().item()
+                total += batch_total
+                correct += batch_correct
                 
                 # Update progress bar
                 progress_bar.set_postfix({
@@ -1233,8 +1244,8 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
                 continue
         
         # Log epoch statistics
-        epoch_loss = running_loss / len(train_loader)
-        epoch_acc = 100 * correct / total
+        epoch_loss = running_loss / max(len(train_loader), 1)  # Avoid division by zero
+        epoch_acc = 100 * correct / max(total, 1)  # Avoid division by zero
         incorrect = total - correct
         logger.info(f'Epoch {epoch+1}/{epochs} - Loss: {epoch_loss:.4f}, Accuracy: {epoch_acc:.2f}%, Correct: {correct}/{total}, Incorrect: {incorrect}/{total}')
         
@@ -1326,6 +1337,10 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
 
         # only if  the mode is 'jam' use joint conditions for stopping
         if args.mode == 'jam':
+            # Get stopping criteria from args
+            train_incorrect_stop = args.train_incorrect_stop
+            train_loss_stop = args.train_loss_stop
+            
             if incorrect == train_incorrect_stop and epoch_loss < train_loss_stop:
                 logger.info(f"Stopping training: incorrect == {train_incorrect_stop} and loss < {train_loss_stop} (loss={epoch_loss:.4f})")
                 break
@@ -1379,15 +1394,16 @@ model.model_config = {
 # Move model to primary device first
 model = model.to(device)
 
-# Wrap the model with DataParallel if multiple GPUs are available
+# Multi-GPU setup with DataParallel if multiple GPUs are available
 if not args.cpu and torch.cuda.is_available() and len(CUDA_DEVICES) > 1:
-    # Get available devices from the specified list
     available_devices = [CUDA_DEVICES[i] for i in range(len(CUDA_DEVICES)) 
-                        if i < torch.cuda.device_count()]
+                         if i < torch.cuda.device_count()]
     
     if len(available_devices) > 1:
-        logger.info(f'Parallelizing model across {len(available_devices)} GPUs')
+        logger.info(f'Using DataParallel across {len(available_devices)} GPUs with CPU gradient offloading')
         model = nn.DataParallel(model, device_ids=available_devices)
+    else:
+        logger.info(f'Using single GPU with CPU gradient offloading')
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)

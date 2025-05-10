@@ -75,6 +75,7 @@ def run_text_to_binary_dataset(input_file):
 def run_pgc_jam(output_file, mode='jam'):
     """
     Launch 674_pgc_fit.py to train on the dataset and copy the latest model.
+    Includes all stopping criteria, including train_incorrect_stop.
     
     Args:
         output_file (str): Path to the output file
@@ -87,10 +88,11 @@ def run_pgc_jam(output_file, mode='jam'):
     checkpoint_dir = os.path.join(os.path.dirname(output_file), f'checkpoints_{timestamp}')
     os.makedirs(checkpoint_dir, exist_ok=True)
     
-    # Run 674_pgc_fit.py
+    # Run 674_pgc_fit.py with all stopping criteria, including train_incorrect_stop
     subprocess.run([
         sys.executable, '674_pgc_fit.py', '--checkpoints', checkpoint_dir,
         '--val_acc_stop', '100.1', '--train_acc_stop', '100.1', '--train_loss_stop', '0.001', '--epochs_stop', '1024',
+        '--train_incorrect_stop', '0',
         '--mode', mode
     ], check=True)
     
@@ -112,6 +114,7 @@ def pack_file(input_file, output_file=None, encoding='base64', mode='jam'):
     2. Prepend 98 '@' characters to the encoded data
     3. Launch text_to_binary_dataset.py with the modified data as input
     4. Launch 674_pgc_fit.py to train and copy the latest model
+    5. Supports all stopping criteria: val_acc_stop, train_acc_stop, train_loss_stop, epochs_stop, and train_incorrect_stop.
     
     Args:
         input_file (str): Path to the input file

@@ -39,6 +39,8 @@ parser.add_argument('--val_acc_stop', type=float, default=0.99, required=True, h
 parser.add_argument('--train_acc_stop', type=float, default=0.99, required=True, help='Training accuracy stopping criteria')
 # add stopping criteria for loss (mandatory, i.e. required)
 parser.add_argument('--train_loss_stop', type=float, default=0.001, required=True, help='Training loss stopping criteria')
+# add stopping criterial for incorrect predictions (mandatory, i.e. required)
+parser.add_argument('--train_incorrect_stop', type=int, default=0, required=True, help='Training incorrect predictions stopping criteria')
 # add stopping criteria for epochs (mandatory, i.e. required)
 parser.add_argument('--epochs_stop', type=int, default=1024, required=True, help='Epochs stopping criteria')
 # two modes: jam and fit
@@ -1140,6 +1142,7 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
     train_acc_stop = getattr(args, 'train_acc_stop', None)
     train_loss_stop = getattr(args, 'train_loss_stop', None)
     epochs_stop = getattr(args, 'epochs_stop', None)
+    train_incorrect_stop = getattr(args, 'train_incorrect_stop', None)
     
     while epoch < epochs:
 
@@ -1294,6 +1297,10 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
         if train_loss_stop is not None and epoch_loss <= train_loss_stop:
             stop_training = True
             stop_reasons.append(f"Training loss {epoch_loss:.6f} <= threshold {train_loss_stop}")
+        # Stop if incorrect predictions threshold met
+        if train_incorrect_stop is not None and train_incorrect_stop > 0 and incorrect <= train_incorrect_stop:
+            stop_training = True
+            stop_reasons.append(f"Incorrect predictions {incorrect} <= threshold {train_incorrect_stop}")
         if stop_training:
             logger.info("Early stopping triggered. Reasons:")
             for reason in stop_reasons:

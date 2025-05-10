@@ -62,13 +62,18 @@ class DatasetSelector:
         ttk.Button(self.frame, text="Open Dataset", command=self.open_dataset).grid(row=2, column=0, pady=10)
     
     def find_datasets(self):
-        # Search recursively in all subfolders within 'data' for .pkl files
+        # Search recursively in all subfolders within 'data' and './tmp' for .pkl files
+        search_dirs = ['data', 'tmp']
         datasets = []
-        for root, _, files in os.walk('data'):
-            for file in files:
-                if file.endswith('.pkl'):
-                    datasets.append(os.path.join(root, file))
+        for search_dir in search_dirs:
+            if os.path.exists(search_dir):
+                for root, _, files in os.walk(search_dir):
+                    for file in files:
+                        if file.endswith('.pkl'):
+                            datasets.append(os.path.join(root, file))
+        datasets = sorted(datasets)
         return datasets
+
     
     def open_dataset(self):
         selection = self.listbox.curselection()
@@ -113,7 +118,7 @@ class DatasetViewer:
         
         # Main frame
         self.main_frame = ttk.Frame(root, padding="10")
-        self.main_frame.pack(fill=tk.BOTH, expand=True)
+        self.main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         
         # Create menu bar
         self.create_menu_bar()

@@ -100,31 +100,37 @@ def run_pgc_jam(output_file, mode='jam', fit_args=None):
         '--checkpoints', checkpoint_dir,
         '--mode', mode
     ]
-    # If user provided extra fit_args, append them
-    if fit_args:
-        # Remove leading '--' if present
-        if fit_args and fit_args[0] == '--':
-            fit_args = fit_args[1:]
-        base_args += fit_args
-    else:
-        # Provide defaults if nothing specified
-        base_args += [
-            '--val_acc_stop', '100.1', 
-            '--train_acc_stop', '100.1', 
-            '--train_loss_stop', '0.001', 
-            '--epochs_stop', '1024',
-            '--train_incorrect_stop', '0',
-            '--dataset_path', os.path.join(dataset_dir, dataset_fname),
-            '--input_size', '784',
-            '--num_classes', '256',
-            '--embedding_size', '784',
-            '--address_space_dim', '3',
-            '--address_space_size', '3',
-            '--num_jumps', '8',
-            '--batch_size', '2048',
-            '--chunk_size', '256',
-            '--learning_rate_factor', '0.9999999',
-        ]
+    # Always append fit_args (after removing leading '--' if present)
+    if fit_args and fit_args[0] == '--':
+        fit_args = fit_args[1:]
+    base_args += fit_args
+
+    # Provide defaults only for arguments not present in fit_args
+    default_args = [
+        ('--val_acc_stop', '100.1'),
+        ('--train_acc_stop', '100.1'),
+        ('--train_loss_stop', '0.001'),
+        ('--epochs_stop', '1024'),
+        ('--train_incorrect_stop', '0'),
+        ('--dataset_path', os.path.join(dataset_dir, dataset_fname)),
+        ('--input_size', '784'),
+        ('--num_classes', '256'),
+        ('--embedding_size', '784'),
+        ('--address_space_dim', '3'),
+        ('--address_space_size', '3'),
+        ('--num_jumps', '8'),
+        ('--batch_size', '2048'),
+        ('--chunk_size', '256'),
+        ('--learning_rate_factor', '0.9999999'),
+    ]
+    fit_arg_names = set()
+    for i, arg in enumerate(fit_args):
+        if arg.startswith('--'):
+            fit_arg_names.add(arg)
+    for arg, val in default_args:
+        if arg not in fit_arg_names:
+            base_args += [arg, val]
+
     subprocess.run(base_args, check=True)
     # Find the latest model in the checkpoint directory
     model_files = glob.glob(os.path.join(checkpoint_dir, 'model_*.pt'))
@@ -206,14 +212,14 @@ def main():
     parser.add_argument('--output', required=False, help='Output file (optional, defaults to input filename + .pgc)')
     parser.add_argument('--encoding', default='base64', choices=['base64', 'uuencode', 'verbatim'], help="Encoding method: base64, uuencode, or verbatim (default: base64)")
     parser.add_argument('--mode', default='jam', choices=['jam', 'fit'], help="Mode for 674_pgc_fit.py: jam or fit (default: jam)")
-    parser.add_argument('fit_args', nargs=argparse.REMAINDER, help="Additional arguments to pass to 674_pgc_fit.py (e.g. --val_acc_stop 0.99)")
-    args = parser.parse_args()
+    # Remove fit_args positional argument
+    args, fit_args = parser.parse_known_args()
 
     input_file = args.input
     output_file = args.output
     encoding = args.encoding
     mode = args.mode
-    fit_args = args.fit_args
+    # fit_args is now all unknown args
 
     pack_file(input_file, output_file, encoding=encoding, mode=mode, fit_args=fit_args)
 

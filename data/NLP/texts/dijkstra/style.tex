@@ -1,0 +1,90 @@
+\batchmode
+\hsize=17cm
+\hoffset=-0.54cm
+\voffset=-0.54cm
+\vsize=9.9in
+\footline={}
+\def\rhead{э. дЕЙКСТРА. {\sl "дИСЦИПЛИНА ПРОГРАММИРОВАНИЯ"}}
+\def\leftheadline{
+ \hbox to \hsize{\vbox to 10 pt {}%
+   \llap{\tenbf\folio\kern 1pc}\tenit\rhead\hfil
+ }
+}
+\def\rightheadline{
+ \hbox to \hsize{\vbox to 10 pt {}%
+   \tenit\hfil\rhead\rlap{\kern 1pc\tenbf\folio}
+ }
+}
+\def\makeheadline{
+ \vbox to 0pt{\vskip-22.5pt\ifodd\pageno\rightheadline\else\leftheadline\fi\vss}
+ \nointerlineskip
+}
+\def\emph#1{{\it #1\/}}
+\newcount\chapno
+\chapno=0
+\newcount\subchno
+\newcount\subsubchno
+\newcount\footno
+\def\chapter#1{\penalty-250
+  \advance\chapno by 1
+  \subchno=0
+  \footno=1
+  \bigskip\noindent
+  \centerline{\bf#1}\nobreak\medskip
+}
+\def\subchap#1{\medskip
+\advance\subchno by 1
+\subsubchno=0
+\centerline{{\bf\the\chapno.\the\subchno.~#1}}\smallskip
+}
+\def\subsubchap#1{\medskip
+\advance\subsubchno by 1
+\centerline{{\bf\the\chapno.\the\subchno.\the\subsubchno.~#1}}\smallskip
+}
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern 0pt
+               \vbox{\kern 0pt #1 \kern 0pt}\kern 0pt\vrule}\hrule}}
+\def\bskip{\hskip 0.5em plus 1fil}
+\widowpenalty=10000
+\clubpenalty=10000
+\def\frac#1/#2{\leavevmode\kern.1em
+\raise.5ex\hbox{\the\scriptfont0 #1}\kern-.1em
+/\kern-.15em\lower.25ex\hbox{\the\scriptfont0 #2}}
+\def\N{\char252\relax}
+\def\sign{\mathop{\rm sign}\nolimits}
+\def\kwd#1{\relax\ifmmode\hbox{\bf{}#1}\else{\bf{}#1}\fi}
+\def\intro#1\par{{\narrower#1\par\medskip}}
+\def\dfn#1{{\it#1}}
+\def\pict#1{$$Picture\ #1$$}
+\def\<#1>{\relax%
+\ifmmode\langle\else$\langle$\fi%
+{\hbox{\rm #1}}%
+\ifmmode\rangle\else$\rangle$\fi%
+}
+\def\note#1{\footnote{$^\the\footno$}{#1}\global\advance\footno by 1}
+\def\^{\char"0B\relax}
+\def\{{\char"7B\relax}
+\def\}{\char"7D\relax}
+\def\true{{\it true}}
+\def\GE{\ifmmode\ge\else$\ge$\fi}
+\def\LE{\ifmmode\le\else$\le$\fi}
+\def\NE{\ifmmode\not=\else$\not=$\fi}
+\def\TO{\ifmmode\to\else$\to$\fi}
+\def\var#1{{\it#1}}
+\def\tnot{$\lnot$}
+\def\and{\mathbin{\bf and}}
+\def\or{\mathbin{\bf or}}
+\def\non{\mathop{\bf non}\nolimits}
+\def\нод{\mathop{\rm нод}\nolimits}
+\def\нок{\mathop{\rm нок}\nolimits}
+\def\wp{\mathop{\rm wp}\nolimits}
+\def\wlp{\mathop{\rm wlp}\nolimits}
+\def\cand{\mathbin{\bf cand}}
+\def\wbox{\hbox{[]}}
+\def\wdec{\mathop{\rm wdec}\nolimits}
+\def\abs{\mathop{\rm abs}\nolimits}
+{\obeyspaces\gdef {\ }}
+\def\prg{\bgroup$$\obeyspaces\tt\let\par=\cr\obeylines%
+\vbox\bgroup\halign\bgroup$##$\hfill\cr%
+}
+\def\grp{\egroup\egroup$$\egroup}
+\def\.#1{\kwd{#1}}

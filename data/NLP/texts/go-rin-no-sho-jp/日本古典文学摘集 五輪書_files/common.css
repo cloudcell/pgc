@@ -1,0 +1,140 @@
+@charset "UTF-8";
+:root { --fs-1: 100%; --fs-2: 81.3%; --fs-3: 75%; --fs-4: 68.8%; --fs-5: 56.3%; --fs-6: 37.5%; --lh-1: 2; --lh-2: 1.8; --lh-3: 1.4; --lh-4: 1; --width: 46em; --mv-1: 1em; --mv-2: calc(var(--mv-1) / 2); --mh-page: 1.2em; --mh-1: 3em; --mh-2: calc(var(--mh-1) / 2); --mh-word: .3em; --gray-1: #333; --gray-2: #555; --gray-3: #999; --gray-4: #aaa; --gray-5: #ddd; --gray-6: #f9f9f9; --gray-7: #fff; --a-link: #246; --a-visited: #654; --a-hover: #934; background-color: var(--gray-2) }
+body { display: flex; max-width: calc(var(--width) + var(--mh-page) + 12em); min-height: 100vh; margin: auto; font-family: "Source Han Serif JP", "Noto Serif CJK JP", "Noto Serif JP", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "IPA P明朝", "IPA PMincho", "IPAmj明朝", "IPAmjMincho", serif, sans-serif; background-color: var(--gray-7); color: var(--gray-1); flex-flow: column wrap; justify-content: center; align-content: center; align-items: center }
+  .index { padding-top: 1.6em }
+/* section, div, figure */
+  .quote { margin-right: var(--mh-2); margin-left: var(--mh-2) }
+/* aside */
+  .dat { margin-top: calc(var(--mv-1) * 2.5) }
+  /* .free { background:var(--gray-2); display: flex; padding:1.5em 0; justify-content: center } */
+/* footer */
+  .global { width: 100%; background-color: var(--gray-1); color: var(--gray-5); flex: 1 }
+/* div */
+  .container { width: 100%; max-width: var(--width); padding: 0 var(--mh-page) .5em; box-sizing: border-box; line-height: var(--lh-2) }
+  .fbox { display: flex; max-width: calc(var(--width) + 7em); margin: 0 auto; padding: 1em var(--mh-page); box-sizing: border-box; flex-wrap: wrap; justify-content: space-between }
+    .finner_l { line-height: var(--lh-2); flex-basis: 7.5em }
+    .finner_m { flex-basis: auto }
+    .finner_r { flex-basis: 12em; text-align: center }
+  .modern_blog { padding-left: var(--mh-2); color: var(--gray-3); font-style: italic }
+blockquote { margin: 0 }
+/* div, blockquote */
+  .original_blog { margin-right: var(--mh-2) }
+:is(h1, h2, h3, h4, h5, h6) { line-height: var(--lh-3); color: var(--gray-2) }
+h1 { margin-top: 0; margin-bottom: 1em; font-size: 175% }
+h2 { font-size: 156.3% }
+h3 { font-size: 137.5% }
+h4 { font-size: 118.8% }
+h5 { font-size: var(--fs-1) }
+h6 { font-size: 93.8% }
+hr { height: 1px; border: 0; background-color: var(--gray-5) }
+ .end { margin-top: 2.5em }
+/* ol, ul */ 
+ol,
+ul { padding-left: var(--mh-2) }
+  .path_dir,
+  .path_page { padding-left: 0 }
+ol { list-style-type: cjk-ideographic }
+  .paragraph { padding-left: 0 }
+ul { list-style-type: "\4e00\3001" }
+  .path_footer_m:empty { display: none }
+/* ol li */
+  .paragraph li { display: inline }
+/* ul li */
+  .path_dir li { display: inline-block; margin-right: var(--mh-word) }
+  ul[class^="path_"] li { display: block }
+  ul[class^="path_footer_"] li { font-size: var(--fs-2) }
+  .path_footer_m li { line-height: var(--lh-1); font-size: var(--fs-2) }
+/* dl */
+  .dates { font-size: var(--fs-2) }
+/* dt */
+  dt[class$="_head"] { float: left; clear: left; width: 3.5em }
+  .kn_t dt { padding-left: var(--mh-1); text-indent: calc(-1 * var(--mh-1)) }
+dd { margin-left: var(--mh-2) }
+  .set_om dd { color: var(--gray-3) }
+  .set_om dd + dd { margin-top: var(--mv-2); font-style: italic }
+  dl[class^="kn_"] dd { margin-left: 0; padding-left: var(--mh-1) }
+  .kn_d dd { text-indent: calc(-1 * var(--mh-1)) }
+  dd.al_kn { text-indent: 0 } /* tag needed */
+
+/* p */
+  p[class$="caption_quote"] { text-align: right; font-size: var(--fs-3) }
+    .supplement_caption_quote::before { margin-right: var(--mh-word); background: linear-gradient(transparent 70%, var(--gray-6) 70%); content: "\524d\63b2\5f15\7528\7b87\6240" }
+  .koten_banner { margin-top: 1.5em }
+  .sitename { display: inline-block; margin-top: 0; color: var(--gray-5); font-size: var(--fs-3) }
+q { background: linear-gradient(transparent 70%, var(--gray-6) 70%); quotes: none }
+cite { font-style: inherit }
+  cite::before { content: "\300e" }
+  cite::after { content: "\300f" }
+b,
+i { font-style: inherit; font-weight: inherit }
+/* b */
+  b[class^="m_"] { display: block }
+  .m_b { padding: var(--mv-1) 0 var(--mv-1) var(--mh-2) }
+  .m_f { padding: var(--mv-1) 0 0 var(--mh-2) }
+  .m_i { padding: 0 0 0 var(--mh-2) }
+  .m_r { padding: 0 0 var(--mv-1) var(--mh-2) }
+  .m_s { padding: 0 0 var(--mv-1) calc(var(--mh-2) * 3) }
+  .m_a { padding: 0 0 0 calc(var(--mh-2) * 3) }
+  .point,
+  .written { margin-right: var(--mh-word); margin-left: var(--mh-word); border-bottom-width: 1px; border-bottom-color: var(--gray-5) }
+  .point { border-bottom-style: dashed }
+  .written { border-bottom-style: dotted }
+/* i */
+  .filled,
+  .assistance { color: var(--gray-3) }
+  .edited { color: inherit }
+    .edited::after { color: var(--gray-4); font-size: var(--fs-3); text-decoration: line-through var(--gray-5); content: attr(data-edited) }
+    .presumed { color: var(--gray-4); text-decoration: underline wavy var(--gray-5) }
+    .presumed::after { color: var(--gray-1); content: " " attr(data-presumed) "? " }
+  .nc,
+  .nt,
+  .as_nt { font-size: var(--fs-4); vertical-align: 8% }
+  .ns + .nc { margin-right: var(--mh-word); margin-left: var(--mh-word) }
+/* ruby {} */
+/* time */
+  table[class*="_list"] time { font-size: var(--fs-2) }
+/* small */
+  .cx { margin-right: var(--mh-word); margin-left: var(--mh-word) }
+  .cf { font-size: var(--fs-5); vertical-align: -10% }
+/* sub, sup, span */
+  .so,
+  .su { color: var(--gray-2); font-size: var(--fs-6) }
+/* table */
+  table[class] { width: 100%; box-sizing: border-box; border-spacing: 0 }
+/* tr */
+  table[class*="_list"] tr { display: flex; flex-flow: row wrap; justify-content: space-between }
+  table[class*="_list"] tr:hover { background-color: var(--gray-6) }
+th { font-weight: normal; text-align: left }
+th,
+td { vertical-align: top }
+  th:not(:last-of-type),
+  td:not(:last-of-type) { padding-right: calc(var(--mh-2) / 2) }
+  table[class$="_list_top"] td:first-of-type { flex-basis: 5.1em; text-align: right }
+  table[class$="_list_top"] td:nth-of-type(2),
+  .kura_list td:nth-last-of-type(3) { flex-grow: 1 }
+  table[class$="_list_top"] td:last-of-type,
+  .yomu_list td:last-of-type { text-align: right }
+input,
+button { height: 1.3em; margin: 0; padding: 0; border: 0; line-height: var(--lh-4); font-size: var(--fs-2) }
+/* input */
+  .sc_t { max-width: 75%; background-color: var(--gray-2); color: var(--gray-7) }
+    .sc_t:placeholder-shown { color: var(--gray-5) }
+/* button */
+  .sc_b { width: 25%; background-color: var(--gray-4); color: var(--gray-1); cursor: pointer; transition: .2s }
+    .sc_b:hover { background-color: var(--gray-5); transition: .2s }
+a { background-color: transparent; text-decoration: none }
+  a:link { color: var(--a-link) }
+  a:visited { color: var(--a-visited) }
+  a:hover { color: var(--a-hover); text-decoration: underline }
+  .deco { text-decoration: underline }
+  .l { text-decoration: none }
+    .l:link,
+    .l:visited { color: var(--gray-4) }
+    .l:hover { background-color: var(--a-hover); color: var(--gray-7); text-decoration: inherit }
+  .l_f:link,
+  .l_f:visited { color: inherit }
+/* (common) */
+  /* .original_c {} */
+  .modern_c { color: var(--gray-3); font-style: italic }
+  .xn { display: none }
+  .xh { visibility: hidden }

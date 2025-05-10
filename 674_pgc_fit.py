@@ -1294,33 +1294,35 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
         logger.info(f'Saved checkpoint at epoch {epoch+1} to {checkpoint_path}')
 
         # --- EARLY STOPPING LOGIC ---
-        stop_training = False
-        stop_reasons = []
-        # Stop if specified number of epochs (epochs_stop) reached
-        if epochs_stop is not None and (epoch + 1) >= epochs_stop:
-            stop_training = True
-            stop_reasons.append(f"Reached user-specified maximum epochs ({epochs_stop})")
-        # Stop if validation accuracy threshold met
-        if val_acc_stop is not None and val_acc >= val_acc_stop:
-            stop_training = True
-            stop_reasons.append(f"Validation accuracy {val_acc:.4f} >= threshold {val_acc_stop}")
-        # Stop if training accuracy threshold met
-        if train_acc_stop is not None and epoch_acc >= train_acc_stop:
-            stop_training = True
-            stop_reasons.append(f"Training accuracy {epoch_acc:.4f} >= threshold {train_acc_stop}")
-        # Stop if training loss threshold met
-        if train_loss_stop is not None and epoch_loss <= train_loss_stop:
-            stop_training = True
-            stop_reasons.append(f"Training loss {epoch_loss:.6f} <= threshold {train_loss_stop}")
-        # Stop if incorrect predictions threshold met
-        if train_incorrect_stop is not None and train_incorrect_stop > 0 and incorrect <= train_incorrect_stop:
-            stop_training = True
-            stop_reasons.append(f"Incorrect predictions {incorrect} <= threshold {train_incorrect_stop}")
-        if stop_training:
-            logger.info("Early stopping triggered. Reasons:")
-            for reason in stop_reasons:
-                logger.info(f"  - {reason}")
-            break
+        # for mode 'fit' use the default stopping criteria
+        if args.mode == 'fit':
+            stop_training = False
+            stop_reasons = []
+            # Stop if specified number of epochs (epochs_stop) reached
+            if epochs_stop is not None and (epoch + 1) >= epochs_stop:
+                stop_training = True
+                stop_reasons.append(f"Reached user-specified maximum epochs ({epochs_stop})")
+            # Stop if validation accuracy threshold met
+            if val_acc_stop is not None and val_acc >= val_acc_stop:
+                stop_training = True
+                stop_reasons.append(f"Validation accuracy {val_acc:.4f} >= threshold {val_acc_stop}")
+            # Stop if training accuracy threshold met
+            if train_acc_stop is not None and epoch_acc >= train_acc_stop:
+                stop_training = True
+                stop_reasons.append(f"Training accuracy {epoch_acc:.4f} >= threshold {train_acc_stop}")
+            # Stop if training loss threshold met
+            if train_loss_stop is not None and epoch_loss <= train_loss_stop:
+                stop_training = True
+                stop_reasons.append(f"Training loss {epoch_loss:.6f} <= threshold {train_loss_stop}")
+            # Stop if incorrect predictions threshold met
+            if train_incorrect_stop is not None and train_incorrect_stop > 0 and incorrect <= train_incorrect_stop:
+                stop_training = True
+                stop_reasons.append(f"Incorrect predictions {incorrect} <= threshold {train_incorrect_stop}")
+            if stop_training:
+                logger.info("Early stopping triggered. Reasons:")
+                for reason in stop_reasons:
+                    logger.info(f"  - {reason}")
+                break
 
         # only if  the mode is 'jam' use joint conditions for stopping
         if args.mode == 'jam':

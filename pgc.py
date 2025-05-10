@@ -25,7 +25,8 @@ import base64
 from datetime import datetime
 
 # temporary file to be used to feed the data
-tmp_file = '/tmp/pgc_tmp_file.pkl'
+dataset_dir = 'tmp'
+dataset_fname = 'pgc_tmp_file.pkl'
 
 
 def uuencode_file(input_file):
@@ -65,12 +66,11 @@ def run_text_to_binary_dataset(input_file):
     print(f"Running text_to_binary_dataset.py on {input_file}...")
     
     # Ensure the output directory exists
-    # output_dir = os.path.join('data', 'NLP', 'raw')
-    # os.makedirs(output_dir, exist_ok=True)
+    output_dir = os.path.join(dataset_dir)
+    os.makedirs(output_dir, exist_ok=True)
     
     # The output path that 674_pgc_fit.py expects
-    # output_file = os.path.join(output_dir, 'corpus_fgmtw_dataset.pkl')
-    output_file = tmp_file
+    output_file = os.path.join(output_dir, dataset_fname)
 
     
     # Run text_to_binary_dataset.py as a separate process
@@ -114,7 +114,7 @@ def run_pgc_jam(output_file, mode='jam', fit_args=None):
             '--train_loss_stop', '0.001', 
             '--epochs_stop', '1024',
             '--train_incorrect_stop', '0',
-            '--dataset_path', os.path.join('data', 'NLP', 'raw', 'corpus_fgmtw_dataset.pkl'),  # to be fed from pgc.py
+            '--dataset_path', os.path.join(dataset_dir, dataset_fname),
             '--input_size', '784',
             '--num_classes', '256',
             '--embedding_size', '784',

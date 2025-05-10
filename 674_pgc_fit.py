@@ -45,6 +45,22 @@ parser.add_argument('--train_incorrect_stop', type=int, default=0, required=True
 parser.add_argument('--epochs_stop', type=int, default=1024, required=True, help='Epochs stopping criteria')
 # two modes: jam and fit
 parser.add_argument('--mode', type=str, default='fit', required=True, help='Mode: fit or jam')
+# set all the hyperparameters
+parser.add_argument('--input_size', type=int, default=784, required=True, help='Input size')
+parser.add_argument('--num_classes', type=int, default=128, required=True, help='Number of classes')
+parser.add_argument('--embedding_size', type=int, default=784, required=True, help='Embedding size')
+parser.add_argument('--address_space_dim', type=int, default=3, required=True, help='Address space dimension')
+parser.add_argument('--address_space_size', type=int, default=3, required=True, help='Address space size per dimension')
+parser.add_argument('--num_jumps', type=int, default=8, required=True, help='Number of jumps')
+# batch size
+parser.add_argument('--batch_size', type=int, default=2048, required=False, help='Batch size')
+# chunk size
+parser.add_argument('--chunk_size', type=int, default=256, required=False, help='Chunk size')
+# learning rate factor
+parser.add_argument('--learning_rate_factor', type=float, default=0.9999999, required=False, help='Learning rate factor')
+
+# dataset path
+parser.add_argument('--dataset_path', type=str, default='./test.pkl', required=True, help='Dataset path')
 
 args = parser.parse_args()
 
@@ -97,21 +113,21 @@ def set_globals_from_model(model):
     logger.info(f"Loaded model config: {config}")
 
 # Constants (will be overwritten by set_globals_from_model if loading a model)
-NUM_EPOCHS = 1024 #40
-BATCH_SIZE = 64 * len(CUDA_DEVICES) * 8 # * 4
-CHUNK_SIZE = 32 * 4 * 4  # Adjust based on GPU memory
+NUM_EPOCHS = args.epochs_stop #40
+BATCH_SIZE = args.batch_size # 64 * len(CUDA_DEVICES) * 8 # * 4
+CHUNK_SIZE = args.chunk_size # 32 * 4 * 4  # Adjust based on GPU memory
 
-input_size = 784  # Flatten the 28x28 images
-num_classes = 128
-embedding_size = 784  #512  # Size of the embedding space
+input_size = args.input_size  # Flatten the 28x28 images
+num_classes = args.num_classes
+embedding_size = args.embedding_size  #512  # Size of the embedding space
 num_heads = 1
-address_space_dim = 3  # Dimensionality of the address space (configurable)
-address_space_size = 3 # 5  # 4 #8 #6  # Size of each dimension in the address space
+address_space_dim = args.address_space_dim  # Dimensionality of the address space (configurable)
+address_space_size = args.address_space_size # 5  # 4 #8 #6  # Size of each dimension in the address space
 brain_size = address_space_size  # Size of each dimension in the brain grid
-num_jumps = 8 # 24 #5 # 3 # Number of steps through the brain
+num_jumps = args.num_jumps # 24 #5 # 3 # Number of steps through the brain
 JUMP_OUT_IF_REVISITED = False
 
-LEARNING_RATE_FACTOR = 0.9999999
+LEARNING_RATE_FACTOR = args.learning_rate_factor
 
 # Address range constants for semi-free movement
 # JUMP_MIN = -2  # Minimum address shift (negative for backward movement)
@@ -130,8 +146,7 @@ class TextDataset(Dataset):
 
 # Load NLP dataset
 print("Loading NLP dataset...")
-# dataset_path = os.path.join('data', 'NLP', 'raw', 'text_binary_dataset.pkl')
-dataset_path = os.path.join('data', 'NLP', 'raw', 'corpus_fgmtw_dataset.pkl')
+dataset_path = os.path.join(args.dataset_path)
 with open(dataset_path, 'rb') as f:
     data = pickle.load(f)
 
@@ -1306,13 +1321,17 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
             for reason in stop_reasons:
                 logger.info(f"  - {reason}")
             break
-        if incorrect == 0 and epoch_loss < 0.001:
-            logger.info(f"Stopping training: incorrect == 0 and loss < 0.001 (loss={epoch_loss:.4f})")
-            break
-        elif incorrect == 0:
-            logger.info(f"Not stopping: incorrect == 0 but loss >= 0.001 (loss={epoch_loss:.4f})")
-        elif epoch_loss < 0.001:
-            logger.info(f"Not stopping: loss < 0.001 but incorrect > 0 (incorrect={incorrect})")
+
+        # only if  the mode is 'jam' use joint conditions for stopping
+        if args.mode == 'jam':
+            if incorrect == train_incorrect_stop and epoch_loss < train_loss_stop:
+                logger.info(f"Stopping training: incorrect == {train_incorrect_stop} and loss < {train_loss_stop} (loss={epoch_loss:.4f})")
+                break
+            elif incorrect == train_incorrect_stop:
+                logger.info(f"Not stopping: incorrect == {train_incorrect_stop} but loss >= {train_loss_stop} (loss={epoch_loss:.4f})")
+            elif epoch_loss < train_loss_stop:
+                logger.info(f"Not stopping: loss < {train_loss_stop} but incorrect > {train_incorrect_stop} (incorrect={incorrect})")
+
         epoch += 1
     
     writer.close()

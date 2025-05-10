@@ -1317,12 +1317,11 @@ import re
 # Dynamically generate the timestamp for the checkpoints folder at run time
 checkpoint_timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
 if args.checkpoints:
-    # Remove any existing timestamp suffix from the provided path
-    base_ckpt_dir = re.sub(r'_\d{8}_\d{6}$', '', args.checkpoints)
-    checkpoint_dir = f'{base_ckpt_dir}_{checkpoint_timestamp}'
-    logger.info(f'Using checkpoint directory: {checkpoint_dir}')
+    checkpoint_dir = args.checkpoints
+    logger.info(f'Using provided checkpoint directory: {checkpoint_dir}')
 else:
     checkpoint_dir = f'checkpoints_{checkpoint_timestamp}'
+    logger.info(f'Using new timestamped checkpoint directory: {checkpoint_dir}')
     logger.info(f'Created new checkpoint directory: {checkpoint_dir}')
 
 os.makedirs(checkpoint_dir, exist_ok=True)

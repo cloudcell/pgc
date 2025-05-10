@@ -41,6 +41,17 @@ class DatasetSelector:
         self.root = root
         self.root.title("Dataset Selector")
         
+        # Set window icon (cross-platform)
+        import sys
+        try:
+            if sys.platform.startswith('win'):
+                self.root.iconbitmap("./assets/CLOUDCELL-32x32.ico")
+            else:
+                icon_img = tk.PhotoImage(file="./assets/CLOUDCELL-32x32-0.png")
+                self.root.wm_iconphoto(True, icon_img)
+        except Exception as e:
+            print(f"Warning: Could not load application icon: {e}")
+        
         self.frame = ttk.Frame(root, padding="20")
         self.frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         
@@ -112,13 +123,31 @@ class DatasetViewer:
         self.dataset_path = dataset_path
         self.current_idx = 0
         
+        # Set window icon (cross-platform)
+        import sys
+        try:
+            if sys.platform.startswith('win'):
+                self.root.iconbitmap("./assets/CLOUDCELL-32x32.ico")
+            else:
+                icon_img = tk.PhotoImage(file="./assets/CLOUDCELL-32x32.png")
+                self.root.wm_iconphoto(True, icon_img)
+        except Exception as e:
+            print(f"Warning: Could not load application icon: {e}")
+        
         # Default shape configuration
         self.feature_shape = None
         self.auto_detect_shape = True
         
+        # Configure window to be resizable
+        root.columnconfigure(0, weight=1)
+        root.rowconfigure(0, weight=1)
+        
         # Main frame
         self.main_frame = ttk.Frame(root, padding="10")
         self.main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        
+        # Configure main frame columns and rows to be resizable
+        self.main_frame.columnconfigure(0, weight=1)
         
         # Create menu bar
         self.create_menu_bar()
@@ -134,9 +163,32 @@ class DatasetViewer:
         ttk.Button(nav_frame, text="Previous", command=self.prev_sample).grid(row=0, column=0, padx=5)
         ttk.Button(nav_frame, text="Next", command=self.next_sample).grid(row=0, column=1, padx=5)
         
+        # Sample slider
+        slider_frame = ttk.Frame(self.main_frame)
+        slider_frame.grid(row=2, column=0, columnspan=2, pady=5, sticky=(tk.W, tk.E))
+        
+        # Configure slider frame to expand with main frame
+        slider_frame.columnconfigure(1, weight=1)
+        
+        ttk.Label(slider_frame, text="Sample:").grid(row=0, column=0, padx=5)
+        self.sample_slider = ttk.Scale(slider_frame, orient=tk.HORIZONTAL, 
+                                  from_=0, to=len(self.labels)-1,
+                                  command=self.on_slider_change)
+        self.sample_slider.grid(row=0, column=1, padx=5, sticky=(tk.W, tk.E))
+        self.sample_slider.set(self.current_idx)
+        
+        # Bind mouse wheel events to the slider for scrolling
+        self.sample_slider.bind("<MouseWheel>", self.on_mouse_wheel)  # Windows and macOS
+        self.sample_slider.bind("<Button-4>", self.on_mouse_wheel)   # Linux scroll up
+        self.sample_slider.bind("<Button-5>", self.on_mouse_wheel)   # Linux scroll down
+        
         # Info frame
         info_frame = ttk.Frame(self.main_frame)
-        info_frame.grid(row=2, column=0, columnspan=2, pady=5)
+        info_frame.grid(row=3, column=0, columnspan=2, pady=5, sticky=(tk.W, tk.E))
+        
+        # Configure info frame to expand with window
+        info_frame.columnconfigure(1, weight=1)
+        info_frame.columnconfigure(2, weight=1)
         
         ttk.Label(info_frame, text="Sample Index:").grid(row=0, column=0, padx=5)
         self.index_var = tk.StringVar()
@@ -154,10 +206,15 @@ class DatasetViewer:
         
         # Use a text widget for features text to allow scrolling and selection
         features_frame = ttk.Frame(info_frame)
-        features_frame.grid(row=2, column=1, columnspan=2, padx=5, pady=5, sticky=tk.W)
+        features_frame.grid(row=2, column=1, columnspan=2, padx=5, pady=5, sticky=(tk.W, tk.E))
         
-        self.features_text = tk.Text(features_frame, width=60, height=6, wrap=tk.WORD)
-        self.features_text.pack(side=tk.LEFT, fill=tk.BOTH)
+        # Configure features frame to expand with info frame
+        features_frame.columnconfigure(0, weight=1)
+        features_frame.rowconfigure(0, weight=1)
+        
+        # Create a text widget with scrollbar in a frame
+        self.features_text = tk.Text(features_frame, height=6, wrap=tk.WORD)
+        self.features_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         
         features_scrollbar = ttk.Scrollbar(features_frame, command=self.features_text.yview)
         features_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
@@ -179,6 +236,12 @@ class DatasetViewer:
         menu_bar = tk.Menu(self.root)
         self.root.config(menu=menu_bar)
         
+        # Add file menu
+        file_menu = tk.Menu(menu_bar, tearoff=0)
+        menu_bar.add_cascade(label="File", menu=file_menu)
+        file_menu.add_command(label="Open Different Dataset", command=self.open_different_dataset)
+        file_menu.add_separator()
+        file_menu.add_command(label="Exit", command=self.root.quit)
         # Create Dataset menu
         dataset_menu = tk.Menu(menu_bar, tearoff=0)
         menu_bar.add_cascade(label="Dataset", menu=dataset_menu)
@@ -199,12 +262,6 @@ class DatasetViewer:
         # Add info option
         dataset_menu.add_command(label="Dataset Info", command=self.show_dataset_info)
         
-        # Add file menu
-        file_menu = tk.Menu(menu_bar, tearoff=0)
-        menu_bar.add_cascade(label="File", menu=file_menu)
-        file_menu.add_command(label="Open Different Dataset", command=self.open_different_dataset)
-        file_menu.add_separator()
-        file_menu.add_command(label="Exit", command=self.root.quit)
     
     def set_shape(self, shape):
         if shape == "auto":
@@ -221,7 +278,7 @@ class DatasetViewer:
         # Create a dialog to get custom shape
         dialog = tk.Toplevel(self.root)
         dialog.title("Set Custom Shape")
-        dialog.geometry("300x150")
+        dialog.geometry("300x250")
         dialog.resizable(False, False)
         dialog.transient(self.root)
         dialog.grab_set()
@@ -354,8 +411,9 @@ Current Shape: {self.feature_shape if not self.auto_detect_shape else 'Auto-dete
         return ImageTk.PhotoImage(img)
     
     def show_current_sample(self):
-        # Update index display
+        # Update index display and slider
         self.index_var.set(str(self.current_idx))
+        self.sample_slider.set(self.current_idx)
         
         # Get current sample
         features = self.features[self.current_idx]
@@ -454,6 +512,23 @@ Current Shape: {self.feature_shape if not self.auto_detect_shape else 'Auto-dete
         except ValueError:
             pass
     
+    def on_slider_change(self, value):
+        # Convert value to int and update current index
+        try:
+            new_idx = int(float(value))
+            if new_idx != self.current_idx:
+                self.current_idx = new_idx
+                self.show_current_sample()
+        except ValueError:
+            pass
+            
+    def on_mouse_wheel(self, event):
+        # Determine scroll direction and update index accordingly
+        if event.num == 4 or event.delta > 0:  # Scroll up (Linux) or up (Windows/macOS)
+            self.prev_sample()
+        elif event.num == 5 or event.delta < 0:  # Scroll down (Linux) or down (Windows/macOS)
+            self.next_sample()
+
     def open_different_dataset(self):
         # Clear the main frame
         for widget in self.main_frame.winfo_children():

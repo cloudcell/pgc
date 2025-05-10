@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@media screen {
+/* [404] */
+  .code .status { padding: 10vh 0; text-align: center }
+  .error_message { padding: 1em 0 4em }
+/* "heike, uji, ugetsu, gorin" */
+  .heike  .kura_list td:nth-of-type(1),
+  .uji    .kura_list td:nth-of-type(1),
+  .gorin  .kura_list td:nth-of-type(1),
+  .heike  .kura_list td:nth-of-type(2),
+  .uji    .kura_list td:nth-of-type(2),
+  .ugetsu .kura_list td:nth-of-type(2) { flex-basis: 2.1rem; text-align: right }
+/* "5" */
+  .tono .kura_list .subheading { padding-left: 1rem }
+  .tono .kura_list td:nth-of-type(1) { flex-basis: 7.1rem }
+    .tono .kura_list .ns,
+    .tono .kura_list .nt { display: block; width: 3.1rem; text-align: right }
+      .tono .kura_list .nt::before { content: "*"; color: #a9a9a9 }
+/* "6" */
+  .oku .kura_list td:nth-of-type(1) { width: 2.2rem; text-align: right }
+  .oku .fuki_corr_tb th:nth-of-type(1),
+  .oku .fuki_corr_tb td:nth-of-type(1),
+  .oku .fuki_corr_tb th:nth-of-type(3),
+  .oku .fuki_corr_tb td:nth-of-type(3) { width: 2.6rem; text-align: right }
+  .oku .fuki_corr_tb th:nth-of-type(2),
+  .oku .fuki_corr_tb td:nth-of-type(2),
+  .oku .fuki_corr_tb th:nth-of-type(4),
+  .oku .fuki_corr_tb td:nth-of-type(4) { width: 12rem }
+
+/* "yomu/tsure" */
+  .yomu_tsure .p083_minister_tb_1 td:nth-of-type(1) { width: 6.5rem }
+  .yomu_tsure .p116_temples_tb_1 th:nth-of-type(1) { width: 5rem }
+  .yomu_tsure .p116_temples_tb_1 td:nth-of-type(1) { width: 4rem }
+  .yomu_tsure .p116_temples_tb_1 td:nth-of-type(2) { width: 12rem }
+  .yomu_tsure .p116_temples_tb_1 td:nth-of-type(3) { width: 12rem }
+  .yomu_tsure .p172_comparison_tb_1 td:nth-of-type(1) { width: 5.5rem }
+  .yomu_tsure .p172_comparison_tb_1 td:nth-of-type(2) { width: 2rem }
+/* screen end */ }

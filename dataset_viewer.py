@@ -525,6 +525,26 @@ Max Pixel Value (all samples): {all_max}
                 else:
                     name = ''
             text.insert(tk.END, f"{dec}  {hex_:>4}  {char:^7}  {name}\n")
+
+        # Add Latin-1/ISO-8859-1 section
+        text.insert(tk.END, "\nLatin-1 (ISO-8859-1) Codes 128–255\n")
+        text.insert(tk.END, f"{'Dec':>3}  {'Hex':>4}  {'Char':^7}  {'Unicode Name'}\n")
+        text.insert(tk.END, f"{'-'*3}  {'-'*4}  {'-'*7}  {'-'*20}\n")
+        for code in range(128, 256):
+            dec = f"{code:3}"
+            hex_ = f"0x{code:02X}"
+            char = ''
+            try:
+                c = bytes([code]).decode('latin-1')
+                # Only display printable chars (exclude control, DEL)
+                if 32 <= code <= 126 or 160 <= code <= 255:
+                    char = f"'{c}'"
+                else:
+                    char = ''
+                name = unicodedata.name(c)
+            except Exception:
+                name = ''
+            text.insert(tk.END, f"{dec}  {hex_:>4}  {char:^7}  {name}\n")
         text.config(state=tk.DISABLED)
         ttk.Button(frame, text="Close", command=dialog.destroy).pack(pady=10)
 

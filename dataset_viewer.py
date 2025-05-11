@@ -210,6 +210,15 @@ class DatasetViewer:
         self.char_name_label = ttk.Label(info_frame, textvariable=self.char_name_var, font=("TkDefaultFont", 10, "italic"))
         self.char_name_label.grid(row=2, column=1, columnspan=2, padx=5, sticky=tk.W)
         
+        # File size display at the top
+        try:
+            file_size = os.path.getsize(self.dataset_path)
+            file_size_str = f"File size: {file_size:,} bytes"
+        except Exception:
+            file_size_str = "File size: (unknown)"
+        self.file_size_label = ttk.Label(info_frame, text=file_size_str, foreground="gray")
+        self.file_size_label.grid(row=0, column=0, columnspan=3, sticky=tk.W, padx=5, pady=(0, 2))
+
         # Features as text display (move to next row)
         self.features_text_var = tk.StringVar()
         ttk.Label(info_frame, text="Features as Text:").grid(row=4, column=0, padx=5, sticky=tk.W)
@@ -360,14 +369,10 @@ class DatasetViewer:
         import threading
         from tkinter import messagebox
         
-        # Show progress dialog
-        progress_dialog = tk.Toplevel(self.root)
-        progress_dialog.title("Calculating Statistics...")
-        progress_dialog.geometry("300x80")
-        progress_dialog.transient(self.root)
-        progress_dialog.grab_set()
-        ttk.Label(progress_dialog, text="Calculating statistics, please wait...").pack(padx=20, pady=20)
-        progress_dialog.update()
+        # Show progress dialog using LoadingDialog
+        progress_dialog = LoadingDialog(self.root)
+        progress_dialog.label.config(text="Calculating statistics...")
+        self.root.update()
 
         def calc_and_show():
             import matplotlib
@@ -375,7 +380,11 @@ class DatasetViewer:
             import matplotlib.pyplot as plt
             from io import BytesIO
             import time
+            import os
             # Compute min and max
+            all_min = None
+            all_max = None
+            all_values = None
             try:
                 if isinstance(self.features, torch.Tensor):
                     all_min = float(self.features.min().item())
@@ -390,14 +399,22 @@ class DatasetViewer:
                 all_max = 'Error'
                 all_values = None
 
+            # File size display
+            try:
+                file_size = os.path.getsize(self.dataset_path)
+                file_size_str = f"File size: {file_size:,} bytes"
+            except Exception:
+                file_size_str = "File size: (unknown)"
+
             info_text = f"""
+{file_size_str}
 Dataset Path: {self.dataset_path}
 Number of Samples: {len(self.labels)}
 Feature Size: {self.features[0].numel()}
 Current Shape: {self.feature_shape if not self.auto_detect_shape else 'Auto-detected'}
 Min Pixel Value (all samples): {all_min}
 Max Pixel Value (all samples): {all_max}
-            """
+"""
 
             # Create histogram
             hist_img = None
@@ -422,7 +439,7 @@ Max Pixel Value (all samples): {all_max}
             def show_info():
                 dialog = tk.Toplevel(self.root)
                 dialog.title("Dataset Information")
-                dialog.geometry("500x400")
+                dialog.geometry("520x450")
                 dialog.transient(self.root)
                 dialog.grab_set()
 
@@ -448,56 +465,13 @@ Max Pixel Value (all samples): {all_max}
 
                 ttk.Button(frame, text="Close", command=dialog.destroy).pack(pady=10)
 
+            self.root.after(0, progress_dialog.destroy)
             self.root.after(0, show_info)
 
         # Run stats calculation in a background thread
         thread = threading.Thread(target=calc_and_show)
         thread.start()
         # The function returns immediately, the info dialog will appear when ready
-
-        # Import matplotlib only here to avoid unnecessary dependency if not used
-        import matplotlib
-        matplotlib.use('Agg')  # Use non-interactive backend
-        import matplotlib.pyplot as plt
-        from io import BytesIO
-
-        # Flatten all features to 1D array
-        try:
-            if isinstance(self.features, torch.Tensor):
-                all_values = self.features.cpu().numpy().flatten()
-            else:
-                all_values = np.array(self.features).flatten()
-        except Exception as e:
-            all_values = None
-
-        hist_img = None
-        if all_values is not None and all_min != 'Error' and all_max != 'Error':
-            bin_edges = np.linspace(all_min, all_max, 101)  # 100 bins
-            fig, ax = plt.subplots(figsize=(4, 2.2), dpi=100)
-            ax.hist(all_values, bins=bin_edges, color='skyblue', edgecolor='black')
-            ax.set_title('Histogram of Pixel Values')
-            ax.set_xlabel('Value')
-            ax.set_ylabel('Count')
-            plt.tight_layout()
-            buf = BytesIO()
-            plt.savefig(buf, format='png')
-            plt.close(fig)
-            buf.seek(0)
-            hist_img = Image.open(buf)
-
-        # Create text widget with scrollbar
-        text_frame = ttk.Frame(frame)
-        text_frame.pack(fill=tk.BOTH, expand=True)
-
-        scrollbar = ttk.Scrollbar(text_frame)
-        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-
-        text_widget = tk.Text(text_frame, wrap=tk.WORD, yscrollcommand=scrollbar.set, height=8)
-        text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        scrollbar.config(command=text_widget.yview)
-
-        text_widget.insert(tk.END, info_text)
-        text_widget.config(state=tk.DISABLED)
 
         # Show histogram image if available
         if hist_img is not None:

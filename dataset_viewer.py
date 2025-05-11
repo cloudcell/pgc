@@ -332,24 +332,154 @@ class DatasetViewer:
         height_entry.focus_set()
     
     def show_dataset_info(self):
-        # Create a dialog to show dataset info
-        dialog = tk.Toplevel(self.root)
-        dialog.title("Dataset Information")
-        dialog.geometry("400x300")
-        dialog.transient(self.root)
-        dialog.grab_set()
+        import threading
+        from tkinter import messagebox
         
-        # Frame for info
-        frame = ttk.Frame(dialog, padding="10")
-        frame.pack(fill=tk.BOTH, expand=True)
-        
-        # Dataset info
-        info_text = f"""
+        # Show progress dialog
+        progress_dialog = tk.Toplevel(self.root)
+        progress_dialog.title("Calculating Statistics...")
+        progress_dialog.geometry("300x80")
+        progress_dialog.transient(self.root)
+        progress_dialog.grab_set()
+        ttk.Label(progress_dialog, text="Calculating statistics, please wait...").pack(padx=20, pady=20)
+        progress_dialog.update()
+
+        def calc_and_show():
+            import matplotlib
+            matplotlib.use('Agg')
+            import matplotlib.pyplot as plt
+            from io import BytesIO
+            import time
+            # Compute min and max
+            try:
+                if isinstance(self.features, torch.Tensor):
+                    all_min = float(self.features.min().item())
+                    all_max = float(self.features.max().item())
+                    all_values = self.features.cpu().numpy().flatten()
+                else:
+                    all_min = float(np.min(self.features))
+                    all_max = float(np.max(self.features))
+                    all_values = np.array(self.features).flatten()
+            except Exception as e:
+                all_min = 'Error'
+                all_max = 'Error'
+                all_values = None
+
+            info_text = f"""
 Dataset Path: {self.dataset_path}
 Number of Samples: {len(self.labels)}
 Feature Size: {self.features[0].numel()}
 Current Shape: {self.feature_shape if not self.auto_detect_shape else 'Auto-detected'}
-        """
+Min Pixel Value (all samples): {all_min}
+Max Pixel Value (all samples): {all_max}
+            """
+
+            # Create histogram
+            hist_img = None
+            if all_values is not None and all_min != 'Error' and all_max != 'Error':
+                bin_edges = np.linspace(all_min, all_max, 101)  # 100 bins
+                fig, ax = plt.subplots(figsize=(4, 2.2), dpi=100)
+                ax.hist(all_values, bins=bin_edges, color='skyblue', edgecolor='black')
+                ax.set_title('Histogram of Pixel Values')
+                ax.set_xlabel('Value')
+                ax.set_ylabel('Count')
+                plt.tight_layout()
+                buf = BytesIO()
+                plt.savefig(buf, format='png')
+                plt.close(fig)
+                buf.seek(0)
+                hist_img = Image.open(buf)
+
+            # Now, close progress dialog and show info dialog
+            progress_dialog.destroy()
+
+            # Show info dialog (on main thread)
+            def show_info():
+                dialog = tk.Toplevel(self.root)
+                dialog.title("Dataset Information")
+                dialog.geometry("500x400")
+                dialog.transient(self.root)
+                dialog.grab_set()
+
+                frame = ttk.Frame(dialog, padding="10")
+                frame.pack(fill=tk.BOTH, expand=True)
+
+                # Single text widget for info
+                text_frame = ttk.Frame(frame)
+                text_frame.pack(fill=tk.BOTH, expand=True)
+                scrollbar = ttk.Scrollbar(text_frame)
+                scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+                text_widget = tk.Text(text_frame, wrap=tk.WORD, yscrollcommand=scrollbar.set, height=8)
+                text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+                scrollbar.config(command=text_widget.yview)
+                text_widget.insert(tk.END, info_text)
+                text_widget.config(state=tk.DISABLED)
+
+                # Show histogram image if available
+                if hist_img is not None:
+                    self.hist_imgtk = ImageTk.PhotoImage(hist_img)
+                    img_label = ttk.Label(frame, image=self.hist_imgtk)
+                    img_label.pack(pady=(5, 0))
+
+                ttk.Button(frame, text="Close", command=dialog.destroy).pack(pady=10)
+
+            self.root.after(0, show_info)
+
+        # Run stats calculation in a background thread
+        thread = threading.Thread(target=calc_and_show)
+        thread.start()
+        # The function returns immediately, the info dialog will appear when ready
+
+        # Import matplotlib only here to avoid unnecessary dependency if not used
+        import matplotlib
+        matplotlib.use('Agg')  # Use non-interactive backend
+        import matplotlib.pyplot as plt
+        from io import BytesIO
+
+        # Flatten all features to 1D array
+        try:
+            if isinstance(self.features, torch.Tensor):
+                all_values = self.features.cpu().numpy().flatten()
+            else:
+                all_values = np.array(self.features).flatten()
+        except Exception as e:
+            all_values = None
+
+        hist_img = None
+        if all_values is not None and all_min != 'Error' and all_max != 'Error':
+            bin_edges = np.linspace(all_min, all_max, 101)  # 100 bins
+            fig, ax = plt.subplots(figsize=(4, 2.2), dpi=100)
+            ax.hist(all_values, bins=bin_edges, color='skyblue', edgecolor='black')
+            ax.set_title('Histogram of Pixel Values')
+            ax.set_xlabel('Value')
+            ax.set_ylabel('Count')
+            plt.tight_layout()
+            buf = BytesIO()
+            plt.savefig(buf, format='png')
+            plt.close(fig)
+            buf.seek(0)
+            hist_img = Image.open(buf)
+
+        # Create text widget with scrollbar
+        text_frame = ttk.Frame(frame)
+        text_frame.pack(fill=tk.BOTH, expand=True)
+
+        scrollbar = ttk.Scrollbar(text_frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        text_widget = tk.Text(text_frame, wrap=tk.WORD, yscrollcommand=scrollbar.set, height=8)
+        text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.config(command=text_widget.yview)
+
+        text_widget.insert(tk.END, info_text)
+        text_widget.config(state=tk.DISABLED)
+
+        # Show histogram image if available
+        if hist_img is not None:
+            # Convert to Tkinter-compatible image
+            self.hist_imgtk = ImageTk.PhotoImage(hist_img)
+            img_label = ttk.Label(frame, image=self.hist_imgtk)
+            img_label.pack(pady=(5, 0))
         
         # Create text widget with scrollbar
         text_frame = ttk.Frame(frame)

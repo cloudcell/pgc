@@ -160,11 +160,11 @@ features = data['features']
 labels = data['labels']
 
 # Normalize features to [-1, 1] range like MNIST
-features = features * 2 - 1
+if 0: features = features * 2 - 1  # TODO: fix this
 
 dataset = TextDataset(features, labels)
 # input_size = 784  # Same as MNIST for compatibility
-num_classes = 128  # ASCII values
+num_classes = args.num_classes  # 
 
 # Create data loaders
 train_size = int(len(dataset) * 0.85)
@@ -1140,7 +1140,7 @@ def validate(model, val_loader, criterion, writer=None, epoch=None, global_stats
     
     return final_loss, final_acc
 
-def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epochs=10, start_epoch=0, global_stats_aggregator=None):
+def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epochs=10, start_epoch=0, global_stats_aggregator=None, epochs_stop=None):
     logger.info(f'Starting training for {epochs} epochs from epoch {start_epoch}')
     
     # Create TensorBoard writer
@@ -1435,7 +1435,7 @@ if latest_checkpoint:
 global_stats_aggregator = GlobalStatisticsAggregator()
 
 # Train the model
-trained_model = train(model, train_loader, val_loader, criterion, optimizer, scheduler, epochs=NUM_EPOCHS, start_epoch=start_epoch, global_stats_aggregator=global_stats_aggregator)
+trained_model = train(model, train_loader, val_loader, criterion, optimizer, scheduler, epochs=NUM_EPOCHS, start_epoch=start_epoch, global_stats_aggregator=global_stats_aggregator, epochs_stop=args.epochs_stop)
 
 # Print final statistics summary
 logger.info("Training complete. Final statistics summary:")

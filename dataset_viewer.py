@@ -473,12 +473,6 @@ Max Pixel Value (all samples): {all_max}
         thread.start()
         # The function returns immediately, the info dialog will appear when ready
 
-        # Show histogram image if available
-        if hist_img is not None:
-            # Convert to Tkinter-compatible image
-            self.hist_imgtk = ImageTk.PhotoImage(hist_img)
-            img_label = ttk.Label(frame, image=self.hist_imgtk)
-            img_label.pack(pady=(5, 0))
         
         # Create text widget with scrollbar
         text_frame = ttk.Frame(frame)

@@ -647,9 +647,46 @@ Max Pixel Value (all samples): {all_max}
                 if logo_imgtk_list[3]:
                     logo_label.config(image=logo_imgtk_list[3])
                     logo_label.image = logo_imgtk_list[3]
+        def on_logo_double_click(event):
+            if not rotating['active']:
+                return  # Only allow while spinning
+            # Pause rotation
+            if rotating['job']:
+                dialog.after_cancel(rotating['job'])
+                rotating['job'] = None
+            base_img = logo_imgs[3]
+            orig_size = base_img.size if base_img else (100, 100)
+            min_scale = 0.05
+            steps = 12
+            duration = 350  # ms for shrink or grow
+            step_delay = duration // steps
+            scales_down = [1 - (i / steps) * (1 - min_scale) for i in range(steps + 1)]
+            scales_up = [min_scale + (i / steps) * (1 - min_scale) for i in range(steps + 1)]
+            def show_scaled(scale):
+                if base_img:
+                    scaled = base_img.resize((max(1, int(orig_size[0]*scale)), max(1, int(orig_size[1]*scale))), Image.Resampling.LANCZOS)
+                    rotated_imgtk['imgtk'] = ImageTk.PhotoImage(scaled)
+                    logo_label.config(image=rotated_imgtk['imgtk'])
+                    logo_label.image = rotated_imgtk['imgtk']
+            def animate_shrink(idx=0):
+                if idx < len(scales_down):
+                    show_scaled(scales_down[idx])
+                    dialog.after(step_delay, animate_shrink, idx+1)
+                else:
+                    dialog.after(80, animate_grow, 0)
+            def animate_grow(idx=0):
+                if idx < len(scales_up):
+                    show_scaled(scales_up[idx])
+                    dialog.after(step_delay, animate_grow, idx+1)
+                else:
+                    # Resume rotation if still active
+                    if rotating['active']:
+                        animate_rotation()
+            animate_shrink(0)
         logo_label.bind('<Enter>', on_logo_enter)
         logo_label.bind('<Leave>', on_logo_leave)
         logo_label.bind('<Button-1>', on_logo_click)
+        logo_label.bind('<Double-Button-1>', on_logo_double_click)
 
         # Title and version
         title_label = ttk.Label(main_frame, text="CloudCell Dataset Viewer", font=("Arial", 14, "bold"))

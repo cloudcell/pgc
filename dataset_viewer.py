@@ -555,26 +555,58 @@ Max Pixel Value (all samples): {all_max}
         except Exception:
             icon_imgtk = None
         # Logo
-        try:
-            logo_img = Image.open(os.path.join("assets", "logo_a3.png"))
-            # Only scale down if necessary, preserve aspect ratio
-            max_width = 200
-            if logo_img.width > max_width:
-                scale = max_width / logo_img.width
-                new_size = (int(logo_img.width * scale), int(logo_img.height * scale))
-                logo_img = logo_img.resize(new_size, Image.Resampling.LANCZOS)
-            logo_imgtk = ImageTk.PhotoImage(logo_img)
-        except Exception:
-            logo_imgtk = None
+        # --- Animated logo for about dialog ---
+        logo_paths = [os.path.join("assets", f"logo_a{i}.png") for i in range(4)]
+        logo_imgs = []
+        logo_imgtk_list = []
+        max_width = 200
+        for path in logo_paths:
+            try:
+                img = Image.open(path)
+                if img.width > max_width:
+                    scale = max_width / img.width
+                    new_size = (int(img.width * scale), int(img.height * scale))
+                    img = img.resize(new_size, Image.Resampling.LANCZOS)
+                logo_imgs.append(img)
+                logo_imgtk_list.append(ImageTk.PhotoImage(img))
+            except Exception:
+                logo_imgs.append(None)
+                logo_imgtk_list.append(None)
         main_frame = ttk.Frame(dialog, padding="10")
         main_frame.pack(fill=tk.BOTH, expand=True)
         top_frame = ttk.Frame(main_frame)
         top_frame.pack(side=tk.TOP, fill=tk.X)
-        # Gyroscope logo at the top, centered
-        if logo_imgtk:
-            logo_label = ttk.Label(main_frame, image=logo_imgtk)
-            logo_label.image = logo_imgtk
-            logo_label.pack(side=tk.TOP, pady=(0,10))
+        # Animated logo label
+        logo_idx = 3  # start at a3
+        logo_label = ttk.Label(main_frame)
+        if logo_imgtk_list[3]:
+            logo_label.config(image=logo_imgtk_list[3])
+            logo_label.image = logo_imgtk_list[3]
+        logo_label.pack(side=tk.TOP, pady=(0,10))
+        # Animation state
+        logo_animating = {'job': None, 'idx': 0}
+        def animate_logo():
+            # cycles a0, a1, a2, a3
+            logo_animating['idx'] = (logo_animating['idx'] + 1) % 4
+            idx = logo_animating['idx']
+            if logo_imgtk_list[idx]:
+                logo_label.config(image=logo_imgtk_list[idx])
+                logo_label.image = logo_imgtk_list[idx]
+            logo_animating['job'] = dialog.after(40, animate_logo)
+        def on_logo_enter(event):
+            logo_animating['idx'] = 0
+            animate_logo()
+        def on_logo_leave(event):
+            # stop animation and show a3
+            if logo_animating['job']:
+                dialog.after_cancel(logo_animating['job'])
+                logo_animating['job'] = None
+            if logo_imgtk_list[3]:
+                logo_label.config(image=logo_imgtk_list[3])
+                logo_label.image = logo_imgtk_list[3]
+        logo_label.bind('<Enter>', on_logo_enter)
+        logo_label.bind('<Leave>', on_logo_leave)
+
         # Title and version
         title_label = ttk.Label(main_frame, text="CloudCell Dataset Viewer", font=("Arial", 14, "bold"))
         title_label.pack(side=tk.TOP, anchor=tk.CENTER)

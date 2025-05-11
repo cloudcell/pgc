@@ -1140,7 +1140,9 @@ def validate(model, val_loader, criterion, writer=None, epoch=None, global_stats
     
     return final_loss, final_acc
 
-def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epochs=10, start_epoch=0, global_stats_aggregator=None, epochs_stop=None):
+def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epochs=10, 
+            start_epoch=0, global_stats_aggregator=None, epochs_stop=None, val_acc_stop=None, 
+            train_acc_stop=None, train_loss_stop=None, train_incorrect_stop=None):
     logger.info(f'Starting training for {epochs} epochs from epoch {start_epoch}')
     
     # Create TensorBoard writer
@@ -1435,7 +1437,17 @@ if latest_checkpoint:
 global_stats_aggregator = GlobalStatisticsAggregator()
 
 # Train the model
-trained_model = train(model, train_loader, val_loader, criterion, optimizer, scheduler, epochs=NUM_EPOCHS, start_epoch=start_epoch, global_stats_aggregator=global_stats_aggregator, epochs_stop=args.epochs_stop)
+trained_model = train(
+    model, train_loader, val_loader, criterion, optimizer, scheduler,
+    epochs=NUM_EPOCHS,
+    start_epoch=start_epoch,
+    global_stats_aggregator=global_stats_aggregator,
+    epochs_stop=args.epochs_stop,
+    val_acc_stop=args.val_acc_stop,
+    train_acc_stop=args.train_acc_stop,
+    train_loss_stop=args.train_loss_stop,
+    train_incorrect_stop=args.train_incorrect_stop
+)
 
 # Print final statistics summary
 logger.info("Training complete. Final statistics summary:")

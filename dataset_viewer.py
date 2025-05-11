@@ -621,39 +621,45 @@ Max Pixel Value (all samples): {all_max}
             '≡','±','‗','¾','¶','§','÷','¸','°','¨','·','¹','³','²','■',' ' 
         ]
         cp437_names = [
-            'Latin Capital Letter C with Cedilla','Latin Small Letter U with Diaeresis','Latin Small Letter E with Acute',
-            'Latin Small Letter A with Circumflex','Latin Small Letter A with Diaeresis','Latin Small Letter A with Grave',
-            'Latin Small Letter A with Ring Above','Latin Small Letter C with Cedilla','Latin Small Letter E with Circumflex',
-            'Latin Small Letter E with Diaeresis','Latin Small Letter E with Grave','Latin Small Letter I with Diaeresis',
-            'Latin Small Letter I with Circumflex','Latin Small Letter I with Grave','Latin Capital Letter A with Diaeresis',
-            'Latin Capital Letter A with Ring Above','Latin Capital Letter E with Acute','Latin Small Letter AE',
-            'Latin Capital Letter AE','Latin Small Letter O with Circumflex','Latin Small Letter O with Diaeresis',
-            'Latin Small Letter O with Grave','Latin Small Letter U with Circumflex','Latin Small Letter U with Grave',
-            'Latin Small Letter Y with Diaeresis','Latin Capital Letter O with Diaeresis','Latin Capital Letter U with Diaeresis',
-            'Cent Sign','Pound Sign','Yen Sign','Peseta Sign','Function Sign','Latin Small Letter A with Acute',
-            'Latin Small Letter I with Acute','Latin Small Letter O with Acute','Latin Small Letter U with Acute',
-            'Latin Small Letter N with Tilde','Latin Capital Letter N with Tilde','Feminine Ordinal Indicator',
-            'Masculine Ordinal Indicator','Inverted Question Mark','Reversed Not Sign','Not Sign','One Half',
-            'One Quarter','Inverted Exclamation Mark','Left-Pointing Double Angle Quotation Mark',
-            'Right-Pointing Double Angle Quotation Mark','Light Shade','Medium Shade','Dark Shade','Box Drawings Light Vertical',
-            'Box Drawings Light Vertical and Left','Latin Capital Letter A with Acute','Latin Capital Letter A with Circumflex',
-            'Latin Capital Letter A with Grave','Copyright Sign','Box Drawings Double Vertical and Left',
-            'Box Drawings Double Vertical','Box Drawings Double Down and Left','Box Drawings Double Up and Left',
-            'Cent Sign','Yen Sign','Box Drawings Double Up and Right','Box Drawings Double Down and Right',
-            'Box Drawings Double Horizontal','Box Drawings Double Vertical and Right','Box Drawings Double Down and Horizontal',
-            'Box Drawings Double Up and Horizontal','Box Drawings Double Vertical and Horizontal','Currency Sign',
-            'Latin Small Letter Eth','Latin Capital Letter Eth','Latin Capital Letter E with Circumflex',
-            'Latin Capital Letter E with Diaeresis','Latin Capital Letter E with Grave','Dotless I',
-            'Latin Capital Letter I with Acute','Latin Capital Letter I with Circumflex','Latin Capital Letter I with Diaeresis',
-            'Box Drawings Light Up and Right','Box Drawings Light Up and Left','Full Block','Lower Half Block',
-            'Broken Bar','Box Drawings Light Up and Horizontal','Upper Half Block','Latin Capital Letter O with Acute',
-            'Latin Small Letter Sharp S','Latin Capital Letter O with Circumflex','Latin Capital Letter O with Grave',
-            'Latin Small Letter O with Tilde','Latin Capital Letter O with Tilde','Micro Sign','Latin Small Letter Thorn',
-            'Latin Capital Letter Thorn','Latin Capital Letter U with Acute','Latin Capital Letter U with Circumflex',
-            'Latin Capital Letter U with Grave','Latin Small Letter Y with Acute','Latin Capital Letter Y with Acute',
-            'Macron','Acute Accent','Identical To','Plus-Minus Sign','Double Low Line','Three Quarters','Pilcrow Sign',
-            'Section Sign','Division Sign','Cedilla','Degree Sign','Diaeresis','Middle Dot','Superscript One',
-            'Superscript Three','Superscript Two','Black Square','Non-Breaking Space'
+            'Latin Capital Letter C with Cedilla', 'Latin Small Letter U with Diaeresis', 'Latin Small Letter E with Acute',
+            'Latin Small Letter A with Circumflex', 'Latin Small Letter A with Diaeresis', 'Latin Small Letter A with Grave',
+            'Latin Small Letter A with Ring Above', 'Latin Small Letter C with Cedilla', 'Latin Small Letter E with Circumflex',
+            'Latin Small Letter E with Diaeresis', 'Latin Small Letter E with Grave', 'Latin Small Letter I with Diaeresis',
+            'Latin Small Letter I with Circumflex', 'Latin Small Letter I with Grave', 'Latin Capital Letter A with Diaeresis',
+            'Latin Capital Letter A with Ring Above', 'Latin Capital Letter E with Acute', 'Latin Small Letter AE',
+            'Latin Capital Letter AE', 'Latin Small Letter O with Circumflex', 'Latin Small Letter O with Diaeresis',
+            'Latin Small Letter O with Grave', 'Latin Small Letter U with Circumflex', 'Latin Small Letter U with Grave',
+            'Latin Small Letter Y with Diaeresis', 'Latin Capital Letter O with Diaeresis', 'Latin Capital Letter U with Diaeresis',
+            'Cent Sign', 'Pound Sign', 'Yen Sign', 'Peseta Sign', 'Function Sign', 'Latin Small Letter A with Acute',
+            'Latin Small Letter I with Acute', 'Latin Small Letter O with Acute', 'Latin Small Letter U with Acute',
+            'Latin Small Letter N with Tilde', 'Latin Capital Letter N with Tilde', 'Feminine Ordinal Indicator',
+            'Masculine Ordinal Indicator', 'Inverted Question Mark', 'Reversed Not Sign', 'Not Sign', 'One Half',
+            'One Quarter', 'Inverted Exclamation Mark', 'Left-Pointing Double Angle Quotation Mark',
+            'Right-Pointing Double Angle Quotation Mark', 'Light Shade', 'Medium Shade', 'Dark Shade', 'Box Drawings Light Vertical',
+            'Box Drawings Light Vertical and Left', 'Box Drawings Vertical Single and Left Double',
+            'Box Drawings Vertical Double and Left Single', 'Box Drawings Down Double and Left Single',
+            'Box Drawings Down Single and Left Double', 'Box Drawings Double Vertical and Right Single',
+            'Box Drawings Double Vertical', 'Box Drawings Double Down and Left', 'Box Drawings Double Up and Left',
+            'Box Drawings Up Double and Left Single', 'Box Drawings Up Single and Left Double', 'Box Drawings Light Down and Left',
+            'Box Drawings Light Up and Right', 'Box Drawings Light Up and Horizontal', 'Box Drawings Light Down and Horizontal',
+            'Box Drawings Light Vertical and Right', 'Box Drawings Light Horizontal', 'Box Drawings Light Vertical and Horizontal',
+            'Box Drawings Vertical Single and Right Double', 'Box Drawings Vertical Double and Right Single',
+            'Box Drawings Double Up and Right', 'Box Drawings Double Down and Right', 'Box Drawings Double Up and Horizontal',
+            'Box Drawings Double Down and Horizontal', 'Box Drawings Double Vertical and Right', 'Box Drawings Double Horizontal',
+            'Box Drawings Double Vertical and Horizontal', 'Box Drawings Up Single and Horizontal Double',
+            'Box Drawings Down Single and Horizontal Double', 'Box Drawings Up Double and Horizontal Single',
+            'Box Drawings Down Double and Horizontal Single', 'Box Drawings Up Double and Right Single',
+            'Box Drawings Up Single and Right Double', 'Box Drawings Down Single and Right Double',
+            'Box Drawings Down Double and Right Single', 'Box Drawings Vertical Double and Horizontal Single',
+            'Box Drawings Vertical Single and Horizontal Double', 'Box Drawings Light Up and Left',
+            'Box Drawings Light Down and Right', 'Full Block', 'Lower Half Block', 'Left Half Block', 'Right Half Block',
+            'Upper Half Block', 'Greek Small Letter Alpha', 'Latin Small Letter Sharp S', 'Greek Capital Letter Gamma',
+            'Greek Small Letter Pi', 'Greek Capital Letter Sigma', 'Greek Small Letter Sigma', 'Micro Sign',
+            'Greek Small Letter Tau', 'Greek Capital Letter Phi', 'Greek Capital Letter Theta', 'Greek Capital Letter Omega',
+            'Greek Small Letter Delta', 'Infinity', 'Greek Small Letter Phi', 'Greek Small Letter Epsilon', 'Intersection',
+            'Identical To', 'Plus-Minus Sign', 'Greater-Than or Equal To', 'Less-Than or Equal To', 'Integral Top',
+            'Integral Bottom', 'Division Sign', 'Almost Equal To', 'Degree Sign', 'Bullet Operator', 'Middle Dot',
+            'Square Root', 'Superscript Latin Small Letter N', 'Superscript Two', 'Black Square', 'Non-Breaking Space'
         ]
         for i, code in enumerate(range(128, 256)):
             dec = f"{code:3}"
@@ -662,8 +668,13 @@ Max Pixel Value (all samples): {all_max}
                 c = bytes([code]).decode('cp437')
             except Exception:
                 c = ''
-            char = f"'{c}'" if c.strip() else ''
-            desc = cp437_names[i] if i < len(cp437_names) else ''
+            # Special handling for 255: display as space with description
+            if code == 255:
+                char = "' '"
+                desc = 'Non-Breaking Space'
+            else:
+                char = f"'{c}'" if c.strip() else ''
+                desc = cp437_names[i] if i < len(cp437_names) else ''
             text.insert(tk.END, f"{dec}  {hex_:>4}  {char:^7}  {desc}\n")
         text.config(state=tk.DISABLED)
         ttk.Button(frame, text="Close", command=dialog.destroy).pack(pady=10)
@@ -689,6 +700,41 @@ Max Pixel Value (all samples): {all_max}
         # Table header
         text.insert(tk.END, f"{'Dec':>3}  {'Hex':>4}  {'Char':^7}  {'Name'}\n")
         text.insert(tk.END, f"{'-'*3}  {'-'*4}  {'-'*7}  {'-'*20}\n")
+        # Mapping of ASCII control character mnemonics to explanations
+        ascii_mnemonics = [
+            ('NUL', 'Null'),
+            ('SOH', 'Start of Heading'),
+            ('STX', 'Start of Text'),
+            ('ETX', 'End of Text'),
+            ('EOT', 'End of Transmission'),
+            ('ENQ', 'Enquiry'),
+            ('ACK', 'Acknowledge'),
+            ('BEL', 'Bell'),
+            ('BS', 'Backspace'),
+            ('TAB', 'Horizontal Tab'),
+            ('LF', 'Line Feed'),
+            ('VT', 'Vertical Tab'),
+            ('FF', 'Form Feed'),
+            ('CR', 'Carriage Return'),
+            ('SO', 'Shift Out'),
+            ('SI', 'Shift In'),
+            ('DLE', 'Data Link Escape'),
+            ('DC1', 'Device Control 1'),
+            ('DC2', 'Device Control 2'),
+            ('DC3', 'Device Control 3'),
+            ('DC4', 'Device Control 4'),
+            ('NAK', 'Negative Acknowledge'),
+            ('SYN', 'Synchronous Idle'),
+            ('ETB', 'End of Transmission Block'),
+            ('CAN', 'Cancel'),
+            ('EM', 'End of Medium'),
+            ('SUB', 'Substitute'),
+            ('ESC', 'Escape'),
+            ('FS', 'File Separator'),
+            ('GS', 'Group Separator'),
+            ('RS', 'Record Separator'),
+            ('US', 'Unit Separator')
+        ]
         for code in range(128):
             dec = f"{code:3}"
             hex_ = f"0x{code:02X}"
@@ -696,22 +742,17 @@ Max Pixel Value (all samples): {all_max}
                 char = f"'{chr(code)}'"
             else:
                 char = ""
-            try:
-                name = unicodedata.name(chr(code))
-            except ValueError:
-                # Standard ASCII control names
-                ascii_names = [
-                    'NUL','SOH','STX','ETX','EOT','ENQ','ACK','BEL','BS','TAB','LF','VT','FF','CR','SO','SI',
-                    'DLE','DC1','DC2','DC3','DC4','NAK','SYN','ETB','CAN','EM','SUB','ESC','FS','GS','RS','US',
-                    'SPACE'
-                ]
-                if code < 32:
-                    name = ascii_names[code]
-                elif code == 32:
-                    name = 'SPACE'
-                elif code == 127:
-                    name = 'DEL'
-                else:
+            if code < 32:
+                mnemonic, explanation = ascii_mnemonics[code]
+                name = f"{mnemonic}: {explanation}"
+            elif code == 32:
+                name = "SPACE: Space"
+            elif code == 127:
+                name = "DEL: Delete"
+            else:
+                try:
+                    name = unicodedata.name(chr(code))
+                except ValueError:
                     name = ''
             text.insert(tk.END, f"{dec}  {hex_:>4}  {char:^7}  {name}\n")
 
@@ -719,20 +760,55 @@ Max Pixel Value (all samples): {all_max}
         text.insert(tk.END, "\nLatin-1 (ISO-8859-1) Codes 128–255\n")
         text.insert(tk.END, f"{'Dec':>3}  {'Hex':>4}  {'Char':^7}  {'Unicode Name'}\n")
         text.insert(tk.END, f"{'-'*3}  {'-'*4}  {'-'*7}  {'-'*20}\n")
-        for code in range(128, 256):
+        control_explanations = {
+            0: "Null",
+            1: "Start of Heading",
+            2: "Start of Text",
+            3: "End of Text",
+            4: "End of Transmission",
+            5: "Enquiry",
+            6: "Acknowledge",
+            7: "Bell",
+            8: "Backspace",
+            9: "Horizontal Tab",
+            10: "Line Feed",
+            11: "Vertical Tab",
+            12: "Form Feed",
+            13: "Carriage Return",
+            14: "Shift Out",
+            15: "Shift In",
+            16: "Data Link Escape",
+            17: "Device Control 1",
+            18: "Device Control 2",
+            19: "Device Control 3",
+            20: "Device Control 4",
+            21: "Negative Acknowledge",
+            22: "Synchronous Idle",
+            23: "End of Transmission Block",
+            24: "Cancel",
+            25: "End of Medium",
+            26: "Substitute",
+            27: "Escape",
+            28: "File Separator",
+            29: "Group Separator",
+            30: "Record Separator",
+            31: "Unit Separator",
+            127: "Delete"
+        }
+        for code in range(256):
             dec = f"{code:3}"
             hex_ = f"0x{code:02X}"
             char = ''
-            try:
+            # Only show Unicode name for codes 32–255 (printable and Latin-1)
+            if 32 <= code <= 126 or 160 <= code <= 255:
                 c = bytes([code]).decode('latin-1')
-                # Only display printable chars (exclude control, DEL)
-                if 32 <= code <= 126 or 160 <= code <= 255:
-                    char = f"'{c}'"
-                else:
-                    char = ''
-                name = unicodedata.name(c)
-            except Exception:
-                name = ''
+                char = f"'{c}'"
+                try:
+                    name = unicodedata.name(c)
+                except Exception:
+                    name = ''
+            else:
+                name = ''  # For codes 0–31 and 127, leave blank or show dash
             text.insert(tk.END, f"{dec}  {hex_:>4}  {char:^7}  {name}\n")
         text.config(state=tk.DISABLED)
         ttk.Button(frame, text="Close", command=dialog.destroy).pack(pady=10)

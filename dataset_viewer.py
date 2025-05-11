@@ -195,10 +195,12 @@ class DatasetViewer:
         ttk.Entry(info_frame, textvariable=self.index_var, width=10).grid(row=0, column=1, padx=5)
         ttk.Button(info_frame, text="Go", command=self.go_to_index).grid(row=0, column=2, padx=5)
         
-        # Label display
-        self.label_var = tk.StringVar()
+        # Label display (use Text widget for highlighting)
         ttk.Label(info_frame, text="Label:").grid(row=1, column=0, padx=5, sticky=tk.W)
-        ttk.Label(info_frame, textvariable=self.label_var).grid(row=1, column=1, columnspan=2, padx=5, sticky=tk.W)
+        self.label_text = tk.Text(info_frame, height=1, width=24, font=("TkDefaultFont", 10), borderwidth=0, highlightthickness=0)
+        self.label_text.grid(row=1, column=1, columnspan=2, padx=5, sticky=tk.W+tk.E)
+        self.label_text.config(state=tk.DISABLED)
+        self.label_text.tag_configure('yellow', background='yellow')
         
         # Features as text display
         self.features_text_var = tk.StringVar()
@@ -224,9 +226,11 @@ class DatasetViewer:
         ttk.Label(info_frame, text=f"Total Samples: {len(self.labels)}").grid(row=3, column=0, columnspan=3, pady=5)
         
         # --- Hex Viewer Panel ---
+        self.main_frame.rowconfigure(4, weight=1)  # Make the hex viewer row expandable
         hex_frame = ttk.Frame(self.main_frame)
-        hex_frame.grid(row=4, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.S), pady=(10, 0))
+        hex_frame.grid(row=4, column=0, columnspan=2, sticky=(tk.N, tk.S, tk.E, tk.W), pady=(10, 0))
         hex_frame.columnconfigure(0, weight=1)
+        hex_frame.rowconfigure(1, weight=1)
         hex_label = ttk.Label(hex_frame, text="Sample Bytes (Hex View):")
         hex_label.pack(anchor=tk.W)
         self.hex_text = tk.Text(hex_frame, height=10, font=("Courier", 10), wrap="none")
@@ -567,8 +571,22 @@ Max Pixel Value (all samples): {all_max}
         self.canvas.delete("all")
         self.canvas.create_image(140, 140, image=self.current_image)
         
-        # Update label display
-        self.label_var.set(f"ASCII: {label} ('{chr(label)}')")
+        # Update label display with yellow highlight for ASCII char (dot if nonprintable)
+        if 32 <= label < 127:
+            char_display = chr(label)
+        else:
+            char_display = '.'
+        label_str = f"ASCII: {label} ('{char_display}')"
+        self.label_text.config(state=tk.NORMAL)
+        self.label_text.delete(1.0, tk.END)
+        self.label_text.insert(tk.END, label_str)
+        # Highlight the displayed char (or dot) in yellow
+        idx = label_str.find(f"'{char_display}'")
+        if idx != -1:
+            start = f"1.{idx+1}"
+            end = f"1.{idx+2}"
+            self.label_text.tag_add('yellow', start, end)
+        self.label_text.config(state=tk.DISABLED)
         
         # Convert features to ASCII text
         feature_values = features.numpy()

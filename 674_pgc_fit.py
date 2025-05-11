@@ -1176,8 +1176,6 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
     # Get the learning rate from the optimizer
     current_lr = optimizer.param_groups[0]['lr']
     
-    # Set up gradient scaler for mixed precision training
-    scaler = torch.amp.GradScaler('cuda')
     
     # Main training loop
     for epoch in epoch_range:
@@ -1201,25 +1199,15 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
                 # Reset gradients
                 optimizer.zero_grad()
                 
-                # Forward pass with mixed precision
-                with torch.cuda.amp.autocast():
-                    outputs = model(inputs, collect_stats=True, labels=targets)
-                    loss = criterion(outputs, targets)
-                
-                # Backward pass with gradient scaling
-                scaler.scale(loss).backward()
-                
-                # Unscale the gradients - do this ONCE before accessing gradients
-                scaler.unscale_(optimizer)
-                
-                # CPU Gradient Offloading - move gradients to CPU before optimizer step
-                # We skip this step since it's causing device mismatch errors
-                # The DataParallel implementation will handle multiple GPUs efficiently
-                # without needing manual CPU offloading
-                
-                # Update weights with gradient scaling
-                scaler.step(optimizer)
-                scaler.update()
+                # Forward pass
+                outputs = model(inputs, collect_stats=True, labels=targets)
+                loss = criterion(outputs, targets)
+
+                # Backward pass
+                loss.backward()
+
+                # Update weights
+                optimizer.step()
                 
                 # Track statistics
                 running_loss += loss.item()

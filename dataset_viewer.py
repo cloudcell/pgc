@@ -585,8 +585,13 @@ Max Pixel Value (all samples): {all_max}
         logo_label.pack(side=tk.TOP, pady=(0,10))
         # Animation state
         logo_animating = {'job': None, 'idx': 0}
+        rotating = {'active': False, 'job': None}
+        rotated_imgtk = {'imgtk': None}
+        import random
         def animate_logo():
             # cycles a0, a1, a2, a3
+            if rotating['active']:
+                return  # don't run hover animation if rotating
             logo_animating['idx'] = (logo_animating['idx'] + 1) % 4
             idx = logo_animating['idx']
             if logo_imgtk_list[idx]:
@@ -594,9 +599,13 @@ Max Pixel Value (all samples): {all_max}
                 logo_label.image = logo_imgtk_list[idx]
             logo_animating['job'] = dialog.after(40, animate_logo)
         def on_logo_enter(event):
+            if rotating['active']:
+                return
             logo_animating['idx'] = 0
             animate_logo()
         def on_logo_leave(event):
+            if rotating['active']:
+                return
             # stop animation and show a3
             if logo_animating['job']:
                 dialog.after_cancel(logo_animating['job'])
@@ -604,8 +613,43 @@ Max Pixel Value (all samples): {all_max}
             if logo_imgtk_list[3]:
                 logo_label.config(image=logo_imgtk_list[3])
                 logo_label.image = logo_imgtk_list[3]
+        def animate_rotation():
+            # rotate a3 by a random angle and display
+            angle = random.uniform(0, 360)
+            base_img = logo_imgs[3]
+            if base_img:
+                rotated = base_img.rotate(angle, resample=Image.BICUBIC, expand=True)
+                # Resize to fit max_width if needed
+                if rotated.width > max_width:
+                    scale = max_width / rotated.width
+                    new_size = (int(rotated.width * scale), int(rotated.height * scale))
+                    rotated = rotated.resize(new_size, Image.Resampling.LANCZOS)
+                rotated_imgtk['imgtk'] = ImageTk.PhotoImage(rotated)
+                logo_label.config(image=rotated_imgtk['imgtk'])
+                logo_label.image = rotated_imgtk['imgtk']
+            rotating['job'] = dialog.after(40, animate_rotation)
+        def on_logo_click(event):
+            if not rotating['active']:
+                # Start rotating
+                rotating['active'] = True
+                # Stop hover animation if running
+                if logo_animating['job']:
+                    dialog.after_cancel(logo_animating['job'])
+                    logo_animating['job'] = None
+                animate_rotation()
+            else:
+                # Stop rotating
+                rotating['active'] = False
+                if rotating['job']:
+                    dialog.after_cancel(rotating['job'])
+                    rotating['job'] = None
+                # Reset to a3
+                if logo_imgtk_list[3]:
+                    logo_label.config(image=logo_imgtk_list[3])
+                    logo_label.image = logo_imgtk_list[3]
         logo_label.bind('<Enter>', on_logo_enter)
         logo_label.bind('<Leave>', on_logo_leave)
+        logo_label.bind('<Button-1>', on_logo_click)
 
         # Title and version
         title_label = ttk.Label(main_frame, text="CloudCell Dataset Viewer", font=("Arial", 14, "bold"))

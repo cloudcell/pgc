@@ -223,9 +223,22 @@ class DatasetViewer:
         # Total samples
         ttk.Label(info_frame, text=f"Total Samples: {len(self.labels)}").grid(row=3, column=0, columnspan=3, pady=5)
         
-        # Display first sample
+        # --- Hex Viewer Panel ---
+        hex_frame = ttk.Frame(self.main_frame)
+        hex_frame.grid(row=4, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.S), pady=(10, 0))
+        hex_frame.columnconfigure(0, weight=1)
+        hex_label = ttk.Label(hex_frame, text="Sample Bytes (Hex View):")
+        hex_label.pack(anchor=tk.W)
+        self.hex_text = tk.Text(hex_frame, height=10, font=("Courier", 10), wrap="none")
+        self.hex_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        hex_scrollbar = ttk.Scrollbar(hex_frame, orient="vertical", command=self.hex_text.yview)
+        self.hex_text.config(yscrollcommand=hex_scrollbar.set)
+        hex_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        self.hex_text.config(state=tk.DISABLED)
+
+        # Display first sample (must come after all widgets are created)
         self.show_current_sample()
-        
+
         # Bind keyboard shortcuts
         root.bind('<Left>', lambda e: self.prev_sample())
         root.bind('<Right>', lambda e: self.next_sample())
@@ -622,6 +635,57 @@ Max Pixel Value (all samples): {all_max}
         self.features_text.delete(1.0, tk.END)
         self.features_text.insert(tk.END, feature_text)
         self.features_text.config(state=tk.DISABLED)
+
+        # --- Update hex viewer ---
+        # Try to get raw bytes from features
+        try:
+            # If binary, use bytes_data from above; else, try to convert feature_values to bytes
+            if 'bytes_data' in locals() and bytes_data:
+                raw_bytes = bytes(bytes_data)
+            else:
+                # Try to scale or cast to bytes
+                if feature_values.max() <= 1.0:
+                    arr = (feature_values * 255).astype(np.uint8)
+                else:
+                    arr = feature_values.astype(np.uint8)
+                raw_bytes = bytes(arr)
+        except Exception:
+            raw_bytes = b''
+
+        self.hex_text.config(state=tk.NORMAL)
+        self.hex_text.delete(1.0, tk.END)
+        self.hex_text.tag_delete('nonprintable')
+        self.hex_text.tag_configure('nonprintable', background='yellow')
+
+        for offset in range(0, len(raw_bytes), 16):
+            chunk = raw_bytes[offset:offset+16]
+            # Hex bytes with | after each 4 bytes
+            hex_groups = []
+            for i in range(0, len(chunk), 4):
+                group = ' '.join(f"{b:02X}" for b in chunk[i:i+4])
+                hex_groups.append(group)
+            hex_bytes = ' | '.join(hex_groups)
+            hex_bytes = hex_bytes.ljust(16*3 + 3)  # Pad to align columns
+
+            # ASCII representation
+            ascii_bytes = ''
+            for b in chunk:
+                ascii_bytes += chr(b) if 32 <= b < 127 else '.'
+
+            line = f"{offset:08X}  {hex_bytes}  {ascii_bytes}\n"
+            start_idx = self.hex_text.index(tk.END)
+            self.hex_text.insert(tk.END, line)
+            # Highlight nonprintable chars in ASCII column
+            ascii_start = line.find(ascii_bytes)
+            for i, b in enumerate(chunk):
+                if not (32 <= b < 127):
+                    # Find the index for the nonprintable char
+                    char_pos = f"{start_idx}+{ascii_start + i}c"
+                    self.hex_text.tag_add('nonprintable', char_pos, f"{char_pos}+1c")
+
+        if len(raw_bytes) == 0:
+            self.hex_text.insert(tk.END, '(No data)')
+        self.hex_text.config(state=tk.DISABLED)
     
     def next_sample(self):
         if self.current_idx < len(self.labels) - 1:

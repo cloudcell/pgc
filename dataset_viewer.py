@@ -129,7 +129,7 @@ class DatasetViewer:
             if sys.platform.startswith('win'):
                 self.root.iconbitmap("./assets/CLOUDCELL-32x32.ico")
             else:
-                icon_img = tk.PhotoImage(file="./assets/CLOUDCELL-32x32.png")
+                icon_img = tk.PhotoImage(file="./assets/CLOUDCELL-32x32-0.png")
                 self.root.wm_iconphoto(True, icon_img)
         except Exception as e:
             print(f"Warning: Could not load application icon: {e}")

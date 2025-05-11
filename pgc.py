@@ -158,13 +158,44 @@ def pack_file(input_file, output_file=None, encoding='base64', mode='jam', fit_a
         mode (str, optional): 'jam' or 'fit'. Default is 'jam'.
         fit_args (list, optional): Extra CLI args for 674_pgc_fit.py
     """
+    # Determine output_file default
     if output_file is None:
-        output_file = input_file + '.pgc'
+        if input_file is not None:
+            output_file = input_file + '.pgc'
+        else:
+            # If input_file is None, try to use pickle path if present
+            if fit_args is not None and '--pickle' in fit_args:
+                idx = fit_args.index('--pickle')
+                if idx + 1 < len(fit_args):
+                    pickle_path = fit_args[idx + 1]
+                    output_file = pickle_path + '.pgc'
+                else:
+                    print("Error: --pickle specified but no file path given.")
+                    sys.exit(1)
+            else:
+                print("Error: Cannot determine output filename: neither --input nor --pickle supplied.")
+                sys.exit(1)
     print(f"Packing {input_file} to {output_file} using {encoding} encoding")
     try:
+        # Special handling: if mode == 'fit' and --pickle <file> is in fit_args, skip encoding and pass pickle file directly
+        use_pickle = False
+        pickle_path = None
+        if mode == 'fit' and fit_args is not None:
+            if '--pickle' in fit_args:
+                idx = fit_args.index('--pickle')
+                if idx + 1 < len(fit_args):
+                    pickle_path = fit_args[idx + 1]
+                    use_pickle = True
+        if use_pickle:
+            print(f"Detected mode=fit and --pickle {pickle_path}. Skipping encoding and dataset creation.")
+            # Call run_pgc_jam with pickle file as the dataset
+            run_pgc_jam(output_file, mode=mode, fit_args=fit_args)
+            print(f"Successfully packed file to {output_file} (pickle mode)")
+            return
         if not os.path.exists(input_file):
             print(f"Error: Input file '{input_file}' not found.")
             sys.exit(1)
+
         # Step 1: Encode the input file
         print(f"Step 1: Encoding the input file with {encoding}...")
         if encoding == 'base64':
@@ -207,8 +238,8 @@ def pack_file(input_file, output_file=None, encoding='base64', mode='jam', fit_a
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="PGC Packer Utility\n\nThis script processes files in the following order:\n1. Encode the input file (base64 or uuencode)\n2. Prepend 98 '@' characters to the encoded data\n3. Launch text_to_binary_dataset.py with the modified data as input\n4. Launch 674_pgc_fit.py to train and copy the latest model from checkpoint\n\nExample usage:\n    python pgc.py --input myfile.txt --output myfile.pgc --encoding base64 --mode jam --val_acc_stop 0.99 --epochs_stop 1024\n\nAll arguments after '--' will be passed to 674_pgc_fit.py.\n")
-    parser.add_argument('--input', required=True, help='Input file to pack')
+    parser = argparse.ArgumentParser(description="PGC Packer Utility\n\nThis script processes files in the following order:\n1. Encode the input file (base64 or uuencode)\n2. Prepend 98 '@' characters to the encoded data\n3. Launch text_to_binary_dataset.py with the modified data as input\n4. Launch 674_pgc_fit.py to train and copy the latest model from checkpoint\n\nUSAGE: All arguments must be passed as --<argument> (e.g., --input file.txt). Positional arguments are not accepted.\n\nExample usage:\n    python pgc.py --input myfile.txt --output myfile.pgc --encoding base64 --mode jam --val_acc_stop 0.99 --epochs_stop 1024\n\nAll arguments after '--' will be passed to 674_pgc_fit.py.\n")
+    parser.add_argument('--input', required=False, help='Input file to pack (required unless --pickle is supplied)')
     parser.add_argument('--output', required=False, help='Output file (optional, defaults to input filename + .pgc)')
     parser.add_argument('--encoding', default='base64', choices=['base64', 'uuencode', 'verbatim'], help="Encoding method: base64, uuencode, or verbatim (default: base64)")
     parser.add_argument('--mode', default='jam', choices=['jam', 'fit'], help="Mode for 674_pgc_fit.py: jam or fit (default: jam)")
@@ -219,7 +250,20 @@ def main():
     output_file = args.output
     encoding = args.encoding
     mode = args.mode
+
     # fit_args is now all unknown args
+
+    # Check that at least --input or --pickle is supplied
+    has_pickle = False
+    pickle_path = None
+    if fit_args is not None and '--pickle' in fit_args:
+        idx = fit_args.index('--pickle')
+        if idx + 1 < len(fit_args):
+            pickle_path = fit_args[idx + 1]
+            has_pickle = True
+    if input_file is None and not has_pickle:
+        print("Error: Either --input or --pickle <file> must be supplied.")
+        sys.exit(1)
 
     pack_file(input_file, output_file, encoding=encoding, mode=mode, fit_args=fit_args)
 

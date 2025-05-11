@@ -799,7 +799,7 @@ Max Pixel Value (all samples): {all_max}
             dec = f"{code:3}"
             hex_ = f"0x{code:02X}"
             char = ''
-            # Only show Unicode name for codes 32–255 (printable and Latin-1)
+            name = ''
             if 32 <= code <= 126 or 160 <= code <= 255:
                 c = bytes([code]).decode('latin-1')
                 char = f"'{c}'"
@@ -808,7 +808,32 @@ Max Pixel Value (all samples): {all_max}
                 except Exception:
                     name = ''
             else:
-                name = ''  # For codes 0–31 and 127, leave blank or show dash
+                # Control characters (C0: 0–31, 127; C1: 128–159)
+                try:
+                    name = unicodedata.name(chr(code))
+                except Exception:
+                    # Fallback for C1 controls (128–159) which may not have names in unicodedata
+                    c1_names = [
+                        'PADDING CHARACTER', 'HIGH OCTET PRESET', 'BREAK PERMITTED HERE', 'NO BREAK HERE',
+                        'INDEX', 'NEXT LINE', 'START OF SELECTED AREA', 'END OF SELECTED AREA',
+                        'CHARACTER TABULATION SET', 'CHARACTER TABULATION WITH JUSTIFICATION',
+                        'LINE TABULATION SET', 'PARTIAL LINE FORWARD', 'PARTIAL LINE BACKWARD',
+                        'REVERSE LINE FEED', 'SINGLE SHIFT TWO', 'SINGLE SHIFT THREE',
+                        'DEVICE CONTROL STRING', 'PRIVATE USE ONE', 'PRIVATE USE TWO', 'SET TRANSMIT STATE',
+                        'CANCEL CHARACTER', 'MESSAGE WAITING', 'START OF GUARDED AREA', 'END OF GUARDED AREA',
+                        'START OF STRING', '', '', '', '', '', '', ''
+                    ]
+                    if 128 <= code <= 159:
+                        idx = code - 128
+                        name = f'C1 CONTROL: {c1_names[idx]}' if c1_names[idx] else 'C1 CONTROL'
+                    elif code == 127:
+                        name = 'DELETE'
+                    else:
+                        # C0 controls (0–31)
+                        try:
+                            name = unicodedata.name(chr(code))
+                        except Exception:
+                            name = 'CONTROL'
             text.insert(tk.END, f"{dec}  {hex_:>4}  {char:^7}  {name}\n")
         text.config(state=tk.DISABLED)
         ttk.Button(frame, text="Close", command=dialog.destroy).pack(pady=10)

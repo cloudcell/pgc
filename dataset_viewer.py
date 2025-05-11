@@ -945,6 +945,7 @@ Max Pixel Value (all samples): {all_max}
 
 def main():
     root = tk.Tk()
+    root.withdraw()  # Hide window until geometry is set
     # Center the main window on the active monitor (multi-monitor aware)
     import sys
     import os
@@ -1013,7 +1014,7 @@ def main():
         x = (sw - w) // 2
         y = (sh - h) // 2
         root.geometry(f"{w}x{h}+{x}+{y}")
-
+    root.deiconify()  # Show window after geometry is set
     app = DatasetSelector(root)
     root.mainloop()
 

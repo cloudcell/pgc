@@ -16,7 +16,7 @@ class LoadingDialog:
 
         # Center the dialog over the parent window
         w = 300
-        h = 100
+        h = 200
         parent.update_idletasks()  # Ensure geometry info is up-to-date
         px = parent.winfo_rootx()
         py = parent.winfo_rooty()
@@ -29,12 +29,40 @@ class LoadingDialog:
         self.frame = ttk.Frame(self.top, padding="20")
         self.frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
 
-        self.label = ttk.Label(self.frame, text="Loading dataset...")
-        self.label.grid(row=0, column=0, pady=5)
-
-        self.progress = ttk.Progressbar(self.frame, mode='indeterminate')
-        self.progress.grid(row=1, column=0, pady=5)
+        # Animated logo display
+        from PIL import Image, ImageTk
+        import os
+        self.logo_paths = [
+            os.path.join("assets", f"logo_a{i}.png") for i in range(4)
+        ]
+        self.logos = []
+        for path in self.logo_paths:
+            try:
+                img = Image.open(path)
+                img = img.resize((80, 80), Image.Resampling.LANCZOS)
+                self.logos.append(ImageTk.PhotoImage(img))
+            except Exception:
+                self.logos.append(None)
+        self.logo_idx = 0
+        # Create a row frame for logo and progress bar
+        logo_row = ttk.Frame(self.frame)
+        logo_row.grid(row=0, column=0, pady=(0, 5), sticky="ew")
+        logo_row.columnconfigure(0, weight=0)
+        logo_row.columnconfigure(1, weight=1)
+        self.logo_label = ttk.Label(logo_row)
+        self.logo_label.grid(row=0, column=0, padx=(0, 10), sticky="w")
+        def animate_logo():
+            if self.logos[self.logo_idx]:
+                self.logo_label.config(image=self.logos[self.logo_idx])
+            self.logo_idx = (self.logo_idx + 1) % len(self.logos)
+            self.top.after(100, animate_logo)
+        animate_logo()
+        self.progress = ttk.Progressbar(logo_row, mode='indeterminate', length=120)
+        self.progress.grid(row=0, column=1, sticky="ew")
         self.progress.start(10)
+
+        self.label = ttk.Label(self.frame, text="Loading dataset...")
+        self.label.grid(row=1, column=0, pady=5)
 
     def destroy(self):
         self.top.destroy()
@@ -55,6 +83,9 @@ class DatasetSelector:
         except Exception as e:
             print(f"Warning: Could not load application icon: {e}")
         
+        root.grid_rowconfigure(0, weight=1)
+        root.grid_columnconfigure(0, weight=1)
+        root.minsize(600, 400)
         self.frame = ttk.Frame(root, padding="10")
         self.frame.grid(row=0, column=0, sticky="nsew")
         self.frame.columnconfigure(0, weight=1)
@@ -70,8 +101,10 @@ class DatasetSelector:
         listbox_frame.grid(row=1, column=0, sticky="nsew")
         listbox_frame.columnconfigure(0, weight=1)
         listbox_frame.rowconfigure(0, weight=1)
+        listbox_frame.grid_propagate(True)
+        listbox_frame.update_idletasks()
 
-        self.listbox = tk.Listbox(listbox_frame, height=10, borderwidth=1, relief="solid")
+        self.listbox = tk.Listbox(listbox_frame, borderwidth=1, relief="solid")
         self.listbox.grid(row=0, column=0, sticky="nsew")
         # Optional: Add a vertical scrollbar if many datasets
         scrollbar = ttk.Scrollbar(listbox_frame, orient="vertical", command=self.listbox.yview)

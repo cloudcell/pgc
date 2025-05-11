@@ -945,17 +945,45 @@ Max Pixel Value (all samples): {all_max}
 
 def main():
     root = tk.Tk()
-    # Center the main window on the screen
-    root.update_idletasks()
-    w = 800
-    h = 600
-    sw = root.winfo_screenwidth()
-    sh = root.winfo_screenheight()
-    x = (sw - w) // 2
-    y = (sh - h) // 2
-    root.geometry(f"{w}x{h}+{x}+{y}")
+    # Center the main window on the active monitor (multi-monitor aware)
+    try:
+        from screeninfo import get_monitors
+        import os
+        # Get mouse pointer location (X11 only, fallback otherwise)
+        pointer_x = pointer_y = None
+        try:
+            import tkinter
+            pointer_x = root.winfo_pointerx()
+            pointer_y = root.winfo_pointery()
+        except Exception:
+            pointer_x = pointer_y = None
+        monitors = get_monitors()
+        # Default to primary
+        monitor = monitors[0]
+        # If pointer location is available, find monitor containing pointer
+        if pointer_x is not None and pointer_y is not None:
+            for m in monitors:
+                if (m.x <= pointer_x < m.x + m.width) and (m.y <= pointer_y < m.y + m.height):
+                    monitor = m
+                    break
+        w = 800
+        h = 600
+        x = monitor.x + (monitor.width - w) // 2
+        y = monitor.y + (monitor.height - h) // 2
+        root.geometry(f"{w}x{h}+{x}+{y}")
+    except ImportError:
+        # Fallback: center on primary screen
+        root.update_idletasks()
+        w = 800
+        h = 600
+        sw = root.winfo_screenwidth()
+        sh = root.winfo_screenheight()
+        x = (sw - w) // 2
+        y = (sh - h) // 2
+        root.geometry(f"{w}x{h}+{x}+{y}")
     app = DatasetSelector(root)
     root.mainloop()
+
 
 if __name__ == "__main__":
     main()

@@ -496,6 +496,16 @@ class BrainStatsVisualizer:
             title += f" - {self.folder_name}"
         self.root.title(title)
         self.root.geometry("1200x800")
+        # Set window icon (cross-platform)
+        import sys
+        try:
+            if sys.platform.startswith('win'):
+                self.root.iconbitmap("./assets/CLOUDCELL-32x32.ico")
+            else:
+                icon_img = tk.PhotoImage(file="./assets/CLOUDCELL-32x32-0.png")
+                self.root.wm_iconphoto(True, icon_img)
+        except Exception as e:
+            print(f"Warning: Could not load application icon: {e}")
         # Set proper shutdown behavior for the close button
         self.root.protocol("WM_DELETE_WINDOW", self.on_close)
         

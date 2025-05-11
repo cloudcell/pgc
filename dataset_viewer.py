@@ -196,7 +196,7 @@ class DatasetViewer:
         ttk.Label(info_frame, text="Sample Index:").grid(row=0, column=0, padx=5)
         self.index_var = tk.StringVar()
         ttk.Entry(info_frame, textvariable=self.index_var, width=10).grid(row=0, column=1, padx=5)
-        ttk.Button(info_frame, text="Go", command=self.go_to_index).grid(row=0, column=2, padx=5)
+        ttk.Button(info_frame, text="Go", command=self.go_to_index).grid(row=0, column=2, padx=5, pady=(0, 12))
         
         # Label display (use Text widget for highlighting)
         ttk.Label(info_frame, text="Label:").grid(row=1, column=0, padx=5, sticky=tk.W)
@@ -233,11 +233,15 @@ class DatasetViewer:
         
         # Create a text widget with scrollbar in a frame
         self.features_text = tk.Text(features_frame, height=6, wrap=tk.WORD)
-        self.features_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        
-        features_scrollbar = ttk.Scrollbar(features_frame, command=self.features_text.yview)
-        features_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        features_scrollbar = ttk.Scrollbar(features_frame, orient='vertical', command=self.features_text.yview)
+        self.features_text.grid(row=0, column=0, sticky='nsew')
+        features_scrollbar.grid(row=0, column=1, sticky='ns')
+        features_frame.columnconfigure(0, weight=1)
+        features_frame.rowconfigure(0, weight=1)
         self.features_text.config(yscrollcommand=features_scrollbar.set)
+        # Make sure the scrollbar is always visible and tightly coupled
+        self.features_text['yscrollcommand'] = features_scrollbar.set
+        features_scrollbar['command'] = self.features_text.yview
         
         # Total samples
         ttk.Label(info_frame, text=f"Total Samples: {len(self.labels)}").grid(row=3, column=0, columnspan=3, pady=5)

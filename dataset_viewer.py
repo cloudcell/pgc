@@ -947,43 +947,26 @@ def main():
     root = tk.Tk()
     root.withdraw()  # Hide window until geometry is set
     # Center the main window on the active monitor (multi-monitor aware)
-    import sys
-    import os
-    import subprocess
     w = 800
-    h = 900  # Increased height for hex viewer
+    h = 900  # Height for hex viewer
     centered = False
-    # Try X11/xrandr multi-monitor centering first (Linux)
-    if sys.platform.startswith("linux") and os.environ.get("DISPLAY"):
-        try:
-            # Get mouse pointer location
-            pointer = subprocess.check_output(["xdotool", "getmouselocation"], text=True)
-            pointer_dict = dict(kv.split(':') for kv in pointer.strip().split())
-            px = int(pointer_dict['x'])
-            py = int(pointer_dict['y'])
-            # Get monitor info from xrandr
-            xrandr = subprocess.check_output(["xrandr", "--query"], text=True)
-            monitors = []
-            for line in xrandr.splitlines():
-                if " connected" in line:
-                    parts = line.split()
-                    for p in parts:
-                        if "+" in p and "x" in p:
-                            res, xy = p.split("+")
-                            width, height = map(int, res.split("x"))
-                            x, y = map(int, xy.split("+"))
-                            monitors.append({'x': x, 'y': y, 'width': width, 'height': height})
-                            break
-            # Find monitor under pointer
-            for m in monitors:
-                if m['x'] <= px < m['x'] + m['width'] and m['y'] <= py < m['y'] + m['height']:
-                    x = m['x'] + (m['width'] - w) // 2
-                    y = m['y'] + (m['height'] - h) // 2
-                    root.geometry(f"{w}x{h}+{x}+{y}")
-                    centered = True
-                    break
-        except Exception:
-            centered = False
+    try:
+        from screeninfo import get_monitors
+        pointer_x = root.winfo_pointerx()
+        pointer_y = root.winfo_pointery()
+        monitors = get_monitors()
+        monitor = monitors[0]
+        for m in monitors:
+            if (m.x <= pointer_x < m.x + m.width) and (m.y <= pointer_y < m.y + m.height):
+                monitor = m
+                break
+        x = monitor.x + (monitor.width - w) // 2
+        y = monitor.y + (monitor.height - h) // 2
+        root.geometry(f"{w}x{h}+{x}+{y}")
+        centered = True
+    except Exception:
+        centered = False
+
     if not centered:
         try:
             from screeninfo import get_monitors

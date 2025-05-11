@@ -188,8 +188,31 @@ def pack_file(input_file, output_file=None, encoding='base64', mode='jam', fit_a
                     use_pickle = True
         if use_pickle:
             print(f"Detected mode=fit and --pickle {pickle_path}. Skipping encoding and dataset creation.")
-            # Call run_pgc_jam with pickle file as the dataset
-            run_pgc_jam(output_file, mode=mode, fit_args=fit_args)
+            # Remove --pickle and its value from fit_args
+            new_fit_args = []
+            skip_next = False
+            for i, arg in enumerate(fit_args):
+                if skip_next:
+                    skip_next = False
+                    continue
+                if arg == '--pickle':
+                    skip_next = True
+                    continue
+                new_fit_args.append(arg)
+            # Ensure --dataset_path is set to pickle_path
+            # Remove any existing --dataset_path
+            filtered_args = []
+            skip_next = False
+            for i, arg in enumerate(new_fit_args):
+                if skip_next:
+                    skip_next = False
+                    continue
+                if arg == '--dataset_path':
+                    skip_next = True
+                    continue
+                filtered_args.append(arg)
+            filtered_args += ['--dataset_path', pickle_path]
+            run_pgc_jam(output_file, mode=mode, fit_args=filtered_args)
             print(f"Successfully packed file to {output_file} (pickle mode)")
             return
         if not os.path.exists(input_file):

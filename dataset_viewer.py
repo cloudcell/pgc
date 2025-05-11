@@ -657,7 +657,7 @@ Max Pixel Value (all samples): {all_max}
         self.hex_text.tag_delete('nonprintable')
         self.hex_text.tag_configure('nonprintable', background='yellow')
 
-        for offset in range(0, len(raw_bytes), 16):
+        for line_no, offset in enumerate(range(0, len(raw_bytes), 16), start=1):
             chunk = raw_bytes[offset:offset+16]
             # Hex bytes with | after each 4 bytes
             hex_groups = []
@@ -673,15 +673,14 @@ Max Pixel Value (all samples): {all_max}
                 ascii_bytes += chr(b) if 32 <= b < 127 else '.'
 
             line = f"{offset:08X}  {hex_bytes}  {ascii_bytes}\n"
-            start_idx = self.hex_text.index(tk.END)
             self.hex_text.insert(tk.END, line)
             # Highlight nonprintable chars in ASCII column
             ascii_start = line.find(ascii_bytes)
             for i, b in enumerate(chunk):
                 if not (32 <= b < 127):
-                    # Find the index for the nonprintable char
-                    char_pos = f"{start_idx}+{ascii_start + i}c"
-                    self.hex_text.tag_add('nonprintable', char_pos, f"{char_pos}+1c")
+                    tag_start = f"{line_no}.{ascii_start + i}"
+                    tag_end = f"{line_no}.{ascii_start + i + 1}"
+                    self.hex_text.tag_add('nonprintable', tag_start, tag_end)
 
         if len(raw_bytes) == 0:
             self.hex_text.insert(tk.END, '(No data)')

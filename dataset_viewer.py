@@ -55,7 +55,7 @@ class LoadingDialog:
             if self.logos[self.logo_idx]:
                 self.logo_label.config(image=self.logos[self.logo_idx])
             self.logo_idx = (self.logo_idx + 1) % len(self.logos)
-            self.top.after(100, animate_logo)
+            self.top.after(40, animate_logo)
         animate_logo()
         self.progress = ttk.Progressbar(logo_row, mode='indeterminate', length=120)
         self.progress.grid(row=0, column=1, sticky="ew")
@@ -116,6 +116,9 @@ class DatasetSelector:
 
         if self.datasets:
             self.listbox.selection_set(0)
+
+        # Enable double-click to open dataset (defer to avoid grab failed error)
+        self.listbox.bind('<Double-Button-1>', lambda e: self.root.after_idle(self.open_dataset))
 
         ttk.Button(self.frame, text="Open Dataset", command=self.open_dataset).grid(row=2, column=0, pady=10, sticky="ew")
     

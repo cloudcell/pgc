@@ -201,14 +201,19 @@ class DatasetViewer:
         self.label_text.grid(row=1, column=1, columnspan=2, padx=5, sticky=tk.W+tk.E)
         self.label_text.config(state=tk.DISABLED)
         self.label_text.tag_configure('yellow', background='yellow')
+        # Label for ASCII character name
+        ttk.Label(info_frame, text="Char Name:").grid(row=2, column=0, padx=5, sticky=tk.W)
+        self.char_name_var = tk.StringVar()
+        self.char_name_label = ttk.Label(info_frame, textvariable=self.char_name_var, font=("TkDefaultFont", 10, "italic"))
+        self.char_name_label.grid(row=2, column=1, columnspan=2, padx=5, sticky=tk.W)
         
-        # Features as text display
+        # Features as text display (move to next row)
         self.features_text_var = tk.StringVar()
-        ttk.Label(info_frame, text="Features as Text:").grid(row=2, column=0, padx=5, sticky=tk.W)
+        ttk.Label(info_frame, text="Features as Text:").grid(row=4, column=0, padx=5, sticky=tk.W)
         
         # Use a text widget for features text to allow scrolling and selection
         features_frame = ttk.Frame(info_frame)
-        features_frame.grid(row=2, column=1, columnspan=2, padx=5, pady=5, sticky=(tk.W, tk.E))
+        features_frame.grid(row=4, column=1, columnspan=2, padx=5, pady=5, sticky=(tk.W, tk.E))
         
         # Configure features frame to expand with info frame
         features_frame.columnconfigure(0, weight=1)
@@ -572,6 +577,18 @@ Max Pixel Value (all samples): {all_max}
         self.canvas.create_image(140, 140, image=self.current_image)
         
         # Update label display with yellow highlight for ASCII char (dot if nonprintable)
+        import unicodedata
+        ascii_names = {
+            0: 'NUL (null)', 1: 'SOH (start of heading)', 2: 'STX (start of text)', 3: 'ETX (end of text)',
+            4: 'EOT (end of transmission)', 5: 'ENQ (enquiry)', 6: 'ACK (acknowledge)', 7: 'BEL (bell)',
+            8: 'BS (backspace)', 9: 'TAB (horizontal tab)', 10: 'LF (line feed)', 11: 'VT (vertical tab)',
+            12: 'FF (form feed)', 13: 'CR (carriage return)', 14: 'SO (shift out)', 15: 'SI (shift in)',
+            16: 'DLE (data link escape)', 17: 'DC1 (device control 1)', 18: 'DC2 (device control 2)', 19: 'DC3 (device control 3)',
+            20: 'DC4 (device control 4)', 21: 'NAK (negative acknowledge)', 22: 'SYN (synchronous idle)', 23: 'ETB (end of trans. block)',
+            24: 'CAN (cancel)', 25: 'EM (end of medium)', 26: 'SUB (substitute)', 27: 'ESC (escape)',
+            28: 'FS (file separator)', 29: 'GS (group separator)', 30: 'RS (record separator)', 31: 'US (unit separator)',
+            127: 'DEL (delete)'
+        }
         if 32 <= label < 127:
             char_display = chr(label)
         else:
@@ -587,6 +604,14 @@ Max Pixel Value (all samples): {all_max}
             end = f"1.{idx+2}"
             self.label_text.tag_add('yellow', start, end)
         self.label_text.config(state=tk.DISABLED)
+        # Set the ASCII character name label
+        if label in ascii_names:
+            self.char_name_var.set(ascii_names[label])
+        else:
+            try:
+                self.char_name_var.set(unicodedata.name(chr(label)))
+            except Exception:
+                self.char_name_var.set('N/A')
         
         # Convert features to ASCII text
         feature_values = features.numpy()
@@ -679,16 +704,21 @@ Max Pixel Value (all samples): {all_max}
             chunk = raw_bytes[offset:offset+16]
             # Hex bytes with | after each 4 bytes
             hex_groups = []
-            for i in range(0, len(chunk), 4):
-                group = ' '.join(f"{b:02X}" for b in chunk[i:i+4])
+            for i in range(0, 16, 4):
+                group = ' '.join(f"{b:02X}" for b in chunk[i:i+4]) if i < len(chunk) else ''
+                # Pad group with spaces if less than 4 bytes
+                if len(chunk[i:i+4]) < 4:
+                    group = group.ljust(3*4-1)
                 hex_groups.append(group)
             hex_bytes = ' | '.join(hex_groups)
-            hex_bytes = hex_bytes.ljust(16*3 + 3)  # Pad to align columns
+            # Pad the entire hex_bytes to match a full row
+            hex_bytes = hex_bytes.ljust(16*3 + 3)
 
-            # ASCII representation
+            # ASCII representation, pad with spaces for missing bytes
             ascii_bytes = ''
             for b in chunk:
                 ascii_bytes += chr(b) if 32 <= b < 127 else '.'
+            ascii_bytes = ascii_bytes.ljust(16)
 
             line = f"{offset:08X}  {hex_bytes}  {ascii_bytes}\n"
             self.hex_text.insert(tk.END, line)

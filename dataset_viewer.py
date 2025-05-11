@@ -299,6 +299,9 @@ class DatasetViewer:
         help_menu = tk.Menu(menu_bar, tearoff=0)
         menu_bar.add_cascade(label="Help", menu=help_menu)
         help_menu.add_command(label="ASCII Reference", command=self.show_ascii_reference)
+        help_menu.add_command(label="DOS Charset (CP437)", command=self.show_dos_cp437)
+        help_menu.add_separator()
+        help_menu.add_command(label="About", command=self.show_about_dialog)
 
 
         
@@ -479,6 +482,136 @@ Max Pixel Value (all samples): {all_max}
         thread.start()
         # The function returns immediately, the info dialog will appear when ready
     
+    def show_about_dialog(self):
+        import tkinter as tk
+        from tkinter import ttk
+        from PIL import Image, ImageTk
+        import os
+        dialog = tk.Toplevel(self.root)
+        dialog.title("About CloudCell Dataset Viewer")
+        dialog.geometry("420x320")
+        dialog.transient(self.root)
+        dialog.grab_set()
+        # Icon (top left)
+        try:
+            icon_img = Image.open(os.path.join("assets", "CLOUDCELL-32x32-0.png"))
+            icon_imgtk = ImageTk.PhotoImage(icon_img)
+        except Exception:
+            icon_imgtk = None
+        # Logo
+        try:
+            logo_img = Image.open(os.path.join("assets", "logo_a3.png"))
+            logo_img = logo_img.resize((200, 100), Image.Resampling.LANCZOS)
+            logo_imgtk = ImageTk.PhotoImage(logo_img)
+        except Exception:
+            logo_imgtk = None
+        main_frame = ttk.Frame(dialog, padding="10")
+        main_frame.pack(fill=tk.BOTH, expand=True)
+        top_frame = ttk.Frame(main_frame)
+        top_frame.pack(side=tk.TOP, fill=tk.X)
+        # Icon at top left
+        if icon_imgtk:
+            icon_label = ttk.Label(top_frame, image=icon_imgtk)
+            icon_label.image = icon_imgtk
+            icon_label.pack(side=tk.LEFT, anchor=tk.NW, padx=(0,10), pady=(0,5))
+        # Title and version
+        title_label = ttk.Label(top_frame, text="CloudCell Dataset Viewer", font=("Arial", 14, "bold"))
+        title_label.pack(side=tk.LEFT, anchor=tk.NW)
+        # Logo
+        if logo_imgtk:
+            logo_label = ttk.Label(main_frame, image=logo_imgtk)
+            logo_label.image = logo_imgtk
+            logo_label.pack(side=tk.TOP, pady=(10,5))
+        # About text
+        about_text = (
+            "A user-friendly dataset viewer for CloudCell projects.\n"
+            "Supports .pkl datasets, image and feature navigation, and quick ASCII/codepage references.\n"
+            "\nCopyright © 2025 CloudCell. All rights reserved."
+        )
+        text_label = ttk.Label(main_frame, text=about_text, justify=tk.CENTER, wraplength=380)
+        text_label.pack(side=tk.TOP, pady=(10,5))
+        ttk.Button(main_frame, text="Close", command=dialog.destroy).pack(side=tk.BOTTOM, pady=10)
+
+    def show_dos_cp437(self):
+        # DOS Code Page 437 table for 128-255
+        import tkinter as tk
+        from tkinter import ttk
+        dialog = tk.Toplevel(self.root)
+        dialog.title("DOS Charset (CP437) 128–255")
+        dialog.geometry("520x600")
+        dialog.transient(self.root)
+        dialog.grab_set()
+
+        frame = ttk.Frame(dialog, padding="10")
+        frame.pack(fill=tk.BOTH, expand=True)
+
+        text = tk.Text(frame, wrap=tk.NONE, height=32, width=60, font=("Courier", 10))
+        text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar = ttk.Scrollbar(frame, orient=tk.VERTICAL, command=text.yview)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        text.config(yscrollcommand=scrollbar.set)
+
+        text.insert(tk.END, f"{'Dec':>3}  {'Hex':>4}  {'Char':^7}  {'CP437 Description'}\n")
+        text.insert(tk.END, f"{'-'*3}  {'-'*4}  {'-'*7}  {'-'*20}\n")
+        # CP437 descriptions for 128-255 (abbreviated for brevity; full can be added as needed)
+        cp437_desc = [
+            'Ç','ü','é','â','ä','à','å','ç','ê','ë','è','ï','î','ì','Ä','Å',
+            'É','æ','Æ','ô','ö','ò','û','ù','ÿ','Ö','Ü','¢','£','¥','₧','ƒ',
+            'á','í','ó','ú','ñ','Ñ','ª','º','¿','⌐','¬','½','¼','¡','«','»',
+            '░','▒','▓','│','┤','Á','Â','À','©','╣','║','╗','╝','¢','¥','┐',
+            '└','┴','┬','├','─','┼','ã','Ã','╚','╔','╩','╦','╠','═','╬','¤',
+            'ð','Ð','Ê','Ë','È','ı','Í','Î','Ï','┘','┌','█','▄','¦','Ì','▀',
+            'Ó','ß','Ô','Ò','õ','Õ','µ','þ','Þ','Ú','Û','Ù','ý','Ý','¯','´',
+            '≡','±','‗','¾','¶','§','÷','¸','°','¨','·','¹','³','²','■',' ' 
+        ]
+        cp437_names = [
+            'Latin Capital Letter C with Cedilla','Latin Small Letter U with Diaeresis','Latin Small Letter E with Acute',
+            'Latin Small Letter A with Circumflex','Latin Small Letter A with Diaeresis','Latin Small Letter A with Grave',
+            'Latin Small Letter A with Ring Above','Latin Small Letter C with Cedilla','Latin Small Letter E with Circumflex',
+            'Latin Small Letter E with Diaeresis','Latin Small Letter E with Grave','Latin Small Letter I with Diaeresis',
+            'Latin Small Letter I with Circumflex','Latin Small Letter I with Grave','Latin Capital Letter A with Diaeresis',
+            'Latin Capital Letter A with Ring Above','Latin Capital Letter E with Acute','Latin Small Letter AE',
+            'Latin Capital Letter AE','Latin Small Letter O with Circumflex','Latin Small Letter O with Diaeresis',
+            'Latin Small Letter O with Grave','Latin Small Letter U with Circumflex','Latin Small Letter U with Grave',
+            'Latin Small Letter Y with Diaeresis','Latin Capital Letter O with Diaeresis','Latin Capital Letter U with Diaeresis',
+            'Cent Sign','Pound Sign','Yen Sign','Peseta Sign','Function Sign','Latin Small Letter A with Acute',
+            'Latin Small Letter I with Acute','Latin Small Letter O with Acute','Latin Small Letter U with Acute',
+            'Latin Small Letter N with Tilde','Latin Capital Letter N with Tilde','Feminine Ordinal Indicator',
+            'Masculine Ordinal Indicator','Inverted Question Mark','Reversed Not Sign','Not Sign','One Half',
+            'One Quarter','Inverted Exclamation Mark','Left-Pointing Double Angle Quotation Mark',
+            'Right-Pointing Double Angle Quotation Mark','Light Shade','Medium Shade','Dark Shade','Box Drawings Light Vertical',
+            'Box Drawings Light Vertical and Left','Latin Capital Letter A with Acute','Latin Capital Letter A with Circumflex',
+            'Latin Capital Letter A with Grave','Copyright Sign','Box Drawings Double Vertical and Left',
+            'Box Drawings Double Vertical','Box Drawings Double Down and Left','Box Drawings Double Up and Left',
+            'Cent Sign','Yen Sign','Box Drawings Double Up and Right','Box Drawings Double Down and Right',
+            'Box Drawings Double Horizontal','Box Drawings Double Vertical and Right','Box Drawings Double Down and Horizontal',
+            'Box Drawings Double Up and Horizontal','Box Drawings Double Vertical and Horizontal','Currency Sign',
+            'Latin Small Letter Eth','Latin Capital Letter Eth','Latin Capital Letter E with Circumflex',
+            'Latin Capital Letter E with Diaeresis','Latin Capital Letter E with Grave','Dotless I',
+            'Latin Capital Letter I with Acute','Latin Capital Letter I with Circumflex','Latin Capital Letter I with Diaeresis',
+            'Box Drawings Light Up and Right','Box Drawings Light Up and Left','Full Block','Lower Half Block',
+            'Broken Bar','Box Drawings Light Up and Horizontal','Upper Half Block','Latin Capital Letter O with Acute',
+            'Latin Small Letter Sharp S','Latin Capital Letter O with Circumflex','Latin Capital Letter O with Grave',
+            'Latin Small Letter O with Tilde','Latin Capital Letter O with Tilde','Micro Sign','Latin Small Letter Thorn',
+            'Latin Capital Letter Thorn','Latin Capital Letter U with Acute','Latin Capital Letter U with Circumflex',
+            'Latin Capital Letter U with Grave','Latin Small Letter Y with Acute','Latin Capital Letter Y with Acute',
+            'Macron','Acute Accent','Identical To','Plus-Minus Sign','Double Low Line','Three Quarters','Pilcrow Sign',
+            'Section Sign','Division Sign','Cedilla','Degree Sign','Diaeresis','Middle Dot','Superscript One',
+            'Superscript Three','Superscript Two','Black Square','Non-Breaking Space'
+        ]
+        for i, code in enumerate(range(128, 256)):
+            dec = f"{code:3}"
+            hex_ = f"0x{code:02X}"
+            try:
+                c = bytes([code]).decode('cp437')
+            except Exception:
+                c = ''
+            char = f"'{c}'" if c.strip() else ''
+            desc = cp437_names[i] if i < len(cp437_names) else ''
+            text.insert(tk.END, f"{dec}  {hex_:>4}  {char:^7}  {desc}\n")
+        text.config(state=tk.DISABLED)
+        ttk.Button(frame, text="Close", command=dialog.destroy).pack(pady=10)
+
     def show_ascii_reference(self):
         import unicodedata
         dialog = tk.Toplevel(self.root)

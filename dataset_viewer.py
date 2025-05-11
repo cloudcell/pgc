@@ -946,41 +946,74 @@ Max Pixel Value (all samples): {all_max}
 def main():
     root = tk.Tk()
     # Center the main window on the active monitor (multi-monitor aware)
-    try:
-        from screeninfo import get_monitors
-        import os
-        # Get mouse pointer location (X11 only, fallback otherwise)
-        pointer_x = pointer_y = None
+    import sys
+    import os
+    import subprocess
+    w = 800
+    h = 900  # Increased height for hex viewer
+    centered = False
+    # Try X11/xrandr multi-monitor centering first (Linux)
+    if sys.platform.startswith("linux") and os.environ.get("DISPLAY"):
         try:
-            import tkinter
-            pointer_x = root.winfo_pointerx()
-            pointer_y = root.winfo_pointery()
-        except Exception:
-            pointer_x = pointer_y = None
-        monitors = get_monitors()
-        # Default to primary
-        monitor = monitors[0]
-        # If pointer location is available, find monitor containing pointer
-        if pointer_x is not None and pointer_y is not None:
+            # Get mouse pointer location
+            pointer = subprocess.check_output(["xdotool", "getmouselocation"], text=True)
+            pointer_dict = dict(kv.split(':') for kv in pointer.strip().split())
+            px = int(pointer_dict['x'])
+            py = int(pointer_dict['y'])
+            # Get monitor info from xrandr
+            xrandr = subprocess.check_output(["xrandr", "--query"], text=True)
+            monitors = []
+            for line in xrandr.splitlines():
+                if " connected" in line:
+                    parts = line.split()
+                    for p in parts:
+                        if "+" in p and "x" in p:
+                            res, xy = p.split("+")
+                            width, height = map(int, res.split("x"))
+                            x, y = map(int, xy.split("+"))
+                            monitors.append({'x': x, 'y': y, 'width': width, 'height': height})
+                            break
+            # Find monitor under pointer
             for m in monitors:
-                if (m.x <= pointer_x < m.x + m.width) and (m.y <= pointer_y < m.y + m.height):
-                    monitor = m
+                if m['x'] <= px < m['x'] + m['width'] and m['y'] <= py < m['y'] + m['height']:
+                    x = m['x'] + (m['width'] - w) // 2
+                    y = m['y'] + (m['height'] - h) // 2
+                    root.geometry(f"{w}x{h}+{x}+{y}")
+                    centered = True
                     break
-        w = 800
-        h = 900  # Increased height for hex viewer
-        x = monitor.x + (monitor.width - w) // 2
-        y = monitor.y + (monitor.height - h) // 2
-        root.geometry(f"{w}x{h}+{x}+{y}")
-    except ImportError:
-        # Fallback: center on primary screen
+        except Exception:
+            centered = False
+    if not centered:
+        try:
+            from screeninfo import get_monitors
+            pointer_x = pointer_y = None
+            try:
+                import tkinter
+                pointer_x = root.winfo_pointerx()
+                pointer_y = root.winfo_pointery()
+            except Exception:
+                pointer_x = pointer_y = None
+            monitors = get_monitors()
+            monitor = monitors[0]
+            if pointer_x is not None and pointer_y is not None:
+                for m in monitors:
+                    if (m.x <= pointer_x < m.x + m.width) and (m.y <= pointer_y < m.y + m.height):
+                        monitor = m
+                        break
+            x = monitor.x + (monitor.width - w) // 2
+            y = monitor.y + (monitor.height - h) // 2
+            root.geometry(f"{w}x{h}+{x}+{y}")
+            centered = True
+        except ImportError:
+            centered = False
+    if not centered:
         root.update_idletasks()
-        w = 800
-        h = 900  # Increased height for hex viewer
         sw = root.winfo_screenwidth()
         sh = root.winfo_screenheight()
         x = (sw - w) // 2
         y = (sh - h) // 2
         root.geometry(f"{w}x{h}+{x}+{y}")
+
     app = DatasetSelector(root)
     root.mainloop()
 

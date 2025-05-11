@@ -967,7 +967,7 @@ def main():
                     monitor = m
                     break
         w = 800
-        h = 600
+        h = 900  # Increased height for hex viewer
         x = monitor.x + (monitor.width - w) // 2
         y = monitor.y + (monitor.height - h) // 2
         root.geometry(f"{w}x{h}+{x}+{y}")
@@ -975,7 +975,7 @@ def main():
         # Fallback: center on primary screen
         root.update_idletasks()
         w = 800
-        h = 600
+        h = 900  # Increased height for hex viewer
         sw = root.winfo_screenwidth()
         sh = root.winfo_screenheight()
         x = (sw - w) // 2

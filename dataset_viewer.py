@@ -12,7 +12,8 @@ class LoadingDialog:
         self.top = tk.Toplevel(parent)
         self.top.title("Loading Dataset")
         self.top.transient(parent)
-        self.top.grab_set()
+        # Do not call grab_set here; wait until window is mapped
+        self.top.bind("<Map>", self._on_map)
 
         # Center the dialog over the parent window
         w = 300
@@ -63,6 +64,10 @@ class LoadingDialog:
 
         self.label = ttk.Label(self.frame, text="Loading dataset...")
         self.label.grid(row=1, column=0, pady=5)
+
+    def _on_map(self, event=None):
+        self.top.grab_set()
+        self.top.unbind("<Map>")
 
     def destroy(self):
         self.top.destroy()

@@ -489,7 +489,7 @@ Max Pixel Value (all samples): {all_max}
         import os
         dialog = tk.Toplevel(self.root)
         dialog.title("About CloudCell Dataset Viewer")
-        dialog.geometry("420x320")
+        dialog.geometry("420x420")
         dialog.transient(self.root)
         dialog.grab_set()
         # Icon (top left)
@@ -501,7 +501,12 @@ Max Pixel Value (all samples): {all_max}
         # Logo
         try:
             logo_img = Image.open(os.path.join("assets", "logo_a3.png"))
-            logo_img = logo_img.resize((200, 100), Image.Resampling.LANCZOS)
+            # Only scale down if necessary, preserve aspect ratio
+            max_width = 200
+            if logo_img.width > max_width:
+                scale = max_width / logo_img.width
+                new_size = (int(logo_img.width * scale), int(logo_img.height * scale))
+                logo_img = logo_img.resize(new_size, Image.Resampling.LANCZOS)
             logo_imgtk = ImageTk.PhotoImage(logo_img)
         except Exception:
             logo_imgtk = None
@@ -509,19 +514,14 @@ Max Pixel Value (all samples): {all_max}
         main_frame.pack(fill=tk.BOTH, expand=True)
         top_frame = ttk.Frame(main_frame)
         top_frame.pack(side=tk.TOP, fill=tk.X)
-        # Icon at top left
-        if icon_imgtk:
-            icon_label = ttk.Label(top_frame, image=icon_imgtk)
-            icon_label.image = icon_imgtk
-            icon_label.pack(side=tk.LEFT, anchor=tk.NW, padx=(0,10), pady=(0,5))
-        # Title and version
-        title_label = ttk.Label(top_frame, text="CloudCell Dataset Viewer", font=("Arial", 14, "bold"))
-        title_label.pack(side=tk.LEFT, anchor=tk.NW)
-        # Logo
+        # Gyroscope logo at the top, centered
         if logo_imgtk:
             logo_label = ttk.Label(main_frame, image=logo_imgtk)
             logo_label.image = logo_imgtk
-            logo_label.pack(side=tk.TOP, pady=(10,5))
+            logo_label.pack(side=tk.TOP, pady=(0,10))
+        # Title and version
+        title_label = ttk.Label(main_frame, text="CloudCell Dataset Viewer", font=("Arial", 14, "bold"))
+        title_label.pack(side=tk.TOP, anchor=tk.CENTER)
         # About text
         about_text = (
             "A user-friendly dataset viewer for CloudCell projects.\n"
@@ -945,6 +945,15 @@ Max Pixel Value (all samples): {all_max}
 
 def main():
     root = tk.Tk()
+    # Center the main window on the screen
+    root.update_idletasks()
+    w = 800
+    h = 600
+    sw = root.winfo_screenwidth()
+    sh = root.winfo_screenheight()
+    x = (sw - w) // 2
+    y = (sh - h) // 2
+    root.geometry(f"{w}x{h}+{x}+{y}")
     app = DatasetSelector(root)
     root.mainloop()
 

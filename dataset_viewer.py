@@ -293,8 +293,14 @@ class DatasetViewer:
         shape_menu.add_separator()
         shape_menu.add_command(label="Custom Shape...", command=self.set_custom_shape)
         
-        # Add info option
         dataset_menu.add_command(label="Dataset Info", command=self.show_dataset_info)
+
+        # Add Help menu with ASCII Reference
+        help_menu = tk.Menu(menu_bar, tearoff=0)
+        menu_bar.add_cascade(label="Help", menu=help_menu)
+        help_menu.add_command(label="ASCII Reference", command=self.show_ascii_reference)
+
+
         
     
     def set_shape(self, shape):
@@ -473,6 +479,55 @@ Max Pixel Value (all samples): {all_max}
         thread.start()
         # The function returns immediately, the info dialog will appear when ready
     
+    def show_ascii_reference(self):
+        import unicodedata
+        dialog = tk.Toplevel(self.root)
+        dialog.title("ASCII Reference Table")
+        dialog.geometry("520x600")
+        dialog.transient(self.root)
+        dialog.grab_set()
+
+        frame = ttk.Frame(dialog, padding="10")
+        frame.pack(fill=tk.BOTH, expand=True)
+
+        # Use a Text widget for scrollable table
+        text = tk.Text(frame, wrap=tk.NONE, height=32, width=60, font=("Courier", 10))
+        text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar = ttk.Scrollbar(frame, orient=tk.VERTICAL, command=text.yview)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        text.config(yscrollcommand=scrollbar.set)
+
+        # Table header
+        text.insert(tk.END, f"{'Dec':>3}  {'Hex':>4}  {'Char':^7}  {'Name'}\n")
+        text.insert(tk.END, f"{'-'*3}  {'-'*4}  {'-'*7}  {'-'*20}\n")
+        for code in range(128):
+            dec = f"{code:3}"
+            hex_ = f"0x{code:02X}"
+            if 32 <= code <= 126:
+                char = f"'{chr(code)}'"
+            else:
+                char = ""
+            try:
+                name = unicodedata.name(chr(code))
+            except ValueError:
+                # Standard ASCII control names
+                ascii_names = [
+                    'NUL','SOH','STX','ETX','EOT','ENQ','ACK','BEL','BS','TAB','LF','VT','FF','CR','SO','SI',
+                    'DLE','DC1','DC2','DC3','DC4','NAK','SYN','ETB','CAN','EM','SUB','ESC','FS','GS','RS','US',
+                    'SPACE'
+                ]
+                if code < 32:
+                    name = ascii_names[code]
+                elif code == 32:
+                    name = 'SPACE'
+                elif code == 127:
+                    name = 'DEL'
+                else:
+                    name = ''
+            text.insert(tk.END, f"{dec}  {hex_:>4}  {char:^7}  {name}\n")
+        text.config(state=tk.DISABLED)
+        ttk.Button(frame, text="Close", command=dialog.destroy).pack(pady=10)
+
     def create_image(self, features):
         # Get the size of the features
         feature_size = features.numel()

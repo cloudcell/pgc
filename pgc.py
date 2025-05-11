@@ -90,10 +90,18 @@ def run_pgc_jam(output_file, mode='jam', fit_args=None):
     """
     print(f"Running 674_pgc_fit.py with mode={mode}...")
     from datetime import datetime
-    # Create a checkpoint directory if it doesn't exist with a timestamp as of now
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    checkpoint_dir = os.path.join(os.path.dirname(output_file), f'checkpoints_{timestamp}')
-    os.makedirs(checkpoint_dir, exist_ok=True)
+    # Check if --checkpoints is in fit_args
+    checkpoint_dir = None
+    if fit_args:
+        if '--checkpoints' in fit_args:
+            idx = fit_args.index('--checkpoints')
+            if idx + 1 < len(fit_args):
+                checkpoint_dir = fit_args[idx + 1]
+    if checkpoint_dir is None:
+        # Create a checkpoint directory if it doesn't exist with a timestamp as of now
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        checkpoint_dir = os.path.join(os.path.dirname(output_file), f'checkpoints_{timestamp}')
+        os.makedirs(checkpoint_dir, exist_ok=True)
     # Build base args
     base_args = [
         sys.executable, '674_pgc_fit.py', 

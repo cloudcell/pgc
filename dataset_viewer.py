@@ -472,24 +472,6 @@ Max Pixel Value (all samples): {all_max}
         thread = threading.Thread(target=calc_and_show)
         thread.start()
         # The function returns immediately, the info dialog will appear when ready
-
-        
-        # Create text widget with scrollbar
-        text_frame = ttk.Frame(frame)
-        text_frame.pack(fill=tk.BOTH, expand=True)
-        
-        scrollbar = ttk.Scrollbar(text_frame)
-        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-        
-        text_widget = tk.Text(text_frame, wrap=tk.WORD, yscrollcommand=scrollbar.set)
-        text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        scrollbar.config(command=text_widget.yview)
-        
-        text_widget.insert(tk.END, info_text)
-        text_widget.config(state=tk.DISABLED)
-        
-        # Close button
-        ttk.Button(frame, text="Close", command=dialog.destroy).pack(pady=10)
     
     def create_image(self, features):
         # Get the size of the features

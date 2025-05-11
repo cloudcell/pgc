@@ -1202,9 +1202,8 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
                 optimizer.zero_grad()
                 
                 # Forward pass with mixed precision
-                with torch.cuda.amp.autocast():
-                    outputs = model(inputs, collect_stats=True, labels=targets)
-                    loss = criterion(outputs, targets)
+                outputs = model(inputs, collect_stats=True, labels=targets)
+                loss = criterion(outputs, targets)
                 
                 # Backward pass with gradient scaling
                 scaler.scale(loss).backward()

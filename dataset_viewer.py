@@ -55,25 +55,36 @@ class DatasetSelector:
         except Exception as e:
             print(f"Warning: Could not load application icon: {e}")
         
-        self.frame = ttk.Frame(root, padding="20")
-        self.frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
-        
-        ttk.Label(self.frame, text="Select a dataset to view:").grid(row=0, column=0, pady=10)
-        
+        self.frame = ttk.Frame(root, padding="10")
+        self.frame.grid(row=0, column=0, sticky="nsew")
+        self.frame.columnconfigure(0, weight=1)
+        self.frame.rowconfigure(1, weight=1)
+
+        ttk.Label(self.frame, text="Select a dataset to view:").grid(row=0, column=0, pady=10, sticky="w")
+
         # Scan for available datasets
         self.datasets = self.find_datasets()
-        
-        # Dataset listbox
-        self.listbox = tk.Listbox(self.frame, height=10, width=50)
-        self.listbox.grid(row=1, column=0, pady=5)
-        
+
+        # Listbox frame for full-width expansion
+        listbox_frame = tk.Frame(self.frame)
+        listbox_frame.grid(row=1, column=0, sticky="nsew")
+        listbox_frame.columnconfigure(0, weight=1)
+        listbox_frame.rowconfigure(0, weight=1)
+
+        self.listbox = tk.Listbox(listbox_frame, height=10, borderwidth=1, relief="solid")
+        self.listbox.grid(row=0, column=0, sticky="nsew")
+        # Optional: Add a vertical scrollbar if many datasets
+        scrollbar = ttk.Scrollbar(listbox_frame, orient="vertical", command=self.listbox.yview)
+        scrollbar.grid(row=0, column=1, sticky="ns")
+        self.listbox.config(yscrollcommand=scrollbar.set)
+
         for dataset in self.datasets:
             self.listbox.insert(tk.END, os.path.basename(dataset))
-        
+
         if self.datasets:
             self.listbox.selection_set(0)
-        
-        ttk.Button(self.frame, text="Open Dataset", command=self.open_dataset).grid(row=2, column=0, pady=10)
+
+        ttk.Button(self.frame, text="Open Dataset", command=self.open_dataset).grid(row=2, column=0, pady=10, sticky="ew")
     
     def find_datasets(self):
         # Search recursively in all subfolders within 'data' and './tmp' for .pkl files

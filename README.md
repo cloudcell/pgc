@@ -7,6 +7,8 @@
 
 ### Running the Example
 ```
+Use the 'recovery' branch!
+
 # Create a virtual environment
 python3 -m venv venv
 
@@ -32,6 +34,13 @@ python3 675_pgc_reader.py
 ### More Info:
 
 https://github.com/cloudcell/prj.pgc-paper-code-public
+
+---
+
+Dataset Analyser
+![image](https://github.com/user-attachments/assets/90c305e2-9115-4f7c-b246-811cbcb47643)
+
+
 
 ---
 # Research Log

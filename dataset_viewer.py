@@ -13,22 +13,25 @@ class LoadingDialog:
         self.top.title("Loading Dataset")
         self.top.transient(parent)
         self.top.grab_set()
-        
-        # Center the dialog
+
+        # Center the dialog over the parent window
         w = 300
         h = 100
-        ws = parent.winfo_screenwidth()
-        hs = parent.winfo_screenheight()
-        x = (ws/2) - (w/2)
-        y = (hs/2) - (h/2)
-        self.top.geometry(f'{w}x{h}+{int(x)}+{int(y)}')
-        
+        parent.update_idletasks()  # Ensure geometry info is up-to-date
+        px = parent.winfo_rootx()
+        py = parent.winfo_rooty()
+        pw = parent.winfo_width()
+        ph = parent.winfo_height()
+        x = px + (pw - w) // 2
+        y = py + (ph - h) // 2
+        self.top.geometry(f'{w}x{h}+{x}+{y}')
+
         self.frame = ttk.Frame(self.top, padding="20")
         self.frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
-        
+
         self.label = ttk.Label(self.frame, text="Loading dataset...")
         self.label.grid(row=0, column=0, pady=5)
-        
+
         self.progress = ttk.Progressbar(self.frame, mode='indeterminate')
         self.progress.grid(row=1, column=0, pady=5)
         self.progress.start(10)

@@ -124,8 +124,8 @@ if 0:
 
     dataset = TextDataset(features, labels)
 
-# use num_classes from the model
-num_classes = None
+# use num_classes from the model using global
+num_classes = 256
 
 if 0:
 # Create data loaders
@@ -162,7 +162,7 @@ def set_globals_from_model(model):
     logger.info(f"Loaded model config: {config}")
 
 class SelfOrganizingBrain(nn.Module):
-    def __init__(self, input_size=784, embedding_size=256, brain_size=3, address_dim=2, num_heads=1, num_jumps=2, num_classes=num_classes):
+    def __init__(self, input_size=784, embedding_size=256, brain_size=3, address_dim=2, num_heads=1, num_jumps=2, num_classes=None):
         super().__init__()
         self.embedding_size = embedding_size
         self.brain_size = brain_size
@@ -212,7 +212,7 @@ class SelfOrganizingBrain(nn.Module):
         self.output = nn.Sequential(
             nn.Linear(embedding_size, embedding_size),
             nn.ReLU(),
-            nn.Linear(embedding_size, num_classes)  # 128 classes for ASCII values
+            nn.Linear(embedding_size, num_classes) 
         )
         
         # Initialize statistics tracking
@@ -1278,13 +1278,18 @@ def load_model_from_checkpoint(checkpoint_dir):
             model = SelfOrganizingBrain(**model_config)
         else:
             # Fallback: try to use globals
+            # Ensure num_classes is always an int
+            fallback_num_classes = num_classes if num_classes is not None else 256
+            if num_classes is None:
+                logger.warning(f"num_classes is None when instantiating fallback model. Using default value: {fallback_num_classes}.")
             model = SelfOrganizingBrain(
                 input_size=input_size,
                 embedding_size=embedding_size,
                 brain_size=brain_size,
                 address_dim=address_space_dim,
                 num_heads=num_heads,
-                num_jumps=num_jumps
+                num_jumps=num_jumps,
+                num_classes=fallback_num_classes
             )
         model.load_state_dict(checkpoint['model_state_dict'])
 

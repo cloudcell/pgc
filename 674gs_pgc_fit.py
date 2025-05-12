@@ -193,7 +193,8 @@ test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False,
 
 # Step 3: Define the Self-Organizing Brain Model
 class SelfOrganizingBrain(nn.Module):
-    def __init__(self, input_size=784, num_classes=128, embedding_size=256, brain_size=3, address_dim=2, num_heads=1, num_jumps=2):
+    def __init__(self, input_size=784, num_classes=args.num_classes, embedding_size=args.embedding_size, 
+    brain_size=args.address_space_size, address_dim=args.address_space_dim, num_heads=1, num_jumps=args.num_jumps):
         super().__init__()
         self.input_size = input_size
         self.num_classes = num_classes

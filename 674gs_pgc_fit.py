@@ -302,19 +302,38 @@ class SelfOrganizingBrain(nn.Module):
         index = self.get_block_index(*coords)
         return self.brain_blocks[index]
     
-    def get_blocks_for_batch(self, current_address):
-        """Get blocks for entire batch at once using vectorized indexing"""
-        batch_size = current_address.size(0)
-        
-        # Calculate flat indices for all batch items at once
-        indices = torch.zeros(batch_size, dtype=torch.long, device=current_address.device)
-        stride = 1
-        for d in range(self.address_dim-1, -1, -1):
-            indices += current_address[:, d] * stride
-            stride *= self.brain_size
-        
-        # Return blocks for these indices
-        return [self.brain_blocks[idx.item()] for idx in indices]
+    def get_blocks_for_batch(self, address_onehot):
+        """
+        Differentiable: Get weighted sum of all blocks for each batch using address_onehot.
+        address_onehot: (batch_size, address_dim, brain_size)
+        Returns: weighted block outputs for each batch item
+        """
+        batch_size = address_onehot.size(0)
+        device = address_onehot.device
+        address_dim = address_onehot.size(1)
+        brain_size = address_onehot.size(2)
+        num_blocks = brain_size ** address_dim
+
+        # Utility: flatten multi-dim one-hot to block weights
+        def flatten_onehot(address_onehot):
+            # address_onehot: (batch_size, address_dim, brain_size)
+            # Returns: (batch_size, num_blocks) one-hot/soft weights
+            # Use einsum to get all possible combinations
+            flat_weights = address_onehot[:, 0, :]
+            for d in range(1, address_dim):
+                flat_weights = torch.einsum('bi,bj->bij', flat_weights, address_onehot[:, d, :])
+                flat_weights = flat_weights.reshape(batch_size, -1)
+            return flat_weights  # (batch_size, num_blocks)
+
+        block_weights = flatten_onehot(address_onehot)  # (batch_size, num_blocks)
+
+        # Stack all block modules' outputs for all possible blocks
+        # For each block, we need to process the batch state through that block
+        # Here, we assume you have a 'state' tensor for the batch, and need to process through all blocks
+        # For now, we'll return the block_weights and let the caller handle the weighted sum
+        return block_weights  # (batch_size, num_blocks)
+
+    # NOTE: In your forward pass, you must now process all blocks for the batch and combine outputs using block_weights.
 
     def process_through_block(self, state, block):
         """Process state through a block"""
@@ -359,142 +378,67 @@ class SelfOrganizingBrain(nn.Module):
         
         # Initialize address
         current_address = self.compute_next_address(initial_state, self.brain_blocks[0])
-        
-        if debug_this:
-            logger.debug(f"Starting path at address: {current_address[0]}")
-        
-        # Initialize pathway tracking and visited addresses
-        if collect_stats:
-            self.current_pathways = [[] for _ in range(batch_size)]
-            # Record initial address in pathways
-            for b in range(batch_size):
-                coords = [int(current_address[b, d].item()) for d in range(self.address_dim)]
-                self.current_pathways[b].append(tuple(coords))
-        
-        # Track visited addresses for each item in batch
-        visited_addresses = [set() for _ in range(batch_size)]
-        # Add initial address to visited set
-        for b in range(batch_size):
-            coords = [int(current_address[b, d].item()) for d in range(self.address_dim)]
-            visited_addresses[b].add(tuple(coords))
-        
-        active_items = set(range(batch_size))  # Track which items are still moving
-        
-        # Main processing loop
+
+        # Initialize pathway tracking
+        self.current_pathways = [[] for _ in range(batch_size)]
+
+        # Main processing loop (differentiable routing)
         for i in range(self.num_jumps):
-            if not active_items:  # Exit if all items have revisited addresses
-                if debug_this:
-                    logger.debug(f"All items completed at step {i}")
-                break
-            
-            # Get all blocks for current addresses
-            blocks = self.get_blocks_for_batch(current_address)
-            
-            # Process state transformations in parallel
-            transformed_states = []
-            next_addresses = []
-            
-            # Process blocks in chunks to avoid memory issues
-            chunk_size = CHUNK_SIZE
-            for chunk_start in range(0, batch_size, chunk_size):
-                chunk_end = min(chunk_start + chunk_size, batch_size)
-                chunk_slice = slice(chunk_start, chunk_end)
-                
-                # Get chunk of states and blocks
-                state_chunk = state[chunk_slice]
-                blocks_chunk = blocks[chunk_start:chunk_end]
-                
-                # Transform states
-                chunk_transformed = torch.cat([
-                    self.process_through_block(state_chunk[j:j+1], blocks_chunk[j])
-                    for j in range(chunk_end - chunk_start)
-                ])
-                
-                # Compute next addresses
-                chunk_addresses = torch.cat([
-                    self.compute_next_address(chunk_transformed[j:j+1], blocks_chunk[j])
-                    for j in range(chunk_end - chunk_start)
-                ])
-                
-                transformed_states.append(chunk_transformed)
-                next_addresses.append(chunk_addresses)
-            
-            # Combine chunks
-            state = torch.cat(transformed_states, dim=0)
-            next_address = torch.cat(next_addresses, dim=0)
-            
-            # Check for revisited addresses and update active items
+            # Get block weights for current address
+            block_weights = self.get_blocks_for_batch(current_address)  # (batch_size, num_blocks)
+
+            # Prepare all possible block modules
+            all_blocks = self.brain_blocks  # length: num_blocks
+            num_blocks = len(all_blocks)
+
+            # Process state through all blocks for each batch
+            # state: (batch_size, embedding_size)
+            all_block_outputs = []  # Will be (batch_size, num_blocks, embedding_size)
+            for block in all_blocks:
+                block_out = self.process_through_block(state, block)  # (batch_size, embedding_size)
+                all_block_outputs.append(block_out.unsqueeze(1))
+            all_block_outputs = torch.cat(all_block_outputs, dim=1)  # (batch_size, num_blocks, embedding_size)
+
+            # Weighted sum over blocks
+            state = torch.bmm(block_weights.unsqueeze(1), all_block_outputs).squeeze(1)  # (batch_size, embedding_size)
+
+            # Compute next address (using a reference block, e.g., first block)
+            current_address = self.compute_next_address(state, self.brain_blocks[0])  # (batch_size, address_dim, brain_size)
+
+            # Log hard address and update pathway tracking
+            address_indices = current_address.argmax(dim=2)
             for b in range(batch_size):
-                if b in active_items:
-                    coords = [int(next_address[b, d].item()) for d in range(self.address_dim)]
-                    coords_tuple = tuple(coords)
-                    
-                    # Check if we should jump out if revisited
-                    if JUMP_OUT_IF_REVISITED:
-                        if coords_tuple in visited_addresses[b]:
-                            active_items.remove(b)
-                            if debug_this and b == 0:  # Log for first item in batch
-                                logger.debug(f"Item 0 completed at step {i} after revisiting {coords_tuple}")
-                            continue  # Skip recording this revisited address
-                    
-                    visited_addresses[b].add(coords_tuple)
-                    if collect_stats:
-                        self.current_pathways[b].append(coords_tuple)
-                        # Record block usage for statistics
-                        self.record_block_usage(coords_tuple)
-            
-            # Update current address for next iteration
-            current_address = next_address
-            
-            # Add residual connection with dynamic weight based on path length
+                self.current_pathways[b].append(tuple(address_indices[b].tolist()))
+
+            # Record block usage
+            for b in range(batch_size):
+                self.record_block_usage(self.current_pathways[b][-1])
+
+            # Optionally, collect pathway stats (not differentiable, so skip or adapt if needed)
+            # (You may want to log soft assignments if desired)
+
+            # Residual connection if needed (optional)
             residual_weight = i / max(1, self.num_jumps - 1)
             state = state + residual_weight * initial_state
-            
-            if debug_this:
-                logger.debug(f"Step {i}: Active items = {len(active_items)}")
-        
-        if debug_this:
-            logger.debug(f"Using final computed address: {current_address[0]}")
-        
-        # Final transformation
-        blocks = self.get_blocks_for_batch(current_address)
-        final_outputs = []
-        
-        # Process final transformation in chunks
-        for chunk_start in range(0, batch_size, chunk_size):
-            chunk_end = min(chunk_start + chunk_size, batch_size)
-            chunk_slice = slice(chunk_start, chunk_end)
-            
-            # Transform final states
-            chunk_transformed = torch.cat([
-                self.process_through_block(state[b:b+1], blocks[b])
-                for b in range(chunk_start, chunk_end)
-            ])
-            final_outputs.append(chunk_transformed)
-        
-        # Combine final outputs
-        final_output = torch.cat(final_outputs, dim=0) + initial_state
-        
-        # Get final outputs through the output layer
+
+        # Final transformation: process through all blocks and combine by block weights
+        block_weights = self.get_blocks_for_batch(current_address)  # (batch_size, num_blocks)
+        all_block_outputs = []
+        for block in all_blocks:
+            block_out = self.process_through_block(state, block)  # (batch_size, embedding_size)
+            all_block_outputs.append(block_out.unsqueeze(1))
+        all_block_outputs = torch.cat(all_block_outputs, dim=1)  # (batch_size, num_blocks, embedding_size)
+        final_output = torch.bmm(block_weights.unsqueeze(1), all_block_outputs).squeeze(1) + initial_state
+
+        # Output layer
         outputs = self.output(final_output)
         
-        # Record pathway statistics if collecting stats
+        # Record pathway with label and prediction
         if collect_stats and labels is not None:
-            # Get predictions from outputs
             _, pred = torch.max(outputs.data, 1)
-            
-            # Record pathways with both labels and predictions
             for b in range(batch_size):
-                if b < len(self.current_pathways):
-                    pathway = self.current_pathways[b]
-                    if pathway:  # Only update if pathway exists
-                        # Record the complete pathway
-                        self.record_pathway_with_label(
-                            pathway=pathway,
-                            label=labels[b],
-                            prediction=pred[b]
-                        )
-        
+                self.record_pathway_with_label(self.current_pathways[b], labels[b], pred[b])
+
         return outputs
 
     def aggregate_stats_from_processes(self):

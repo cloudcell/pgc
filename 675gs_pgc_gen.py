@@ -180,6 +180,97 @@ class SelfOrganizingBrain(nn.Module):
             'num_jumps': num_jumps,
             'num_classes': num_classes
         }
+        # Initial embedding of input
+        self.embedding = nn.Linear(input_size, embedding_size)
+        # Initialize brain blocks
+        blocks_shape = tuple([brain_size] * address_dim)
+        self.brain_blocks = nn.ModuleList()
+        # Calculate total number of blocks needed
+        total_blocks = brain_size ** address_dim
+        # Initialize each block
+        for _ in range(total_blocks):
+            block = nn.ModuleDict({
+                'state_transform': nn.Sequential(
+                    nn.Linear(embedding_size, embedding_size),
+                    nn.ReLU(),
+                    nn.Linear(embedding_size, embedding_size),
+                    nn.ReLU()
+                ),
+                'address_transform': nn.Sequential(
+                    nn.Linear(embedding_size, embedding_size),
+                    nn.ReLU(),
+                    nn.Linear(embedding_size, address_dim * brain_size)
+                )
+            })
+            self.brain_blocks.append(block)
+        # Output layer
+        self.output = nn.Sequential(
+            nn.Linear(embedding_size, embedding_size),
+            nn.ReLU(),
+            nn.Linear(embedding_size, num_classes)
+        )
+        # Initialize statistics tracking
+        self.reset_stats()
+        # Fixed start address
+        self.start_address = nn.Parameter(torch.zeros(1, self.address_dim, dtype=torch.long), requires_grad=False)
+        # Additional transformation for absolute addressing
+        self.absolute_transform = nn.Linear(embedding_size, self.address_dim * brain_size)
+
+    def compute_block_weights(self, current_address):
+        """
+        Compute soft weights for each block given the current soft address.
+        current_address: (batch_size, address_dim, brain_size) (probabilities for each address dim)
+        Returns: (batch_size, num_blocks) tensor of weights
+        """
+        if current_address.dim() != 3:
+            raise ValueError(f"compute_block_weights expects current_address to be 3D (batch_size, address_dim, brain_size), but got shape {tuple(current_address.shape)}")
+        batch_size = current_address.size(0)
+        address_dim = current_address.size(1)
+        brain_size = current_address.size(2)
+        num_blocks = brain_size ** address_dim
+
+        # For each batch, compute the probability of each block being selected
+        # For each block index (in n-dim), probability is product of probabilities along each address dim
+        # Generate all possible n-dim coordinates
+        coords = torch.stack(torch.meshgrid(*[torch.arange(brain_size, device=current_address.device) for _ in range(address_dim)], indexing='ij'), dim=-1)
+        coords = coords.reshape(-1, address_dim)  # (num_blocks, address_dim)
+
+        # For each batch, for each block, get the probability for each address dim
+        # current_address: (batch_size, address_dim, brain_size)
+        # coords: (num_blocks, address_dim)
+        # For each block, get the probability for each dim
+        # Gather the probabilities for each block coordinate
+        probs = []
+        for d in range(address_dim):
+            # For each block, get the coordinate along dim d
+            idx = coords[:, d].unsqueeze(0).expand(batch_size, -1)  # (batch_size, num_blocks)
+            # Gather the probability for this coordinate from current_address
+            dim_probs = torch.gather(current_address[:, d, :], 1, idx)  # (batch_size, num_blocks)
+            probs.append(dim_probs)
+        block_weights = torch.ones_like(probs[0])
+        for p in probs:
+            block_weights = block_weights * p  # Elementwise multiply over dims
+        # Normalize (should already sum to 1, but for safety)
+        block_weights = block_weights / (block_weights.sum(dim=1, keepdim=True) + 1e-8)
+        return block_weights  # (batch_size, num_blocks)
+
+        super().__init__()
+        self.embedding_size = embedding_size
+        self.brain_size = brain_size
+        self.address_dim = address_dim
+        self.num_heads = num_heads
+        self.num_jumps = num_jumps
+        self.num_classes = num_classes
+        # Store model config for checkpointing and loading
+        self.model_config = {
+            'input_size': input_size,
+            'embedding_size': embedding_size,
+            'brain_size': brain_size,
+            'address_dim': address_dim,
+            'num_heads': num_heads,
+            'num_jumps': num_jumps,
+            'num_classes': num_classes
+        }
         
         # Initial embedding of input
         self.embedding = nn.Linear(input_size, embedding_size)
@@ -314,8 +405,9 @@ class SelfOrganizingBrain(nn.Module):
         state = self.embedding(x.view(batch_size, -1))
         initial_state = state
 
-        # Initialize address (soft, one-hot for differentiable routing)
-        current_address = self.compute_next_address(initial_state, self.brain_blocks[0])  # (batch_size, address_dim, brain_size)
+        # Compute initial address logits and softmax (for differentiable routing)
+        logits = self.brain_blocks[0]['address_transform'](initial_state)
+        current_address = F.softmax(logits.view(-1, self.address_dim, self.brain_size), dim=2)  # (batch_size, address_dim, brain_size)
 
         # Initialize pathway tracking (hard address for stats)
         if collect_stats:
@@ -326,8 +418,8 @@ class SelfOrganizingBrain(nn.Module):
 
         # Main processing loop (differentiable routing)
         for i in range(self.num_jumps):
-            # Get block weights (soft one-hot) for current address
-            block_weights = self.get_blocks_for_batch(current_address)  # (batch_size, num_blocks)
+            # Compute block weights (soft one-hot, differentiable) from current_address
+            block_weights = self.compute_block_weights(current_address)  # (batch_size, num_blocks)
 
             # Process all possible blocks for each batch
             all_block_outputs = []
@@ -340,7 +432,8 @@ class SelfOrganizingBrain(nn.Module):
             state = torch.bmm(block_weights.unsqueeze(1), all_block_outputs).squeeze(1)  # (batch_size, embedding_size)
 
             # Compute next address (soft, for differentiable routing)
-            current_address = self.compute_next_address(state, self.brain_blocks[0])  # (batch_size, address_dim, brain_size)
+            logits = self.brain_blocks[0]['address_transform'](state)
+            current_address = F.softmax(logits.view(-1, self.address_dim, self.brain_size), dim=2)  # (batch_size, address_dim, brain_size)
 
             # Track pathway using hard address for stats
             if collect_stats:
@@ -354,7 +447,7 @@ class SelfOrganizingBrain(nn.Module):
             state = state + residual_weight * initial_state
 
         # Final transformation: process through all blocks and combine by block weights
-        block_weights = self.get_blocks_for_batch(current_address)  # (batch_size, num_blocks)
+        block_weights = self.compute_block_weights(current_address)  # (batch_size, num_blocks)
         all_block_outputs = []
         for block in all_blocks:
             block_out = self.process_through_block(state, block)  # (batch_size, embedding_size)

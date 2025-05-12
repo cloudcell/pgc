@@ -487,6 +487,9 @@ class BrainStatsVisualizer:
         self.frame_slider.config(from_=0, to=len(self.files)-1)
         self.update_frame(0)
         self.status_label.config(text=f"Loaded folder: {stats_dir}")
+        # Update window title with the folder name
+        folder_name = os.path.basename(os.path.normpath(stats_dir))
+        self.root.title(f"PGC Training Stats Visualizer - {folder_name}")
 
     def setup_ui(self):
         # Create the main window

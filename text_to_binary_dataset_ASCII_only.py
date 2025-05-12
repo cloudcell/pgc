@@ -25,9 +25,10 @@ class TextBinaryDataset(Dataset):
         return self.features[idx], self.labels[idx]
 
 def char_to_binary(char):
-    """Convert a character to its 8-bit binary representation (0-255)."""
-    val = ord(char)
-    return [int(b) for b in format(val, '08b')]
+    """Convert a character to its 8-bit binary representation."""
+    # Only consider ASCII characters (0-127)
+    ascii_val = ord(char) & 127
+    return [int(b) for b in format(ascii_val, '08b')]
 
 def process_text_file(file_path):
     """Process text file and convert to binary sequences with sliding windows."""
@@ -40,8 +41,9 @@ def process_text_file(file_path):
     
     print("Converting characters to binary...")
     for char in tqdm(text, desc="Processing characters"):
-        binary_data.extend(char_to_binary(char))
-        ascii_chars.append(char)
+        if ord(char) < 128:  # Only process ASCII characters
+            binary_data.extend(char_to_binary(char))
+            ascii_chars.append(char)
     
     # Create samples using sliding window
     window_size = 784  # Same as MNIST

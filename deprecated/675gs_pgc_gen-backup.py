@@ -38,25 +38,6 @@ parser.add_argument('--cpu', action='store_true', help='Force using CPU even if 
 parser.add_argument('--tensorboard', type=str, default='runs', help='Path to TensorBoard log directory')
 parser.add_argument('--stats_dir', type=str, default='brain_stats', help='Directory to save brain usage statistics')
 # parser.add_argument('--address_dim', type=int, default=4, help='Dimensionality of the address space (default: 4)')
-parser.add_argument('--num_classes', type=int, default=256, help='Number of classes (default: 256)')
-parser.add_argument('--embedding_size', type=int, default=784, help='Embedding size (default: 784)')
-parser.add_argument('--brain_size', type=int, default=5, help='Brain size (default: 5)')
-parser.add_argument('--address_dim', type=int, default=3, help='Address dimension (default: 3)')
-parser.add_argument('--num_jumps', type=int, default=8, help='Number of jumps (default: 8)')
-parser.add_argument('--batch_size', type=int, default=2048, required=False, help='Batch size')
-parser.add_argument('--chunk_size', type=int, default=256, required=False, help='Chunk size')
-parser.add_argument('--learning_rate_factor', type=float, default=0.9999999, required=False, help='Learning rate factor')
-parser.add_argument('--dataset_path', type=str, default='./test.pkl', required=False, help='Dataset path')
-parser.add_argument('--val_acc_stop', type=float, default=0.99, required=False, help='Validation accuracy stopping criteria')
-parser.add_argument('--train_acc_stop', type=float, default=0.99, required=False, help='Training accuracy stopping criteria')
-parser.add_argument('--train_loss_stop', type=float, default=0.001, required=False, help='Training loss stopping criteria')
-parser.add_argument('--train_incorrect_stop', type=int, default=0, required=False, help='Training incorrect predictions stopping criteria')
-parser.add_argument('--epochs_stop', type=int, default=1024, required=False, help='Epochs stopping criteria')
-parser.add_argument('--mode', type=str, default='fit', required=False, help='Mode: fit or jam')
-parser.add_argument('--input_size', type=int, default=784, required=False, help='Input size')
-parser.add_argument('--address_space_dim', type=int, default=3, required=False, help='Address space dimension')
-parser.add_argument('--address_space_size', type=int, default=5, required=False, help='Address space size per dimension')
-
 args = parser.parse_args()
 
 
@@ -180,30 +161,117 @@ def set_globals_from_model(model):
     # Optionally: num_heads, etc.
     logger.info(f"Loaded model config: {config}")
 
-# Step 3: Define the Self-Organizing Brain Model
 class SelfOrganizingBrain(nn.Module):
-    def __init__(self, input_size=784, num_classes=args.num_classes, embedding_size=args.embedding_size, 
-    brain_size=args.address_space_size, address_dim=args.address_space_dim, num_heads=1, num_jumps=args.num_jumps):
+    def __init__(self, input_size=784, embedding_size=256, brain_size=3, address_dim=2, num_heads=1, num_jumps=2, num_classes=None):
         super().__init__()
-        self.input_size = input_size
-        self.num_classes = num_classes
         self.embedding_size = embedding_size
         self.brain_size = brain_size
         self.address_dim = address_dim
         self.num_heads = num_heads
         self.num_jumps = num_jumps
-        
-        # Store config for later retrieval
+        self.num_classes = num_classes
+        # Store model config for checkpointing and loading
         self.model_config = {
             'input_size': input_size,
-            'num_classes': num_classes,
             'embedding_size': embedding_size,
             'brain_size': brain_size,
             'address_dim': address_dim,
             'num_heads': num_heads,
-            'num_jumps': num_jumps
+            'num_jumps': num_jumps,
+            'num_classes': num_classes
         }
+        # Initial embedding of input
+        self.embedding = nn.Linear(input_size, embedding_size)
+        # Initialize brain blocks
+        blocks_shape = tuple([brain_size] * address_dim)
+        self.brain_blocks = nn.ModuleList()
+        # Calculate total number of blocks needed
+        total_blocks = brain_size ** address_dim
+        # Initialize each block
+        for _ in range(total_blocks):
+            block = nn.ModuleDict({
+                'state_transform': nn.Sequential(
+                    nn.Linear(embedding_size, embedding_size),
+                    nn.ReLU(),
+                    nn.Linear(embedding_size, embedding_size),
+                    nn.ReLU()
+                ),
+                'address_transform': nn.Sequential(
+                    nn.Linear(embedding_size, embedding_size),
+                    nn.ReLU(),
+                    nn.Linear(embedding_size, address_dim * brain_size)
+                )
+            })
+            self.brain_blocks.append(block)
+        # Output layer
+        self.output = nn.Sequential(
+            nn.Linear(embedding_size, embedding_size),
+            nn.ReLU(),
+            nn.Linear(embedding_size, num_classes)
+        )
+        # Initialize statistics tracking
+        self.reset_stats()
+        # Fixed start address
+        self.start_address = nn.Parameter(torch.zeros(1, self.address_dim, dtype=torch.long), requires_grad=False)
+        # Additional transformation for absolute addressing
+        self.absolute_transform = nn.Linear(embedding_size, self.address_dim * brain_size)
 
+    def compute_block_weights(self, current_address):
+        """
+        Compute soft weights for each block given the current soft address.
+        current_address: (batch_size, address_dim, brain_size) (probabilities for each address dim)
+        Returns: (batch_size, num_blocks) tensor of weights
+        """
+        if current_address.dim() != 3:
+            raise ValueError(f"compute_block_weights expects current_address to be 3D (batch_size, address_dim, brain_size), but got shape {tuple(current_address.shape)}")
+        batch_size = current_address.size(0)
+        address_dim = current_address.size(1)
+        brain_size = current_address.size(2)
+        num_blocks = brain_size ** address_dim
+
+        # For each batch, compute the probability of each block being selected
+        # For each block index (in n-dim), probability is product of probabilities along each address dim
+        # Generate all possible n-dim coordinates
+        coords = torch.stack(torch.meshgrid(*[torch.arange(brain_size, device=current_address.device) for _ in range(address_dim)], indexing='ij'), dim=-1)
+        coords = coords.reshape(-1, address_dim)  # (num_blocks, address_dim)
+
+        # For each batch, for each block, get the probability for each address dim
+        # current_address: (batch_size, address_dim, brain_size)
+        # coords: (num_blocks, address_dim)
+        # For each block, get the probability for each dim
+        # Gather the probabilities for each block coordinate
+        probs = []
+        for d in range(address_dim):
+            # For each block, get the coordinate along dim d
+            idx = coords[:, d].unsqueeze(0).expand(batch_size, -1)  # (batch_size, num_blocks)
+            # Gather the probability for this coordinate from current_address
+            dim_probs = torch.gather(current_address[:, d, :], 1, idx)  # (batch_size, num_blocks)
+            probs.append(dim_probs)
+        block_weights = torch.ones_like(probs[0])
+        for p in probs:
+            block_weights = block_weights * p  # Elementwise multiply over dims
+        # Normalize (should already sum to 1, but for safety)
+        block_weights = block_weights / (block_weights.sum(dim=1, keepdim=True) + 1e-8)
+        return block_weights  # (batch_size, num_blocks)
+
+        super().__init__()
+        self.embedding_size = embedding_size
+        self.brain_size = brain_size
+        self.address_dim = address_dim
+        self.num_heads = num_heads
+        self.num_jumps = num_jumps
+        self.num_classes = num_classes
+        # Store model config for checkpointing and loading
+        self.model_config = {
+            'input_size': input_size,
+            'embedding_size': embedding_size,
+            'brain_size': brain_size,
+            'address_dim': address_dim,
+            'num_heads': num_heads,
+            'num_jumps': num_jumps,
+            'num_classes': num_classes
+        }
+        
         # Initial embedding of input
         self.embedding = nn.Linear(input_size, embedding_size)
         
@@ -235,7 +303,7 @@ class SelfOrganizingBrain(nn.Module):
         self.output = nn.Sequential(
             nn.Linear(embedding_size, embedding_size),
             nn.ReLU(),
-            nn.Linear(embedding_size, num_classes)  # 128 classes for ASCII values
+            nn.Linear(embedding_size, num_classes) 
         )
         
         # Initialize statistics tracking
@@ -263,15 +331,6 @@ class SelfOrganizingBrain(nn.Module):
             'num_heads': getattr(base_model, 'num_heads', None),
             'num_jumps': getattr(base_model, 'num_jumps', None)
         }
-        
-        # Initialize statistics tracking
-        self.reset_stats()
-        
-        # Fixed start address
-        self.start_address = nn.Parameter(torch.zeros(1, self.address_dim, dtype=torch.long), requires_grad=False)
-        
-        # Additional transformation for absolute addressing
-        self.absolute_transform = nn.Linear(embedding_size, self.address_dim * brain_size)
     
     def get_block_index(self, *coords):
         """Convert n-dimensional coordinates to flat index"""
@@ -316,14 +375,7 @@ class SelfOrganizingBrain(nn.Module):
             return flat_weights  # (batch_size, num_blocks)
 
         block_weights = flatten_onehot(address_onehot)  # (batch_size, num_blocks)
-
-        # Stack all block modules' outputs for all possible blocks
-        # For each block, we need to process the batch state through that block
-        # Here, we assume you have a 'state' tensor for the batch, and need to process through all blocks
-        # For now, we'll return the block_weights and let the caller handle the weighted sum
         return block_weights  # (batch_size, num_blocks)
-
-    # NOTE: In your forward pass, you must now process all blocks for the batch and combine outputs using block_weights.
 
     def process_through_block(self, state, block):
         """Process state through a block"""
@@ -337,25 +389,18 @@ class SelfOrganizingBrain(nn.Module):
         return normalized
 
     def compute_next_address(self, state, block):
-        """Compute next address using the block's address transform"""
+        """Compute next address using the block's address transform (Gumbel-Softmax, differentiable)"""
         # Get logits from state
         logits = block['address_transform'](state)
-        
-        # Reshape logits to (batch_size, address_dim, brain_size)
         logits = logits.view(-1, self.address_dim, self.brain_size)
-        
-        # Apply Gumbel-Softmax along brain_size dimension for differentiable routing
-        # hard=True returns one-hot, but gradients flow through soft sample
+        # Use Gumbel-Softmax for differentiable sampling
         address_onehot = F.gumbel_softmax(logits, tau=1.0, hard=True, dim=2)
-        
-        # Optionally, get indices if needed for downstream (non-differentiable)
+        # Optionally log indices for debugging
         address_indices = address_onehot.argmax(dim=2)
-        
-        # Log the sampled address indices for debugging
         if self.training:
             logger.debug(f"Gumbel-Softmax address indices: {address_indices[0].tolist()}")
-        
-        return address_onehot  # or return address_indices if you need indices
+        return address_onehot
+
 
     def forward(self, x, collect_stats=False, labels=None, predictions=None):
         batch_size = x.size(0)
@@ -403,9 +448,6 @@ class SelfOrganizingBrain(nn.Module):
             # Record block usage
             for b in range(batch_size):
                 self.record_block_usage(self.current_pathways[b][-1])
-
-            # Optionally, collect pathway stats (not differentiable, so skip or adapt if needed)
-            # (You may want to log soft assignments if desired)
 
             # Residual connection if needed (optional)
             residual_weight = i / max(1, self.num_jumps - 1)
@@ -496,7 +538,6 @@ class SelfOrganizingBrain(nn.Module):
         
         # Increment the counter for this pathway
         self.pathway_counter[pathway_tuple] += 1
-
 
 class GlobalStatisticsAggregator:
     """
@@ -1268,8 +1309,8 @@ def text_to_binary(text, pad_to_length=98):
         bits = format(ord(char), '08b')
         binary.extend(int(bit) for bit in bits)
     
-    # do not normalize
-    binary = [bit for bit in binary]
+    # Normalize to [-1, 1] range like in training
+    binary = [2 * bit - 1 for bit in binary]
     
     return binary
 

@@ -1,0 +1,7 @@
+2025-05-13 10:53:57 - === Starting new text generation session ===
+2025-05-13 10:54:05 - User selected option: 1
+2025-05-13 10:54:06 - Selected checkpoint folder: checkpoints_20250513_095203
+2025-05-13 10:54:08 - Successfully loaded model from: model_20250513_095206_epoch_00218.pt
+2025-05-13 10:54:08 - Loaded model config: {'input_size': 784, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8, 'num_classes': 256}
+2025-05-13 10:54:10 - User selected option: 5
+2025-05-13 10:54:10 - Generating/unpacking response with input: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

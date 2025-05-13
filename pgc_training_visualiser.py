@@ -196,7 +196,7 @@ class BrainStatsVisualizer:
         self.files = files or []
         self.current_frame = 0
         self.is_playing = False
-        self.interval = 500  # Default interval in ms (2 fps)
+        self.interval = 1000  # Default interval in ms (1 fps)
         # Set last_loaded_folder if files and folder_name are provided
         if files and folder_name:
             self.last_loaded_folder = folder_name
@@ -487,6 +487,9 @@ class BrainStatsVisualizer:
         self.frame_slider.config(from_=0, to=len(self.files)-1)
         self.update_frame(0)
         self.status_label.config(text=f"Loaded folder: {stats_dir}")
+        # Update window title with the folder name
+        folder_name = os.path.basename(os.path.normpath(stats_dir))
+        self.root.title(f"PGC Training Stats Visualizer - {folder_name}")
 
     def setup_ui(self):
         # Create the main window
@@ -551,11 +554,11 @@ class BrainStatsVisualizer:
                                  orient=HORIZONTAL, length=200,
                                  label="",
                                  command=self.on_speed_change)
-        self.speed_slider.set(20)  # Default speed (about 2 fps)
+        self.speed_slider.set(10)  # Default speed (about 1 fps)
         self.speed_slider.pack(side=tk.LEFT, padx=(0, 20))
         
         # Add current speed display label
-        self.speed_display = Label(self.control_frame, text="2.0 fps")
+        self.speed_display = Label(self.control_frame, text="1.0 fps")
         self.speed_display.pack(side=tk.LEFT, padx=(0, 20))
         
         # Add slider for top N pathways
@@ -765,7 +768,7 @@ Created: April 2025
             
             # Determine how many frames to capture (use every Nth frame if too many)
             total_frames = len(self.files)
-            max_frames = 100  # Maximum number of frames for the GIF
+            max_frames = 100000  # Maximum number of frames for the GIF
             
             if total_frames > max_frames:
                 frame_step = total_frames // max_frames

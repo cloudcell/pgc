@@ -36,21 +36,28 @@ n_val = int(total * 0.10)
 # Ensure all lines are used (test gets the remainder)
 n_test = total - n_train - n_val
 
-if 0:
+# Toggle: Set to True to perform real splits, False to put all data in 'trn'.
+do_real_split = False
+
+# The splitting logic is preserved for flexibility, but by default all data goes into 'trn'.
+# This is because the training script performs its own internal splitting.
+# Set do_real_split = True if you want to generate separate files and pickles for each split here.
+if do_real_split:
     splits = {
         'trn': lines[:n_train],
         'val': lines[n_train:n_train+n_val],
         'tst': lines[n_train+n_val:]
     }
 else:
-    # single split to be divided into train/val/test sets internally by the training process
     splits = {
         'trn': lines,
         'val': [],
         'tst': []
     }
 
-
+# track which files have been created
+created_files = set()
+print(f"Splitting complete. Splits saved to: {subfolder}")
 for split, split_lines in splits.items():
     # if a split is not empty
     if len(split_lines) > 0:
@@ -58,7 +65,10 @@ for split, split_lines in splits.items():
         split_filepath = os.path.join(subfolder, split_filename)
         with open(split_filepath, 'w', encoding='utf-8') as f:
             f.writelines(split_lines)
-    print(f"Saved {split} set ({len(split_lines)} lines) to: {split_filepath}")
+        print(f"Saved {split} set ({len(split_lines)} lines) to: {split_filepath}")
+        created_files.add(split_filename)
+    else:
+        print(f"No lines for {split} set")
 
 # --- Generate samples for each split file ---
 import pickle
@@ -120,5 +130,10 @@ def generate_samples(input_path, stub_pad=98, split_name=None):
 
 for split in ['trn', 'val', 'tst']:
     split_filename = f"{base}_filtered_{split}{ext}"
+    if split_filename not in created_files:
+        print(f"No lines for {split} set")
+        continue
     split_filepath = os.path.join(subfolder, split_filename)
     generate_samples(split_filepath, stub_pad=98, split_name=split)
+
+print(f"Data preparation complete. Data saved to: {subfolder}")

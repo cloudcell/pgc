@@ -1,0 +1,27 @@
+2025-05-14 22:41:01 - === Starting new text generation session ===
+2025-05-14 22:41:07 - User selected option: 1
+2025-05-14 22:41:08 - Selected checkpoint folder: checkpoints_20250513_182638
+2025-05-14 22:41:10 - Successfully loaded model from: model_20250513_182644_epoch_00016.pt
+2025-05-14 22:41:10 - Loaded model config: {'input_size': 128, 'num_classes': 256, 'embedding_size': 128, 'brain_size': 7, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-14 22:41:12 - User selected option: 2
+2025-05-14 22:41:16 - Input text: 1+1=
+2025-05-14 22:42:06 - Generated: <|sot|>1+1=11111111111111111111111111111111111111111111111111111111111111111111111111;1;110;66;;;;0;01000000000<|eot|>
+2025-05-14 22:42:06 - Generation stats - Model calls: 100, Time: 50.45s, Speed: 1.98 calls/s
+2025-05-14 22:42:16 - User selected option: 4
+2025-05-14 22:42:23 - Set tokens to: 16
+2025-05-14 22:42:26 - User selected option: 2
+2025-05-14 22:42:32 - Input text: 100+111=
+2025-05-14 22:42:40 - Generated: <|sot|>100+111=1111111111111111<|eot|>
+2025-05-14 22:42:40 - Generation stats - Model calls: 16, Time: 8.45s, Speed: 1.89 calls/s
+2025-05-14 22:43:02 - User selected option: 2
+2025-05-14 22:43:07 - Input text: 222+333=
+2025-05-14 22:43:15 - Generated: <|sot|>222+333=1111111111111111<|eot|>
+2025-05-14 22:43:15 - Generation stats - Model calls: 16, Time: 7.88s, Speed: 2.03 calls/s
+2025-05-14 22:43:42 - User selected option: 6
+2025-05-14 22:43:42 - 
+Final Generation Statistics:
+2025-05-14 22:43:42 - Total model calls: 132
+2025-05-14 22:43:42 - Total generation time: 66.79s
+2025-05-14 22:43:42 - Average time per model call: 505.95ms
+2025-05-14 22:43:42 - Average model call speed: 1.98 calls/second
+2025-05-14 22:43:42 - === Ending session ===

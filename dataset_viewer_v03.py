@@ -8,7 +8,7 @@ import os
 from threading import Thread
 
 
-SEARCH_DIRS = ['data', 'tmp', '.']
+SEARCH_DIRS = ['.']  #'data', 'tmp',
 
 class LoadingDialog:
     def __init__(self, parent):
@@ -120,7 +120,8 @@ class DatasetSelector:
         self.listbox.config(yscrollcommand=scrollbar.set)
 
         for dataset in self.datasets:
-            self.listbox.insert(tk.END, os.path.basename(dataset))
+            rel_path = os.path.relpath(dataset, os.getcwd())
+            self.listbox.insert(tk.END, rel_path)
 
         if self.datasets:
             self.listbox.selection_set(0)
@@ -140,7 +141,8 @@ class DatasetSelector:
                     for file in files:
                         if file.endswith('.pkl'):
                             datasets.append(os.path.join(root, file))
-        datasets = sorted(datasets)
+        # Remove duplicates, sort
+        datasets = sorted(set(datasets))
         return datasets
 
     

@@ -1287,7 +1287,7 @@ def text_to_binary(text, input_size=None):
 def generate_text(model, input_text, num_chars=100):
     device = next(model.parameters()).device
     # Add start token to input
-    input_text = "<|sot|>" + input_text
+    input_tag_prefix = "<|sot|>"
     generated_text = input_text
     model_calls = 0
     
@@ -1327,6 +1327,9 @@ def generate_text(model, input_text, num_chars=100):
             # Append to generated text
             generated_text += predicted_char
     
+    # Add input tag prefix to generated text
+    generated_text = input_tag_prefix + generated_text
+
     # Add end token
     generated_text += "<|eot|>"
     return generated_text, model_calls
@@ -1518,10 +1521,19 @@ def main():
                 continue
                 
             try:
-                input_text = session.prompt("\nEnter your text (will use last 98 chars if longer): ")
+                input_text = session.prompt(f"\nEnter your text (will use last {current_model.input_size} chars if longer): ")
             except (KeyboardInterrupt, EOFError):
                 print("\nOperation cancelled")
                 continue
+
+            if len(input_text) > current_model.input_size:
+                input_text = input_text[-current_model.input_size:]
+                print(f"\nInput text was longer than {current_model.input_size} chars, using last {current_model.input_size} chars")
+
+            # pad with spaces if shorter than input size before the text
+            if len(input_text) < current_model.input_size//8:
+                input_text = " " * (current_model.input_size//8 - len(input_text)) + input_text
+                print(f"\nInput text was shorter than {current_model.input_size // 8} chars, padding with spaces")
                 
             record_interaction(f"Input text: {input_text}")
             print("\nGenerating text...")
@@ -1554,7 +1566,8 @@ def main():
             print("\nGenerating text from empty input...")
             
             start_time = time.time()
-            generated, calls = generate_text(current_model, " " * 98, num_tokens)
+            # use the input window size as the number of spaces
+            generated, calls = generate_text(current_model, " " * current_model.input_size, num_tokens)
             generation_time = time.time() - start_time
             
             total_model_calls += calls

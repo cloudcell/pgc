@@ -7,9 +7,6 @@ from PIL import Image, ImageTk
 import os
 from threading import Thread
 
-
-SEARCH_DIRS = ['data', 'tmp', '.']
-
 class LoadingDialog:
     def __init__(self, parent):
         self.top = tk.Toplevel(parent)
@@ -132,7 +129,7 @@ class DatasetSelector:
     
     def find_datasets(self):
         # Search recursively in all subfolders within 'data' and './tmp' for .pkl files
-        search_dirs = SEARCH_DIRS
+        search_dirs = ['data', 'tmp']
         datasets = []
         for search_dir in search_dirs:
             if os.path.exists(search_dir):

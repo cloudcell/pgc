@@ -24,6 +24,14 @@ import glob
 import base64
 from datetime import datetime
 
+# --- Logging of run command and timestamp ---
+log_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pgc_runs.log')
+now = datetime.now().strftime('%Y-%m-%d_%H:%M:%S')
+cmd = ' '.join([os.path.basename(sys.executable)] + sys.argv) if sys.executable else ' '.join(sys.argv)
+with open(log_file, 'a') as f:
+    f.write(f'{now} {cmd}\n')
+# --- End logging ---
+
 # temporary file to be used to feed the data
 dataset_dir = 'tmp'
 dataset_fname = 'pgc_tmp_file.pkl'

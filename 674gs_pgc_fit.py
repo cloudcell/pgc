@@ -141,6 +141,10 @@ LEARNING_RATE_FACTOR = args.learning_rate_factor
 
 class TextDataset(Dataset):
     def __init__(self, features, labels):
+        # Debug: print type and dtype
+        print(f"[DEBUG] features type: {type(features)}, dtype: {getattr(features, 'dtype', 'N/A')}")
+        # Ensure features is a numpy array of float32
+        features = np.array(features, dtype=np.float32)
         self.features = torch.FloatTensor(features)
         self.labels = torch.LongTensor(labels)
     
@@ -1093,7 +1097,7 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
     
     # Create TensorBoard writer
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    writer_dir = os.path.join(args.tensorboard, f'{os.path.basename(__file__)}_{timestamp}_{embedding_size}e_{num_classes}c_{address_space_dim}d_{brain_size}s_{num_jumps}i')
+    writer_dir = os.path.join(args.tensorboard, f'{os.path.basename(__file__)}_{timestamp}_{embedding_size}e_{num_classes}c_{address_space_dim}d_{brain_size}s_{num_jumps}j')
     writer = SummaryWriter(writer_dir)
     logger.info(f'TensorBoard logs will be saved to {writer_dir}')
     

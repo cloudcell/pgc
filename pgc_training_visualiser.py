@@ -14,6 +14,8 @@ This script visualizes data from brain_stats_train_epoch_*.json files in a selec
 It ensures correct numerical ordering of the epoch files.
 """
 
+MAX_TOP_PATHWAYS = 20
+
 import os
 import json
 import re
@@ -238,10 +240,10 @@ class BrainStatsVisualizer:
             # Update the top pathways slider range
             num_pathways = len(data.get('top_pathways', []))
             if num_pathways > 0:
-                self.top_pathways_slider.config(from_=1, to=num_pathways)
-                if self.top_n_pathways > num_pathways:
-                    self.top_n_pathways = num_pathways
-                self.top_pathways_slider.set(self.top_n_pathways)
+                self.top_pathways_slider.config(from_=1, to=MAX_TOP_PATHWAYS)
+                # if self.top_n_pathways > num_pathways:
+                #     self.top_n_pathways = num_pathways
+                # self.top_pathways_slider.set(self.top_n_pathways)
             else:
                 self.top_pathways_slider.config(from_=1, to=1)
                 self.top_n_pathways = 1

@@ -141,6 +141,10 @@ LEARNING_RATE_FACTOR = args.learning_rate_factor
 
 class TextDataset(Dataset):
     def __init__(self, features, labels):
+        # Debug: print type and dtype
+        print(f"[DEBUG] features type: {type(features)}, dtype: {getattr(features, 'dtype', 'N/A')}")
+        # Ensure features is a numpy array of float32
+        features = np.array(features, dtype=np.float32)
         self.features = torch.FloatTensor(features)
         self.labels = torch.LongTensor(labels)
     

@@ -9,3 +9,31 @@
 2025-05-14 23:07:14 - Input text:         444+555=
 2025-05-14 23:07:19 - Generated: <|sot|>        444+555=999;;;;;;;<|eot|>
 2025-05-14 23:07:19 - Generation stats - Model calls: 10, Time: 5.16s, Speed: 1.94 calls/s
+2025-05-14 23:13:19 - User selected option: 2
+2025-05-14 23:13:44 - Input text:             3+4=
+2025-05-14 23:13:49 - Generated: <|sot|>            3+4=8;;;1;86;;<|eot|>
+2025-05-14 23:13:49 - Generation stats - Model calls: 10, Time: 4.93s, Speed: 2.03 calls/s
+2025-05-14 23:14:02 - User selected option: 2
+2025-05-14 23:14:07 - Input text:         123+654=
+2025-05-14 23:14:12 - Generated: <|sot|>        123+654=777;;;;;;;<|eot|>
+2025-05-14 23:14:12 - Generation stats - Model calls: 10, Time: 4.90s, Speed: 2.04 calls/s
+2025-05-14 23:25:51 - User selected option: 2
+2025-05-14 23:25:54 - Input text:             0+0=
+2025-05-14 23:25:59 - Generated: <|sot|>            0+0=1;0;11;0;;<|eot|>
+2025-05-14 23:25:59 - Generation stats - Model calls: 10, Time: 4.82s, Speed: 2.08 calls/s
+2025-05-14 23:26:06 - User selected option: 2
+2025-05-14 23:26:10 - Input text:             1+0=
+2025-05-14 23:26:15 - Generated: <|sot|>            1+0=3;1;48;1;;<|eot|>
+2025-05-14 23:26:15 - Generation stats - Model calls: 10, Time: 4.93s, Speed: 2.03 calls/s
+2025-05-14 23:26:22 - User selected option: 2
+2025-05-14 23:26:27 - Input text:             0+1=
+2025-05-14 23:26:32 - Generated: <|sot|>            0+1=1;1;12;2;;<|eot|>
+2025-05-14 23:26:32 - Generation stats - Model calls: 10, Time: 4.85s, Speed: 2.06 calls/s
+2025-05-14 23:27:13 - User selected option: 6
+2025-05-14 23:27:13 - 
+Final Generation Statistics:
+2025-05-14 23:27:13 - Total model calls: 60
+2025-05-14 23:27:13 - Total generation time: 29.60s
+2025-05-14 23:27:13 - Average time per model call: 493.36ms
+2025-05-14 23:27:13 - Average model call speed: 2.03 calls/second
+2025-05-14 23:27:13 - === Ending session ===

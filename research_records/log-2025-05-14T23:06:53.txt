@@ -1,0 +1,11 @@
+2025-05-14 23:06:53 - === Starting new text generation session ===
+2025-05-14 23:06:57 - User selected option: 1
+2025-05-14 23:06:57 - Selected checkpoint folder: checkpoints_20250513_182638
+2025-05-14 23:07:00 - Successfully loaded model from: model_20250513_182644_epoch_00016.pt
+2025-05-14 23:07:00 - Loaded model config: {'input_size': 128, 'num_classes': 256, 'embedding_size': 128, 'brain_size': 7, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-14 23:07:07 - User selected option: 4
+2025-05-14 23:07:08 - Set tokens to: 10
+2025-05-14 23:07:10 - User selected option: 2
+2025-05-14 23:07:14 - Input text:         444+555=
+2025-05-14 23:07:19 - Generated: <|sot|>        444+555=999;;;;;;;<|eot|>
+2025-05-14 23:07:19 - Generation stats - Model calls: 10, Time: 5.16s, Speed: 1.94 calls/s

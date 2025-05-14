@@ -1,0 +1,35 @@
+2025-05-14 22:49:49 - === Starting new text generation session ===
+2025-05-14 22:49:51 - User selected option: 1
+2025-05-14 22:49:51 - Selected checkpoint folder: checkpoints_20250513_182638
+2025-05-14 22:49:54 - Successfully loaded model from: model_20250513_182644_epoch_00016.pt
+2025-05-14 22:49:54 - Loaded model config: {'input_size': 128, 'num_classes': 256, 'embedding_size': 128, 'brain_size': 7, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-14 22:49:56 - User selected option: 4
+2025-05-14 22:49:57 - Set tokens to: 10
+2025-05-14 22:49:59 - User selected option: 2
+2025-05-14 22:50:02 - Input text: 1+1=
+2025-05-14 22:50:07 - Generated: <|sot|>1+1=6;;;;;;;;;<|eot|>
+2025-05-14 22:50:07 - Generation stats - Model calls: 10, Time: 5.13s, Speed: 1.95 calls/s
+2025-05-14 22:50:14 - User selected option: 2
+2025-05-14 22:50:16 - Input text: 2+2=
+2025-05-14 22:50:21 - Generated: <|sot|>2+2=6;;;;;;;;;<|eot|>
+2025-05-14 22:50:21 - Generation stats - Model calls: 10, Time: 4.88s, Speed: 2.05 calls/s
+2025-05-14 22:50:25 - User selected option: 2
+2025-05-14 22:50:32 - Input text: 777+999=
+2025-05-14 22:50:37 - Generated: <|sot|>777+999=;;;;;;;;;;<|eot|>
+2025-05-14 22:50:37 - Generation stats - Model calls: 10, Time: 4.92s, Speed: 2.03 calls/s
+2025-05-14 22:50:54 - User selected option: 2
+2025-05-14 22:51:02 - Input text: 1+2=
+2025-05-14 22:51:07 - Generated: <|sot|>1+2=6;;;;;;;;;<|eot|>
+2025-05-14 22:51:07 - Generation stats - Model calls: 10, Time: 4.91s, Speed: 2.04 calls/s
+2025-05-14 22:51:14 - User selected option: 2
+2025-05-14 22:51:16 - Input text: 6+6=
+2025-05-14 22:51:21 - Generated: <|sot|>6+6=6;;;;;;;;;<|eot|>
+2025-05-14 22:51:21 - Generation stats - Model calls: 10, Time: 4.90s, Speed: 2.04 calls/s
+2025-05-14 22:54:14 - User selected option: 6
+2025-05-14 22:54:14 - 
+Final Generation Statistics:
+2025-05-14 22:54:14 - Total model calls: 50
+2025-05-14 22:54:14 - Total generation time: 24.74s
+2025-05-14 22:54:14 - Average time per model call: 494.73ms
+2025-05-14 22:54:14 - Average model call speed: 2.02 calls/second
+2025-05-14 22:54:14 - === Ending session ===

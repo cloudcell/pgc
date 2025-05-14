@@ -39,7 +39,7 @@ parser.add_argument('--tensorboard', type=str, default='runs', help='Path to Ten
 parser.add_argument('--stats_dir', type=str, default='brain_stats', help='Directory to save brain usage statistics')
 # parser.add_argument('--address_dim', type=int, default=4, help='Dimensionality of the address space (default: 4)')
 parser.add_argument('--num_classes', type=int, default=256, help='Number of classes (default: 256)')
-parser.add_argument('--embedding_size', type=int, default=784, help='Embedding size (default: 784)')
+parser.add_argument('--embedding_size', type=int, default=128, help='Embedding size (default: 128)')
 parser.add_argument('--brain_size', type=int, default=5, help='Brain size (default: 5)')
 parser.add_argument('--address_dim', type=int, default=3, help='Address dimension (default: 3)')
 parser.add_argument('--num_jumps', type=int, default=8, help='Number of jumps (default: 8)')
@@ -53,7 +53,7 @@ parser.add_argument('--train_loss_stop', type=float, default=0.001, required=Fal
 parser.add_argument('--train_incorrect_stop', type=int, default=0, required=False, help='Training incorrect predictions stopping criteria')
 parser.add_argument('--epochs_stop', type=int, default=1024, required=False, help='Epochs stopping criteria')
 parser.add_argument('--mode', type=str, default='fit', required=False, help='Mode: fit or jam')
-parser.add_argument('--input_size', type=int, default=784, required=False, help='Input size')
+parser.add_argument('--input_size', type=int, default=128, required=False, help='Input size')
 parser.add_argument('--address_space_dim', type=int, default=3, required=False, help='Address space dimension')
 parser.add_argument('--address_space_size', type=int, default=5, required=False, help='Address space size per dimension')
 
@@ -182,7 +182,7 @@ def set_globals_from_model(model):
 
 # Step 3: Define the Self-Organizing Brain Model
 class SelfOrganizingBrain(nn.Module):
-    def __init__(self, input_size=784, num_classes=args.num_classes, embedding_size=args.embedding_size, 
+    def __init__(self, input_size=128, num_classes=args.num_classes, embedding_size=args.embedding_size, 
     brain_size=args.address_space_size, address_dim=args.address_space_dim, num_heads=1, num_jumps=args.num_jumps):
         super().__init__()
         self.input_size = input_size
@@ -1254,11 +1254,22 @@ def count_actual_chars(text):
     # Count remaining characters
     return len(text)
 
-def text_to_binary(text, pad_to_length=98):
+def text_to_binary(text, input_size=None):
+    # If input_size is provided, calculate the number of characters to pad
+    # Each character is 8 bits, so divide input_size by 8
+    if input_size is not None:
+        pad_to_length = input_size // 8
+    else:
+        # Default to 16 characters if input_size is not provided
+        pad_to_length = 16
+    
     # Convert text to binary, padding with spaces if needed
+    # Always pad on the left side of the input text
     if len(text) < pad_to_length:
+        # Left padding with spaces
         text = ' ' * (pad_to_length - len(text)) + text
     elif len(text) > pad_to_length:
+        # If text is too long, take the rightmost characters
         text = text[-pad_to_length:]
     
     # Convert to binary
@@ -1280,14 +1291,30 @@ def generate_text(model, input_text, num_chars=100):
     generated_text = input_text
     model_calls = 0
     
+    # Get the model's input size
+    input_size = model.input_size if hasattr(model, 'input_size') else 1/0  # assertion hack!
+    
     with torch.no_grad():
         # show progress using tqdm
         for _ in tqdm.tqdm(range(num_chars)):
-            # Convert last 98 characters to binary
-            binary_input = text_to_binary(generated_text)
+            # Convert text to binary representation with dynamic padding based on input_size
+            binary_input = text_to_binary(generated_text, input_size=input_size)
             
             # Convert to tensor
-            x = torch.FloatTensor(binary_input).view(1, -1).to(device)
+            x = torch.FloatTensor(binary_input).to(device)
+            
+            # Ensure we have exactly the right number of bits
+            if len(x) != input_size:
+                if len(x) < input_size:
+                    # Pad with zeros if needed
+                    padding = torch.zeros(input_size - len(x), device=device)
+                    x = torch.cat([x, padding])
+                else:
+                    # Truncate if too long
+                    x = x[:input_size]
+            
+            # Reshape to batch size of 1
+            x = x.view(1, input_size)
             
             # Get model prediction
             output = model(x)

@@ -38,11 +38,9 @@ https://github.com/cloudcell/prj.pgc-paper-code-public
 
 2025-05-16 02:43
 
-Here's PGC learning MNIST-FASHION dataset:
+Here's PGC learning MNIST-FASHION dataset (8 dimensional core with only 3 dimensions visible):
+
 ![20250516_0233_mnist-fashion-2st-attempt](https://github.com/user-attachments/assets/cd84bcdd-6043-4c16-ad98-94b7893e0f8a)
-
-
-
 
 ---
 Here's the dashboard used during training:

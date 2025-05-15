@@ -36,6 +36,15 @@ https://github.com/cloudcell/prj.pgc-paper-code-public
 ---
 # Research Log
 
+2025-05-16 02:43
+
+Here's PGC learning MNIST-FASHION dataset:
+![20250516_0233_mnist-fashion-2st-attempt](https://github.com/user-attachments/assets/cd84bcdd-6043-4c16-ad98-94b7893e0f8a)
+
+
+
+
+---
 Here's the dashboard used during training:
 
 ![image](https://github.com/user-attachments/assets/1711d0b5-147b-448e-af0d-adbea8b5dbaf)

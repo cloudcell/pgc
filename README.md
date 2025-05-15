@@ -42,8 +42,11 @@ Here's PGC learning MNIST-FASHION dataset (8 dimensional core with only 3 dimens
 
 ![20250516_0233_mnist-fashion-2st-attempt](https://github.com/user-attachments/assets/cd84bcdd-6043-4c16-ad98-94b7893e0f8a)
 
+
 ---
-Here's the dashboard used during training:
+2025-05-04 11:19
+
+Here's the dashboard used during training on the uu-encoded text "LICENSE" (from this repo), which it learns with 100% accuracy (!):
 
 ![image](https://github.com/user-attachments/assets/1711d0b5-147b-448e-af0d-adbea8b5dbaf)
 

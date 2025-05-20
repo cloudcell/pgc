@@ -1,0 +1,27 @@
+2025-05-21 01:24:53 - === Starting new text generation session ===
+2025-05-21 01:24:56 - User selected option: 1
+2025-05-21 01:24:59 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 01:25:02 - Successfully loaded model from: model_20250520_222647_epoch_00010.pt
+2025-05-21 01:25:02 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 01:25:18 - User selected option: 2
+2025-05-21 01:25:23 - Input text:                                                                                       Who are you?
+2025-05-21 01:25:30 - Generated: <|sot|>                                                                                      Who are you? 
+ 
+ 
+santing the r into. there are the ting. 
+
+The enemy's the enemy's the enemy's the enemy's the long sword, and the enemy's the enemy of the same the enemy's the enemy's the enemy's the enemy's of<|eot|>
+2025-05-21 01:25:30 - Generation stats - Model calls: 100, Time: 7.78s, Speed: 12.86 calls/s
+2025-05-21 01:26:01 - User selected option: 2
+2025-05-21 01:26:04 - Input text:                                                                                         The enemy?
+2025-05-21 01:26:11 - Generated: <|sot|>                                                                                        The enemy?n  a sas. the r out  a tith  as the en then the enemy at the 
+strategy. 
+
+
+
+The Way of the same the enemy's the enemy of the same the enemy's the enemy's the enemy's the enemy's of the spirit of the s<|eot|>
+2025-05-21 01:26:11 - Generation stats - Model calls: 100, Time: 7.43s, Speed: 13.46 calls/s
+2025-05-21 01:26:40 - User selected option: 4
+2025-05-21 01:26:48 - Set tokens to: 16384
+2025-05-21 01:27:04 - User selected option: 2
+2025-05-21 01:27:19 - Input text:                                                                     Tell me what you want to tell.

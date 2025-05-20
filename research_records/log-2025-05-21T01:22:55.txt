@@ -1,0 +1,7 @@
+2025-05-21 01:22:55 - === Starting new text generation session ===
+2025-05-21 01:22:57 - User selected option: 1
+2025-05-21 01:22:59 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 01:23:02 - Successfully loaded model from: model_20250520_222647_epoch_00010.pt
+2025-05-21 01:23:02 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 01:23:17 - User selected option: 2
+2025-05-21 01:23:23 - Input text:                                                                                       Who are you?

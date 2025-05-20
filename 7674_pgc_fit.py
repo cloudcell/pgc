@@ -67,6 +67,12 @@ parser.add_argument('--dataset_path', type=str, default='./test.pkl', required=T
 
 args = parser.parse_args()
 
+# Print all arguments and their values at launch
+print("\nArguments used for running the model:")
+for arg, value in vars(args).items():
+    print(f"  {arg}: {value}")
+print()
+
 
 # Set up logging
 logging.basicConfig(

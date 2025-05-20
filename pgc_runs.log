@@ -23,3 +23,9 @@
 2025-05-16_05:09:34 python3 pgc_gs.py --pickle /mnt/synology/brain/training_data/IMAGES/MNIST/mnist-fashion.pkl --mode fit --input_size 784 --embedding_size 784 --num_classes 10 --address_space_size 2 --address_space_dim 11 --cpu
 2025-05-16_05:11:26 python3 pgc_gs.py --pickle /mnt/synology/brain/training_data/IMAGES/MNIST/mnist-fashion.pkl --mode fit --input_size 784 --embedding_size 784 --num_classes 10 --address_space_size 2 --address_space_dim 10 --cpu
 2025-05-16_05:15:25 python3 pgc_gs.py --pickle /mnt/synology/brain/training_data/IMAGES/MNIST/mnist-fashion.pkl --mode fit --input_size 784 --embedding_size 784 --num_classes 10 --address_space_size 2 --address_space_dim 9 --cpu
+2025-05-20_21:58:22 python pgc_gs.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode fit --cpu
+2025-05-20_21:58:56 python pgc_gs.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode fit --cpu -h
+2025-05-20_22:00:25 python 7676_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode fit --cpu -num_classes 65536
+2025-05-20_22:01:17 python 7676_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode fit --cpu --num_classes 65536
+2025-05-20_22:05:16 python 7676_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode fit --cpu --num_classes 65536
+2025-05-20_22:26:39 python 7676_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode fit --cpu --num_classes 65536

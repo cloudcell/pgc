@@ -1320,9 +1320,18 @@ def generate_text(model, input_text, num_chars=100):
             output = model(x)
             model_calls += 1
             
-            # Get the predicted character
-            _, predicted = output.max(1)
-            predicted_char = chr(predicted.item())
+            # Get the predicted characters. Enable flexibility for different outputs: if output is less than 256, assume it is a single character, terminated with a null character. 
+            # If output is greater than 256 but less than 65535, assume it is a two character string, not terminated at the end.
+            # If output is greater than 65535, throw an error.
+            # so essentially, the numbering is called big-endian.
+            if output.max(1)[0] > 65535:
+                raise ValueError("Output value is greater than 65535")
+            elif output.max(1)[0] < 256:
+                predicted_char = chr(output.max(1)[0].item()) + chr(0) # null is not printed.
+            else:
+                predicted_char = chr(output.max(1)[0].item() // 256) + chr(output.max(1)[0].item() % 256)
+            # _, predicted = output.max(1)
+            # predicted_char = chr(predicted.item())
             
             # Append to generated text
             generated_text += predicted_char

@@ -1,0 +1,457 @@
+2025-05-21 01:24:53 - === Starting new text generation session ===
+2025-05-21 01:24:56 - User selected option: 1
+2025-05-21 01:24:59 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 01:25:02 - Successfully loaded model from: model_20250520_222647_epoch_00010.pt
+2025-05-21 01:25:02 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 01:25:18 - User selected option: 2
+2025-05-21 01:25:23 - Input text:                                                                                       Who are you?
+2025-05-21 01:25:30 - Generated: <|sot|>                                                                                      Who are you? 
+ 
+ 
+santing the r into. there are the ting. 
+
+The enemy's the enemy's the enemy's the enemy's the long sword, and the enemy's the enemy of the same the enemy's the enemy's the enemy's the enemy's of<|eot|>
+2025-05-21 01:25:30 - Generation stats - Model calls: 100, Time: 7.78s, Speed: 12.86 calls/s
+2025-05-21 01:26:01 - User selected option: 2
+2025-05-21 01:26:04 - Input text:                                                                                         The enemy?
+2025-05-21 01:26:11 - Generated: <|sot|>                                                                                        The enemy?n  a sas. the r out  a tith  as the en then the enemy at the 
+strategy. 
+
+
+
+The Way of the same the enemy's the enemy of the same the enemy's the enemy's the enemy's the enemy's of the spirit of the s<|eot|>
+2025-05-21 01:26:11 - Generation stats - Model calls: 100, Time: 7.43s, Speed: 13.46 calls/s
+2025-05-21 01:26:40 - User selected option: 4
+2025-05-21 01:26:48 - Set tokens to: 16384
+2025-05-21 01:27:04 - User selected option: 2
+2025-05-21 01:27:19 - Input text:                                                                     Tell me what you want to tell.
+2025-05-21 01:47:32 - Generated: <|sot|>                                                                    Tell me what you want to tell.g the ting. the ting. 
+
+
+
+The enemy's the enemy the enemy's the enemy the long sword, and the enemy of the 
+strongly. 
+
+
+
+The Way of the same the enemy is to the enemy of the same the enemy's of the 
+Way. 
+
+
+
+There is the enemy's the enemy in the same the enemy's the enemy's the enemy's the long sword, and the enemy's the enemy of the spirit is to the Way of strategy. 
+
+
+
+There are to the enemy of the same the enemy's of the same the enemy's the enemy's the enemy's the long sword. 
+
+
+
+The enemy of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the sam of the enemy's of the same the enemy is the same the enemy's the enemy's the enemy's of the spirit of the same to whoully and the long sword the enemy of the same the enemy to the 
+spirition. It is not to the Way of strongly the enemy of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly <|eot|>
+2025-05-21 01:47:32 - Generation stats - Model calls: 16384, Time: 1212.81s, Speed: 13.51 calls/s
+2025-05-21 01:48:37 - User selected option: 4
+2025-05-21 01:49:20 - Set tokens to: 512
+2025-05-21 01:49:53 - User selected option: 3
+2025-05-21 01:49:53 - Generating from empty input
+2025-05-21 01:50:31 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ise  a tare  at th ar . 
+
+. The r ofn at then the ting. 
+
+ 
+enemy's the enemy's the enemy's the enemy's the enemy's the long sword. 
+
+This is the long sword, and the enemy in the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enemy's of the same the enemy's of the same the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the long sword, the samusly the long sword, and the enemy of the same the enemy's of the same the enem<|eot|>
+2025-05-21 01:50:31 - Generation stats - Model calls: 512, Time: 37.91s, Speed: 13.51 calls/s
+2025-05-21 01:51:05 - User selected option: 1
+2025-05-21 01:51:13 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 01:51:26 - Successfully loaded model from: model_20250520_222647_epoch_00012.pt
+2025-05-21 01:51:26 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 01:51:33 - User selected option: 3
+2025-05-21 01:51:33 - Generating from empty input
+2025-05-21 01:52:12 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ise  a tition  a sas.  ad thate  and they are  anderedy at the 
+in 
+the Way of strategy the Way of the 
+came the sho. 
+
+
+
+The Way of strategy is the samurailed to strategply in the samurai and the sword 
+the enemy in the sword and strategy 
+
+
+
+The Way of the sword sword in the Warrior. 
+
+The sword and the same the Way of strategy the Way of the for the samurai 
+secomes the enemy is the shimation the spirit of strategy of strategy is there in the Way of strategy 
+
+
+
+The Fire and the samuraing the same of the same of the samurai, the enemy of the same the 
+the spirit of the same in and the sword shout and the spirit of the sho. 
+
+
+
+The Firs and the trualf in the spirit of strategy of strategy of the samurai 
+the enemy in the sword and the spirit of strategy the enemy of strategy the enemy in 
+the Way of strategishe 
+the Way of strategy. 
+
+
+
+The To leans 
+
+
+
+The Firs aboutrategy, 
+
+
+
+The Firele the enemy's strategy 
+
+
+
+The Way of strategy is the 
+Was is the same the enemy of the samuraie time. 
+
+
+
+The Way of str<|eot|>
+2025-05-21 01:52:12 - Generation stats - Model calls: 512, Time: 38.25s, Speed: 13.39 calls/s
+2025-05-21 01:53:41 - User selected option: 2
+2025-05-21 01:53:48 - Input text:                                                                                  What is strategy?
+2025-05-21 01:54:26 - Generated: <|sot|>                                                                                 What is strategy?n  a 
+. To sel. 
+
+ 
+thate is the spirit thics are  and the spirit of strategy of the same the enemy as the 
+strategy, and the Way of strategy the Way of the sword and the spirit of the same the long sword in the Way of the same of the strategy is the same the long sword and the spirit of strategy of strategy is the same in a spirit of the spirit of strategy of the same of the same of the samurai with the Way of strategy the Way of the sword and the spirit of the same the time to the enemy of the samurai and the spirit of the 
+Was of the 
+the Way of the samuraiess of the samuraie to strategy the enemy in and the 
+enemy of the same the enemy in and the same of the spirit of the spirit of the same in and the same a strategy and strategy is the same of the samuraie of the 
+had you cannot and the enemy's and strategy the enemy of the samuraing sword with the enemy is and the 
+the Way of strategy 
+
+
+
+The Way of strategy 
+
+
+
+The Firs and the sword wash the Way of strategy the Way of the 
+muster this. 
+
+
+
+The Firstan<|eot|>
+2025-05-21 01:54:26 - Generation stats - Model calls: 512, Time: 38.17s, Speed: 13.41 calls/s
+2025-05-21 02:10:49 - User selected option: 1
+2025-05-21 02:10:51 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 02:10:54 - Successfully loaded model from: model_20250520_222647_epoch_00013.pt
+2025-05-21 02:10:54 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 02:11:02 - User selected option: 2
+2025-05-21 02:11:21 - Input text:                                                                      What do you think about life?
+2025-05-21 02:11:59 - Generated: <|sot|>                                                                     What do you think about life?n thes. 
+
+
+
+the thing the attack, the Way of the spirit of the shortain the fiver the first the 
+enemy 
+the confust the Way. 
+
+
+
+To Hold in the way of the enemy's long the Way of strategy the enemy's 
+
+The Way of 
+the Way of the spirit, the enemy and their to the Way of the spirit of the 
+enemy as he studies to the 
+strongly. 
+
+
+
+The Way of the enemy's life with the enemy's sword. 
+
+
+
+To the Way of the long sword, and the Way of the spirit of the strategy the sword the 
+spirit of the enemy and the spirit of the spirit of strategy. 
+
+
+
+There are no the Way of the spirit of the strategy. 
+
+
+
+To Movern in the Way of the 
+enemy as the same to cut the enemy's swords the Way of the 
+the sword. 
+
+
+
+The Way of the Way of strategy the true Way of strategy, when your long sword. 
+
+
+
+The Way of the strategy 
+
+
+
+To Kyush the enemy and strategy the Way of the spirit of the 
+enemy's 
+
+
+
+The Way of 
+
+
+
+To The Way of the Long Sword the Way of strategy the Way of the spirit, 
+
+
+
+To Mingle 
+
+
+
+m41ter the true Way of the Way of<|eot|>
+2025-05-21 02:11:59 - Generation stats - Model calls: 512, Time: 37.89s, Speed: 13.51 calls/s
+2025-05-21 02:14:27 - User selected option: 2
+2025-05-21 02:14:36 - Input text:                                                                            What is life and death?
+2025-05-21 02:15:13 - Generated: <|sot|>                                                                           What is life and death?n the thes. wath awk. the themy's the 
+ene sword. 
+
+
+
+The Way of the same the long sword, the long swords the principle long swords in 
+the sword the comming the enemy's to the spirit of strategy strongly. 
+
+The First the Way of the Way of the first the fight Side. 
+
+
+
+The Firsue of the 
+spirit. 
+
+
+
+There was cut the enemy's swords the Way of the 
+the way of the same to left the sword as the enemy's' the Way of strategy. 
+
+
+
+To ree the Way of the long sword the enemy of the Way of strategy. 
+
+
+
+The First 
+and 
+
+
+
+The Times and the Long sword the Way of strategy the Way of the 
+strategy your the long sword in the Way of strategy. 
+
+
+
+The means to the Way of strategy the Way of the Warrior to the first the five and 
+
+
+
+The Way of the Way of strategy the Way of the Way of the Way of strategy the Way of 
+there the long swords the Way of strategy. 
+
+
+
+To Bet the Way of the Warrior the concerned the spirit of the concerned to the Ware 
+the sword. 
+
+
+
+The Way of strategy, and the Way of the swords of strategy. 
+
+The<|eot|>
+2025-05-21 02:15:13 - Generation stats - Model calls: 512, Time: 37.10s, Speed: 13.80 calls/s
+2025-05-21 02:22:55 - User selected option: 1
+2025-05-21 02:22:58 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 02:23:01 - Successfully loaded model from: model_20250520_222647_epoch_00014.pt
+2025-05-21 02:23:01 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 02:23:21 - User selected option: 3
+2025-05-21 02:23:21 - Generating from empty input
+2025-05-21 02:23:59 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ising . . .", ket men .^erate  ad into selly. 
+
+
+
+strongly. The enemy's of the spirit been and the Way of the long sword. The Way of 
+
+
+
+The Way of the Way of the tructh the enemy are master the same of the spirit of the 
+strong 
+the enemy are the enemy is the Way of the fire as a life of the fire of the enemy's long sword. The Way of the enemy's and strategy the enemy are are not the enemy of the Way of the enemy's of the Way of the enemy's of the Way of the long sword, and the Way of the same of these and strongly as the enemy's, the enemy's of the Way of strategy, and the fight of the Way of the enemy's of the Way of the enemy's of the enemy, and the enemy's of the Way of the enemy's of the Way of strategy, but the Way of strategy, and the spirit of the same of the sword, and the enemy in a long sword is the enemy. 
+
+
+
+To His the Way of the enemy's of the same of the Way of strategy, and the enemy is 
+the 
+spirit is the Way of strategy, the enemy at the Way of the long sword in the enemy's of the samuraied<|eot|>
+2025-05-21 02:23:59 - Generation stats - Model calls: 512, Time: 37.44s, Speed: 13.68 calls/s
+2025-05-21 02:28:00 - User selected option: 2
+2025-05-21 02:28:05 - Input text:                                                                                       Hello World!
+2025-05-21 02:28:44 - Generated: <|sot|>                                                                                      Hello World!ter . asing . as the site  ad the at the 
+ing uped your long sword. The enemy's are many, and the enemy of the Way of strategy, and the Way of strongly, and the same strategy, and the enemy is attacking the Way of the enemy's long sword. The Way of the true the enemy's of the Way of strategy. 
+
+
+
+The enemy is the Way of the fire and enemies as a warrior the enemy's of the Way of the enemy are are the enemy of the sword, and the enemy at the same of the long sword in 
+becomenter the enemy. 
+
+
+
+The Way of the strong the long sword in the Way of the Way of the enemy's of the 
+long swords of the samuraiâ and the enemy of the spirit of the fivendation. The spirit of the enemy's of the Way of strategy and the sword. The worling the enemy's methods of the spirit of the truseared the swords of the same of the Way of the way of the bealing of the sword in the samurai with the enemy of the Way of the teach the enemy is the same always of the enemy as the Way of strategy. 
+
+
+
+The spirit is the enemy is the Way of the <|eot|>
+2025-05-21 02:28:44 - Generation stats - Model calls: 512, Time: 38.89s, Speed: 13.17 calls/s
+2025-05-21 02:37:13 - User selected option: 1
+2025-05-21 02:37:17 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 02:37:20 - Successfully loaded model from: model_20250520_222647_epoch_00015.pt
+2025-05-21 02:37:20 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 02:37:27 - User selected option: 3
+2025-05-21 02:37:27 - Generating from empty input
+2025-05-21 02:38:05 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ist can ter ter . e enr the isn swor. 
+
+n the the Wall ynge tor strategy, an nr benemy, and the nourategd touratting. 
+
+
+
+Tor 
+
+
+
+The coverstrategt tor the lordloing and and fo with and bene an the con sword an 
+
+In the Wacashi stay, 
+
+
+
+To kn the con 
+
+
+
+
+The Vhe Say of the Way of strategy tor strategy, and in whe of the wall you wo on in the con and wan in nef in the long sand for Gor an whe strongl, 
+
+
+
+The Wamed and the lor and ind the lord, and for lo nith nor and the Wantere tor in 
+
+
+The can 
+
+
+
+The wantering the lor the longfint, and and for lordlough and and wall you will in theining and ind lo nlo strategh ind beco with louren whe strategn 
+
+
+
+The corele, 
+
+
+
+Tor in nf the ting of the lor and to strategd and and wall you with ing the Wall you whe in the Wameh ind and for and and wave whe in my strategh in the sne in the Wall when mye to cnd with lor becorthe shing, and adting of the long sword, and and waild to strategh in wserd, and the lor beneing to whee ind wathng in the co nitst and in the way <|eot|>
+2025-05-21 02:38:05 - Generation stats - Model calls: 512, Time: 38.35s, Speed: 13.35 calls/s
+2025-05-21 02:50:42 - User selected option: 1
+2025-05-21 02:50:44 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 02:50:46 - Successfully loaded model from: model_20250520_222647_epoch_00016.pt
+2025-05-21 02:50:46 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 02:50:55 - User selected option: 3
+2025-05-21 02:50:55 - Generating from empty input
+2025-05-21 02:51:32 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ise den th the. th his. cight  ad him attack. is not by the enemy attack, it is the enemy. 
+
+
+
+The First, the enemy of the firstand strategy. 
+
+
+
+The say of strategy, there in the enemy. 
+
+
+
+There in the enemy's 
+
+"The samd the enemy as not the enemy, and the enemy in the 
+Was a strategy, the enemy's the enemy attacking and the enemy attackly. 
+
+
+
+The Commting the Way of the enemy's of the firld there is the enemy's reorer, and the enemy's of the Way of the enemy of the samurain the enemy's the enemy the enemy as the enemy. 
+
+
+
+ Fe somed timing the fest the enemy's resed in the fivent of the enemy and the 
+ 
+
+
+ 
+
+
+ 
+
+
+ The Fire the enemy's 
+
+"The Way of strategy. 
+
+ then you can  attereny of the 
+ 
+
+
+ 
+e With the enemy's and they from the enemy, and the enemy's of the five timing 
+ 
+
+
+To 
+ When you cannot bet the Way of the enemy's reall bet the enemy's of the Way of the 
+weapo 
+apilited there is the enemy. Your body. 
+
+
+
+To Preving the enemy's, but the enemy attackaled the same the enemy as not the 
+the enem<|eot|>
+2025-05-21 02:51:32 - Generation stats - Model calls: 512, Time: 37.12s, Speed: 13.79 calls/s
+2025-05-21 03:08:46 - User selected option: 1
+2025-05-21 03:08:47 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 03:08:50 - Successfully loaded model from: model_20250520_222647_epoch_00017.pt
+2025-05-21 03:08:50 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 03:09:04 - User selected option: 3
+2025-05-21 03:09:04 - Generating from empty input
+2025-05-21 03:09:41 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                anci at . . ." smally at then the enemy's the ted the 
+enemy's and 
+stand, 
+e 
+apping to the 
+the 
+sounder the Way of strategy as the same. 
+
+The samurai one 
+his is the command the long sword, and the enemy attack with the enemies's of there in the 
+spirit. You will the long sword, you cannot become the enemy's long sword, and strategy in the enemy recomed the enemy, and the Way of the warrior the 
+samurai and the trure in the enemy, and the fame of the first, and think of the 
+strongly, and the long sword is the first the firs of the enemy's of the field to cut to cutting the five the samurai the 
+sword. The same. 
+
+
+
+To Right-ly with a resoles' 
+
+All and the enemy attacks of the first; of the enemy's 
+the enemy, your body as the enemy of the sword, and the enemy attacking the enemy's and the enemy as a form and the first firstand is the same of the enemy's of the Way of strategy. The samurai there wereation the 
+sword, and the enemy of the sword, and the enemy attackly of the enemy's the enemy's of the swo<|eot|>
+2025-05-21 03:09:41 - Generation stats - Model calls: 512, Time: 37.33s, Speed: 13.71 calls/s

@@ -34,6 +34,7 @@ import tqdm
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='Self-Organizing Brain Training')
 parser.add_argument('--checkpoints', type=str, help='Path to checkpoints directory. If not specified, a timestamped directory will be created.')
+parser.add_argument('--root', type=str, default='checkpoints', help='Root directory for checkpoint folders (used in menu option 1)')
 parser.add_argument('--cpu', action='store_true', help='Force using CPU even if CUDA is available')
 parser.add_argument('--tensorboard', type=str, default='runs', help='Path to TensorBoard log directory')
 parser.add_argument('--stats_dir', type=str, default='brain_stats', help='Directory to save brain usage statistics')
@@ -1324,13 +1325,15 @@ def generate_text(model, input_text, num_chars=100):
             # If output is greater than 256 but less than 65535, assume it is a two character string, not terminated at the end.
             # If output is greater than 65535, throw an error.
             # so essentially, the numbering is called big-endian.
-            if output.max(1)[0] > 65535:
-                raise ValueError("Output value is greater than 65535")
-            elif output.max(1)[0] < 256:
-                predicted_char = chr(output.max(1)[0].item()) + chr(0) # null is not printed.
+            # Use the predicted class index, not the max value
+            _, predicted = output.max(1)
+            predicted_int = int(predicted.item())
+            if predicted_int > 65535:
+                raise ValueError("Predicted class index is greater than 65535")
+            elif predicted_int < 256:
+                predicted_char = chr(predicted_int) + chr(0)  # null is not printed.
             else:
-                predicted_char = chr(output.max(1)[0].item() // 256) + chr(output.max(1)[0].item() % 256)
-            # _, predicted = output.max(1)
+                predicted_char = chr(predicted_int // 256) + chr(predicted_int % 256)
             # predicted_char = chr(predicted.item())
             
             # Append to generated text
@@ -1394,10 +1397,15 @@ def load_model_from_checkpoint(checkpoint_dir):
         return None, None
 
 def list_checkpoint_folders():
-    """List all available checkpoint folders in the current directory"""
+    """List all available checkpoint folders in the root directory specified by --root"""
+    root_dir = args.root if hasattr(args, 'root') else 'checkpoints'
+    if not os.path.exists(root_dir):
+        print(f"\nRoot directory '{root_dir}' does not exist!")
+        return None, None
     folders = []
-    for item in os.listdir('.'):
-        if os.path.isdir(item) and ('checkpoint' in item.lower() or 'ckpt' in item.lower()):
+    for item in os.listdir(root_dir):
+        full_path = os.path.join(root_dir, item)
+        if os.path.isdir(full_path) and ('checkpoint' in item.lower() or 'ckpt' in item.lower()):
             folders.append(item)
     
     if not folders:
@@ -1407,7 +1415,7 @@ def list_checkpoint_folders():
     # Sort folders alphabetically
     folders.sort()
     
-    print("\nAvailable checkpoint folders:")
+    print(f"\nAvailable checkpoint folders in '{root_dir}':")
     for idx, folder in enumerate(folders, 1):
         print(f"{idx}. {folder}")
     
@@ -1418,7 +1426,7 @@ def list_checkpoint_folders():
                 return None, None
             choice_idx = int(choice) - 1
             if 0 <= choice_idx < len(folders):
-                selected_folder = folders[choice_idx]
+                selected_folder = os.path.join(root_dir, folders[choice_idx])
                 return selected_folder, None
             else:
                 print("Invalid selection. Please try again.")

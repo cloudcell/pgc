@@ -1138,3 +1138,215 @@ the enemy attacking the enemy attack.
 The Way of the Way of the enemy of the spirit of the spirit of the sword, and with the 
 record, and the enemy of the<|eot|>
 2025-05-21 09:46:41 - Generation stats - Model calls: 512, Time: 83.96s, Speed: 6.10 calls/s
+2025-05-21 10:00:22 - User selected option: 1
+2025-05-21 10:00:24 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 10:00:29 - Successfully loaded model from: model_20250521_033319_epoch_00012.pt
+2025-05-21 10:00:29 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 10:00:53 - User selected option: 3
+2025-05-21 10:00:53 - Generating from empty input
+2025-05-21 10:02:15 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ringl . edting. . centen. . cet into. the ter inted into. 
+
+ 
+
+'rording the enemy's to the sword. 
+
+
+
+The enemy as the sword. 
+
+
+
+To attack is the 
+the enemy in the for the threes intent 
+the enemy's the first the enemy as the 
+interion. 
+
+
+
+The Way of the sword. 
+
+
+
+The First the enemy the enemy at the first the same to 
+the 
+enemy. 
+
+
+
+To Soncern 
+
+The Way of the Way of the enemy and the sword. The enemy's the enemy 
+end 
+the spirit 
+the spirit. 
+
+
+
+The Way of the sword when you cally to concerned be the enemy of the sen with a should 
+to begord the fight of the same to the 
+the sword in the Way of the enemy of the 
+the enemy in attitude. The fore of the foremens of the 
+spirit. 
+
+
+
+To Scoute conth, 
+
+
+
+The Firster the enemy, when you cannot be and and the Way of the 
+enemy's and 
+the 
+enemy's and the 
+enemy's to the 
+inowing the enemy attacking the enemy in the ford the enemy in the sword. 
+
+
+
+The Book of the Fight of the fore the enemy to become to the form the enemy's sword the 
+enemy, the enemy to the 
+<|eot|>
+2025-05-21 10:02:15 - Generation stats - Model calls: 512, Time: 82.71s, Speed: 6.19 calls/s
+2025-05-21 10:05:30 - User selected option: 2
+2025-05-21 10:05:36 - Input text:                                                                            The way of the sword is
+2025-05-21 10:06:58 - Generated: <|sot|>                                                                           The way of the sword is and. into. . cet into. . 
+
+ 
+umiching. The Want. 
+
+
+
+The Way of the Way of the enemy's the true Way, the enemy's spirit. 
+
+
+
+The spirit. 
+
+
+
+The Body of the five book of the fore of the sword in the Way of strategy the enemy to 
+the spirit of the 
+enemy, and the five and 
+the five book of the sword. 
+
+
+
+The Way of the sword-f 
+the enemy in the enemy. 
+
+
+
+The fight of the Way of the enemy the enemy to become on the same to defeat in the 
+the enemy of strategy. 
+
+The sword. The Way of the fore the enemy's the enemy in the 
+the enemy of the sword. 
+
+
+
+The Body of the Way of the ford the enemy of the fore of the same to conside the 
+in 
+the Way of strategy. 
+
+
+
+The Way of the enemy of the sword. The enemy is not be strategy. 
+
+
+
+To Single combat 
+the spirition the fight Side. The enemy of the first to the enemy of 
+the enemy in the first. The spirit. 
+
+
+
+The Way of the sword when the enemy to be able the Way of the enemy's spirit. 
+
+
+
+The Way of the Way of the enemy in the sword. The spirit of the enemy of the f<|eot|>
+2025-05-21 10:06:58 - Generation stats - Model calls: 512, Time: 82.64s, Speed: 6.20 calls/s
+2025-05-21 11:12:37 - User selected option: 1
+2025-05-21 11:12:40 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 11:12:44 - Successfully loaded model from: model_20250521_033319_epoch_00014.pt
+2025-05-21 11:12:44 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 11:13:30 - User selected option: 3
+2025-05-21 11:13:30 - Generating from empty input
+2025-05-21 11:14:54 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ring the an . central that they are . edtall. edtabl. 
+
+ 
+using  and the spirit of the 
+apple. It is the sword. 
+
+
+
+The Gater the attack well. 
+
+
+
+The Way of the enemy is attack which you can be seed to 
+strategy. 
+
+
+
+The Way of the 
+enemy's long sword in you are the enemy's long sword is not the enemy strategy, and the enemy as attitud the spirit of the sword. This is the enemy's the enemy's that the enemy's sword. 
+
+
+
+The Way of the ware the enemy of the first the spirit of the chance of the spirit of the 
+end the Way of the spirit of the enemy's they are the enemy attack well. 
+
+
+
+The sword the enemy's life to the spirit of the spirit of the sword. The way of strategy. 
+
+
+
+To strategy the enemy's differed the enemy of the sword. 
+
+
+
+The Way of the enemy's 
+
+"To ren No the enemy is the parry the enemy and the enemy's confucing to the enemy's that 
+the enemy is attack to the 
+ength the commoned the sword. 
+
+The enemy's long sword, but the enemy "In the enemy's the enemy's are the enemy in the 
+enemy's long s<|eot|>
+2025-05-21 11:14:54 - Generation stats - Model calls: 512, Time: 83.85s, Speed: 6.11 calls/s
+2025-05-21 11:17:35 - User selected option: 2
+2025-05-21 11:17:42 - Input text:                                                              The key element of the strategy is to
+2025-05-21 11:19:05 - Generated: <|sot|>                                                             The key element of the strategy is to the 
+ 
+used the spirit had 
+the 
+stand the cound the spirit of you are that the enemy's sword. 
+
+
+
+One the enemy's long sword is the enemy are not because that you will be able to 
+that 
+the commanded the enemy is a 
+for the enemy's spirited in the enemy's long sword in this well. 
+
+The swords through you must to the enemy is to hand the enemy's lown swords. 
+
+
+
+The Way of the sword is the Way of the enemy's long sword in the enemy's do not out 
+the sword of the Way of the sword, and the way of the enemy, the spirit of the way of the long sword is to the enemy is to the was in the sword in you have cannot becaus-i", and the enemy's lown the enemy's long sword. 
+
+
+
+without the enemies of the long sword the enemy. Forategy, and strategy, and the 
+look 
+strategy, and the samurai you are that to the enemy of the enemy's does not are are the 
+spirit is to the enemy is attains must study thould the enemy's lown swords. 
+
+
+
+The Way of the spirit is different the spirit of the sword, and the enemy is attack 
+perced <|eot|>
+2025-05-21 11:19:05 - Generation stats - Model calls: 512, Time: 83.43s, Speed: 6.14 calls/s

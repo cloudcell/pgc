@@ -364,3 +364,94 @@ The corele,
 
 Tor in nf the ting of the lor and to strategd and and wall you with ing the Wall you whe in the Wameh ind and for and and wave whe in my strategh in the sne in the Wall when mye to cnd with lor becorthe shing, and adting of the long sword, and and waild to strategh in wserd, and the lor beneing to whee ind wathng in the co nitst and in the way <|eot|>
 2025-05-21 02:38:05 - Generation stats - Model calls: 512, Time: 38.35s, Speed: 13.35 calls/s
+2025-05-21 02:50:42 - User selected option: 1
+2025-05-21 02:50:44 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 02:50:46 - Successfully loaded model from: model_20250520_222647_epoch_00016.pt
+2025-05-21 02:50:46 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 02:50:55 - User selected option: 3
+2025-05-21 02:50:55 - Generating from empty input
+2025-05-21 02:51:32 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ise den th the. th his. cight  ad him attack. is not by the enemy attack, it is the enemy. 
+
+
+
+The First, the enemy of the firstand strategy. 
+
+
+
+The say of strategy, there in the enemy. 
+
+
+
+There in the enemy's 
+
+"The samd the enemy as not the enemy, and the enemy in the 
+Was a strategy, the enemy's the enemy attacking and the enemy attackly. 
+
+
+
+The Commting the Way of the enemy's of the firld there is the enemy's reorer, and the enemy's of the Way of the enemy of the samurain the enemy's the enemy the enemy as the enemy. 
+
+
+
+ Fe somed timing the fest the enemy's resed in the fivent of the enemy and the 
+ 
+
+
+ 
+
+
+ 
+
+
+ The Fire the enemy's 
+
+"The Way of strategy. 
+
+ then you can  attereny of the 
+ 
+
+
+ 
+e With the enemy's and they from the enemy, and the enemy's of the five timing 
+ 
+
+
+To 
+ When you cannot bet the Way of the enemy's reall bet the enemy's of the Way of the 
+weapo 
+apilited there is the enemy. Your body. 
+
+
+
+To Preving the enemy's, but the enemy attackaled the same the enemy as not the 
+the enem<|eot|>
+2025-05-21 02:51:32 - Generation stats - Model calls: 512, Time: 37.12s, Speed: 13.79 calls/s
+2025-05-21 03:08:46 - User selected option: 1
+2025-05-21 03:08:47 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 03:08:50 - Successfully loaded model from: model_20250520_222647_epoch_00017.pt
+2025-05-21 03:08:50 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 03:09:04 - User selected option: 3
+2025-05-21 03:09:04 - Generating from empty input
+2025-05-21 03:09:41 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                anci at . . ." smally at then the enemy's the ted the 
+enemy's and 
+stand, 
+e 
+apping to the 
+the 
+sounder the Way of strategy as the same. 
+
+The samurai one 
+his is the command the long sword, and the enemy attack with the enemies's of there in the 
+spirit. You will the long sword, you cannot become the enemy's long sword, and strategy in the enemy recomed the enemy, and the Way of the warrior the 
+samurai and the trure in the enemy, and the fame of the first, and think of the 
+strongly, and the long sword is the first the firs of the enemy's of the field to cut to cutting the five the samurai the 
+sword. The same. 
+
+
+
+To Right-ly with a resoles' 
+
+All and the enemy attacks of the first; of the enemy's 
+the enemy, your body as the enemy of the sword, and the enemy attacking the enemy's and the enemy as a form and the first firstand is the same of the enemy's of the Way of strategy. The samurai there wereation the 
+sword, and the enemy of the sword, and the enemy attackly of the enemy's the enemy's of the swo<|eot|>
+2025-05-21 03:09:41 - Generation stats - Model calls: 512, Time: 37.33s, Speed: 13.71 calls/s

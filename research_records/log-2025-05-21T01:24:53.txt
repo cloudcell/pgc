@@ -481,3 +481,660 @@ sword, and the enemy of the sword, and the enemy attackly of the enemy's the ene
 2025-05-21 04:58:32 - Generation stats - Model calls: 512, Time: 84.49s, Speed: 6.06 calls/s
 2025-05-21 04:58:41 - User selected option: 2
 2025-05-21 04:58:46 - Input text:                                                                                  What is strategy?
+2025-05-21 05:00:11 - Generated: <|sot|>                                                                                 What is strategy?g the  ther the  ther the  ther the  ther the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-21 05:00:11 - Generation stats - Model calls: 512, Time: 84.85s, Speed: 6.03 calls/s
+2025-05-21 05:01:09 - User selected option: What is the most important thing about strategy?
+2025-05-21 05:01:09 - Invalid choice: What is the most important thing about strategy?
+2025-05-21 05:01:12 - User selected option: 2
+2025-05-21 05:01:13 - Input text:                                                   What is the most important thing about strategy?
+2025-05-21 05:02:36 - Generated: <|sot|>                                                  What is the most important thing about strategy?g the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-21 05:02:36 - Generation stats - Model calls: 512, Time: 82.77s, Speed: 6.19 calls/s
+2025-05-21 05:09:09 - User selected option: 1
+2025-05-21 05:09:12 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 05:09:17 - Successfully loaded model from: model_20250521_033319_epoch_00003.pt
+2025-05-21 05:09:17 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 05:09:28 - User selected option: 3
+2025-05-21 05:09:28 - Generating from empty input
+2025-05-21 05:10:51 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                e  ther  ar  and. . the . st ther  and. the . the  ther  and ther the . 
+
+
+
+
+
+
+
+ot ther the the the the the the the st ther the ing the the to ther the ing the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the st ther the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the  ther the st ther the the the the the th<|eot|>
+2025-05-21 05:10:51 - Generation stats - Model calls: 512, Time: 83.58s, Speed: 6.13 calls/s
+2025-05-21 05:42:10 - User selected option: 1
+2025-05-21 05:42:13 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 05:42:17 - Successfully loaded model from: model_20250521_033319_epoch_00004.pt
+2025-05-21 05:42:17 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 05:42:23 - User selected option: 3
+2025-05-21 05:42:23 - Generating from empty input
+2025-05-21 05:43:44 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                rer . and . st ther  
+e end . the . 
+
+ 
+e end ing the end the enemy' 
+the enemy' 
+
+
+
+Thes the enemy's of the enemy. The enemy' 
+
+
+
+Thes the enemy' 
+
+
+
+Thes the enemy' 
+
+
+The enemy' 
+
+
+The enemy's of the enemy. The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+Th<|eot|>
+2025-05-21 05:43:44 - Generation stats - Model calls: 512, Time: 81.44s, Speed: 6.29 calls/s
+2025-05-21 05:44:18 - User selected option: 2
+2025-05-21 05:44:23 - Input text:                                                                                  Who is the enemy?
+2025-05-21 05:45:47 - Generated: <|sot|>                                                                                 Who is the enemy?. the end y  ther ing the en thes the en thes the enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+
+Thes the enemy' 
+
+
+
+Thes of the enemy. The enemy' 
+the enemy' 
+
+
+The of the enemys of the enemy. The enemy' 
+
+
+
+Thes the enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The enemy' 
+
+
+The en<|eot|>
+2025-05-21 05:45:47 - Generation stats - Model calls: 512, Time: 83.78s, Speed: 6.11 calls/s
+2025-05-21 06:30:50 - User selected option: 1
+2025-05-21 06:30:56 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 06:31:00 - Successfully loaded model from: model_20250521_033319_epoch_00005.pt
+2025-05-21 06:31:00 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 06:31:17 - User selected option: 3
+2025-05-21 06:31:17 - Generating from empty input
+2025-05-21 06:32:39 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                t ate d y stt ing d th ther the . 
+
+ 
+e en then the en then the enemr the enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword the sword. The enemy the enemy of the sword. The enemy the enem<|eot|>
+2025-05-21 06:32:39 - Generation stats - Model calls: 512, Time: 81.62s, Speed: 6.27 calls/s
+2025-05-21 06:33:05 - User selected option: 2
+2025-05-21 06:33:11 - Input text:                                                                                    The strategy is
+2025-05-21 06:34:34 - Generated: <|sot|>                                                                                   The strategy is then the en then the en ther the enemr . The enemy . The enemy the enemy the enemy of the enemy. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of t<|eot|>
+2025-05-21 06:34:34 - Generation stats - Model calls: 512, Time: 82.93s, Speed: 6.17 calls/s
+2025-05-21 06:36:58 - User selected option: 2
+2025-05-21 06:37:14 - Input text:                                     The strategy is the enemy of the sword. The reason for this is
+2025-05-21 06:38:37 - Generated: <|sot|>                                    The strategy is the enemy of the sword. The reason for this is the enemy. The enemy the the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword the sword. The enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword the sword. The enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The enemy the enemy of the sword. The enemy the enemy the enemy of the sword. The <|eot|>
+2025-05-21 06:38:37 - Generation stats - Model calls: 512, Time: 82.43s, Speed: 6.21 calls/s
+2025-05-21 06:56:19 - User selected option: 1
+2025-05-21 06:56:23 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 06:56:27 - Successfully loaded model from: model_20250521_033319_epoch_00006.pt
+2025-05-21 06:56:27 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 06:56:43 - User selected option: 2
+2025-05-21 06:56:47 - Input text:                                                                                    The strategy is
+2025-05-21 06:58:09 - Generated: <|sot|>                                                                                   The strategy is tp inurt inurt inurt in then the enemy in the enemy. 
+
+
+
+The enemy of the same the enemy of the same the enemy of the same the enemy of the 
+ 
+
+There is the enemy's of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the samurt of the same the enemy of the same the enemy of the enemy. 
+
+
+
+The enemy of the same the enemy of the same the enemy of the same the enemy of the 
+ 
+
+The same the enemy's of the same the enemy of the same the enemy of the same the enemy of the enemy's. 
+
+
+
+The enemy of the same the enemy of the same the enemy of the same the enemy of the 
+ 
+
+There is the enemy's of the same the enemy of the same the en<|eot|>
+2025-05-21 06:58:09 - Generation stats - Model calls: 512, Time: 81.65s, Speed: 6.27 calls/s
+2025-05-21 07:00:01 - User selected option: 3
+2025-05-21 07:00:01 - Generating from empty input
+2025-05-21 07:01:25 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                rtt inurt . t atst. . the ent t at tit of the enemy's of then the enemy to the same the enemy of the same the enemy of the samurt of the same the enemy of the same the enemy of the same the enemy of the enemy's. 
+
+
+
+The enemy of the same the enemy of the same the enemy of the same the enemy of the 
+ 
+
+There is the enemy's of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the same the en<|eot|>
+2025-05-21 07:01:25 - Generation stats - Model calls: 512, Time: 83.14s, Speed: 6.16 calls/s
+2025-05-21 07:24:11 - User selected option: 1
+2025-05-21 07:24:14 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 07:24:19 - Successfully loaded model from: model_20250521_033319_epoch_00007.pt
+2025-05-21 07:24:19 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 07:24:33 - User selected option: 3
+2025-05-21 07:24:33 - Generating from empty input
+2025-05-21 07:25:56 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ringnd, . qusting  and ther  in the ent  and ther inurt ings. 
+
+
+
+The enemy of the same the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit. 
+
+The sword, and the enemy of the spiring the same the enemy the enemy and the enemy the enemy the enemy of the sword and the samurt of the same the enemy of the spiring the same the enemy the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the samurt the enemy the enemy the enemy of the same the enemy of the same the enemy of the same the enemy of the same the enemy of the samurt the enemy the enemy <|eot|>
+2025-05-21 07:25:56 - Generation stats - Model calls: 512, Time: 83.39s, Speed: 6.14 calls/s
+2025-05-21 07:28:23 - User selected option: 2
+2025-05-21 07:28:28 - Input text:                                                                                       The enemy is
+2025-05-21 07:29:51 - Generated: <|sot|>                                                                                      The enemy is an the . qut  and ther inurt  ther inurt  and ther the enemy to the samurt the enemy of the spiring the spiring the same the enemy of the spirit. 
+
+The spiring the same the enemy the enemy of the samurt of the same the enemy the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the samurt the enemy the enemy the enemy of the samurt the enemy the enemy the enemy of the samurt the enemy the enemy the enemy of the samurt the enemy the enemy the enemy of the samurt the enemy the enemy the enemy of the same the enemy of the same the enemy of the samurt the enemy the enemy the enemy of the same the enem<|eot|>
+2025-05-21 07:29:51 - Generation stats - Model calls: 512, Time: 83.27s, Speed: 6.15 calls/s
+2025-05-21 07:36:07 - User selected option: 2
+2025-05-21 07:36:30 - Input text:                                             The best way to defeat the enemy without a sword is to
+2025-05-21 07:37:53 - Generated: <|sot|>                                            The best way to defeat the enemy without a sword is tong spiring. 
+
+
+
+The enemy in the same the enemy of the samurt of the sword, and the enemy of the 
+the enemy of the same the enemy the enemy of the spiring the samurt of the samurt of the same the enemy of the spiring the same the enemy the enemy of the spiring the samurt of the sword and the same the enemy of the spiring the same the enemy the enemy the enemy of the sword, and the enemy of the spiring the samurt of the same the enemy of the same the enemy the enemy the enemy of the spirit. 
+
+In you cannot is the enemy of the spiring the sample the enemy the enemy the enemy the enemy the enemy of the same the enemy the enemy of the spiring the samurt the enemy the enemy the enemy the enemy of the same the enemy of the spirit the enemy the enemy the enemy the enemy of the sword and the sword, and the enemy of the spirit. 
+
+The samurt of the same the enemy of the sword, and the enemy of the same the enemy the enemy the enemy of the sword and the same the enemy the enemy the enemy the enemy of the same the enemy <|eot|>
+2025-05-21 07:37:53 - Generation stats - Model calls: 512, Time: 82.35s, Speed: 6.22 calls/s
+2025-05-21 07:38:43 - User selected option: 2
+2025-05-21 07:38:50 - Input text:                                                                                         Samurai is
+2025-05-21 07:40:14 - Generated: <|sot|>                                                                                        Samurai is, onls. . centing  and ther inurt in ther the enemy the enemy the enemy becomed the enemy of the spiring the same the enemy of the spirit the enemy the enemy and the enemy of the sword. 
+
+
+
+The Way of strategy the enemy the enemy of the samurt and the enemy of the sword, and the enemy the enemy the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same the enemy of the spirit the enemy the enemy the enemy of the same the enemy of the same th<|eot|>
+2025-05-21 07:40:14 - Generation stats - Model calls: 512, Time: 83.21s, Speed: 6.15 calls/s
+2025-05-21 07:52:46 - User selected option: 1
+2025-05-21 07:52:48 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 07:52:53 - Successfully loaded model from: model_20250521_033319_epoch_00008.pt
+2025-05-21 07:52:53 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 07:53:08 - User selected option: 3
+2025-05-21 07:53:08 - Generating from empty input
+2025-05-21 07:54:30 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                inur tely der  then inur then the . 
+
+ 
+ 
+ 
+ 
+
+Then in then the enemy's the enemy the enemy's the enemy in the enemy's the 
+ 
+
+The 
+the enemy of the enemy as the enemy of the enemy's, the enemy of the enemy's and the 
+the Way of the enemy's and the enemy's and the enemy's of the Way of the enemy's of the enemy the enemy the the enemy. 
+
+
+
+The spiring the enemy's and the enemy's and the enemy's and the enemy, and the Way of 
+the enemy. 
+
+
+
+Theiring the enemy of the spiring the enemy's, the Way of the enemy's and the enemy, the Way of the enemy's and the enemy, and the Way of the enemy's and the enemy. 
+
+
+
+The Way of the spiring the enemy's and the enemy's of the enemy.s the enemy. 
+
+
+
+The 
+the Way of the enemy's of the Way of then you must the enemy. 
+
+
+
+The Way of the 
+the sword the enemy.s the enemy's to the enemy's and the enemy's 
+this 
+the enemy of the spirit the enemy's to the enemy's of the enemy the enemy. 
+
+
+
+There then the enemy of the spiring the enemy's of the enemy. The enemy's and the 
+the enemy <|eot|>
+2025-05-21 07:54:30 - Generation stats - Model calls: 512, Time: 82.35s, Speed: 6.22 calls/s
+2025-05-21 07:55:22 - User selected option: 2
+2025-05-21 07:55:32 - Input text:                                                                      The way of the strategy is to
+2025-05-21 07:56:56 - Generated: <|sot|>                                                                     The way of the strategy is tor  and. 
+
+ 
+ 
+ 
+ 
+umver in then the en then the enemy the enemy's the enemy's the enemy's the en 
+this 
+cannot the enemy's and the enemy's and the enemy's and the enemy's and the enemy's 
+the Way of the enemy's of the enemy the Way of then you must the enemy's and the enemy's, the Way of the enemy's and the enemy's and the enemy. 
+
+
+
+The Way of the enemy's, the enemy's the enemy the enemy. 
+
+
+
+The spiring the enemy's 
+the enemy's the enemy the enemy. 
+
+
+
+The spiring the enemy's 
+the enemy's the enemy the enemy. 
+
+
+
+The spiring the enemy's 
+the enemy's the enemy the enemy.s the enemy is the enemy's 
+the Way of the sword. 
+
+
+
+The enemy's the enemy's the enemy's the enemy's the enemy the enemy. In the enemy the enemy. 
+
+
+
+The sword the enemy's confust the enemy's of the enemy. 
+
+
+
+There is the enemy of the enemy's and the enemy's of the enemy of the spiring the 
+the enemy to the enemy's and the enemy's of the Way of the enemy's and the enemy's of the Way of the enemy's and the enemy's of the Way of the spiring t<|eot|>
+2025-05-21 07:56:56 - Generation stats - Model calls: 512, Time: 84.42s, Speed: 6.06 calls/s
+2025-05-21 09:44:57 - User selected option: 1
+2025-05-21 09:45:04 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 09:45:08 - Successfully loaded model from: model_20250521_033319_epoch_00011.pt
+2025-05-21 09:45:08 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 09:45:17 - User selected option: 3
+2025-05-21 09:45:17 - Generating from empty input
+2025-05-21 09:46:41 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ring tell . qut  ther  ther into thon the ter into they call. You must they call the 
+cat his the enemy in the form the enemy in the Way of the enemy the enemy and the enemy attacking the enemy as and the their, and cut the enemy by the by the enemy's of theirstand the enemy of the Way of the enemy of the Way of the enemy is and the enemy's and the enemy's and theirate the enemy byour spirit. 
+
+
+
+The Way of the Way of the enemy's of the enemy. 
+
+The enemy's the enemy's called 
+the enemy is the Way of the enemy's of the spirit of the spirit of the the Way of the enemy in attack and the enemy is and the to the enemy of the 
+recoment the spirit is the the enemy. 
+
+
+
+The Way of the Way of the enemy in the Way of the enemy attacking the enemy attacking 
+and the enemy. 
+
+
+
+To Stand is the enemy of the sword. The enemy in the Way of the enemy and the enemy at 
+the enemy attacking the enemy attack. 
+
+
+
+The Way of the Way of the enemy of the spirit of the spirit of the sword, and with the 
+record, and the enemy of the<|eot|>
+2025-05-21 09:46:41 - Generation stats - Model calls: 512, Time: 83.96s, Speed: 6.10 calls/s

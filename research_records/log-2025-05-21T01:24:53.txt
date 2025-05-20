@@ -146,3 +146,221 @@ muster this.
 
 The Firstan<|eot|>
 2025-05-21 01:54:26 - Generation stats - Model calls: 512, Time: 38.17s, Speed: 13.41 calls/s
+2025-05-21 02:10:49 - User selected option: 1
+2025-05-21 02:10:51 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 02:10:54 - Successfully loaded model from: model_20250520_222647_epoch_00013.pt
+2025-05-21 02:10:54 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 02:11:02 - User selected option: 2
+2025-05-21 02:11:21 - Input text:                                                                      What do you think about life?
+2025-05-21 02:11:59 - Generated: <|sot|>                                                                     What do you think about life?n thes. 
+
+
+
+the thing the attack, the Way of the spirit of the shortain the fiver the first the 
+enemy 
+the confust the Way. 
+
+
+
+To Hold in the way of the enemy's long the Way of strategy the enemy's 
+
+The Way of 
+the Way of the spirit, the enemy and their to the Way of the spirit of the 
+enemy as he studies to the 
+strongly. 
+
+
+
+The Way of the enemy's life with the enemy's sword. 
+
+
+
+To the Way of the long sword, and the Way of the spirit of the strategy the sword the 
+spirit of the enemy and the spirit of the spirit of strategy. 
+
+
+
+There are no the Way of the spirit of the strategy. 
+
+
+
+To Movern in the Way of the 
+enemy as the same to cut the enemy's swords the Way of the 
+the sword. 
+
+
+
+The Way of the Way of strategy the true Way of strategy, when your long sword. 
+
+
+
+The Way of the strategy 
+
+
+
+To Kyush the enemy and strategy the Way of the spirit of the 
+enemy's 
+
+
+
+The Way of 
+
+
+
+To The Way of the Long Sword the Way of strategy the Way of the spirit, 
+
+
+
+To Mingle 
+
+
+
+m41ter the true Way of the Way of<|eot|>
+2025-05-21 02:11:59 - Generation stats - Model calls: 512, Time: 37.89s, Speed: 13.51 calls/s
+2025-05-21 02:14:27 - User selected option: 2
+2025-05-21 02:14:36 - Input text:                                                                            What is life and death?
+2025-05-21 02:15:13 - Generated: <|sot|>                                                                           What is life and death?n the thes. wath awk. the themy's the 
+ene sword. 
+
+
+
+The Way of the same the long sword, the long swords the principle long swords in 
+the sword the comming the enemy's to the spirit of strategy strongly. 
+
+The First the Way of the Way of the first the fight Side. 
+
+
+
+The Firsue of the 
+spirit. 
+
+
+
+There was cut the enemy's swords the Way of the 
+the way of the same to left the sword as the enemy's' the Way of strategy. 
+
+
+
+To ree the Way of the long sword the enemy of the Way of strategy. 
+
+
+
+The First 
+and 
+
+
+
+The Times and the Long sword the Way of strategy the Way of the 
+strategy your the long sword in the Way of strategy. 
+
+
+
+The means to the Way of strategy the Way of the Warrior to the first the five and 
+
+
+
+The Way of the Way of strategy the Way of the Way of the Way of strategy the Way of 
+there the long swords the Way of strategy. 
+
+
+
+To Bet the Way of the Warrior the concerned the spirit of the concerned to the Ware 
+the sword. 
+
+
+
+The Way of strategy, and the Way of the swords of strategy. 
+
+The<|eot|>
+2025-05-21 02:15:13 - Generation stats - Model calls: 512, Time: 37.10s, Speed: 13.80 calls/s
+2025-05-21 02:22:55 - User selected option: 1
+2025-05-21 02:22:58 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 02:23:01 - Successfully loaded model from: model_20250520_222647_epoch_00014.pt
+2025-05-21 02:23:01 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 02:23:21 - User selected option: 3
+2025-05-21 02:23:21 - Generating from empty input
+2025-05-21 02:23:59 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ising . . .", ket men .^erate  ad into selly. 
+
+
+
+strongly. The enemy's of the spirit been and the Way of the long sword. The Way of 
+
+
+
+The Way of the Way of the tructh the enemy are master the same of the spirit of the 
+strong 
+the enemy are the enemy is the Way of the fire as a life of the fire of the enemy's long sword. The Way of the enemy's and strategy the enemy are are not the enemy of the Way of the enemy's of the Way of the enemy's of the Way of the long sword, and the Way of the same of these and strongly as the enemy's, the enemy's of the Way of strategy, and the fight of the Way of the enemy's of the Way of the enemy's of the enemy, and the enemy's of the Way of the enemy's of the Way of strategy, but the Way of strategy, and the spirit of the same of the sword, and the enemy in a long sword is the enemy. 
+
+
+
+To His the Way of the enemy's of the same of the Way of strategy, and the enemy is 
+the 
+spirit is the Way of strategy, the enemy at the Way of the long sword in the enemy's of the samuraied<|eot|>
+2025-05-21 02:23:59 - Generation stats - Model calls: 512, Time: 37.44s, Speed: 13.68 calls/s
+2025-05-21 02:28:00 - User selected option: 2
+2025-05-21 02:28:05 - Input text:                                                                                       Hello World!
+2025-05-21 02:28:44 - Generated: <|sot|>                                                                                      Hello World!ter . asing . as the site  ad the at the 
+ing uped your long sword. The enemy's are many, and the enemy of the Way of strategy, and the Way of strongly, and the same strategy, and the enemy is attacking the Way of the enemy's long sword. The Way of the true the enemy's of the Way of strategy. 
+
+
+
+The enemy is the Way of the fire and enemies as a warrior the enemy's of the Way of the enemy are are the enemy of the sword, and the enemy at the same of the long sword in 
+becomenter the enemy. 
+
+
+
+The Way of the strong the long sword in the Way of the Way of the enemy's of the 
+long swords of the samuraiâ and the enemy of the spirit of the fivendation. The spirit of the enemy's of the Way of strategy and the sword. The worling the enemy's methods of the spirit of the truseared the swords of the same of the Way of the way of the bealing of the sword in the samurai with the enemy of the Way of the teach the enemy is the same always of the enemy as the Way of strategy. 
+
+
+
+The spirit is the enemy is the Way of the <|eot|>
+2025-05-21 02:28:44 - Generation stats - Model calls: 512, Time: 38.89s, Speed: 13.17 calls/s
+2025-05-21 02:37:13 - User selected option: 1
+2025-05-21 02:37:17 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250520_222639
+2025-05-21 02:37:20 - Successfully loaded model from: model_20250520_222647_epoch_00015.pt
+2025-05-21 02:37:20 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 3, 'address_dim': 3, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 02:37:27 - User selected option: 3
+2025-05-21 02:37:27 - Generating from empty input
+2025-05-21 02:38:05 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ist can ter ter . e enr the isn swor. 
+
+n the the Wall ynge tor strategy, an nr benemy, and the nourategd touratting. 
+
+
+
+Tor 
+
+
+
+The coverstrategt tor the lordloing and and fo with and bene an the con sword an 
+
+In the Wacashi stay, 
+
+
+
+To kn the con 
+
+
+
+
+The Vhe Say of the Way of strategy tor strategy, and in whe of the wall you wo on in the con and wan in nef in the long sand for Gor an whe strongl, 
+
+
+
+The Wamed and the lor and ind the lord, and for lo nith nor and the Wantere tor in 
+
+
+The can 
+
+
+
+The wantering the lor the longfint, and and for lordlough and and wall you will in theining and ind lo nlo strategh ind beco with louren whe strategn 
+
+
+
+The corele, 
+
+
+
+Tor in nf the ting of the lor and to strategd and and wall you with ing the Wall you whe in the Wameh ind and for and and wave whe in my strategh in the sne in the Wall when mye to cnd with lor becorthe shing, and adting of the long sword, and and waild to strategh in wserd, and the lor beneing to whee ind wathng in the co nitst and in the way <|eot|>
+2025-05-21 02:38:05 - Generation stats - Model calls: 512, Time: 38.35s, Speed: 13.35 calls/s

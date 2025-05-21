@@ -1321,21 +1321,17 @@ def generate_text(model, input_text, num_chars=100):
             output = model(x)
             model_calls += 1
             
-            # Get the predicted characters. Enable flexibility for different outputs: if output is less than 256, assume it is a single character, terminated with a null character. 
-            # If output is greater than 256 but less than 65535, assume it is a two character string, not terminated at the end.
-            # If output is greater than 65535, throw an error.
-            # so essentially, the numbering is called big-endian.
-            # Use the predicted class index, not the max value
+            # Get the predicted characters as trigrams (3 ASCII chars, big-endian)
+            # Class id can be 0..16,777,215 (256^3 - 1)
             _, predicted = output.max(1)
             predicted_int = int(predicted.item())
-            if predicted_int > 65535:
-                raise ValueError("Predicted class index is greater than 65535")
-            elif predicted_int < 256:
-                predicted_char = chr(predicted_int) + chr(0)  # null is not printed.
-            else:
-                predicted_char = chr(predicted_int // 256) + chr(predicted_int % 256)
-            # predicted_char = chr(predicted.item())
-            
+            if predicted_int >= 16777216:
+                raise ValueError("Predicted class index is greater than 16,777,215 (cannot decode as trigram)")
+            # Always decode as trigram (3 chars, big-endian)
+            c1 = (predicted_int // (256 * 256)) % 256
+            c2 = (predicted_int // 256) % 256
+            c3 = predicted_int % 256
+            predicted_char = chr(c1) + chr(c2) + chr(c3)
             # Append to generated text
             generated_text += predicted_char
     

@@ -193,28 +193,35 @@ def pack_file(input_file, output_file=None, encoding='base64', mode='jam', fit_a
                 sys.exit(1)
     print(f"Packing {input_file} to {output_file} using {encoding} encoding")
     try:
-        # Special handling: if mode == 'fit' and --pickle <file> is in fit_args, skip encoding and pass pickle file directly
+        # Generalized pickle handling: skip encoding and pass pickle file directly for both 'fit' and 'jam' modes
         use_pickle = False
         pickle_path = None
-        if mode == 'fit' and fit_args is not None:
-            if '--pickle' in fit_args:
-                idx = fit_args.index('--pickle')
-                if idx + 1 < len(fit_args):
-                    pickle_path = fit_args[idx + 1]
-                    use_pickle = True
+        # Detect pickle by --pickle argument
+        if fit_args is not None and '--pickle' in fit_args:
+            idx = fit_args.index('--pickle')
+            if idx + 1 < len(fit_args):
+                pickle_path = fit_args[idx + 1]
+                use_pickle = True
+        # Detect pickle by file extension (input_file or pickle_path)
+        elif input_file is not None and (input_file.endswith('.pkl') or input_file.endswith('.pickle')):
+            pickle_path = input_file
+            use_pickle = True
         if use_pickle:
-            print(f"Detected mode=fit and --pickle {pickle_path}. Skipping encoding and dataset creation.")
-            # Remove --pickle and its value from fit_args
+            print(f"Detected pickle file {pickle_path}. Skipping encoding and dataset creation.")
+            # Remove --pickle and its value from fit_args if present
             new_fit_args = []
             skip_next = False
-            for i, arg in enumerate(fit_args):
-                if skip_next:
-                    skip_next = False
-                    continue
-                if arg == '--pickle':
-                    skip_next = True
-                    continue
-                new_fit_args.append(arg)
+            if fit_args is not None:
+                for i, arg in enumerate(fit_args):
+                    if skip_next:
+                        skip_next = False
+                        continue
+                    if arg == '--pickle':
+                        skip_next = True
+                        continue
+                    new_fit_args.append(arg)
+            else:
+                new_fit_args = []
             # Ensure --dataset_path is set to pickle_path
             # Remove any existing --dataset_path
             filtered_args = []

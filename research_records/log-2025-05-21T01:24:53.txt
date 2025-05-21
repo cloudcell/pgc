@@ -1995,3 +1995,121 @@ body and then the Way of the long sword is to collapses. If you will come straig
 In large-scale strategy, when the enemy is a 
 fought. The enemy's long<|eot|>
 2025-05-21 14:52:25 - Generation stats - Model calls: 512, Time: 83.23s, Speed: 6.15 calls/s
+2025-05-21 16:28:43 - User selected option: 1
+2025-05-21 16:28:46 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 16:28:51 - Successfully loaded model from: model_20250521_033319_epoch_00024.pt
+2025-05-21 16:28:51 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 16:28:57 - User selected option: 3
+2025-05-21 16:28:57 - Generating from empty input
+2025-05-21 16:30:20 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                attably edtant of our..  is ning. and thate, it haviour.s, 
+it. 
+
+what is that 
+your spirit to down the 
+eneming on the trueens. 
+
+In large at the enemy, tath one his he attacks. If you attaining in he can become 
+super to could and left of his spaceing comen occles, his cannot be able to the had instially with the butting of the way of the enemy. 
+
+
+
+There is the Way of the body, and compled the ability the true Way of the field to 
+against be attack. 
+
+In large-scale strategy, when the enemy. You must be about and the enemy broade 
+betwenty 
+lords 
+heart as nen in the higd, and his sword, and the Way of the spirit be able to cut arm(seems. This. 
+
+Intering". A 
+samural in to the long sword" and it can battled it war pilligation of the 
+saing the enemy's long sword, the longle compled with thing pirigiling of your body called and have halberfect. Maditary as 
+witilg the longerni To retain to realisally, learninence with a the fire you down, but the about the 
+familied the feet other, you does not allows what<|eot|>
+2025-05-21 16:30:20 - Generation stats - Model calls: 512, Time: 82.58s, Speed: 6.20 calls/s
+2025-05-21 16:33:55 - User selected option: 2
+2025-05-21 16:34:28 - Input text:                                                                                       The sword is
+2025-05-21 16:35:51 - Generated: <|sot|>                                                                                      The sword is armen, . edtal abour..  is nirm.  
+using edo with the lat 
+of the 
+cantained in the forestally diving of the Way of the 
+mility and no techniques, and this 
+spirited and to his mover his spirit is not be strategy around to research the let 
+the varined by have I haves. First. The sword. The warringarmention by schools. 
+
+
+
+Chising the Way of the enemy, you must appreciated the agere is to cut. 
+
+Musashi scale 
+first the enemy's at the Might hards. When attacking lifed to cutting him. 
+
+
+
+To Inji of the Techniques attack. 
+
+
+
+The Way of the Twentage the libratched to 
+manisation". 
+
+his is not life with carious 
+and co. Your body of the Ways timing he havice your at the 
+samurai, to move by 
+the house enemy 
+youra. 
+
+In the Wated by Shown in the enemy is namily be concerned the enemy's down to this. 
+
+In large for technined by a 
+enemy's Body. The way of sword" and legs â whenefing the enemy as the sword is 
+always, lear not to attacking what the enemy is schools 
+is timing to attains 
+haneturally commost. <|eot|>
+2025-05-21 16:35:51 - Generation stats - Model calls: 512, Time: 83.63s, Speed: 6.12 calls/s
+2025-05-21 17:01:33 - User selected option: 1
+2025-05-21 17:01:35 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 17:01:40 - Successfully loaded model from: model_20250521_033319_epoch_00025.pt
+2025-05-21 17:01:40 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 17:01:43 - User selected option: 3
+2025-05-21 17:01:43 - Generating from empty input
+2025-05-21 17:03:06 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                atevareded. . r hend. . r en ang. sword..  is emvel instared the 
+cat wield with the 
+ack to dealing by stever. 
+
+The enemy's four 
+
+
+
+The Way of the Shings sword art when you must rear is weak a vai of strategy, were then 
+this is accorder to forcs attacking. It is enemy prese for be into the enemy's sworded to chass and librear of strategy, persunefining both of the foremen for winning sword is the Way. When we in untiourai in oot leaching him that you will become the Kan in my see to menth in there are difficult to fight him. If you down the other the first this. 
+
+It is not them of them. 
+
+
+
+The Book is times, and the enemy's to appil and the 
+Wate the enemy attack to ristared 
+the enemy as that is not be attack of the beneficledgessanding without reading the enemy's sword is werring there and come school deceitary of the fiveal escaps of strategy, and there is noth class charch for the Way of strategy, but their few mativelling sword then were of the Way of the long sword the long sword with the besting <|eot|>
+2025-05-21 17:03:06 - Generation stats - Model calls: 512, Time: 83.03s, Speed: 6.17 calls/s
+2025-05-21 17:05:19 - User selected option: 2
+2025-05-21 17:05:33 - Input text:                                                                               The strategy is the 
+2025-05-21 17:06:58 - Generated: <|sot|>                                                                              The strategy is the tseld edtal ince wart in. aftere.  
+thatter 
+his prons. 
+
+Pering worksioning by the enemy's spirited and will the enemy's are sword in the 
+speak of strategy, people rame with the enemy. You must befody. Way of the battle. 
+
+If you cushed and the five in the Way of the enemy's who pine, you must appronter. You must change the Way of strategy is a 
+hunderstand whenever this spirit unciappressed. The lishiors breast. This is the worksion the Tokugand of the Japanent used to realies. 
+
+Intering, with you way of the sword. He use for teaching Befeat in the spirit of the way. 
+
+The Way of seat of this Way, strongld in the pristenter. There are now think of 
+crotely with the Way of the feeling, fight in the way of strategy. 
+
+
+
+The practing this is the penetrate the bow rhythm, they you be nothing. Musashi you must udo think your foreo the swords, your means this well and at his not ground in the Way of strategy your body. It is the enemy and not lete the Way of the breat to that you will become on the true Way, fi<|eot|>
+2025-05-21 17:06:58 - Generation stats - Model calls: 512, Time: 84.35s, Speed: 6.07 calls/s

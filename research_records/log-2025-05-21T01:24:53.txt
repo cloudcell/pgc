@@ -2293,3 +2293,94 @@ treading in the common swords.
 
 â¢ sin usedition through the beginners thout morearchin<|eot|>
 2025-05-21 23:36:59 - Generation stats - Model calls: 512, Time: 83.11s, Speed: 6.16 calls/s
+2025-05-22 01:01:14 - User selected option: 1
+2025-05-22 01:01:16 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-22 01:01:21 - Successfully loaded model from: model_20250521_033319_epoch_00040.pt
+2025-05-22 01:01:21 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-22 01:01:35 - User selected option: 3
+2025-05-22 01:01:35 - Generating from empty input
+2025-05-22 01:02:58 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                atever ieds  is t . . ither  is rell. .  
+thir pecy. The mot see the enemy is of his 
+cat with the ability als. When you a few not met not dept setted in the gods of 
+rince to fencing. The way of ad note wo make is 
+the olt in the want of the hot will his morely, 
+
+
+
+teaching the Way of the Warrion sear forestally in large-scale salvation, you must pater. In an entish the sword. The spirit on everytang for you remable of this is timing to glow a part of your 
+wisdiented 
+or the new night o'cupone at, also your foot as not chout duade, and the sword and theenish he not bos of a pried in leyassing a 
+hurder it. If it's swords the provincialy lax. 
+
+
+Sometime: The realing four Well be a ginned to shout aspirit of become. The feet and 
+the enemy work drought. The especting to the sword, you strongly. 
+
+
+
+The extra-low canning move pow, you must clall the enemy day to be are oo the Way of 
+stabt from it. Holeyhusu. You can win of sword. There is alwayns, and first at as he lassionaration and sight. If you must swo<|eot|>
+2025-05-22 01:02:58 - Generation stats - Model calls: 512, Time: 83.00s, Speed: 6.17 calls/s
+2025-05-22 01:05:16 - User selected option: 2
+2025-05-22 01:05:44 - Input text:                                               The most important aspect of strategy in a battle is
+2025-05-22 01:07:07 - Generated: <|sot|>                                              The most important aspect of strategy in a battle is and naturally be 
+the 
+enemy. 
+
+
+
+a wisdomies a thogunside with the family be conten swords and dichioki. 
+
+Fat for 
+the Bodying method the enemy ren perfect. The body into thist and were means 
+him 
+spiries to keepred and attack ghen you out there is aspirit, you must come 
+
+
+
+It is resoluter with the spirit years and halbern that you deel to gon. The resongly 
+been permats the samur of doors, and when your long swordsword their sind onlyour on a straibit and there are been to unpristise Zust cross weaponly of withing mount this right in a 
+colding sword. The sout from the enemy's sword by a sword-fen ten" is the left of duels face the enemy were verion. It, duel up if the sword fencing on the concense that you will stay to has means of have all death. 
+
+^^ Four head, he wradice to set. You with side, you wile reasons. And in this is retails, thing the enemy you must the enemy. This. I aboveficien, and will 
+meant up a same of the sword changing passord. The artisonaba esadition, and the bast. Pract, the be<|eot|>
+2025-05-22 01:07:07 - Generation stats - Model calls: 512, Time: 82.78s, Speed: 6.19 calls/s
+2025-05-22 04:07:14 - User selected option: 1
+2025-05-22 04:07:16 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-22 04:07:21 - Successfully loaded model from: model_20250521_033319_epoch_00045.pt
+2025-05-22 04:07:21 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-22 04:07:25 - User selected option: 3
+2025-05-22 04:07:25 - Generating from empty input
+2025-05-22 04:08:50 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                somer..  
+ 
+umstion  it iltemp by 
+at hing. sword..  
+apples, the truelly in we have befeation of other schools school, where times the face. 
+
+
+
+ansakawas of my to mement to think only other means an understery of horses. 
+
+This is tradition wisdording into meaning one quick, he spale and sontial, so, interigal to stance, and small methoust Horredge" spirit. The sure vealt of strongly and sever methods hand. 
+
+In large-scale sun (these he 
+reat to night attting his over in large such and 
+ten 
+his reconden. This book. 
+
+
+
+The Two heaves printels. This is the enement be wath the long sword in the enemy's fourse, 
+and come weigol of 
+spears weapon of the first part this book. 
+
+The bolding to Knowing, an a reading to hit 
+single in strategy, will as conteents of some 
+win of the samurai withd the five all halberention 
+
+In large-scale have beason it is the 
+lay ire combat is the method sure a domitary intempy 
+and, doo sword the enemy, for the thing, you cannot 
+sword your 
+boad pringing. If you do not mine ca<|eot|>
+2025-05-22 04:08:50 - Generation stats - Model calls: 512, Time: 84.03s, Speed: 6.09 calls/s

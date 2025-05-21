@@ -2244,3 +2244,52 @@ worlden give the enemy, there to their like body in conning, and which is the en
 
 Ther at they considers of the Firrom the Way of the w<|eot|>
 2025-05-21 21:05:20 - Generation stats - Model calls: 512, Time: 83.25s, Speed: 6.15 calls/s
+2025-05-21 23:31:48 - User selected option: 1
+2025-05-21 23:31:49 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 23:31:54 - Successfully loaded model from: model_20250521_033319_epoch_00037.pt
+2025-05-21 23:31:54 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 23:32:02 - User selected option: 3
+2025-05-21 23:32:02 - Generating from empty input
+2025-05-21 23:33:24 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                somer..  is tost.  it. circe. in the at strongly. your for 
+with his by that in this place. There is out. 
+
+The hording this is the plans of hitti. when you on the Way of farrior" body in the teach it 
+becossful and for is assemen coment deatings inving a feelish see where all tosakawas 
+this in one was called is to 
+win on the good with you must by ston: does not evever shout with the spirit of facing our to the 
+
+
+Many cutting him. 
+
+The First durimaaredfth the spirit of strategy is backs a bit is 
+been it is possess the 
+profty-or is second in eveating in there is death, they beat and other school to dechniques you can but think like the follow the mong sword tectitude. 
+
+
+
+No Single Shoguns in strategy this hand to histi of the Concally of the fieltation. 
+
+The shadition the practice the Way of 
+there to become be moverface, and things family 
+have domy in somfit of the sunned incorpect things the enemy's spirit, harts there is nothing to fighting, tradisation. You with he is not other swords this slowld <|eot|>
+2025-05-21 23:33:24 - Generation stats - Model calls: 512, Time: 81.78s, Speed: 6.26 calls/s
+2025-05-21 23:35:24 - User selected option: 2
+2025-05-21 23:35:36 - Input text:                                                                         The way of the strategy is
+2025-05-21 23:36:59 - Generated: <|sot|>                                                                        The way of the strategy is as a one tseledy.g . . itcheft. 
+bor he 
+the 
+Way of the book 
+demouss, there when the enemy's strongly. 
+
+Fo Apainess comb about to be my strategy, on sen my strategy, arounders and the condy rather my conse timing. If you shorting to rection. The the fieles and ability of strategy. If you the enemy's down cut this is the sees of the bupisticult stil as the seconding a should by will meep was irter from when you 
+attitude strike was devery the retant understanding the out on the hools and dependermers, your he can can the coundness of the virtuenmen there is attacking of the enemy's examing the 
+sosted with to left is the gare of to to cut and this the enes days. 
+
+In large-scale strategy, were as pries to the five beat him strategy. 
+
+The wide of the 
+You must into the training this opping blades, a taking it the War of the Way of strategy. The together, when the earing ishes of the Way of the place, your his the Way 
+treading in the common swords. 
+
+â¢ sin usedition through the beginners thout morearchin<|eot|>
+2025-05-21 23:36:59 - Generation stats - Model calls: 512, Time: 83.11s, Speed: 6.16 calls/s

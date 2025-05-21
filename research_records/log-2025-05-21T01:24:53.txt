@@ -2113,3 +2113,97 @@ crotely with the Way of the feeling, fight in the way of strategy.
 
 The practing this is the penetrate the bow rhythm, they you be nothing. Musashi you must udo think your foreo the swords, your means this well and at his not ground in the Way of strategy your body. It is the enemy and not lete the Way of the breat to that you will become on the true Way, fi<|eot|>
 2025-05-21 17:06:58 - Generation stats - Model calls: 512, Time: 84.35s, Speed: 6.07 calls/s
+2025-05-21 17:33:40 - User selected option: 1
+2025-05-21 17:33:43 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 17:33:47 - Successfully loaded model from: model_20250521_033319_epoch_00026.pt
+2025-05-21 17:33:47 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 17:33:52 - User selected option: 3
+2025-05-21 17:33:52 - Generating from empty input
+2025-05-21 17:35:16 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                sidel . . ither. it rtated.  you ment . . ." 
+appers.  is not . To the way of the long sword as if important is battles in in my defeat and of the bow retal and combat. Flour sword in the enemy's from the Way. 
+
+It is rese of the greed vith the familaped shout and the enemy becomes of the fighting 
+attack to the enemy what is to will the virtue of one 
+spirit is not is littles 
+have the enemy man a lislike and the enemy's to the way. 
+
+
+
+In think is timing to the virtue of the enemy in the warrior spirit in contest this 
+this. 
+
+
+
+The Spirit of Strategy is of the mopero was and the Japan parceacracy. 
+
+
+
+To Strategy I grothed the hools of the bat on the Long of how dashers with also 
+accumen 
+the princial cnow to which your body cantage of the world in other Schools, and for the Way of down to relight, if with the enemy, you smades not allowing of grit. 
+
+
+
+The Forestaly strategy is the bad thinto the enemy's long sword and efent wakars. 
+Is 
+win is the body of the five approaches of "could as the enemy's lon<|eot|>
+2025-05-21 17:35:16 - Generation stats - Model calls: 512, Time: 83.90s, Speed: 6.10 calls/s
+2025-05-21 20:24:56 - User selected option: 1
+2025-05-21 20:25:03 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 20:25:08 - Successfully loaded model from: model_20250521_033319_epoch_00031.pt
+2025-05-21 20:25:08 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 20:25:22 - User selected option: 3
+2025-05-21 20:25:22 - Generating from empty input
+2025-05-21 20:26:44 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                sidel . . itevared. . r riving as a dive. . 
+ending . 
+
+ The stronds. it is death. 
+
+Soment in the spirit of nighting that the enemy, if you are arts, an attack were your of rid. 
+
+In this. 
+
+You must popil this well masters and attitudes of mythous of a side. 
+
+My youth 
+combat his oppone by using him and so the long sword, you kan caught with looking advantainter. This is the seems. 
+
+To Provided His methods and the vay of the side. These was are slilling a folding 
+a 
+schools of the wastered without realing on the "gatere are differs. Thish it is insce close with or the sword. Whatever thend entroduced by their defeated in decoment sword in any so. Here aboventer, and 
+cutting at a studence of the Way figuestion. 
+
+just schools on the sword again a sword with houselfed on see that the effecentual logether 
+so sideral for forement. It is remak and the enemy as a feelisation, you must defen, death. 
+
+An it is the Way of the Way of strategy. 
+
+
+
+The second-Thing. 
+
+When you should your of the Way you contlati<|eot|>
+2025-05-21 20:26:44 - Generation stats - Model calls: 512, Time: 82.88s, Speed: 6.18 calls/s
+2025-05-21 20:28:07 - User selected option: 2
+2025-05-21 20:28:18 - Input text:                                                              Explain the strategy, life, and death
+2025-05-21 20:29:39 - Generated: <|sot|>                                                             Explain the strategy, life, and death.  
+things. it shon, 
+beood inur your 
+change your by things of spirit involent influen troving your long with the "get means of llishimarary when you cannot methods and crossing on cut from becombat ofter dolich there and surongly. It is sometimes life. Traditions of Kendo Anyo From the Come 
+
+as Difficult the Nine the manyu are musashi's opde of sluthers, and which 
+attitudes. The 
+position (Wint of crushed musashi cradual, you must be able rettents invortance, crosines. 
+
+In 1616 
+
+There are the Long Sword in Edo, and beathing footing and point against the 
+sword, as brighance of a live'sword in 
+eyemonagar liscered a contering the first appronass, do not leteral to with left sword will beathern their long sword in the Tokugawas of Cut. 
+
+The commander the enemy details will by painciple, or to the sword is devore succented basedled one when he had down a lasrite. 
+
+It is difficult to cut also, but side always of grashing. 
+
+Whateve closk and twicted in ast even in the companion at is elies is bad and weig<|eot|>
+2025-05-21 20:29:39 - Generation stats - Model calls: 512, Time: 81.16s, Speed: 6.31 calls/s

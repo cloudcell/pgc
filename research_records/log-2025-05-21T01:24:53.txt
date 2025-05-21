@@ -1350,3 +1350,133 @@ spirit is to the enemy is attains must study thould the enemy's lown swords.
 The Way of the spirit is different the spirit of the sword, and the enemy is attack 
 perced <|eot|>
 2025-05-21 11:19:05 - Generation stats - Model calls: 512, Time: 83.43s, Speed: 6.14 calls/s
+2025-05-21 11:21:33 - User selected option: 2
+2025-05-21 11:21:43 - Input text:                                                                     How does one defeat the enemy?
+2025-05-21 11:23:07 - Generated: <|sot|>                                                                    How does one defeat the enemy?de. you ar and the 
+ 
+used the spirit only 
+had the enemy study is the sword in the enemy's hand the long sword. In the Way of the 
+enemy's the enemy's spirit of the enemy's not becategion, and your long of the long sword the enemy's long sword, and that is the spirit, and so the same to the land. 
+
+The spirit of the swords the enemy are the enemy is attack attackly. 
+
+
+
+To Such the enemy's the enemy's the enemy is the sword. 
+
+The restance with the enemy, the 
+spirit is not becaled the enemy is a school. 
+
+In the enemy's 
+
+When your Oate the sword when the enemy's long sword is the enemy as a 
+refored the trued the enemy's the enemy's sword is is the enemy. 
+
+
+
+The sword: The stred the enemy is bad and the sword, and the enemy of the spirit of the 
+enemy's to the 
+long sword the spirit of these are the enemy's sword. 
+
+
+
+The Way of the enemy's lools, and the enemy of the sword. 
+
+
+
+The first the enemy 
+know, the twelfient to the enemy are strongly. 
+
+The Iching the 
+enemy's 
+
+What is the Way of the long swor<|eot|>
+2025-05-21 11:23:07 - Generation stats - Model calls: 512, Time: 84.12s, Speed: 6.09 calls/s
+2025-05-21 11:41:31 - User selected option: 1
+2025-05-21 11:41:32 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-21 11:41:37 - Successfully loaded model from: model_20250521_033319_epoch_00015.pt
+2025-05-21 11:41:37 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-21 11:41:40 - User selected option: 3
+2025-05-21 11:41:40 - Generating from empty input
+2025-05-21 11:43:02 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ringl . edtall.  is thate  his of the tern.  in the see le 
+have. The 
+spirit things. 
+
+The have be the enemy is a the spirit of conterions. 
+
+In the sea the enemy the first the may of the spirit of the way of the 
+surfated the backrds of and the enemy. 
+
+
+
+Deruo Magords Cut, and the long sword in the enemy is a abouring the enemy's dist the 
+spirit is enemy and the 
+
+
+
+The Body of strategy the Way of the fight of the Way of strategy the Way of the 
+war. 
+
+
+
+The cod or the Way of strategy 
+
+Like is the compenior of Shinto the spirit of the long sword in the Way of strategy is 
+was a littled to the 
+enemy. 
+
+
+
+The spirit of Crush the there are dise of the same timing of the Way of they are 
+the 
+weapon 
+the Way of the Long sword the enemy hand the long sword is with the spirit of the first the spirit of the Way of strategy the Way of the long sword the lord be the spirit of the comple combat, 
+
+
+
+The long sword the enemy, there are many of must thing the spirit of the first the firsue 
+of the long sword in the<|eot|>
+2025-05-21 11:43:02 - Generation stats - Model calls: 512, Time: 82.01s, Speed: 6.24 calls/s
+2025-05-21 11:53:36 - User selected option: 2
+2025-05-21 11:53:44 - Input text:                                                                             The sword is the main 
+2025-05-21 11:55:06 - Generated: <|sot|>                                                                            The sword is the main . edternmer. 
+is as a ranted. . 
+
+There thate the 
+spirit of 
+have the enemy is to concerned. 
+
+When you are conter the have be able the Long sword, and short of the enemy. 
+
+
+
+The spirit of must the master the Long sword the spirit of the same the feen the Way of 
+have be able to the Way of the spirit of the beat of the 
+spirit of the 
+spirit of the 
+Wanters of my strategy. 
+
+The lord be in everydate the for Kendoriore with 
+
+The spirit of the Long sword, you 
+the enemy's deeply. 
+
+
+
+Crossing the Way of the Way of strategy you can the sentlessly and he see the 
+the 
+was beasy to the 
+wour spirit of the become of musashi 
+reseiged to the more be able the long sword is 
+mast he thred the sword, and the enemy attacks and sword. The shinto concerned by the enemy is strategy the enemy's spirit, the 
+study of the enemy's spirition. 
+
+
+
+The Nexantant of the Chinto ryuars the enemy is the bown sword, but you must the 
+spirit of the long sword the spirition the way of the ford". 
+
+
+
+The Way of strategy, with the long<|eot|>
+2025-05-21 11:55:06 - Generation stats - Model calls: 512, Time: 82.13s, Speed: 6.23 calls/s

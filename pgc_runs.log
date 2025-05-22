@@ -33,6 +33,10 @@
 2025-05-21_03:25:08 python 7676_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 6 --address_space_size 2
 2025-05-21_03:27:33 python 7676_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 6 --address_space_size 2 --encoding verbatim
 2025-05-21_03:33:10 python 7676_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 6 --address_space_size 2
+2025-05-22_02:01:57 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/meditations/meditations.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 6 --address_space_size 2
+2025-05-22_02:13:23 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/meditations/meditations.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 5 --address_space_size 2
+2025-05-22_02:14:05 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/meditations/meditations.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 5 --address_space_size 2
+2025-05-22_02:24:35 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/meditations/meditations.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 3 --address_space_size 2
 2025-05-22_02:34:46 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/meditations/meditations.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 4 --address_space_size 2
 2025-05-22_02:37:24 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/meditations/meditations.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 3 --address_space_size 2 --jumps 4
 2025-05-22_02:37:49 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/meditations/meditations.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 3 --address_space_size 2 --num_jumps 4

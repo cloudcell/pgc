@@ -19,3 +19,31 @@
 2025-05-24 06:09:40 - Input text:                                                                                        Musashi was
 2025-05-24 06:09:54 - Generated: <|sot|>                                                                                       Musashi was the the the the the the the the the the the the the the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
 2025-05-24 06:09:54 - Generation stats - Model calls: 100, Time: 13.99s, Speed: 7.15 calls/s
+2025-05-24 06:11:34 - User selected option: 2
+2025-05-24 06:11:43 - Input text:                                                                              Miyamoto Musashi was 
+2025-05-24 06:11:58 - Generated: <|sot|>                                                                             Miyamoto Musashi was the the  the the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:11:58 - Generation stats - Model calls: 100, Time: 14.19s, Speed: 7.05 calls/s
+2025-05-24 06:12:07 - User selected option: 2
+2025-05-24 06:12:14 - Input text:                                                                           Miyamoto Musashi was not
+2025-05-24 06:12:28 - Generated: <|sot|>                                                                          Miyamoto Musashi was not the the the the the the the the the the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:12:28 - Generation stats - Model calls: 100, Time: 14.23s, Speed: 7.03 calls/s
+2025-05-24 06:12:38 - User selected option: 2
+2025-05-24 06:12:42 - Input text:                                                                                 Life and death are
+2025-05-24 06:12:56 - Generated: <|sot|>                                                                                Life and death are the the the the the the the the the the the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:12:56 - Generation stats - Model calls: 100, Time: 13.72s, Speed: 7.29 calls/s
+2025-05-24 06:13:17 - User selected option: 2
+2025-05-24 06:13:29 - Input text:                                                          The way of the strategy is to do the foll
+2025-05-24 06:13:43 - Generated: <|sot|>                                                         The way of the strategy is to do the foll the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:13:43 - Generation stats - Model calls: 100, Time: 13.99s, Speed: 7.15 calls/s
+2025-05-24 06:58:05 - User selected option: 1
+2025-05-24 06:58:07 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_045831
+2025-05-24 06:58:12 - Successfully loaded model from: model_20250524_045842_epoch_00003.pt
+2025-05-24 06:58:12 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 06:58:16 - User selected option: 2
+2025-05-24 06:58:21 - Input text:                                                          The way of the strategy is to do the foll
+2025-05-24 06:58:26 - Generated: <|sot|>                                                         The way of the strategy is to do the foll ther the  aou of the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:58:26 - Generation stats - Model calls: 100, Time: 5.52s, Speed: 18.10 calls/s
+2025-05-24 06:58:33 - User selected option: 2
+2025-05-24 06:58:37 - Input text:                                                                                 Life and death are
+2025-05-24 06:58:43 - Generated: <|sot|>                                                                                Life and death arer the  as the  as the  aou thes the  aou ther the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:58:43 - Generation stats - Model calls: 100, Time: 5.69s, Speed: 17.56 calls/s

@@ -7,3 +7,15 @@
 2025-05-24 05:45:41 - Input text:                                                                               Miyamoto Musashi was
 2025-05-24 05:45:58 - Generated: <|sot|>                                                                              Miyamoto Musashi was the the thee e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e <|eot|>
 2025-05-24 05:45:58 - Generation stats - Model calls: 100, Time: 17.49s, Speed: 5.72 calls/s
+2025-05-24 05:48:48 - User selected option: 2
+2025-05-24 05:48:53 - Input text:                                                                                 Life and death are
+2025-05-24 05:49:11 - Generated: <|sot|>                                                                                Life and death are the the the the thee e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e <|eot|>
+2025-05-24 05:49:11 - Generation stats - Model calls: 100, Time: 18.09s, Speed: 5.53 calls/s
+2025-05-24 06:09:17 - User selected option: 1
+2025-05-24 06:09:21 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_045831
+2025-05-24 06:09:29 - Successfully loaded model from: model_20250524_045842_epoch_00002.pt
+2025-05-24 06:09:29 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 06:09:36 - User selected option: 2
+2025-05-24 06:09:40 - Input text:                                                                                        Musashi was
+2025-05-24 06:09:54 - Generated: <|sot|>                                                                                       Musashi was the the the the the the the the the the the the the the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:09:54 - Generation stats - Model calls: 100, Time: 13.99s, Speed: 7.15 calls/s

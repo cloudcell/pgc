@@ -394,6 +394,10 @@ class SelfOrganizingBrain(nn.Module):
         self.current_pathways = [[] for _ in range(batch_size)]
 
         # Main processing loop (differentiable routing)
+        # Track which batch items have reached the origin (all-zero coordinates)
+        exited = torch.zeros(batch_size, dtype=torch.bool, device=x.device)
+        exit_states = torch.zeros_like(state)
+        exit_addresses = torch.zeros_like(current_address)
         for i in range(self.num_jumps):
             # Get block weights for current address
             block_weights = self.get_blocks_for_batch(current_address)  # (batch_size, num_blocks)
@@ -425,17 +429,30 @@ class SelfOrganizingBrain(nn.Module):
             for b in range(batch_size):
                 self.record_block_usage(self.current_pathways[b][-1])
 
-            # Optionally, collect pathway stats (not differentiable, so skip or adapt if needed)
-            # (You may want to log soft assignments if desired)
+            # Check if any batch item has reached the origin (all zeros)
+            is_origin = (address_indices == 0).all(dim=1) & (~exited)
+            if is_origin.any():
+                # Store the state and address at exit for those items
+                exit_states[is_origin] = state[is_origin]
+                exit_addresses[is_origin] = current_address[is_origin]
+                exited[is_origin] = True
+            # If all have exited, break early
+            if exited.all():
+                break
 
             # Residual connection if needed (optional)
             residual_weight = i / max(1, self.num_jumps - 1)
             state = state + residual_weight * initial_state
 
+        # For items that exited, use their exit state/address; others use the last state/address
+        final_state = torch.where(exited.unsqueeze(1), exit_states, state)
+        final_address = torch.where(exited.unsqueeze(1).unsqueeze(2), exit_addresses, current_address)
+
         # Final transformation: process through all blocks and combine by block weights
-        block_weights = self.get_blocks_for_batch(current_address)  # (batch_size, num_blocks)
+        block_weights = self.get_blocks_for_batch(final_address)  # (batch_size, num_blocks)
         all_block_outputs = []
         for block in all_blocks:
+            block_out = self.process_through_block(final_state, block)  # (batch_size, embedding_size)
             block_out = self.process_through_block(state, block)  # (batch_size, embedding_size)
             all_block_outputs.append(block_out.unsqueeze(1))
         all_block_outputs = torch.cat(all_block_outputs, dim=1)  # (batch_size, num_blocks, embedding_size)

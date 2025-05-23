@@ -1,0 +1,9 @@
+2025-05-24 05:45:13 - === Starting new text generation session ===
+2025-05-24 05:45:20 - User selected option: 1
+2025-05-24 05:45:23 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_045831
+2025-05-24 05:45:27 - Successfully loaded model from: model_20250524_045842_epoch_00001.pt
+2025-05-24 05:45:27 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 05:45:35 - User selected option: 2
+2025-05-24 05:45:41 - Input text:                                                                               Miyamoto Musashi was
+2025-05-24 05:45:58 - Generated: <|sot|>                                                                              Miyamoto Musashi was the the thee e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e <|eot|>
+2025-05-24 05:45:58 - Generation stats - Model calls: 100, Time: 17.49s, Speed: 5.72 calls/s

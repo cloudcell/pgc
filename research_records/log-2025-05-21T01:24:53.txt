@@ -3279,3 +3279,11 @@ study this.
 
 attacks, master of the faster, mever wh<|eot|>
 2025-05-24 04:32:45 - Generation stats - Model calls: 512, Time: 67.69s, Speed: 7.56 calls/s
+2025-05-24 05:43:23 - User selected option: 6
+2025-05-24 05:43:23 - 
+Final Generation Statistics:
+2025-05-24 05:43:23 - Total model calls: 65224
+2025-05-24 05:43:23 - Total generation time: 8224.47s
+2025-05-24 05:43:23 - Average time per model call: 126.10ms
+2025-05-24 05:43:23 - Average model call speed: 7.93 calls/second
+2025-05-24 05:43:23 - === Ending session ===

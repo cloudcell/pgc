@@ -644,6 +644,8 @@ def load_model_checkpoint(model, optimizer, scheduler, checkpoint_path):
     # Get the base model if using DataParallel
     base_model = model.module if isinstance(model, nn.DataParallel) else model
     
+    # Always use the global device for loading
+    global device
     checkpoint = torch.load(checkpoint_path, map_location=device)
     
     # Load state dict into the base model
@@ -1381,8 +1383,8 @@ def load_model_from_checkpoint(checkpoint_dir):
         # Set global variables from model config for downstream code compatibility
         set_globals_from_model(model)
 
-        # Move to GPU if available
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        # Move model to correct device (CPU or GPU based on args.cpu)
+        global device
         model = model.to(device)
         model.eval()  # Set to evaluation mode
         

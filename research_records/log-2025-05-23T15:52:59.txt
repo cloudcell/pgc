@@ -1,0 +1,7 @@
+2025-05-23 15:52:59 - === Starting new text generation session ===
+2025-05-23 15:53:11 - User selected option: 1
+2025-05-23 15:53:12 - Selected checkpoint folder: ./checkpoints_20250522_031040
+2025-05-23 15:56:03 - Successfully loaded model from: model_20250522_031140_epoch_00001.pt
+2025-05-23 15:56:03 - Loaded model config: {'input_size': 784, 'num_classes': 16777216, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 8, 'num_heads': 1, 'num_jumps': 5}
+2025-05-23 15:56:19 - User selected option: 2
+2025-05-23 15:56:24 - Input text:                                                                                       Who are you?

@@ -399,6 +399,11 @@ class SelfOrganizingBrain(nn.Module):
         exit_states = torch.zeros_like(state)
         exit_addresses = torch.zeros_like(current_address)
         for i in range(self.num_jumps):
+            # Only update non-exited items
+            active_mask = ~exited
+            if not active_mask.any():
+                break
+
             # Get block weights for current address
             block_weights = self.get_blocks_for_batch(current_address)  # (batch_size, num_blocks)
 
@@ -407,38 +412,35 @@ class SelfOrganizingBrain(nn.Module):
             num_blocks = len(all_blocks)
 
             # Process state through all blocks for each batch
-            # state: (batch_size, embedding_size)
-            all_block_outputs = []  # Will be (batch_size, num_blocks, embedding_size)
+            all_block_outputs = []  # (batch_size, num_blocks, embedding_size)
             for block in all_blocks:
                 block_out = self.process_through_block(state, block)  # (batch_size, embedding_size)
                 all_block_outputs.append(block_out.unsqueeze(1))
-            all_block_outputs = torch.cat(all_block_outputs, dim=1)  # (batch_size, num_blocks, embedding_size)
+            all_block_outputs = torch.cat(all_block_outputs, dim=1)
 
             # Weighted sum over blocks
-            state = torch.bmm(block_weights.unsqueeze(1), all_block_outputs).squeeze(1)  # (batch_size, embedding_size)
+            new_state = torch.bmm(block_weights.unsqueeze(1), all_block_outputs).squeeze(1)
 
-            # Compute next address (using a reference block, e.g., first block)
-            current_address = self.compute_next_address(state, self.brain_blocks[0])  # (batch_size, address_dim, brain_size)
+            # Compute next address
+            new_address = self.compute_next_address(new_state, self.brain_blocks[0])
+            address_indices = new_address.argmax(dim=2)
 
-            # Log hard address and update pathway tracking
-            address_indices = current_address.argmax(dim=2)
+            # Only update pathway, state, address for non-exited items
             for b in range(batch_size):
-                self.current_pathways[b].append(tuple(address_indices[b].tolist()))
+                if not exited[b]:
+                    self.current_pathways[b].append(tuple(address_indices[b].tolist()))
+                    self.record_block_usage(self.current_pathways[b][-1])
 
-            # Record block usage
-            for b in range(batch_size):
-                self.record_block_usage(self.current_pathways[b][-1])
-
-            # Check if any batch item has reached the origin (all zeros)
-            is_origin = (address_indices == 0).all(dim=1) & (~exited)
+            # Check if any active item has reached the origin (all zeros)
+            is_origin = (address_indices == 0).all(dim=1) & active_mask
             if is_origin.any():
-                # Store the state and address at exit for those items
-                exit_states[is_origin] = state[is_origin]
-                exit_addresses[is_origin] = current_address[is_origin]
+                exit_states[is_origin] = new_state[is_origin]
+                exit_addresses[is_origin] = new_address[is_origin]
                 exited[is_origin] = True
-            # If all have exited, break early
-            if exited.all():
-                break
+
+            # Update state/address only for active items; freeze exited
+            state = torch.where(active_mask.unsqueeze(1), new_state, state)
+            current_address = torch.where(active_mask.unsqueeze(1).unsqueeze(2), new_address, current_address)
 
             # Residual connection if needed (optional)
             residual_weight = i / max(1, self.num_jumps - 1)

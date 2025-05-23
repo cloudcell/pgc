@@ -5,3 +5,66 @@
 2025-05-23 15:56:03 - Loaded model config: {'input_size': 784, 'num_classes': 16777216, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 8, 'num_heads': 1, 'num_jumps': 5}
 2025-05-23 15:56:19 - User selected option: 2
 2025-05-23 15:56:24 - Input text:                                                                                       Who are you?
+2025-05-23 16:01:02 - Generated: <|sot|>                                                                                      Who are you? that er er er  an that er these  an that thou soul that thou
+thet
+these of these and that their thet that is that thet
+these of thet
+these of their their these and that their their their of their thet
+thet
+their their their is their their their their their their is thet
+their their their the<|eot|>
+2025-05-23 16:01:02 - Generation stats - Model calls: 100, Time: 277.83s, Speed: 0.36 calls/s
+2025-05-23 16:01:29 - User selected option: 3
+2025-05-23 16:01:29 - Generating from empty input
+2025-05-23 16:06:09 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                thet as as as as as as as as are  that on  that in thet
+thet that is that thou
+these of their these of their their thet
+their their their is their thet
+these and that their their their is thet
+their their their their thet
+these their is their their their their thet
+their is their their thet
+<|eot|>
+2025-05-23 16:06:09 - Generation stats - Model calls: 100, Time: 280.49s, Speed: 0.36 calls/s
+2025-05-23 16:08:14 - User selected option: 2
+2025-05-23 16:08:22 - Input text:                                                                           Tell me about being busy
+2025-05-23 16:13:02 - Generated: <|sot|>                                                                          Tell me about being busy things, thet that is that in thet that is that thou
+these of thesel that these of their their thet
+their thesel that thet
+these of their their their their their thet
+their their is their thet
+their their is their their their their thet
+their is their their thet
+their their their is their the<|eot|>
+2025-05-23 16:13:02 - Generation stats - Model calls: 100, Time: 280.18s, Speed: 0.36 calls/s
+2025-05-23 16:42:47 - User selected option: 2
+2025-05-23 16:42:57 - Input text:                                                                          Tell me about being busy!
+2025-05-23 16:47:46 - Generated: <|sot|>                                                                         Tell me about being busy!tion and er these of thet
+these of these of thet
+their their of their their of their their thet
+their their their thet
+these of their their their their their thet
+their their is their thet
+their their their their is their their thet
+their their their is thet
+their their their their their is <|eot|>
+2025-05-23 16:47:46 - Generation stats - Model calls: 100, Time: 288.75s, Speed: 0.35 calls/s
+2025-05-23 17:09:23 - User selected option: 2
+2025-05-23 17:09:27 - Input text:                                                                                          Marcus Au
+2025-05-23 17:14:09 - Generated: <|sot|>                                                                                         Marcus Aust  an
+that isst in  that on  that thou soul that thould the
+these of thet
+their their is their their their their their is their thet
+their thet
+their their is their their is their their their their thet
+their is their their their their their is their their their is thet
+their their their the<|eot|>
+2025-05-23 17:14:09 - Generation stats - Model calls: 100, Time: 281.77s, Speed: 0.35 calls/s
+2025-05-23 18:27:55 - User selected option: 6
+2025-05-23 18:27:55 - 
+Final Generation Statistics:
+2025-05-23 18:27:55 - Total model calls: 500
+2025-05-23 18:27:55 - Total generation time: 1409.02s
+2025-05-23 18:27:55 - Average time per model call: 2818.03ms
+2025-05-23 18:27:55 - Average model call speed: 0.35 calls/second
+2025-05-23 18:27:55 - === Ending session ===

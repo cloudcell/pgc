@@ -11,7 +11,10 @@ base, ext = os.path.splitext(input_filename)
 output_filename = f"{base}_filtered{ext}"
 output_filepath = os.path.join(subfolder, output_filename)
 
-max_length = 95
+CONTEXT_SIZE = 256
+max_length = CONTEXT_SIZE - 1
+
+
 
 with open(input_filepath, 'r', encoding='utf-8') as infile, open(output_filepath, 'w', encoding='utf-8') as outfile:
     for line in infile:
@@ -80,7 +83,7 @@ def char_to_binary(char):
     ascii_val = ord(char) & 127
     return np.array([int(b) for b in format(ascii_val, '08b')], dtype=np.uint8)
 
-def generate_samples(input_path, stub_pad=98, split_name=None):
+def generate_samples(input_path, stub_pad=CONTEXT_SIZE, split_name=None):
     features = []
     labels = []
     if split_name is not None:
@@ -134,6 +137,6 @@ for split in ['trn', 'val', 'tst']:
         print(f"No lines for {split} set")
         continue
     split_filepath = os.path.join(subfolder, split_filename)
-    generate_samples(split_filepath, stub_pad=98, split_name=split)
+    generate_samples(split_filepath, stub_pad=CONTEXT_SIZE, split_name=split)
 
 print(f"Data preparation complete. Data saved to: {subfolder}")

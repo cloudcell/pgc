@@ -2384,3 +2384,386 @@ and, doo sword the enemy, for the thing, you cannot
 sword your 
 boad pringing. If you do not mine ca<|eot|>
 2025-05-22 04:08:50 - Generation stats - Model calls: 512, Time: 84.03s, Speed: 6.09 calls/s
+2025-05-22 04:19:12 - User selected option: 2
+2025-05-22 04:19:20 - Input text:                                                                     The way of the strategy is the
+2025-05-22 04:20:43 - Generated: <|sot|>                                                                    The way of the strategy is the able  is rituated.  
+that 
+the 
+piritared the 
+ 
+
+produwo him think of the Void. 
+
+Attack strategished with baduried yet for to be the 
+sonce the Way of the times of 
+was bould in order spirit pronesses of the body styll this devoted his may be used. This is he can bate moved attitude in this teal to 
+becour, and fencing the enemy. 
+
+
+
+The Bood making the Way of the men when he five seem along  pailing is to gaile him recover 
+thing 
+contests of his pargeed him. 
+
+
+
+
+''^ The woreman carivall and when the forugts. 
+
+The enemy's house left him an in because, is 
+gen to upone this way. This is the mear become 
+surengthing, his method. If or not must train the whatever your try 
+sould dowet the baponishes of attack and on Darge-scale the samurai were sword and eventuen. In horevence of his for through, and where in a schools of strateges are for they down a provided look on the fight and merchants intent. Then your spirit. 
+
+The knee timilara deferation, Nobuses are long swords, wheres, art opedle 
+flour spirit.<|eot|>
+2025-05-22 04:20:43 - Generation stats - Model calls: 512, Time: 82.92s, Speed: 6.17 calls/s
+2025-05-22 10:04:47 - User selected option: 1
+2025-05-22 10:04:49 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-22 10:05:08 - Successfully loaded model from: model_20250521_033319_epoch_00055.pt
+2025-05-22 10:05:08 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-22 10:05:15 - User selected option: 3
+2025-05-22 10:05:15 - Generating from empty input
+2025-05-22 10:06:24 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                somer..  
+ 
+umsting  in lement in that you will mife of the truer. thes doubly cith your eye with for over declicusles, for the bowering the varing upper, strelegy by mend it whoin well- with a show of not 
+
+
+
+
+
+
+If you comen, the finger, by histring, so entending meaning a great Befored as 
+the 
+neg 
+tirit of Show to had interninese and unders of Kendo school, and motranions. 
+Is a ways of the way, the enemyo school, traditions of the usually and falled in 1598one. The searet the cound, or yoing and undections, and nofting anace is musashi relaxedain the near, no sen 
+bothoughng that is the cut. 
+
+
+
+The Way be the void be no his techt, a few must emple. When 
+are monker of the techniquens that it is inving with strategy, and trying, you must 
+he with your body and understand" have to an it is method. Skink metly can be used few must researed in the neverations on Consided is the same time. You must sword in large-scale it must for dendo with your spirit 
+of the enemy. Hewadaten body in decided disticats with<|eot|>
+2025-05-22 10:06:24 - Generation stats - Model calls: 512, Time: 68.55s, Speed: 7.47 calls/s
+2025-05-22 10:07:37 - User selected option: 2
+2025-05-22 10:07:45 - Input text:                                                                         The way of the strategy is
+2025-05-22 10:08:54 - Generated: <|sot|>                                                                        The way of the strategy is as a edep per. it is 
+it he combable strategy in tictring two Hitivare. These are this to who hore in 
+cu . When he wast "The same easy to the body witery to life the enemy succre 
+to the pries to confemence in the gort of holding ago. 
+
+
+"These are four noths and righest swords this privition and balmos. 
+
+The foreving the varrior own who dowern the enemy relain I 
+deated for the long 
+swordifencing the enemies, seces. Which you The means of  and or entage of in 
+a dinapary of the true Way atternace with one training of eny seven war the second, you must sworded attitude. This point, and the enemy's 
+onceron and sword at their of the long sword again the enemy. 
+
+
+
+No Kamizo, as Voot field with a share into and an hattles and Must train with your spirit with the back, and to pains opshly body. 
+Also means not to crush is the fielding your of sealing other to the 
+spirit is time, and you left the enemy's sword fencing with the long sword, and suddenly has is you can have can perearch as enger, but the enemy'<|eot|>
+2025-05-22 10:08:54 - Generation stats - Model calls: 512, Time: 68.78s, Speed: 7.44 calls/s
+2025-05-22 10:10:47 - User selected option: 1
+2025-05-22 10:10:48 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250521_033310
+2025-05-22 10:11:07 - Successfully loaded model from: model_20250521_033319_epoch_00054.pt
+2025-05-22 10:11:07 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-22 10:11:52 - User selected option: 3
+2025-05-22 10:11:52 - Generating from empty input
+2025-05-22 10:13:00 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                somer..  
+ 
+umstion  im t eyr  in the tend.  
+um be them. 
+
+ 
+
+In large-scion a scemping. 
+
+The same In other schools only kind the virteritions of his meaning placking schools 
+hundrools caserving to ce play countion of horerior. Apply schools use othinal fornilings. It is not the essending fook of the possible with the enemy's sword-fighten. Himself the same him fighting, the first. The spirit. The whole the begistance it and for as so. The tain it is to uade. 
+
+In large-scale strategy, when the enemy to brate can beaturally becoress. 
+
+I distreed one 
+the ide. You must up is osing you metho, and the blattently collances of see 
+arched victory and the lay word 
+not to rect only one on the long sword at is drine, and that the woid. Thus have the sword is to, the true Way. 
+
+There the fixing to body, althing 
+it you mearn for the fight times faily. Fetaing. 
+
+The end things of it is impoinal praining he stirit became, resorbs downs aspecied the shogu of have in counter a few nemiation and cut do not musashi's<|eot|>
+2025-05-22 10:13:00 - Generation stats - Model calls: 512, Time: 68.20s, Speed: 7.51 calls/s
+2025-05-22 10:15:22 - User selected option: 2
+2025-05-22 10:15:36 - Input text:                                                      The way of the strategy using the sword is to
+2025-05-22 10:16:44 - Generated: <|sot|>                                                     The way of the strategy using the sword is to the 
+ spelling in 
+the true nint  and his body try 
+tens them one but the t Shold strategy. You hit there are naturate difficult to attack your spirit. 
+
+
+
+The sword So the Way 
+
+"The Way are concen pretels, befeat a 
+
+streation but if you oppetion is a warried 
+acame points and when you can had work as a master by meremach dislicate, to shif havioders tokugato, and strategy, 
+bureat him and slastice. 
+Agay, and hit is any ca There are are attack. If you down a small where through the tabt from it 
+place, cut and if you should not understanding the enemier long sword in their invically metane the five sword. This inding the corned in the enemy's dissing, where he had but to the first perhing to ucterst by larger this spead in my Ichi school is somen, not speed him of the companion arm. 
+
+
+
+I Threasonojed is the fere, usishi a bow, some arme, the saint of little are cloong 
+spirit with century of the confing parrance of spirit, we make other until he way of strategy. 
+
+
+
+The her to buddhisation. 
+
+
+
+The threw<|eot|>
+2025-05-22 10:16:44 - Generation stats - Model calls: 512, Time: 68.12s, Speed: 7.52 calls/s
+2025-05-22 10:31:47 - User selected option: 2
+2025-05-22 10:32:04 - Input text:                                                         The strategy in terms of life and death is
+2025-05-22 10:33:13 - Generated: <|sot|>                                                        The strategy in terms of life and death is andy. sword. . . . teacher". He difst, and the feeling our through the "Formar eyede, and the five all disces with the spirit of strategy. 
+
+
+
+ the sword can swords welling the lead with bowse the enemy's how touces. Thus spirit. 
+
+
+
+The secongled. 
+
+If Oriting fany 
+
+
+
+
+Some "The vork be pade foressmen Musashi when the spirit up if you 
+udg pight. The 
+bectrategs, with a strongly and after long in large-scale it all 
+assumved your as bised to this 
+pumck so the spirit is book as a 
+corner and single comballing in sevive most is to felt in commori by 
+dad, nobunact with a fears, but go neiting and mean he wide and decing my Is tools his formly vas and fall poin. The spiriting this bate forelly morely 
+seeishi 
+
+Strategy. 
+
+
+
+The NiTo Attacking of the long sword" is faces of the long sword are const. He means, 
+weathroese, on the set be for prossed belan, understand the enemy's shortun, and not downer of my Way 
+
+
+
+To From as thould sword in but the his lord nore Masters. But all doors of cut as Then 
+a choic<|eot|>
+2025-05-22 10:33:13 - Generation stats - Model calls: 512, Time: 68.58s, Speed: 7.47 calls/s
+2025-05-22 10:36:39 - User selected option: 2
+2025-05-22 10:36:46 - Input text:                                                                         The most danger comes from
+2025-05-22 10:37:54 - Generated: <|sot|>                                                                        The most danger comes from as a peiling  production 
+his posite  the ance the Way a ractory to the sperited as fice wall, and evely. The edoored his face of inst one sword, and not to move metho. 
+
+It is not just the enemy the lord' and fighting, the enemy, taking the feet. The cledges a 
+yous of strategy. 
+
+There is time to difficult fen or the inere had sealed beep a listure. The timing on his 
+researed bear to placessing his own when for and the enemy is diming. 
+
+There is an elucatisal permiss in missing batterien, dueilly change to the twenty-on spears. 
+
+In the enemy's men with the spirit of a pries. The spirit of become and ten. 
+
+The spirition. In strategy, and thead becomer of strategy. This is the pried be some work 
+of through and sometime, and sociled and methods. It is attenting a last, but with him back, but the especiple dividude, and that the space. When his place was by use condo combation for the void. The spearms to both do the live 
+this change their body and his worlients of a show up their comding fix your right <|eot|>
+2025-05-22 10:37:54 - Generation stats - Model calls: 512, Time: 68.15s, Speed: 7.51 calls/s
+2025-05-22 10:40:38 - User selected option: 2
+2025-05-22 10:40:54 - Input text:                                                         The most dangerous enemy is an ememy whose
+2025-05-22 10:42:03 - Generated: <|sot|>                                                        The most dangerous enemy is an ememy whose hart ir. . 
+
+steel militally attack, this hong sword and pight and hand, practing. 
+
+The spirite. You 
+the 
+
+
+
+Stanno Sword strongling in the traditionally enemy attain cut 
+of encours, the 
+Warrion fighting. 
+
+What also the Long and so the Japanese the farmssing lefger. It is the tainth be was note to the Shout as compled on strategists, people cours, you can 
+weapon the abovid. This. You must scare train oee of the way, it is notchance, right with the spirit must be trifled, and recomy into to know of your long sword moster this inspirit of toors of all parrying with you can waiter long strongly. His battle men down at the essed in elinto 
+and way. 
+
+
+
+Spirit of the Ichi of the face your straightinment kind advance spirit. Hold sword, and be was cor leged mind in fighting his men showld. The five and see think 
+that in the mey recorders beat pupilled on the Way of the sword, you must rely 
+his spirit of togests employs cornerance, I and wereased in a warrior unithes itting 
+dire to upprection. The spirit. <|eot|>
+2025-05-22 10:42:03 - Generation stats - Model calls: 512, Time: 68.61s, Speed: 7.46 calls/s
+2025-05-22 11:38:54 - User selected option: 2
+2025-05-22 11:39:02 - Input text:                                                              The qualities of the best warrior are
+2025-05-22 11:40:11 - Generated: <|sot|>                                                             The qualities of the best warrior are 
+thing sword.. 
+
+ 
+using attacks,ike". 
+
+ensard knoformorances when a retaine one interuobly apprintels 
+
+"The principle of the 
+
+
+
+The Sime make for the timing of "
+
+
+The "Flue and the Long . You must firstayed in alterior. This is the enemy raisons, strike is an order and strategy. 
+
+When you there the enemy from a life. Perhi road. It Strivicale, the hit kind become retained a long sword was distan, they 
+continute, long sword nown wells: They you will be more the realing the Way of strategy, you the above the enemy. From one sword strategists spirit. If you liment the 
+down sword against que not proving on the wririt when then strategy from the body be fashimars persued in this book. There as a tread as if you are of it in the need as in learts downalterns, your on the 
+auseince stand. 
+
+Musashi's he daid tary perearch for may lose of can him evence, the spirit of arring, as he commus can battland, and 
+simple in this to chast, and an hards and regide, to cutreend so. You must be defeathern this he will <|eot|>
+2025-05-22 11:40:11 - Generation stats - Model calls: 512, Time: 68.43s, Speed: 7.48 calls/s
+2025-05-22 18:45:34 - User selected option: 2
+2025-05-22 18:45:41 - Input text:                                                                              Miyamoto Musashi was 
+2025-05-22 18:46:50 - Generated: <|sot|>                                                                             Miyamoto Musashi was edep fircied. . ittel on in sword. 
+appering when 
+y have 
+attitude. 
+acdound so other strategy 
+dad. You can had line booksing for always are deveated asedield a strategy. If you colly as his bettle in every are is to chase practics. In or beneficial is noten underned to cayse the wenty move the thave the men the first the slace them the lidy. 
+
+Sectory sword, and gave errain of pous in the baspecias, they there are are defeards. 
+
+In side, last is not fighting of the Void. 
+
+
+
+the practise to up the Into attack the Will sened. 
+
+Must 
+
+There are the lead. 
+
+The 
+lidy, you must study the fence of the cartle as he attack, 
+for the enemy. 
+
+
+
+The Ways deather Strongly, both dathm. This books of fight, but if your body. 
+
+
+
+This is the Way of strategy in the way of the enemy's diffically explain is in when 
+the 
+long schools, and knowing how should be all means school. The spirit of not 
+the sword. It is that Insither. Where arectise of the great this. 
+
+
+
+To Strategy: 
+
+The "ianing in a stre comment pomen in t<|eot|>
+2025-05-22 18:46:50 - Generation stats - Model calls: 512, Time: 68.33s, Speed: 7.49 calls/s
+2025-05-23 07:51:40 - User selected option: 2
+2025-05-23 07:51:50 - Input text:                                                                          Who was Miyamoto Musashi?
+2025-05-23 07:52:57 - Generated: <|sot|>                                                                         Who was Miyamoto Musashi? as he ween  in that you sca 
+with a 
+make spheck to 
+ad 
+wanin", hat be alto schools other to fightern that has are three to Kw it can be reacht. 
+
+Kome if void: "
+Or, and Strategy at from thing the enemy atrike ven though your f You power aircless to 
+that the practice, 
+daed, but 
+strategy of the deather. 
+
+Peaching by hike hand to the had cround of commined distance, but this had feel him 
+words. 
+
+This is the commats. 
+
+The patiod and this spirit is not unce strongly will expressees the situation and your body, his strengther. His deeply as possible, observictory from which recees, gover. 
+
+In situath. Eneage are did art sword 
+a spoto but scale, treat him Musashi extresent 
+are 
+other and fores loss sword with a sword. "y thought is important in this way. 
+
+
+
+I mind the farrior of cudding men counted the long swords and wield with and 
+left Set. You will ride practice him as skainst fight firsing as the spirit of the samed in fighting at a cheases and a had he tend to greatalling. It is no abaintations <|eot|>
+2025-05-23 07:52:57 - Generation stats - Model calls: 512, Time: 67.75s, Speed: 7.56 calls/s
+2025-05-23 07:54:19 - User selected option: The Way of the Strategy of a warrior is
+2025-05-23 07:54:19 - Invalid choice: The Way of the Strategy of a warrior is
+2025-05-23 07:54:22 - User selected option: 2
+2025-05-23 07:54:24 - Input text:                                                            The Way of the Strategy of a warrior is
+2025-05-23 07:55:31 - Generated: <|sot|>                                                           The Way of the Strategy of a warrior is 
+througly as poing in strategy, and his strategy and the times, lor slint on eventher the Way, and is and the Middle ishere the syllation such not accord, halboom and the fasing them stops and a lisled on his spirit. This with his dead deather min, cut the chare hairated it can and your spirit. 
+Percis out in 
+eye of strategy. 
+
+There is not is eqch the oathod make stry in attacks. 
+
+In large-scale strategy weaponess we chaped on nare vasing at a plought from nor only 
+in a row the bad his face. The Japanese 
+farincers, andrance the crossibles, as in lanants of spirit parrying and second on their life. It means the enemy. There was a prace was perhaps the situable to lean when he see to beath own his small it his natural from the boath the at this and fine interposit in the Way of strategy. 
+
+In single combat in exane of his sword as priestion of the two and the prinese and right. 
+
+lisher he way to be many poligent the bigund, there as the galled buices. 
+
+
+
+In singled a conce a spoot respinci, as parry, 
+b<|eot|>
+2025-05-23 07:55:31 - Generation stats - Model calls: 512, Time: 67.47s, Speed: 7.59 calls/s
+2025-05-23 07:59:53 - User selected option: 2
+2025-05-23 08:00:03 - Input text:                                                               The long sword of the warrior is the
+2025-05-23 08:01:11 - Generated: <|sot|>                                                              The long sword of the warrior is the at them is had 
+and, 
+and companion strategy. 
+
+This is the long sword are been it means a few when fighting with foression is wentle is not 
+eveo is strategy of he hand. 
+
+This is things danceition to four body all perefer With a feeling expletion in trings the attack of training ordislish thes grip's sime said to fighting and 
+to becampter by be for people and legs and advance of the enemy, or welling, he sears and teaching. Thus 
+is the straight pessed to make tp the lease. 
+
+
+
+permight against by of the enemy so that you downrd means, and to sword in Zetail, 
+work 
+according to practicant to win out notending workers to be hadiattermy are not beating. The 
+enemy, whiir been 
+should come relying chand intangly of the firtue of these are 
+wanded is a spirit. You will resolvert of the sword. 
+
+
+
+The Book schools horned, I hand cale the point to the ear for place and of ever distance your ownrdrine and 
+and famice. Not means busine: When you will 
+not appeck him teachings the 
+tirit, and be able to wield aga<|eot|>
+2025-05-23 08:01:11 - Generation stats - Model calls: 512, Time: 67.90s, Speed: 7.54 calls/s

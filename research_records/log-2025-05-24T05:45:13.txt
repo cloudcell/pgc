@@ -1,0 +1,174 @@
+2025-05-24 05:45:13 - === Starting new text generation session ===
+2025-05-24 05:45:20 - User selected option: 1
+2025-05-24 05:45:23 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_045831
+2025-05-24 05:45:27 - Successfully loaded model from: model_20250524_045842_epoch_00001.pt
+2025-05-24 05:45:27 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 05:45:35 - User selected option: 2
+2025-05-24 05:45:41 - Input text:                                                                               Miyamoto Musashi was
+2025-05-24 05:45:58 - Generated: <|sot|>                                                                              Miyamoto Musashi was the the thee e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e <|eot|>
+2025-05-24 05:45:58 - Generation stats - Model calls: 100, Time: 17.49s, Speed: 5.72 calls/s
+2025-05-24 05:48:48 - User selected option: 2
+2025-05-24 05:48:53 - Input text:                                                                                 Life and death are
+2025-05-24 05:49:11 - Generated: <|sot|>                                                                                Life and death are the the the the thee e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e <|eot|>
+2025-05-24 05:49:11 - Generation stats - Model calls: 100, Time: 18.09s, Speed: 5.53 calls/s
+2025-05-24 06:09:17 - User selected option: 1
+2025-05-24 06:09:21 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_045831
+2025-05-24 06:09:29 - Successfully loaded model from: model_20250524_045842_epoch_00002.pt
+2025-05-24 06:09:29 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 06:09:36 - User selected option: 2
+2025-05-24 06:09:40 - Input text:                                                                                        Musashi was
+2025-05-24 06:09:54 - Generated: <|sot|>                                                                                       Musashi was the the the the the the the the the the the the the the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:09:54 - Generation stats - Model calls: 100, Time: 13.99s, Speed: 7.15 calls/s
+2025-05-24 06:11:34 - User selected option: 2
+2025-05-24 06:11:43 - Input text:                                                                              Miyamoto Musashi was 
+2025-05-24 06:11:58 - Generated: <|sot|>                                                                             Miyamoto Musashi was the the  the the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:11:58 - Generation stats - Model calls: 100, Time: 14.19s, Speed: 7.05 calls/s
+2025-05-24 06:12:07 - User selected option: 2
+2025-05-24 06:12:14 - Input text:                                                                           Miyamoto Musashi was not
+2025-05-24 06:12:28 - Generated: <|sot|>                                                                          Miyamoto Musashi was not the the the the the the the the the the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:12:28 - Generation stats - Model calls: 100, Time: 14.23s, Speed: 7.03 calls/s
+2025-05-24 06:12:38 - User selected option: 2
+2025-05-24 06:12:42 - Input text:                                                                                 Life and death are
+2025-05-24 06:12:56 - Generated: <|sot|>                                                                                Life and death are the the the the the the the the the the the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:12:56 - Generation stats - Model calls: 100, Time: 13.72s, Speed: 7.29 calls/s
+2025-05-24 06:13:17 - User selected option: 2
+2025-05-24 06:13:29 - Input text:                                                          The way of the strategy is to do the foll
+2025-05-24 06:13:43 - Generated: <|sot|>                                                         The way of the strategy is to do the foll the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:13:43 - Generation stats - Model calls: 100, Time: 13.99s, Speed: 7.15 calls/s
+2025-05-24 06:58:05 - User selected option: 1
+2025-05-24 06:58:07 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_045831
+2025-05-24 06:58:12 - Successfully loaded model from: model_20250524_045842_epoch_00003.pt
+2025-05-24 06:58:12 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 06:58:16 - User selected option: 2
+2025-05-24 06:58:21 - Input text:                                                          The way of the strategy is to do the foll
+2025-05-24 06:58:26 - Generated: <|sot|>                                                         The way of the strategy is to do the foll ther the  aou of the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:58:26 - Generation stats - Model calls: 100, Time: 5.52s, Speed: 18.10 calls/s
+2025-05-24 06:58:33 - User selected option: 2
+2025-05-24 06:58:37 - Input text:                                                                                 Life and death are
+2025-05-24 06:58:43 - Generated: <|sot|>                                                                                Life and death arer the  as the  as the  aou thes the  aou ther the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 06:58:43 - Generation stats - Model calls: 100, Time: 5.69s, Speed: 17.56 calls/s
+2025-05-24 07:38:28 - User selected option: 1
+2025-05-24 07:38:32 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_045831
+2025-05-24 07:38:37 - Successfully loaded model from: model_20250524_045842_epoch_00006.pt
+2025-05-24 07:38:37 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 07:38:42 - User selected option: 2
+2025-05-24 07:38:44 - Input text:                                                                                 Life and death are
+2025-05-24 07:38:49 - Generated: <|sot|>                                                                                Life and death arer . 
+
+ 
+ap inge and the enemy and the enemy and the enemy of the 
+the enemy of the sword. 
+
+
+
+The enemy and the enemy of the sword. 
+
+
+
+The enemy's of the sword. 
+
+
+
+The enemy of the sword. 
+
+
+
+The en<|eot|>
+2025-05-24 07:38:49 - Generation stats - Model calls: 100, Time: 5.26s, Speed: 19.02 calls/s
+2025-05-24 07:41:05 - User selected option: 2
+2025-05-24 07:41:12 - Input text:                                                                         The way of the strategy is
+2025-05-24 07:41:18 - Generated: <|sot|>                                                                        The way of the strategy is then the en then the enemy's the enemy's the enemy to the 
+the enemy of the sword. 
+
+
+
+The enemy of the sword. 
+
+
+
+The enemy and the enemy of the sword. 
+
+
+
+The enemy's of the sword. 
+
+
+
+The enemy of<|eot|>
+2025-05-24 07:41:18 - Generation stats - Model calls: 100, Time: 5.62s, Speed: 17.79 calls/s
+2025-05-24 07:42:43 - User selected option: 2
+2025-05-24 07:42:51 - Input text:                                                                          Miyamoto Musashi was the 
+2025-05-24 07:42:56 - Generated: <|sot|>                                                                         Miyamoto Musashi was the en then the en then the enemy's of the 
+you the enemy's the enemy the enemy of the sword. 
+
+
+
+The enemy of the sword. 
+
+
+
+The enemy and the enemy of the sword. 
+
+
+
+The enemy's of the sword. 
+
+
+
+The en<|eot|>
+2025-05-24 07:42:56 - Generation stats - Model calls: 100, Time: 5.48s, Speed: 18.24 calls/s
+2025-05-24 07:44:12 - User selected option: 2
+2025-05-24 07:44:20 - Input text:                                                                            What is a broken sword?
+2025-05-24 07:44:26 - Generated: <|sot|>                                                                           What is a broken sword?. the en then the enemy an the spiring the 
+the enemy to the sword. 
+
+
+
+The sword the enemy and the enemy to the sword. 
+
+
+
+The enemy's the enemy of the 
+you must the sword the sword. 
+
+
+
+The enemy of<|eot|>
+2025-05-24 07:44:26 - Generation stats - Model calls: 100, Time: 5.72s, Speed: 17.48 calls/s
+2025-05-24 08:23:07 - User selected option: 2
+2025-05-24 08:23:13 - User selected option: 1
+2025-05-24 08:23:16 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_045831
+2025-05-24 08:23:20 - Successfully loaded model from: model_20250524_045842_epoch_00008.pt
+2025-05-24 08:23:20 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 08:23:24 - User selected option: 2
+2025-05-24 08:23:27 - Input text:                                                                            What is a broken sword?
+2025-05-24 08:23:33 - Generated: <|sot|>                                                                           What is a broken sword?. the en then the ende. the enemy's the enemy's the enemy's the enemy's the long sword, the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's of the first the sword. 
+
+
+
+<|eot|>
+2025-05-24 08:23:33 - Generation stats - Model calls: 100, Time: 5.27s, Speed: 18.96 calls/s
+2025-05-24 08:23:55 - User selected option: 2
+2025-05-24 08:24:03 - Input text:                                                                          Miyamoto Musashi was the 
+2025-05-24 08:24:09 - Generated: <|sot|>                                                                         Miyamoto Musashi was the en then the ende. the enemy's the enemy's the enemy's the enemy's the enemy's of the first the same the enemy's of the sword. 
+
+
+
+To the enemy's the enemy's, the enemy's of the sword. 
+
+
+
+To strategy <|eot|>
+2025-05-24 08:24:09 - Generation stats - Model calls: 100, Time: 5.79s, Speed: 17.26 calls/s
+2025-05-24 13:40:14 - User selected option: 1
+2025-05-24 13:40:16 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_083834
+2025-05-24 13:40:21 - Successfully loaded model from: model_20250524_083844_epoch_00011.pt
+2025-05-24 13:40:21 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 13:40:30 - User selected option: 6
+2025-05-24 13:40:30 - 
+Final Generation Statistics:
+2025-05-24 13:40:30 - Total model calls: 1500
+2025-05-24 13:40:30 - Total generation time: 150.07s
+2025-05-24 13:40:30 - Average time per model call: 100.05ms
+2025-05-24 13:40:30 - Average model call speed: 10.00 calls/second
+2025-05-24 13:40:30 - === Ending session ===

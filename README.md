@@ -5,6 +5,9 @@
 | ------ |   ---- | ------- |
 | Alexander Bikeyev | 2025-04-17/present | AGPL v3 |
 
+### Help
+[Discord](https://discord.gg/daTSuB2z)
+
 ### Running the Example
 ```
 # Create a virtual environment

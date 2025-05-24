@@ -1,0 +1,64 @@
+{
+  "epoch": 5,
+  "phase": "val",
+  "top_blocks": [
+    {
+      "coords": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "count": 13388
+    }
+  ],
+  "top_pathways": [
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 13388
+    }
+  ],
+  "pathway_stats": [
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 13388,
+      "top_labels": [
+        {
+          "label": 25888,
+          "count": 438
+        },
+        {
+          "label": 8308,
+          "count": 337
+        },
+        {
+          "label": 29800,
+          "count": 305
+        }
+      ],
+      "accuracy": 0.23050492978786974,
+      "correct_count": 3086,
+      "sample_count": 13388
+    }
+  ]
+}

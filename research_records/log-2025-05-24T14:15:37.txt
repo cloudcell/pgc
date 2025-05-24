@@ -1,0 +1,25 @@
+2025-05-24 14:15:37 - === Starting new text generation session ===
+2025-05-25 04:07:08 - User selected option: 1
+2025-05-25 04:07:10 - Selected checkpoint folder: /mnt/synology/brain/training_data/CHEMINFORMATICS/uspto/checkpoints_20250524_164254
+2025-05-25 04:08:05 - Successfully loaded model from: model_20250524_164325_epoch_00002.pt
+2025-05-25 04:08:05 - Loaded model config: {'input_size': 2048, 'num_classes': 65536, 'embedding_size': 2048, 'brain_size': 2, 'address_dim': 5, 'num_heads': 1, 'num_jumps': 8}
+2025-05-25 04:08:46 - User selected option: 2
+2025-05-25 04:08:49 - Input text:                                                                                                                                                                                                                                                         C=CCBr>>
+2025-05-25 04:08:58 - Generated: <|sot|>                                                                                                                                                                                                                                                        C=CCBr>>BrC=1C=C(C=CC1)C(F)(F)F;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;](=O)[C@@H]2CN](=O)[C@@H]1CN(CC2)C2=CC=CC2=CC=C2)C2=CC2)CC2)C22)=NC2=CC2)C2=C2)C2=CC2)=NC2)C2=C2C1)C2=CC=C2)=NC2=CC2)C;;;;;;;;];](=N=N=N=N<|eot|>
+2025-05-25 04:08:58 - Generation stats - Model calls: 100, Time: 8.82s, Speed: 11.34 calls/s
+2025-05-25 04:09:31 - User selected option: 2
+2025-05-25 04:09:34 - Input text:                                                                                                                                                                                                                                              [I-].[Na+].C=CCBr>>
+2025-05-25 04:09:40 - Generated: <|sot|>                                                                                                                                                                                                                                             [I-].[Na+].C=CCBr>>C(C)(C)(C)OC(=O)N1CC(CC1)C1=CC=C(C=C1)N;;;;;;;;;;;;;;;;;](=O)[O-])C;;;;;;;;;](=O)(C)(C)C;;;;;;;;](=O)[O-])C;;;;;](=O)(C)(C)C;;;;;;-])[2H])(N)(C)C)=O)C;;;;;;-])C(=C2)C2=CC2=C(=C(C2=C2)C2=CC2=C(=CC2)N=C<|eot|>
+2025-05-25 04:09:40 - Generation stats - Model calls: 100, Time: 5.95s, Speed: 16.80 calls/s
+2025-05-25 04:09:57 - User selected option: 2
+2025-05-25 04:09:59 - Input text:                                                                                                                                                                                                                                       C=CCBr.[Na+].[I-]>CC(=O)C>
+2025-05-25 04:10:05 - Generated: <|sot|>                                                                                                                                                                                                                                      C=CCBr.[Na+].[I-]>CC(=O)C>BrC=1C=C(C=CC1)C;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;](=O)[C@H](C)C)C;;;;;;;;](=O)[2H])];;;](=O)[O-])C2=CC=C(C=C2)C2=CC2=C(C2=CC2=C(N2)=NC2=CC2)C2=CC2)=CC2)C2=CN2)=NC2)N=CC2)C2=CC2)=N=N=N=N=C2=CC2=CC=CC2)C<|eot|>
+2025-05-25 04:10:05 - Generation stats - Model calls: 100, Time: 5.96s, Speed: 16.78 calls/s
+2025-05-25 07:22:31 - User selected option: 6
+2025-05-25 07:22:31 - 
+Final Generation Statistics:
+2025-05-25 07:22:31 - Total model calls: 300
+2025-05-25 07:22:31 - Total generation time: 20.73s
+2025-05-25 07:22:31 - Average time per model call: 69.09ms
+2025-05-25 07:22:31 - Average model call speed: 14.47 calls/second
+2025-05-25 07:22:31 - === Ending session ===

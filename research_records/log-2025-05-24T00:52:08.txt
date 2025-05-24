@@ -59,3 +59,11 @@
 2025-05-24 11:18:20 - Input text:                                                                                                                                                                                                                                       C=CCBr.[Na+].[I-]>CC(=O)C>
 2025-05-24 11:18:25 - Generated: <|sot|>                                                                                                                                                                                                                                      C=CCBr.[Na+].[I-]>CC(=O)C>BrC1=C(C=C2C(=NC=NC2=C1F)C(=O)OCC;;;;;;;;;;;;;;;;;;;;;;;;;C(NC(COC2OCCCC2)=O;;;;;;;;;;;;N2C=NC=C(N2C)C=2C=NC(=CC3C2)C=2C=CC=2C=CC=2C=CC=2C=CC=2C=CC=2C=CC=2C=CC=2C=CC=2C=CC=2C=CC=2C=CC=2C=CC=2C=CC=2C=C<|eot|>
 2025-05-24 11:18:25 - Generation stats - Model calls: 100, Time: 4.66s, Speed: 21.45 calls/s
+2025-05-24 14:15:24 - User selected option: 6
+2025-05-24 14:15:24 - 
+Final Generation Statistics:
+2025-05-24 14:15:24 - Total model calls: 1200
+2025-05-24 14:15:24 - Total generation time: 70.45s
+2025-05-24 14:15:24 - Average time per model call: 58.71ms
+2025-05-24 14:15:24 - Average model call speed: 17.03 calls/second
+2025-05-24 14:15:24 - === Ending session ===

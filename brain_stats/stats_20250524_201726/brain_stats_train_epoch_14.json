@@ -1,0 +1,64 @@
+{
+  "epoch": 14,
+  "phase": "train",
+  "top_blocks": [
+    {
+      "coords": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "count": 133888
+    }
+  ],
+  "top_pathways": [
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 133888
+    }
+  ],
+  "pathway_stats": [
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 133888,
+      "top_labels": [
+        {
+          "label": 25888,
+          "count": 4179
+        },
+        {
+          "label": 8308,
+          "count": 3383
+        },
+        {
+          "label": 29800,
+          "count": 3122
+        }
+      ],
+      "accuracy": 0.42589328393881454,
+      "correct_count": 57022,
+      "sample_count": 133888
+    }
+  ]
+}

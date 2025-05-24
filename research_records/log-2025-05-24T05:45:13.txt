@@ -160,3 +160,15 @@ To the enemy's the enemy's, the enemy's of the sword.
 
 To strategy <|eot|>
 2025-05-24 08:24:09 - Generation stats - Model calls: 100, Time: 5.79s, Speed: 17.26 calls/s
+2025-05-24 13:40:14 - User selected option: 1
+2025-05-24 13:40:16 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_083834
+2025-05-24 13:40:21 - Successfully loaded model from: model_20250524_083844_epoch_00011.pt
+2025-05-24 13:40:21 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 13:40:30 - User selected option: 6
+2025-05-24 13:40:30 - 
+Final Generation Statistics:
+2025-05-24 13:40:30 - Total model calls: 1500
+2025-05-24 13:40:30 - Total generation time: 150.07s
+2025-05-24 13:40:30 - Average time per model call: 100.05ms
+2025-05-24 13:40:30 - Average model call speed: 10.00 calls/second
+2025-05-24 13:40:30 - === Ending session ===

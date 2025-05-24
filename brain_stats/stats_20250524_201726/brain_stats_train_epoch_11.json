@@ -1,0 +1,192 @@
+{
+  "epoch": 11,
+  "phase": "train",
+  "top_blocks": [
+    {
+      "coords": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "count": 133888
+    },
+    {
+      "coords": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "count": 2
+    },
+    {
+      "coords": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "count": 1
+    }
+  ],
+  "top_pathways": [
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 133885
+    },
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 2
+    },
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 1
+    }
+  ],
+  "pathway_stats": [
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 133885,
+      "top_labels": [
+        {
+          "label": 25888,
+          "count": 4179
+        },
+        {
+          "label": 8308,
+          "count": 3383
+        },
+        {
+          "label": 29800,
+          "count": 3122
+        }
+      ],
+      "accuracy": 0.35785935691078163,
+      "correct_count": 47912,
+      "sample_count": 133885
+    },
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 2,
+      "top_labels": [
+        {
+          "label": 25956,
+          "count": 1
+        },
+        {
+          "label": 8295,
+          "count": 1
+        }
+      ],
+      "accuracy": 0.0,
+      "correct_count": 0,
+      "sample_count": 2
+    },
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 1,
+      "top_labels": [
+        {
+          "label": 28192,
+          "count": 1
+        }
+      ],
+      "accuracy": 1.0,
+      "correct_count": 1,
+      "sample_count": 1
+    }
+  ]
+}

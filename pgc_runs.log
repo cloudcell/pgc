@@ -47,3 +47,6 @@
 2025-05-22_03:04:01 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/meditations/meditations.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 4 --address_space_size 2 --num_jumps 3 --batch_size 128
 2025-05-22_03:07:43 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/meditations/meditations.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 6 --address_space_size 2 --num_jumps 3 --batch_size 128
 2025-05-22_03:10:40 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/meditations/meditations.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 8 --address_space_size 2 --num_jumps 5 --batch_size 128
+2025-05-22_19:45:01 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/kjv/kjv.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 5 --address_space_size 2 --num_jumps 5 --batch_size 64
+2025-05-22_19:50:50 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/kjv/kjv.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 5 --address_space_size 2 --num_jumps 5 --batch_size 32
+2025-05-22_19:55:54 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/kjv/kjv.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 5 --address_space_size 2 --num_jumps 4 --batch_size 16

@@ -804,8 +804,8 @@ def analyze_brain_stats(model, epoch, stats_dir, phase='train', global_stats_agg
         for coords in pathway:
             block_usage_count[coords] += 1
     
-    # Get the top 20 most used blocks
-    top_blocks = heapq.nlargest(20, block_usage_count.items(), key=lambda x: x[1])
+    # Get the top 64 most used blocks
+    top_blocks = heapq.nlargest(64, block_usage_count.items(), key=lambda x: x[1])
     
     # Print summary to console
     logger.info(f"Brain usage statistics for epoch {epoch}:")
@@ -831,8 +831,8 @@ def analyze_brain_stats(model, epoch, stats_dir, phase='train', global_stats_agg
         # Use the maximum of the two counts
         pathway_counts[pathway] = max(counter_count, labels_count)
     
-    # Get the top 20 most common pathways
-    top_pathways = heapq.nlargest(20, pathway_counts.items(), key=lambda x: x[1])
+    # Get the top 64 most common pathways
+    top_pathways = heapq.nlargest(64, pathway_counts.items(), key=lambda x: x[1])
     
     # Prepare stats dictionary
     stats = {

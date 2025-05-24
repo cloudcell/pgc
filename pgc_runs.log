@@ -58,3 +58,4 @@
 2025-05-22_19:45:01 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/kjv/kjv.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 5 --address_space_size 2 --num_jumps 5 --batch_size 64
 2025-05-22_19:50:50 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/kjv/kjv.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 5 --address_space_size 2 --num_jumps 5 --batch_size 32
 2025-05-22_19:55:54 python 7776_pgc.py --pickle /mnt/synology/brain/training_data/NLP/kjv/kjv.pkl --mode jam --cpu --num_classes 16777216 --address_space_dim 5 --address_space_size 2 --num_jumps 4 --batch_size 16
+2025-05-24_18:43:28 python 76762z_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 7 --address_space_size 2 --num_jumps 10

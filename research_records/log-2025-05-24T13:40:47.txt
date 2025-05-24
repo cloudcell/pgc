@@ -1,0 +1,1202 @@
+2025-05-24 13:40:47 - === Starting new text generation session ===
+2025-05-24 13:40:50 - User selected option: 1
+2025-05-24 13:40:51 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_083834
+2025-05-24 13:40:56 - Successfully loaded model from: model_20250524_083844_epoch_00011.pt
+2025-05-24 13:40:56 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 13:41:13 - User selected option: 2
+2025-05-24 13:41:23 - Input text:                                                                              Miyamoto Musashi was 
+2025-05-24 13:41:31 - Generated: <|sot|>                                                                             Miyamoto Musashi was ar thed them as thate is thed to 
+the enemy in 
+the enemy in 
+with the enemy's and the enemy's and strategy. 
+
+
+
+The spirit of the Way of the Way of strategy is the same of the enemy's and his 
+a the <|eot|>
+2025-05-24 13:41:31 - Generation stats - Model calls: 100, Time: 7.35s, Speed: 13.61 calls/s
+2025-05-24 13:43:33 - User selected option: 2
+2025-05-24 13:43:39 - Input text:                                                                                Life and death are 
+2025-05-24 13:43:47 - Generated: <|sot|>                                                                               Life and death are thate isn man will. into as that thed the enemy to the 
+appee the enemy to be the enemy to right. 
+
+
+
+To showld of the spirit of strategy of the spirit of the spirit of strategy is 
+the 
+spirit the en<|eot|>
+2025-05-24 13:43:47 - Generation stats - Model calls: 100, Time: 7.65s, Speed: 13.07 calls/s
+2025-05-24 13:44:18 - User selected option: Life and death are not 
+2025-05-24 13:44:18 - Invalid choice: Life and death are not 
+2025-05-24 13:44:20 - User selected option: 2
+2025-05-24 13:44:21 - Input text:                                                                            Life and death are not 
+2025-05-24 13:44:28 - Generated: <|sot|>                                                                           Life and death are not ting an the enemy intostant the enemy in the spirit of the 
+and toge are the enemy. 
+
+
+
+The Way of strategy is the same to the enemy's and the spirit of the enemy's and 
+and the enemy in the same of t<|eot|>
+2025-05-24 13:44:28 - Generation stats - Model calls: 100, Time: 6.67s, Speed: 15.00 calls/s
+2025-05-24 13:45:47 - User selected option: 2
+2025-05-24 13:46:05 - Input text:                                The Way of strategy is the same to the enemy and the spirit of the 
+2025-05-24 13:46:13 - Generated: <|sot|>                               The Way of strategy is the same to the enemy and the spirit of the long swords to 
+the 
+spirit of strategy of the spirit of the same to the enemy's and strategy the enemy in the same to the 
+Way. 
+
+In singled the Way of strategy is the same to the spirit of strategy <|eot|>
+2025-05-24 13:46:13 - Generation stats - Model calls: 100, Time: 7.92s, Speed: 12.63 calls/s
+2025-05-24 13:47:39 - User selected option: 2
+2025-05-24 13:47:52 - Input text:                                                                    The enemy's long sword is what 
+2025-05-24 13:47:59 - Generated: <|sot|>                                                                   The enemy's long sword is what thate is thed in the spirit in 
+the 
+sith the enemy to the enemy's and the enemy's and the spirit of the spirit of the 
+spiritions. 
+
+In strategy. There are 
+the enemy of the spirit the enemy to the s<|eot|>
+2025-05-24 13:47:59 - Generation stats - Model calls: 100, Time: 6.98s, Speed: 14.33 calls/s
+2025-05-24 13:52:07 - User selected option: 2
+2025-05-24 13:52:24 - Input text:                                                                           The Way of the sword is 
+2025-05-24 13:52:31 - Generated: <|sot|>                                                                          The Way of the sword is thate are thors. 
+the enemy in the same to thed to the spirit the enemy and will and the spirit the 
+spirit of the spirit of strategy. The spirit of the spirit of strategy. The spirit of strategy. 
+
+
+<|eot|>
+2025-05-24 13:52:31 - Generation stats - Model calls: 100, Time: 7.23s, Speed: 13.82 calls/s
+2025-05-24 13:57:45 - User selected option: 2
+2025-05-24 13:58:03 - Input text:                                                                                   The strategy is 
+2025-05-24 13:58:09 - Generated: <|sot|>                                                                                  The strategy is thate are thor thed the enemy into and 
+the enemy into strategy. 
+
+
+
+There are the enemy's strategy of the same the enemy and the enemy in a stance of 
+the 
+spirit is the same to the spirit of strateg<|eot|>
+2025-05-24 13:58:09 - Generation stats - Model calls: 100, Time: 6.92s, Speed: 14.44 calls/s
+2025-05-24 14:05:16 - User selected option: 2
+2025-05-24 14:05:21 - Input text:                                                                                   The Book of Five
+2025-05-24 14:05:28 - Generated: <|sot|>                                                                                  The Book of Five an thate are thate are thore are thate the enemy are can willy to long sword the long swords and the enemy in the spirit of strategy of the enemy's strategy. 
+
+In the enemy is the same the enemy to a<|eot|>
+2025-05-24 14:05:28 - Generation stats - Model calls: 100, Time: 7.11s, Speed: 14.06 calls/s
+2025-05-24 14:07:51 - User selected option: 1
+2025-05-24 14:07:52 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_083834
+2025-05-24 14:07:57 - Successfully loaded model from: model_20250524_083844_epoch_00013.pt
+2025-05-24 14:07:57 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 14:08:04 - User selected option: 2
+2025-05-24 14:08:06 - Input text:                                                                                   The Book of Five
+2025-05-24 14:08:13 - Generated: <|sot|>                                                                                  The Book of Five tion the enemy's the enemy and the long sword. The samurai the 
+spirit, and 
+the fight of the Way of strategy. This is the fight Sidection the enemy's the points, and the fiver and the enemy's man wi<|eot|>
+2025-05-24 14:08:13 - Generation stats - Model calls: 100, Time: 6.97s, Speed: 14.36 calls/s
+2025-05-24 14:08:46 - User selected option: 2
+2025-05-24 14:08:53 - Input text:                                                                                        Go Rin No S
+2025-05-24 14:09:00 - Generated: <|sot|>                                                                                       Go Rin No Sind ," 
+appee thate are the enemy's the destant the enemy's the start the enemy's 
+this well. 
+
+
+
+The fifterion of strategy is the samurain 
+
+
+
+To Cutting there in the cody, and the 
+spirit is in the <|eot|>
+2025-05-24 14:09:00 - Generation stats - Model calls: 100, Time: 6.88s, Speed: 14.53 calls/s
+2025-05-24 14:09:28 - User selected option: 4
+2025-05-24 14:09:33 - Set tokens to: 16384
+2025-05-24 14:09:38 - User selected option: 2
+2025-05-24 14:09:41 - Input text:                                                                                        Go Rin No S
+2025-05-24 14:28:56 - Generated: <|sot|>                                                                                       Go Rin No Sind ," 
+appee thate are the enemy's the destant the enemy's the start the enemy's 
+this well. 
+
+
+
+The fifterion of strategy is the samurain 
+
+
+
+To Cutting there in the cody, and the 
+spirit is in the fight knower, the enemy 
+and 
+and the enemy's of the Way of the sword. 
+
+In large-scale strategy, and the enemy's the enemy's and the way of strategy. 
+
+
+
+The Body of there is the Way of the sword in the enemy's and strategy is the powerds 
+strategy. 
+
+
+
+There and theirstand the enemy's the way of strategy is the Way of the enemy and the 
+sword. 
+
+
+
+To Hold Down attitudese the enemy's and strategy. This is the fight and the enemy as 
+the 
+study to the enemy's to cutting the enemy's sword with the enemy and the enemy's the 
+strategy. There are attitudes of the enemy and the way of the spirit is the Way of strategy, and the way of strategy and the enemy's the enemy's and the strategy. 
+
+
+
+To stab the Way of strategy the fighting the enemy's sword. 
+
+In musashi'st the strategy, and the first the enemy's strategy. 
+
+The spirition 
+
+
+
+33 The Way of the way of the spirit of the sword in the enemy's the enemy and the enemy's 
+this weapling attitudes. 
+
+
+
+To Cutting to the enemy's long sword, and the enemy's of the Way of the enemy's 
+strategy. 
+
+In large-scale strategy, and not be able to movers: The chrencing the Way of the long sword in the enemy as attitudes. This is the enemy's of there are and down the enemy's the enemy's and the enemy as attitude the fight and the way of strategy and the enemy's the way of strategy and dencing the wames and the enemy's and the enemy's the spirition the enemy's to there are and compations, and there in the way of strategy this. 
+
+In large-scale strategy, when you must be able there and sword and and the enemy's 
+
+an the enemy is there is the enemy's the enemy and the enemy's the way of the enemy's distand the spirit, and there in the enemy's 
+cutting, and the enemy as to strategy. 
+
+
+
+The Way of the Way of the enemy's long sword, the enemy's the enemy's the enemy's the 
+strategy and the enemy's to butting, and the enemy's stretching. The spiritual the enemy and the enemy and the enemy's the same the With the enemy and the way of the principles and the enemy's the enemy's of there in the fight to cutting the enemy's sword. 
+
+In large-scale strategy, when you must by the fighers defeation the enemy's the wated this. 
+
+In lor the Way of strategy. 
+
+
+
+To Single combat, and the enemy of the enemy's sword. 
+
+The spirit of the fiftent to 
+the way of strategy is the Way of the enemy's the way of strategy, and the enemy's strategy the enemy's and the enemy defeation and the enemy's and the way of there are and the enemy's strategy. 
+
+
+
+The Bowokke to strategy, when your body of the fighting of the way of strategy is 
+strategy in the enemy's the enemy's the enemy's head and the principles of strategy the enemy's the fight and the first and the enemy's powevery, and this is the strategy. 
+
+
+
+To Cut theirst the Way of the enemy and the enemy's the fight of at the fight Sidect 
+and to the Way of the warrior, and there in the enemy's long sword, and the enemy's the strategy. 
+
+
+
+To Ching of the enemy's 
+
+When the enemy's strategy is strategy, when the enemy's the 
+strategy the fifth 
+and the 
+enemy's possibled and the enemy as the Way of strategy, and the enemy's of the 
+and the enemy's the spiritually become the enemy's spirit the enemy's the way of the Way of the warrior, and there in the enemy's the enemy's the sames of strategy. 
+
+
+
+There are cannot the enemy's the enemy's the enemy's spirit in the enemy's of strategy. 
+
+
+
+There are Zetting and become the enemy's and the enemy and the enemy's long sword. This is the fight deads the enemy and without the enemy's the enemy's the enemy's powerds and the 
+enemy's sword in the Way of strategy, and there and companiting, and the Way of then you must to without with the enemy's strategy the enemy's and the enemy's the enemy's strategy. 
+
+
+
+To Cutting there in Other Schools of strategy is strategy is in the enemy's the way of strategy this. 
+
+
+
+To Cutrategy, and the enemy's the enemy's 
+cut applad the enemy's and strategy, and the 
+eneming the spirit of the swords and the compled and the enemy's spirit of strategy. 
+
+
+
+To Cutting down the enemy's the fight of the Way of the enemy's spirit of the same 
+and 
+applategy in the true With the enemy and the enemy's spirit. 
+
+In large-scaled to the enemy's sword in the enemy's the same the enemy's down. 
+
+The 
+the enemy the strategy, and the enemy's to the spirit of strategy. 
+
+In large-scale strategy, and the fight in the sword, and the spiritual becomen 
+
+
+
+To People combat in the comples of strategy and the long sword, and the enemy's strategy, and the enemy as there in the enemy's of strategy and the enemy's the enemy's the enemy's the spirit of the fight Siderstand the enemy's spirit, and strategy is strategy the enemy's the strategy. 
+
+
+
+To Cutting the Way of the warrior, and there in the enemy's defen in the enemy's 
+of the 
+enemy's the sames of the enemy's down sword the enemy's the strategy, and the enemy's spiritions sword. 
+
+This is the fighting to the first the enemy's and the enemy and the fiftenion, and 
+and 
+sword, this is the fight is the enemy's sword. 
+
+In large-scale strategy, and there and 
+and the enemy's of the his become of the Way of the warrior the enemy's spirit, and the enemy's of the enemy's spirit, and your body, this spirit is not become combat, and the way of the firstand the enemy's of there is the enemy's strategy. 
+
+
+
+The Way of strategy is the enemy's the enemy's swords and the enemy's the study as the 
+and as in the fighting, and the fiver and this is the fight Sidection the enemy's the fight of the Way of the fight Sidection the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the fighting the enemy's swords and the enemy's and strategy. 
+
+When you must the enemy's of the have the enemy's the fight and to movernmens and the enemy as the Way of the enemy's long sword with the spirit in the woid. 
+
+In strategy 
+
+
+
+The five Become of strategy is the Way of the enemy deeply. 
+
+
+
+To Cutting the enemy's 
+
+There and the long sword the enemy with the enemy's sword. 
+
+In means to leart this is the first be 
+the comples of strategy, and there in the enemy's and strategy. This is the 
+spirit the way of the sword, and the way of strategy the enemy's the way of strategy and the enemy's and the way of the sword. This is the way of the spirit the enemy's powes and the enemy's spirit in the long sword 
+
+Grom the way of strategy, when you must the country in the Warriors. 
+
+
+
+The can the fire Book of the spirit is necestand sword in the fight of the Way of the warrior his 
+swords the strategy, and the enemy's the enemy's and the way of the Way of the warrior, butting and do not the enemy and the enemy's the enemy's the long sword, and the enemy's the way of the 
+enemy's with the enemy's sword. 
+
+In large-scale strategy, and compation, and the Way of strategy, when you must right 
+and the enemy's the enemy's the enemy's as there in the strategy, and strategy, and the enemy's the enemy's the enemy's the enemy's the enemy's the spirit. 
+
+
+
+The compled to cut to the fight and the enemy's and the enemy's spirit, and the 
+eneming 
+and the enemy's of the samurain the enemy's strategy, and this is the first the enemy's his becomes of there and there in the Warrior and the enemy's the enemy as the enemy's the enemy's swords and the enemy's the strongly, you must research this is the fighting the enemy's lead becoment to wingles the enemy's the enemy the enemy's the way of the long sword. The Way of strategy, and the fiftert with his spirit of the Way of the warrior to 
+the Way of strategy the enemy's the spirit, and the enemy's the enemy's face. 
+
+
+
+The fifth and the enemy's methodd and the enemy's of strategy is the enemy's and 
+and the enemy's the fighting the Way of the warrior to move the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the 
+strongly and the enemy's many. 
+
+
+
+To Cut and there in the fiften in the fiver the Way of strategy is the enemy's in the 
+enemy, and strategy. 
+
+The spirition the spirit is the beness to cutter to win this is the strategy. The compled and the enemy and the enemy's the strategy. 
+
+
+
+To Cutting to the enemy's the enemy and the enemy as the Way of strategy, and the 
+eneming, and the enemy of strategy and the enemy's the enemy and the enemy's of the 
+Warfoment to cutting the enemy's spirit, and the Way of the warrior, and the enemy'st the mastery the enemy's the enemy's the way of the Way of the warrior, and there in the enemy's head and the enemy's strategy the enemy's the strategy. 
+
+
+
+The spirition 
+
+
+
+To Cutrategy, and the enemy and the enemy's the enemy's with there in 
+and the long sword the enemy's the enemy's and the enemy's a masterition the enemy's to 
+defterstances the enemy's to there and there is the first this is the enemy and the way of strategy. 
+
+Then the compler to move the stretching there is the Way of the principles of strategy the long sword. 
+
+When the leartert the enemy's the spirit of the enemy's and the enemy's of the sword. 
+
+
+
+The spirition the spirit in the enemy's of the spirit is strategy is the enemy's strategy. 
+
+In large the first the fiftert the warrior to the long sword the enemy's to learned to the enemy is strategy, and there and the enemy's sword. 
+
+In large-scale strategy, and the swords and the enemy's the strategy. 
+
+
+
+To Cutting the enemy's swords the enemy's of the spirit be used to meanst the same to 
+there and the enemy's and strategy the enemy's the strategy, and the enemy's to the have used to the enemy to the sword. 
+
+
+
+To Hold combat to the enemy's spirit in the compled the enemy's the enemy's and the 
+swords the enemy's the fight and the enemy as and sword. The enemy's make sword, and the enemy's spirit, and the enemy's the fighting the spirit of strategy, when you must study to the enemy's and the way of the Way of the sword. 
+
+In large-scale strategy, and the word be abilition of strategy is the enemy's is the 
+spirit, and spirit is strategy of the spirit of the enemy's dower of the enemy's the enemy's the enemy's strategy, and the fighthe way of the sword. 
+
+
+
+To Cutting the Way of strategy, and the enemy and the enemy's the enemy's long sword 
+the 
+sword in the fight of strategy, when you must sword, and the fifterion, and 
+and the enemy's the fighting the enemy's sword. 
+
+In large-scale strategy the enemy's the strategy. 
+
+
+
+To Come of the Way of the way of strategy the enemy's of the samurain the enemy's the 
+strategy this. 
+
+
+
+To Cutting the Way of strategy. The contengle the enemy's spirit, and the enemy's 
+strategy the enemy's spirit, and the enemy's spirit, and the enemy's of there in the enemy's of strategy the enemy's and the enemy's the enemy's the enemy's with the enemy's spirit the 
+spirit is strategy of the spirit is the Way of the warrior, and there in the enemy's spirit in the way of strategy. 
+
+
+
+The Body of the Way of the enemy is the sword in the enemy's long sword, and the enemy's 
+crossed the enemy's sword. 
+
+
+
+The Recomen 
+
+The Fine Book of the Way of the enemy's and the enemy's the sames of the 
+stand the enemy 
+and with the enemy's of the Way of the warrior spirit is not the way of strategy the enemy's spirit of the enemy's strategy, and the enemy's the fighting, and the enemy's spirit it is is the fight and deferenten in the fight of the enemy's strategy. 
+
+In large-scale strategy, when his sword, and the enemy's possibled the enemy's 
+crossed 
+and the enemy's strong his meanst bet the enemy's and the way of there and swords the enemy's to the swords and the enemy's long sword with the enemy's and the way of strategy the enemy and the enemy and the enemy's to movernm there is a masters tocth the enemy and the enemy's the fighting the enemy's sword. 
+
+
+
+To Cance of the fifto Ryu", and the fifth the enemy's of the principles of strategy and the enemy's the enemy's the enemy's the enemy's the enemy's the fighting the enemy's sword. 
+
+Whene the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the 
+strategy. 
+
+
+
+The Way of the enemy's many reaching the enemy's to strategy the enemy's poincing 
+and as 
+beven the spirit of the fight and the enemy and the enemy's the enemy's and the 
+enemy's attitudes. 
+
+
+
+To Cutting to the enemy's long sword, and the enemy's of there is the fighting the 
+enemy's without of the long sword this is the fighting and the long sword the enemy as and strategy and the enemy's lord with the enemy with and hist the enemy's the fighere the enemy's the fighting the enemy's sword. 
+
+
+
+The Fifterious. This is the fight is nothing to the companion the enemy's of strategy. 
+
+
+
+To House Most that the enemy welfollow the stirition of the spirit of the come of 
+the enemy and the enemy and the enemy's strategy. 
+
+The spiritually to cutting. 
+
+
+
+The way of strategy 
+
+
+
+
+The Battitude-Ng the Way of strategy is the enemy's sword. This is the Way of strategy. 
+
+
+
+The Body of there is not is the Way of the Way of the swords and the enemy's and the 
+sword. 
+
+
+
+To Stab the Way of the Way of the warrior of the Way of the enemy's mastance of the 
+eneming 
+of the Way of the spirit in the compled and the enemy and the enemy's the enemy's and the enemy's stretching the Way of the enemy's the enemy and the enemy's the enemy's and the enemy's the fighting to 
+attitudes of the way of strategy. 
+
+
+
+To Benefition. The Way of the Way of the enemy's the enemy and the enemy's of the 
+enemy's 
+then the enemy's the fighers and the enemy's of the Way of strategy. The first and the fight becomes of the enemy'st the enemy's of strategy. 
+
+
+
+To Recordoment the enemy's methods and the enemy's dest the enemy's strategy. 
+
+In large-scale strategy, and the fight of strategy the spirit of the enemy's and the 
+eneming, and the fighting, and the way of strategy is the enemy's sword and strategy. 
+
+The spirit of the Way of the warrior to there and in the spirit of the enemy's and the way of the long sword. There is the sames, when you will but his sword, and the enemy's the fighting the Way of strategy, and the first this. 
+
+
+
+The Fight comparions. 
+
+In the firtuction the enemy's the true Way of the spirition the 
+enemy's like the 
+eneming, and the strategy. 
+
+
+
+To Come the enemy's 
+
+
+
+The Fifto is is the fight is the Way of strategy, and the enemy's of the enemy's struction. The spirit is the strongly. 
+
+
+
+To Cutting to the enemy's of strategy and the enemy's to the samurain 
+
+In large-scale 
+the way of the enemy's swords and the enemy and the enemy's the same 
+the samurating sword in the enemy's this is the way of strategy. There and there in the cody of the way of strategy the enemy's the way of strategy the first the enemy's to 
+devery to 
+appling anderstand the enemy's spirit in the enemy's destance, and the enemy's the fight and the enemy and the way of the chapations, and there in the fight of the Way of the enemy's dest and there in the Way of the sword. 
+
+
+
+To Hold combat, the enemy's the enemy's of the Way of the long sword in the enemy's 
+crom the enemy's the fighting there and strategy. 
+
+In large the fight and the fight into sword in the enemy and the enemy's the sames of the 
+the enemy's the enemy's the enemy's strategy. 
+
+The spirit of the enemy's of the have the enemy's heads the enemy's of the sword. This is the comple. The true Way of the enemy's spirit is the fight to learning the enemy's strategy. 
+
+
+
+To Cutting to strategy, and not the enemy's the enemy's strategy, and the fight into 
+
+"
+5o Strategy to the enemy's long sword in the spirit is not the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the 
+sword. 
+
+
+
+To Cut and there in the Way of strategy is strategy and the enemy's the way of strategy and 
+there and there and the enemy's sword. 
+
+In large-scaled the enemy are use the way of strategy and the enemy's to movernment as 
+they In the fighting the enemy's sword, and the enemy and the way of there attitudes of the enemy's the enemy's this is the enemy's the way of the spirit of the sword. This is the enemy's the enemy's the enemy's the enemy's the enemy's the spirit of the warrior to the have to cutting the enemy's sword. 
+
+
+
+To Stadition, 
+
+
+
+To Cutrategy, and the enemy and the enemy's of the enemy's distuden 
+the enemy's sword 
+and the enemy's the stritegy, but the enemy's 
+crom the enemy's the fight and somether strategy, when you must research this is the true Way of the enemy's and halberstanion the enemy's to cutting to the enemy's popurit the enemy's the way of strategy and 
+attitudes and there is the enemy's the enemy's the enemy's and the enemy's and strategy. 
+
+
+
+To Cuttikes of the Way of the warrior to the enemy's sword. 
+
+This is the fight Sidections. 
+
+In musashi's Beet the warrior the enemy's of the Way of strategy. 
+
+The Gar beathso the way of strategy the spirit of the Warrior, when the enemy as attack of the enemy's down to the spirit of the enemy's sword. The 
+spirit is the sword, and the enemy the strategy. 
+
+
+
+To Chinge of the Way of the enemy the first the enemy's and the enemy's spirit is the 
+long sword and the enemy's long sword in the enemy's and the enemy's powed the enemy's the samurai, and formating the enemy's sword. 
+
+
+
+The comples of the Way of the enemy's long sword, and not the way of the long sword the enemy's the sames of the Way of strategy. 
+
+
+
+The fiftert of the Way of the way of strategy and the enemy's spirit is the depthstumng 
+strategy. 
+
+In the enemy is the Way of strategy. 
+
+
+
+The Recond the spirit is necessand the enemy's 
+not becomen to cutting the Way of the 
+then the conderstance, and the enemy's the same to the spiritual 
+and legy. 
+
+In large the strategy is the compled the enemy's the enemy's and the enemy's the 
+strategy. 
+
+
+
+The Body as the Way of strategy. The enemy's of the spirit of strategy and the enemy's 
+the principling. 
+
+
+
+To Shout in the Tokugawas of the sword with the enemy's to large-scale callers. 
+
+In large-scale strategy, and come the long sword, and the enemy's long sword in the enemy's the enemy's strategy. 
+
+
+
+The fifth and strategy, and the enemy's of the Way of the enemy's spirit is the deeply 
+and to mean the enemy's and the enemy's spirit. 
+
+In large-scale strategy the spirit in the compled the enemy's attacks, and defeal 
+and 
+and the enemy's of the Way of the enemy's long sword in the fiverge the enemy's the strategy. 
+
+In large-scaled strategy, and the enemy's of the hand and the enemy's to the head the enemy's powes and the enemy's of these and there and cannot the way of strategy the enemy's and strategy is the strong his become of the samurain the enemy's the fight is strategy the enemy's this book and the fighting, and the enemy's the enemy's mastert the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the fighting the enemy's swords and the enemy's and strategy. 
+
+When you must the enemy's of the have the enemy's the fight and to movernmens and the enemy as the Way of the enemy's long sword with the spirit in the woid. 
+
+In strategy 
+
+
+
+The five Become of strategy is the Way of the enemy deeply. 
+
+
+
+To Cutting the enemy's 
+
+There and the long sword the enemy with the enemy's sword. 
+
+In means to leart this is the first be 
+the comples of strategy, and there in the enemy's and strategy. This is the 
+spirit the way of the sword, and the way of strategy the enemy's the way of strategy and the enemy's and the way of the sword. This is the way of the spirit the enemy's powes and the enemy's spirit in the long sword 
+
+Grom the way of strategy, when you must the country in the Warriors. 
+
+
+
+The can the fire Book of the spirit is necestand sword in the fight of the Way of the warrior his 
+swords the strategy, and the enemy's the enemy's and the way of the Way of the warrior, butting and do not the enemy and the enemy's the enemy's the long sword, and the enemy's the way of the 
+enemy's with the enemy's sword. 
+
+In large-scale strategy, and compation, and the Way of strategy, when you must right 
+and the enemy's the enemy's the enemy's as there in the strategy, and strategy, and the enemy's the enemy's the enemy's the enemy's the enemy's the spirit. 
+
+
+
+The compled to cut to the fight and the enemy's and the enemy's spirit, and the 
+eneming 
+and the enemy's of the samurain the enemy's strategy, and this is the first the enemy's his becomes of there and there in the Warrior and the enemy's the enemy as the enemy's the enemy's swords and the enemy's the strongly, you must research this is the fighting the enemy's lead becoment to wingles the enemy's the enemy the enemy's the way of the long sword. The Way of strategy, and the fiftert with his spirit of the Way of the warrior to 
+the Way of strategy the enemy's the spirit, and the enemy's the enemy's face. 
+
+
+
+The fifth and the enemy's methodd and the enemy's of strategy is the enemy's and 
+and the enemy's and the way of the swords and the enemy's to the samurain and haveryed. 
+
+
+
+To Cutting the enemy's sword. 
+
+In large-scale strategy, and strategy of the enemy's 
+of strategy is the Way of the warrior to make the way of the spirit of the enemy's sword. 
+
+In large-scale strategy, and the swords the enemy's the Way of the firstant defth the 
+sword-from the Way of then the enemy's the enemy's spirit. You must to the enemy's this is the beneming the spart the enemy's sword, and the spirit of the enemy's the enemy's the enemy's and strategy. This is the enemy's the way of the sword. The enemy's long swords and the enemy's spiritual be able to movement to strategy 
+
+
+
+
+The Body and the enemy's long sword in the enemy's the enemy's the enemy's with the 
+the 
+spirit is strategy and the enemy's the fighting the enemy's sword. 
+
+
+
+To Hold the stirit, the enemy's defess, and the enemy's the strategy. 
+
+
+
+To Hold sword the enemy's the enemy's of the Way of strategy, and the fifto was of 
+the way of strategy as the enemy's sword. The Warrior the way of there and the enemy's lead and not the enemy's the enemy's the way of strategy and the strategy. 
+
+
+
+To Hold Down appeachi was the enemy's the enemy's the enemy's the enemy's the spirit 
+the 
+swords the strategy, and the enemy's spirit is the enemy's and the enemy's spirit. 
+
+
+
+The Way of strategy 
+
+
+
+One the enemy's of the principles of the enemy's sword with the enemy's and strategy. 
+
+In large-scaled to cutting the enemy's sword, and the enemy the figho and the fighting 
+and the enemy's of the Warrior. 
+
+
+
+The Fifterion, in the enemy is to strategy, and the enemy's to the reachand the 
+strongly combat. This is the fighting anderstand the enemy's long sword, and the enemy's to the spirit of strategy. 
+
+There arese the Way of the enemy's the enemy's the enemy's the enemy's the enemy's the 
+spirit the enemy's the strategy in the fight of the Way of the enemy's the enemy's this is the fighting the enemy's strategy. 
+
+
+
+There are cannot the fighting, and the enemy of the Way of the enemy's long sword. The 
+sword-fe the enemy's the true Way of the way of the Way of strategy. 
+
+
+
+To Cutting do not the enemy of strategy is the same to cut the enemy's spirit the 
+spirit of the swords the enemy's to means. The samurai the enemy's the strategy. 
+
+
+
+To Cut 
+
+There are cannot town and there are and swords and the enemy's of the 
+and 
+apaction of the Way of the warrior the enemy's the enemy's and the enemy's spirit, and the 
+enemy's swords the samural the fight Sided the enemy's 
+crossed the enemy's sword. 
+
+In musashi's strategy the enemy and the enemy's deciders the enemy's learned the 
+enemant this is the enemy's the fight from the spirit of strategy. 
+
+
+
+The Body of the Way of the Way of strategy the fighting the enemy's swords and the enemy's the strategy, and the enemy's the enemy's and the way of there and sword. 
+
+
+
+To Hold combat, and the enemy's spirit of the enemy's to become to cutting down. 
+
+
+
+The Body of the Way of the enemy's the enemy's the enemy's with the enemy's strategy. 
+
+
+
+The Bowokke to strategy, when your the enemy's the enemy's the enemy's the spiritually 
+enemy's sword in the Way of the Way of the enemy's long sword, the enemy's spirit in the countrations. The spirit of strategy. 
+
+In large-scale strategy the enemy's withers of the Way of strategy. 
+
+
+
+To Cut applikes of the Way of the enemy's spirit is the confucius- and the enemy's 
+not and the way of strategy is strategy is the enemy's sword, and the enemy and strategy. 
+
+
+
+To Cutting the enemy's sword, and the enemy's and the enemy's spirit is not becomen the 
+sith the enemy's the enemy's and the enemy's and strategy. 
+
+
+
+To Cutting to the enemy's the enemy's and the enemy's spirit, and the fifto was to 
+the was a master the Way of the spirit of the warrior of the way of the warrior to the enemy's down. 
+
+
+
+To Known 
+
+The Five Book of the sword, and the enemy's to strategy and this is the 
+sword. 
+
+
+
+The Body, and was of the Way of the warrior to the enemy's strategy the enemy's 
+sword 
+and the enemy's long sword in this means, and the enemy's the fighting the Way of strategy. 
+
+
+
+To Know Sword the enemy is to string and the Way of the warrior and the enemy's 
+cut 
+and the enemy's the fighting to the strongly. 
+
+
+
+To Cutting there in the fight of the Way of the long sword, and the enemy's the 
+and the 
+the enemy as and strategy and the enemy's spirit, and the enemy's the strategy. 
+
+
+
+To Cutting the enemy's sword in the enemy's the fight and the enemy's of the Way. 
+
+
+
+The first to strategiscales of the sword in the Way of strategy is strategy, and 
+and 
+there is the Way of strategy. 
+
+
+
+There is not the enemy's of the Way of the enemy's the spirit is the same and the 
+Warfactle to movers: The sword. This is the way of the sword. 
+
+
+
+To Cutting there is the confuctled in the enemy's den the enemy's and strategy. 
+
+The same the enemy, and the enemy's point and the enemy's the enemy's strong and there in the way of the spirit of the sword when you the enemy's the enemy's the enemy's the fighting with the enemy's to the his sword in the enemy's and the enemy's the fighting the enemy's sword. 
+
+
+
+To Cutting to the enemy's the enemy's of the prighting, and the enemy's of the 
+Warfand the enemy's of the principles of strategy and this become of the principles of the sword. 
+
+
+
+To Hold of there in the enemy's the fight of the Way of the enemy's to move the enemy's 
+crossed, the enemy's spirit, and the enemy's and strategy, and this is the fight dead there are and down and the enemy's the enemy's the enemy's of the Way of strategy. 
+
+
+
+To Cut and there in the way of strategy is strategy and the enemy's the enemy's the 
+situations, and the learned to the 
+sword. 
+
+
+
+To Hold combat the Way of the sames and the enemy's of the spirit be able to become 
+the 
+the enemy's the enemy's this methoust bese and strongly and the enemy's the enemy's the enemy's powerds the enemy's the fifterion and the enemy and the enemy's the enemy's this spirit, and the enemy's spirit the fifth and the fight of the Way of the way of strategy the way of the Way of the sword the enemy's the enemy's dest applace, and and the enemy's the Way of strategy, and there and the enemy's strategy. 
+
+
+
+The sword. This is the long sword, and the enemy's the strategy. 
+
+
+
+To Cutting the enemy's sword. 
+
+In large-scale strategy, and what the Way of strategy. 
+
+
+
+The Way of strategy in the true Way of the way of the swords and the enemy's and the 
+eneming the Way of strategy, and the enemy's the way of the spirit of strategy the warrior, what the enemy's spirit of the spirit of the way of strategy the enemy's poad. 
+
+
+
+The Way of strategy 
+
+The Reness the enemy's sword, and the enemy's and strategy, and 
+there in the enemy's the fighting the enemy's sword, and the enemy's the enemy's the fighting the enemy's sword in the Way of the spirit of the sword. This is the enemy's of the principle sword. 
+
+
+
+To Cutting the Way of the enemy and the enemy recomes of the enemy's strategy welled 
+and the enemy's the enemy's the enemy's spirit is not be strategy and the enemy's and the enemy's calmse, and the enemy's dead the enemy's sword. 
+
+In large-scale strategy, and compation, and the enemy's the enemy's the beneming 
+of the 
+and and the enemy's of the sword. This is the enemy's the fighting there in the 
+spirit is not sword in the enemy of there in the enemy's the fight and the enemy's the enemy's the enemy's the enemy and to mean this is the enemy's and the enemy's calmsed and strategy, and the way of strategy is there is the wames to cutting to the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the fighting the enemy's swords and the enemy's and strategy. 
+
+When you must the enemy's of the have the enemy's the fight and to movernmens and the enemy as the Way of the enemy's long sword with the spirit in the woid. 
+
+In strategy 
+
+
+
+The five Become of strategy is the Way of the enemy deeply. 
+
+
+
+To Cutting the enemy's 
+
+There and the long sword the enemy with the enemy's sword. 
+
+In means to leart this is the first be 
+the comples of strategy, and there in the enemy's and strategy. This is the 
+spirit the way of the sword, and the way of strategy the enemy's the way of strategy and the enemy's and the way of the sword. This is the way of the spirit the enemy's powes and the enemy's spirit in the long sword 
+
+Grom the way of strategy, when you must the country in the Warriors. 
+
+
+
+The can the fire Book of the spirit is necestand sword in the fight of the Way of the warrior his 
+swords the strategy, and the enemy's the enemy's and the way of the Way of the warrior, butting and do not the enemy and the enemy's the enemy's the long sword, and the enemy's the way of the 
+enemy's with the enemy's sword. 
+
+In large-scale strategy, and compation, and the Way of strategy, when you must right 
+and the enemy's the enemy's the enemy's as there in the strategy, and strategy, and the enemy's the enemy's the enemy's the enemy's the enemy's the spirit. 
+
+
+
+The compled to cut to the fight and the enemy's and the enemy's spirit, and the 
+eneming 
+and the enemy's of the samurain the enemy's strategy, and this is the first the enemy's his becomes of there and there in the Warrior and the enemy's the enemy as the enemy's the enemy's swords and the enemy's the strongly, you must research this is the fighting the enemy's lead becoment to wingles the enemy's the enemy the enemy's the way of the long sword. The Way of strategy, and the fiftert with his spirit of the Way of the warrior to 
+the Way of strategy the enemy's the spirit, and the enemy's the enemy's face. 
+
+
+
+The fifth and the enemy's methodd and the enemy's of strategy is the enemy's and 
+and the enemy's the fighting the Way of the warrior to move the enemy's the enemy's the enemy's the enemy's the enemy's the enemy's the 
+strongly and the enemy's many. 
+
+
+
+To Cut and there in the fiften in the fiver the Way of strategy is the enemy's in the 
+enemy, and strategy. 
+
+The spirition the spirit is the beness to cutter to win this is the strategy. The compled and the enemy and the enemy's the strategy. 
+
+
+
+To Cutting to the enemy's the enemy and the enemy as the Way of strategy, and the 
+eneming, and the enemy of strategy and the enemy's the enemy and the enemy's of the 
+Warfoment to cutting the enemy's spirit, and the Way of the warrior, and the enemy'st the mastery the enemy's the enemy's the way of the Way of the warrior, and there in the enemy's head and the enemy's strategy the enemy's the strategy. 
+
+
+
+The spirition 
+
+
+
+To Cutrategy, and the enemy and the enemy's the enemy's with there in 
+and the long sword the enemy's the enemy's and the enemy's a masterition the enemy's to 
+defterstances the enemy's to there and there is the first this is the enemy and the way of strategy. 
+
+Then the compler to move the stretching there is the Way of the principles of strategy the long sword. 
+
+When the leartert the enemy's the spirit of the enemy's and the enemy's of the sword. 
+
+
+
+The spirition the spirit in the enemy's of the spirit is strategy is the enemy's strategy. 
+
+In large the first the fiftert the warrior to the long sword the enemy's to learned to the enemy is strategy, and there and the enemy's sword. 
+
+In large-scale strategy, and the swords and the enemy's the strategy. 
+
+
+
+To Cutting the enemy's swords the enemy's of the spirit be used to meanst the same to 
+there and the enemy's and strategy the enemy's the strategy, and the enemy's to the have used to the enemy to the sword. 
+
+
+
+To Hold combat to the enemy's spirit in the comp<|eot|>
+2025-05-24 14:28:56 - Generation stats - Model calls: 16384, Time: 1155.60s, Speed: 14.18 calls/s
+2025-05-24 14:32:32 - User selected option: 1
+2025-05-24 14:32:34 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_083834
+2025-05-24 14:32:38 - Successfully loaded model from: model_20250524_083844_epoch_00015.pt
+2025-05-24 14:32:38 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 14:32:51 - User selected option: 2
+2025-05-24 14:33:33 - User selected option: 4
+2025-05-24 14:33:36 - Set tokens to: 1024
+2025-05-24 14:33:38 - User selected option: 2
+2025-05-24 14:33:41 - Input text:                                                                                        Go Rin No S
+2025-05-24 14:34:52 - Generated: <|sot|>                                                                                       Go Rin No Sind  a ware isn . Thould.  ands thould. Think is as the sally with as you appearch to becoming and strategy. 
+
+
+
+To becomes Cutting the enemy the first be able becomes 
+pereat with a strategy is 
+the 
+swords to wing to wingly recome cannot becomen sword the enemy is strategy is the same the enemy and the first schools of 
+the wate attacking of the enemy is the same to wien the enemy to crush head beconder the same becomes 
+strategy is the same to warry to the enemy is to the enemy to attack the 
+spirit the void. 
+
+
+
+The Recond in the Four Of the enemy are the Long swords and the enemy's long swords the enemy's long sword. 
+
+
+
+The spirition 
+
+
+
+The Way of the samurai way of the spirited the bor the enemy's strong out the 
+enemy 
+the 
+same the enemy's sword the enemy with a with the enemy as attack of all the 
+and the 
+swords and the enemy is 
+the enemy as the samurai with the enemy. 
+
+
+
+The samurai, the enemy is the enemy's and the enemy's attack, and 
+the enemy with a 
+there is to was to 
+the enemy is the Way of strategy. 
+
+
+
+The Way of the samuraia to the 
+spirit, and becoments of the samurai and the way 
+
+bey 
+the Warrior to the enemy's attacking the same the enemy is the samurai, the 
+spirit is 
+slash the comm at the first the enemy as the 
+the enemy, and they are the enemy the 
+seakning the enemy is the 
+the enemy is to the enemy is attitudes to strategy. 
+
+The spirit, and the first the enemy attack and they is attacting. 
+
+
+
+The Firect this the Ways of the enemy's of the samurai way, the enemy and the 
+enemy 
+the fight sword the 
+situation. Withough and the enemy's spirit be up the enemy the strongly. 
+
+
+
+To Become the sword is to the enemy is the samurai, the enemy's the enemy is attack 
+the 
+the enemy is the samurai, the enemy consider the same the enemy is attacking of the 
+samurai, to the samurai as the void. The spirit is the enemy is to win with the 
+the enemy. The enemy's and this is the same to warry the enemy's attace with the 
+spirit. 
+
+
+
+The First the Long Swords and the enemy as the book of the s<|eot|>
+2025-05-24 14:34:52 - Generation stats - Model calls: 1024, Time: 70.67s, Speed: 14.49 calls/s
+2025-05-24 14:45:31 - User selected option: 1
+2025-05-24 14:45:33 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_083834
+2025-05-24 14:45:38 - Successfully loaded model from: model_20250524_083844_epoch_00016.pt
+2025-05-24 14:45:38 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 14:45:59 - User selected option: 2
+2025-05-24 14:46:02 - Input text:                                                                                        Go Rin No S
+2025-05-24 14:47:12 - Generated: <|sot|>                                                                                       Go Rin No Sints. As "abild in ting that is things. The enemy whare is not the spirit in 
+the spirit of the Formally with the timing the Way of the enemy's long sword. This is that the spirit of the spirit of the sword is this. 
+
+
+
+To Cut, and the enemy into in the commans and think of the become timber, inter to 
+stretchings of the samurails of the enemy's long sword. 
+
+In the Way of the enemy's into reaching intenter, and this is the Way to the Way of strategy. 
+
+
+
+To Stand offerent with the spirit of the enemy and the enemy's spirit be used the Way of 
+the enemy's spirit of the enemy to reat to his seat think and some to the enemy in the same to reat things. 
+
+In single combat, this is the Way of the spirit be use of the tirtue of the enemy in the 
+Was hand smackly. 
+
+
+
+Desing on the enemy is "adoplated in fighting attitudes and the enemy in there is 
+not 
+the spirit of the enemy as "adtack. 
+
+In single combat, and the enemy in fighting the enemy in from to realise the enemy's 
+they 
+the comm school. He what the Way of strategy. 
+
+
+
+To Stab in Onere the Way of the enemy's long sword, the enemy's spactions are think is 
+the 
+book. 
+
+In the enemy is "Sword. These are contest the enemy's spirit incle combat, and 
+the 
+Walk Ryu fame and the enemy and the enemy and things in the enemy lives to 
+the enemy's sword in the enemy's and strongly. 
+
+In the common," 
+
+
+
+To Strategy, and the enemy into the school the enemy's spirit in this is the enemy's spirit in the end the enemy's spirit, and your reaching the enemy's to wings, the enemy's spirit in the enemy's long sword, this spirit with the fore and this "spirit of strategy. This is the defe school and that is the Way of the samurai for the enemy's and the world. 
+
+
+
+To Single combat the samurai, this spirit is the way of strategy. This is your 
+body. 
+
+
+
+Sp, assonden the Way, things, the enemy to principle the spirit be use of the 
+enemy. 
+
+
+
+The Foreman in the enemy, and the enemy in the spirit of the body into ryum in 
+with 
+things. There is not the spirit is the Way of strate<|eot|>
+2025-05-24 14:47:12 - Generation stats - Model calls: 1024, Time: 69.98s, Speed: 14.63 calls/s
+2025-05-24 15:10:25 - User selected option: 1
+2025-05-24 15:10:27 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_083834
+2025-05-24 15:10:31 - Successfully loaded model from: model_20250524_083844_epoch_00018.pt
+2025-05-24 15:10:31 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 15:10:50 - User selected option: 2
+2025-05-24 15:10:54 - Input text:                                                                                        Go Rin No S
+2025-05-24 15:12:05 - Generated: <|sot|>                                                                                       Go Rin No Sints. As "abilts ap. 
+apanry, in ther, and strategy. 
+
+The spirit in the 
+phinking in the ese that your have appreciate the spear and his took 
+sword things in the long sword in the long sword in Zemans the body, and strongly with the syllang in the true Way of the trinciple to not swords. 
+
+In large-scale strategy, when your spirit is the enemies'"*
+The spirit is a change of 
+byous are halberent in the same timing of the bame and and 
+suts, and the reach the commander the enemy. 
+
+The sword. The spirit in the long sword. 
+
+I where is the Ware warring attitudes instared the cut and always of Bused. 
+
+
+
+The Water methods of the Way of the long sword in large-scale is a stand, you must 
+the 
+strongly will be able to traditions. 
+
+The Waten 
+
+
+
+The Way of the Fire your spirit in we are for in the swords in the same to because your 
+boraloce the enemy incling to the samurai conscalled by "long sword in the Way of the 
+Way of the samurails, the long sword in the abilities of voray, the especiation of the pasious, and cut the five and 
+sword clasher the enemy as postraching. The true Way of strategy, but the sword-fencing the spirit of the comple and the Many 
+not means, and now sword and the oade, and the lorders the enemies with arm and the enemy, and you 
+the sword in the Way, the sword, and the eses, but achin, and "lefter doongly in the warrior the timing is the samurai of the way of the warrior of you will becoment the contestant with a short the enemy's spears in 
+the province, the true Way of the true Way of the long swords and the 
+enemy, and the long sword in the Way of the warrior, and left of 
+then the enemy will, well both you will not cannot be uses, and "learning and strategy is the samurails, thinking, and not "cut negy well not applies of this with long sword of the Way of the warrior of the warrior of the enemy as a like and when he was and strongly and the chance of the long sword, you must they are hands of the long sword the enemy at the swords and halberds, and small men in the enemy, and will not<|eot|>
+2025-05-24 15:12:05 - Generation stats - Model calls: 1024, Time: 70.97s, Speed: 14.43 calls/s
+2025-05-24 15:20:25 - User selected option: 2
+2025-05-24 15:20:31 - Input text:                                                                                  The Book of Five 
+2025-05-24 15:21:42 - Generated: <|sot|>                                                                                 The Book of Five . ase.. That ing sword. 
+lots. 
+kers ther intorting that is to move the enemy. 
+
+This is in the spirit of the long swords. 
+
+You will becoments of strategy is advantagents in arto the long sword" Thuse the enemy. 
+
+The sword in the sword is the enemy attack well not becauses. 
+
+When you should be not because the same at had with a was and attacking the ching attack and this is the Way of the spirit is advantagents fencing the sword in the contenter, things of the long sword. 
+
+Some sword in the same advanger. You must sword fencing the enemy and the enemy. 
+
+To training the Tokugawhen Having attack well the conterning the enemy incluels, things. The long sword and shout as the samuraiâ and the concepter, welling sword well. 
+
+Pesongthing to kent to attitude- and regult 
+enement and attack of the sword and your long sword. 
+
+From the enemy's of the long sword is not the true Way of the samurai Have are attack of 
+the commander the samurai 
+kno Halas, but and the long sword in their becoment and and the enemy, and pilling the true Way, but will because of the his men had win by the "Way of the cut, your spirit in as the Water long sword and cutting attacking attack, your spirit. 
+
+
+
+The void: The strategy: The true Way of the sword in the Shout strain in the way of the 
+enemy, who distue of the long sword. 
+
+From the enemy as the true Way of the long sword in the enemies of the spirit of 
+unsuarched as to attacking the same to apprecing as a perfers of at his to attacking advantage", 
+Warrior's all means of the sword and spearchan, an everydated in strategy. 
+
+Sterts and the enemies with so a sword in the changed the cut at his becausu kn the 
+sword the same and attacking of the sword. He reman power and live attack it is differs and by diffiver book. 
+
+The eses, clase way, the enemy. The spirit in the sword the true Way of the long swords. Shohout, and lacque the companity, when your spirit in the enemy's points, and some the spirit of the Way of the long sword in 1615tegy your spill will no Sent the struction i<|eot|>
+2025-05-24 15:21:42 - Generation stats - Model calls: 1024, Time: 71.25s, Speed: 14.37 calls/s
+2025-05-24 15:24:50 - User selected option: 1
+2025-05-24 15:24:54 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_083834
+2025-05-24 15:24:59 - Successfully loaded model from: model_20250524_083844_epoch_00019.pt
+2025-05-24 15:24:59 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 15:25:03 - User selected option: 2
+2025-05-24 15:25:05 - Input text:                                                                                  The Book of Five 
+2025-05-24 15:26:16 - Generated: <|sot|>                                                                                 The Book of Five . ase.. That ing sword. in the swords an the sword. The enemy dies. The sword. 
+
+The swords and hands, and sho do not of the true Way of the long sword in q64ais 
+mant to the start of weaks in 
+the sword in a studied is noten sword. It is is the first 
+cannot is difficult this weaks and unsage. The sword many come from the spearly. 
+
+In large-scale strategy, and the enemy's like and deation of Japan. The enemy understand 
+the pries of the Way of the sword in the enemy's aresed the enemy of a 
+you will spirit of dook attitude. 
+
+
+
+Den The Youn as the halbertaing the enemy's spirit. You must ability and the enemy's 
+dison of sword, and abilitien to 
+whenly changestant of his faming the long sword into as a few to cutting the enemy's spirit, and the lord sword and the technique. 
+
+When I hand the Way of strategy is the stant of the swords and hands, and there in the sword in the shout school. 
+
+Perocuther the enemy's in the tradition as a littles of the long sword. The lord appreciated in the gattle of the swords and inter. 
+The Way of the proughts the enemies of strategy of the sword it to cutting the long sword your rhy 
+not be should now swords, Detain the Way of strategy. You must down and the sword of When you hand the man was as a way of the lord of Japan, some for the enemy's and should of "enemy understand the spirit of dies to be attacking the Way of strategy. 
+
+There are there in a little to details of caller the enemy and the teached the sword. 
+you cannot cannot became the Way of the But the 
+swordsmally recover, you must swords and the sword in as necently schools 
+and not legs â allow of Bust approrms involved the swords. 
+appeciate of Japance opposed. When the swords this is weak and strategy. It is is to any to been and large-scale strategy into as the sword the conting down as the fight of the Way of strategy. 
+
+"Some schools 
+
+
+
+In the Wood of Japangeth making a master, there is a sword. The spirit is battle 
+and 
+fixlowing sword. The enemy of the spirit of their as the Way to fighting and Kade o<|eot|>
+2025-05-24 15:26:16 - Generation stats - Model calls: 1024, Time: 70.35s, Speed: 14.56 calls/s
+2025-05-24 15:59:22 - User selected option: 1
+2025-05-24 15:59:23 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_083834
+2025-05-24 15:59:28 - Successfully loaded model from: model_20250524_083844_epoch_00021.pt
+2025-05-24 15:59:28 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 8}
+2025-05-24 15:59:30 - User selected option: 2
+2025-05-24 15:59:32 - Input text:                                                                                  The Book of Five 
+2025-05-24 16:00:27 - Generated: <|sot|>                                                                                 The Book of Five  at ngr  an myngr the e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e <|eot|>
+2025-05-24 16:00:27 - Generation stats - Model calls: 1024, Time: 54.79s, Speed: 18.69 calls/s
+2025-05-25 04:32:51 - User selected option: 6
+2025-05-25 04:32:51 - 
+Final Generation Statistics:
+2025-05-25 04:32:51 - Total model calls: 23528
+2025-05-25 04:32:51 - Total generation time: 1635.28s
+2025-05-25 04:32:51 - Average time per model call: 69.50ms
+2025-05-25 04:32:51 - Average model call speed: 14.39 calls/second
+2025-05-25 04:32:51 - === Ending session ===

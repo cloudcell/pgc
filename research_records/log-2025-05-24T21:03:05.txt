@@ -1,0 +1,381 @@
+2025-05-24 21:03:05 - === Starting new text generation session ===
+2025-05-24 21:03:09 - User selected option: 1
+2025-05-24 21:03:11 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_201714
+2025-05-24 21:03:15 - Successfully loaded model from: model_20250524_201726_epoch_00001.pt
+2025-05-24 21:03:15 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-24 21:04:11 - User selected option: 3
+2025-05-24 21:04:11 - Generating from empty input
+2025-05-24 21:04:31 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                th the the the the the the the the the the t the the the the t the the t t t t t t t t the the the t t t t t t t t the the t the the the t the t t the t the the the t the the the t the the the t the t<|eot|>
+2025-05-24 21:04:31 - Generation stats - Model calls: 100, Time: 20.59s, Speed: 4.86 calls/s
+2025-05-24 21:20:39 - User selected option: 1
+2025-05-24 21:20:40 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_201714
+2025-05-24 21:20:42 - Successfully loaded model from: model_20250524_201726_epoch_00002.pt
+2025-05-24 21:20:42 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-24 21:20:45 - User selected option: 3
+2025-05-24 21:20:45 - Generating from empty input
+2025-05-24 21:20:57 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ing the  the theg the  the theg the  the the the the the the the the the the the the the the thes the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-24 21:20:57 - Generation stats - Model calls: 100, Time: 11.94s, Speed: 8.37 calls/s
+2025-05-24 21:25:29 - User selected option: 1
+2025-05-24 21:25:30 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_201714
+2025-05-24 21:25:34 - Successfully loaded model from: model_20250524_201726_epoch_00002.pt
+2025-05-24 21:25:34 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-24 21:25:40 - User selected option: 2
+2025-05-24 21:25:52 - Input text:                                                                            Miyamoto Musashi was a 
+2025-05-24 21:26:06 - Generated: <|sot|>                                                                           Miyamoto Musashi was a  the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the<|eot|>
+2025-05-24 21:26:06 - Generation stats - Model calls: 100, Time: 13.53s, Speed: 7.39 calls/s
+2025-05-24 22:36:13 - User selected option: 1
+2025-05-24 22:36:15 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_201714
+2025-05-24 22:36:19 - Successfully loaded model from: model_20250524_201726_epoch_00008.pt
+2025-05-24 22:36:19 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-24 22:36:22 - User selected option: 2
+2025-05-24 22:36:24 - Input text:                                                                            Miyamoto Musashi was a 
+2025-05-24 22:36:29 - Generated: <|sot|>                                                                           Miyamoto Musashi was a and  and ther in ther in the 
+the enemy in the Way of the enemy and the enemy of the Way of the enemy and the enemy of the Way of the enemy and the enemy of the same the enemy's of the Way of the enem<|eot|>
+2025-05-24 22:36:29 - Generation stats - Model calls: 100, Time: 5.16s, Speed: 19.39 calls/s
+2025-05-24 22:36:51 - User selected option: 3
+2025-05-24 22:36:51 - Generating from empty input
+2025-05-24 22:36:56 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ise  aver  in  aver  in  aver  in  and ther in ther in the 
+aptings and the enemy in the Way of the enemy in the 
+the enemy in the Way of the enemy and the enemy of the spirit of the to the enemy of t<|eot|>
+2025-05-24 22:36:56 - Generation stats - Model calls: 100, Time: 4.97s, Speed: 20.11 calls/s
+2025-05-24 23:22:17 - User selected option: 1
+2025-05-24 23:22:18 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_201714
+2025-05-24 23:22:21 - Successfully loaded model from: model_20250524_201726_epoch_00013.pt
+2025-05-24 23:22:21 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-24 23:22:24 - User selected option: 3
+2025-05-24 23:22:24 - Generating from empty input
+2025-05-24 23:22:29 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                iseds . 
+
+ 
+ap ting . Then your  it inur they in thes around in the enemy attacking and legs 
+hand 
+strateging the for the ware of the Way, and the Way of strategy and halbertions. 
+
+
+
+Their by the Wa<|eot|>
+2025-05-24 23:22:29 - Generation stats - Model calls: 100, Time: 5.27s, Speed: 18.98 calls/s
+2025-05-24 23:58:47 - User selected option: 1
+2025-05-24 23:58:48 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_201714
+2025-05-24 23:58:51 - Successfully loaded model from: model_20250524_201726_epoch_00017.pt
+2025-05-24 23:58:51 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-24 23:58:54 - User selected option: 3
+2025-05-24 23:58:54 - Generating from empty input
+2025-05-24 23:59:00 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                rords.. . .". ."e sears.s eden. swords. 
+
+in as orces the enemy's long sword-fed in the longly. 
+
+
+
+study the countroly", 
+
+
+
+To Prese of strategy in the Way of strategy there is the cut 
+you with you<|eot|>
+2025-05-24 23:59:00 - Generation stats - Model calls: 100, Time: 5.35s, Speed: 18.68 calls/s
+2025-05-25 01:19:57 - User selected option: 1
+2025-05-25 01:19:58 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_201714
+2025-05-25 01:20:01 - Successfully loaded model from: model_20250524_201726_epoch_00025.pt
+2025-05-25 01:20:01 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-25 01:20:05 - User selected option: 3
+2025-05-25 01:20:05 - Generating from empty input
+2025-05-25 01:20:11 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                alind.. Thate . There thate . beelmes . Then your  your long sword in this. 
+
+The ishing, to pollonently gazilese the paining the useds the to wall not on know qut to 
+down according to their piso Of <|eot|>
+2025-05-25 01:20:11 - Generation stats - Model calls: 100, Time: 6.26s, Speed: 15.98 calls/s
+2025-05-25 01:27:46 - User selected option: 4
+2025-05-25 01:27:48 - Set tokens to: 1024
+2025-05-25 01:27:50 - User selected option: 2
+2025-05-25 01:28:00 - Input text:                                                                          Miyamoto Musashi was the 
+2025-05-25 01:28:55 - Generated: <|sot|>                                                                         Miyamoto Musashi was the tey thate the teal. Thath 
+even on the 
+mile his 
+seven and 
+theired in the enemy your eyes. Feild in the seall in the Words, and that his deeishery quickly, and win by nne and then the enemy with they have the sword. It is dist they down well to periouse 
+autitude. These withon, without as the enemy as titude and halbert this 
+body of strategy is the true Way. 
+But is to strategy it his place in the true Which conting At the should become and lessains are the enemy in instance of the Way of 
+this docate with perhated. A milition and governately because the enemy's long sword" then the long of sword. It is the hosome to the enemy down at the same the place 
+of the long sword is 
+reson the say of strategy as postring the long sword in the samurai follow up. The true of the long sword in there is a like him wain. There is no not", and conth month mind of this words" strength, there in the 
+spirit of their the enami, for the above to the enemy. The enemy. 
+
+Stune many the true Way, the contunities. 
+
+In large-scale strategy. 
+
+The chalite of strength this beeple is an it is instori of 
+that it harder of the leart of the sword gentle by position of the enemy. 
+
+The can until into recondolding the longthers", in the confurter the spirit of an deing 
+sword. The practise the enemy also as pended by 
+and men to at the name. There were meaning 
+the powence, and the enemy and cut the enemy. The 
+sound come a good enemy also as the 
+enemy bestains, and the assence of the 
+poles the natules of the true Way of strategy is the true Way. 
+
+It is the anconne of the enemy man spirit is not extra-long 
+
+Munused the true Way of the Must havergers and then and plalling the long sword. It is difficult not spirit is no move the with the prink as it is not the enemy are rivele. You will in the commoned with the enemy, with the long sword gnll be grance on the spirit of strategy 
+
+This is difficult to strategion of the samurai, it in one who win by postructive 
+behally with the enemy in the same to the enemy's down and mill be able to b<|eot|>
+2025-05-25 01:28:55 - Generation stats - Model calls: 1024, Time: 55.03s, Speed: 18.61 calls/s
+2025-05-25 02:19:47 - User selected option: 1
+2025-05-25 02:19:48 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_201714
+2025-05-25 02:19:51 - Successfully loaded model from: model_20250524_201726_epoch_00031.pt
+2025-05-25 02:19:51 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-25 02:20:38 - User selected option: 3
+2025-05-25 02:20:38 - Generating from empty input
+2025-05-25 02:21:31 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                aticns.  cnours. a sith . ." 
+appeen tell . ." 
+appeally. 
+
+This day. 
+
+I sea place the maans, the short army your his enemy while that the blades own as you 
+is great with a feeling the timing of his shout. You must to train were there are many 
+thing the 
+resours the enemy receated by the beat out. If ward. Then, Do not hand. It is feels have 
+feelding dissing the showided the abover of caing 
+shido. In Sintem into sword by the Way of hearts to when and defeater this time. This up not. 
+
+There are arefures 
+
+
+
+The five use thing the usenty-one your sword in the enemy's fours. 
+
+
+
+The thrustion you will can had the Way of the long sword. 
+
+
+
+In myu actican the 
+weapon 
+a shorts and under the Way of the true Way of the meraod cland. I warrior. The Way of the Warrior. 
+
+
+
+The Ninowiels: Stren parting up the long swords in the ands,i warrior the virts to 
+the fire. To strategy 
+
+
+
+I  We short sword 
+
+Musashi was a depte of his enemy use of were for then the look of the morate the 
+strengless. As your feath the intention of jeise, and shout in the enemy, defling of hitting down this. 
+
+Whenemy the Jai No Shit Do the gate time Attack and that from the beginnered and 
+miyands, one 
+facens, and to faid, Man's are word may junderning swords in shat the timing is the shorit of the principles of strategy inthinge any sword. 
+
+
+
+The Advantage for with the Way of then cutting attitudes arisid to the Japan means and 
+this is the truating a littles spirit. 
+
+
+
+To Secre formal or this do nine and decing the many encut place. It is eqush 
+ruisters. 
+
+
+
+That is the Way of the merchant. They ha knowing the enemy with there is do not can that Is relity, may of the tru" Was foot, and the Kamataly this your eyed, you will see become to the Warrior the spirit. When your levides cannery of things interially in the fight chachi resoly retwe descently unrecide "peristed in strategy. You must to recome strongly and lighting and the lorge who rinle of you are 
+to describe, and as becomes used with oeep to frinks only 
+moun Musashi advuleg<|eot|>
+2025-05-25 02:21:31 - Generation stats - Model calls: 1024, Time: 53.58s, Speed: 19.11 calls/s
+2025-05-25 02:44:42 - User selected option: 1
+2025-05-25 02:44:44 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_201714
+2025-05-25 02:44:47 - Successfully loaded model from: model_20250524_201726_epoch_00033.pt
+2025-05-25 02:44:47 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-25 02:44:49 - User selected option: 3
+2025-05-25 02:44:49 - Generating from empty input
+2025-05-25 02:45:45 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                atickined . ." 
+appeen. times . 
+
+with the spirit belies. 
+
+anory. 
+
+Leyting "Courses are the enemy attackly. You can the training in any of the could 
+Musashi was the five an fighting do no magho, the lang of the cons "Souterions cut, fillen you must rese of the never thire is the brearines on he plan the enemy first he maists become as the Want other, but allotting the 
+enemy, and training woon some to the lidd onether this. 
+
+It you can all no swords 
+
+The three is no "it exaws natured with the enemy, and slow 
+and the enemy are decision of the long swords as, swords, detually seeully skilly, and cut 
+fom of defeated somes of with as falloys the Way of the warrior. There is no whe Gire 
+and So Rimio, bot Kuml in the spirit lifer the bours. Againstant the long sword in the enemy. When or is to 
+enemy's are the enemy the benefit of the differed and broourly mowerion 
+straight known pracking of the Japanent to wiel or companions world. 
+
+In large-stion of the fiming the same can on the bow incied forerning the enemy's cut the as the enemy to on single Short swickly different from the 
+work Wand Rided, kojiro with small wind small the long him attack, and to cut the 
+enemy's spiries, but first lover the diling the 
+his method. 
+
+If you are for as a the man the enemy as the samurai, and fally and 
+foremaning 
+inter, and we dread into a sword as had things Way, strategy with chates. To 
+wistord there is the samesioued to real to Musashi was ability. 
+
+
+
+To Hourself, and the Warrior to the book of the Void: Said to research for tey with the 
+beha come of strategy is life, 
+when aissasted with the enemy's sword and can Musashi strengthinfling any man cut his and the strategy, cattle impand cutting is an depermy, cannori as the defeatalling with the long sith the beconawath a short was aressing as a timing a fistracticuls in strategy, but nuraped. 
+
+In singly, but stuntry is imner body. 
+
+
+
+The Way of the provincences of the school, by dislikals in sind befored you will no 
+enjud with chect figuri the woresnilly 
+decid<|eot|>
+2025-05-25 02:45:45 - Generation stats - Model calls: 1024, Time: 56.72s, Speed: 18.05 calls/s
+2025-05-25 02:50:32 - User selected option: 2
+2025-05-25 02:50:40 - Input text:                                                                                 Musashi's name was
+2025-05-25 02:51:35 - Generated: <|sot|>                                                                                Musashi's name was.  curces . 
+
+strongly. The enemy attacks, as enchant thinkings he passed in Sometion even againg 
+techning agaiking upons. The long strategy the 
+enemying succently explained and the deelt of all upplaving or Righor, and spirit of the enemy's dire, when you knone body and without bringing his to the sampery the spirit of defficulled in once, the bod orition is a like sword in the enemy. 
+
+To heave should tread resent 
+a ushing and can used with a througes. In be did the Muraphan train he have schools. 
+
+Strength, and the Long Sword in a the "Geared that is disonation, when when and technines of at, their technique, but study the cutting the depths distu of the 
+weare the attitude. If you try to appla Way hittitudes to clight of nor lishinat a titude with the long sword wine, cut have many his the enemy's spirit, a 
+pastere is the arts of his trying edad operently is inclinatinator, as musashi's cut your rightering man with a lister on use well energe. If other schools and the hosome the way, the enemy and hanging 
+and strong and breap the enemy, buts lembil things in attack, Mor must without and the enem many his to attack and with the enemy, and a rais of or grout with a different of that the renefing the forem of the eatsided is of cut". 
+Musashi's life will on muses of the principle for extra-nt understance will not becomes spirit. You will 
+someswa of the listery, and you will so jut the Way of strategy, people and then how cannot injurriving the enemy downg the long sword, some master the such and place, and with a stint. 
+
+
+
+The Name musashi's not preconside in men In the strant to chise is the enemy is 
+the he not second incluen. 
+
+When to make to lesign" The man is use of strongly. 
+
+
+
+The true vorth, again and spirit 
+of training swordsmed in the situation and be denderto One saver, and deelt, appling your eyed the 
+enemd the Grear of consing his timing in Garpenters. The Way of the depitaoki ever body, and someth not ways, In he hanged by the core of how the warrior become, and dilings use dictory, but<|eot|>
+2025-05-25 02:51:35 - Generation stats - Model calls: 1024, Time: 55.31s, Speed: 18.51 calls/s
+2025-05-25 02:55:04 - User selected option: 2
+2025-05-25 02:55:11 - Input text:                                                                        The way of the strategy is 
+2025-05-25 02:56:11 - Generated: <|sot|>                                                                       The way of the strategy is a 
+must s. 
+ding his always nature, and 
+him surded mastured in 
+spear surper the sword and yet the enemy is the dirst are is has own as "hold sword was study as marrow stick to know how cut, people, and if your arts so Riming 
+sword followded the conto the benemies with a figunter, even arrection for 
+everyday life, 
+the esesse, as not becomes life defends arot think of Seemaned wea. 
+
+The made and do not on and to k have aparare of the spirit of the Way of strategy, when you must these wasrior slashing sword, brassing they possibly 
+place or the bone of Choo other is a ford in large-scale priets of taking and from a can with sontancing for moverior is the some to the spirit to the Warrior the enemy and accome rainto. 
+
+In the enemy's 
+
+
+
+The troourde Wore 
+
+
+
+The Thremaias, there is lilited to unale areass. Firstance so the enemy, conth, 
+spirit, 
+and the first 
+cut appreciats and this comple bad Musashi life as a relefise the 
+shore. Go Rin our the enemy are combat 
+making meaning with a fine of Zefing the spirit is not allowing and so obsenes, but when he was a master. 
+
+
+
+The Five commos: To learn Study deeparilg. If you think rent mand beench or to mind to 
+souts are uso. 
+
+
+
+2'' The practise 
+
+The life Attitudes are carrying, sword. You must trainalling if your 
+
+an it is of not uses and from no making at with and win. do noter that the enemy difficult and a difference school and descumlately printually the deperior of the enemy with your of other schools 
+warrie in rechniques and pririt, attitudes way the 
+slown, there is no normal. 
+
+When you have man maning in thingating with so be used to tense your spirit, and and large speay. Musashi strategy topk still in the sword fencing his houst mast over foreasions. 
+
+The Way of the warrior is to 
+think who delishi schools of a shorter the tru" 
+
+The magy along bor "word and what the are also held trying 
+and the enemns and ared to day, and train 
+diffections gred the Warrior over attitude in the long sword. "Munder, and event of the Lord' Wershing in 
+
+
+
+To de<|eot|>
+2025-05-25 02:56:11 - Generation stats - Model calls: 1024, Time: 59.43s, Speed: 17.23 calls/s
+2025-05-25 03:22:29 - User selected option: 1
+2025-05-25 03:22:30 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250524_201714
+2025-05-25 03:22:34 - Successfully loaded model from: model_20250524_201726_epoch_00037.pt
+2025-05-25 03:22:34 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-25 03:22:36 - User selected option: 3
+2025-05-25 03:22:36 - Generating from empty input
+2025-05-25 03:23:30 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                atteen y.  maturences. at the 
+enemy, are sells. 
+useds the 
+eneract 
+the samural carried the enemy's spirit can catance in the enemy's strategy. 
+
+
+
+The means hands of the ligentrol. The same timing 
+the held intend or the To cut 
+of the enemy's body or small, in the enemy are the sparility. 
+
+In the enemy's attack, and your spirit. The spirit. 
+
+The spear of the fings was small the wildise of the study. If used hand. Though calm the long sword to place with the enemy, to the first seich the enemy's spirit is to cut with the enemy. 
+
+
+
+To study as of strategy is enemy. You must have the enemy you can by parries and leaves, clance, but even wside pread and the Way of the reasher. This devising and becom â shall the Way of the prove by house, folling attantags, oar spirit, and he nenemy, the seleran and, you must train the long swordable, so. If you at the five 
+the arts and this well. 
+
+
+
+The Way of the "Cood monthings is the enemy will be case thinking the Way of the 
+middinled to such the enemy technique. The mastence of consive pread should triest. 
+
+The commandeferation of sword. But must before wordsmated in the way of strongly with other floar body and some to using to the Way and moved to be intent or the First sees clow must sword. It must dive must beade to be you are this. 
+
+When you attack where two upplies to lary one encive man. I dislikes. In large 
+Shorter, "The Warrior Walk strategy, and the strategy, the spirit at the spirit of not crush horselfed in the Water body. The vartueting down custury the enemy's long sword 
+and the enemy from the for even though you priediness that you will not gettler abov of you wall now hell in your teacher. Your hand, besses without, but been in ordection of the moshi's nothing the enemy, the Way of thus in defore of the sectable,s of strategy in the battle way 
+the spirityons of the Way of strategy. 
+
+The first attack strategy is bentred to this down out follow that it maint for 
+prush the bad dest use the has weaponr or the Way rew explain the place, those in pe<|eot|>
+2025-05-25 03:23:30 - Generation stats - Model calls: 1024, Time: 53.94s, Speed: 18.98 calls/s
+2025-05-25 05:20:22 - User selected option: 6
+2025-05-25 05:20:22 - 
+Final Generation Statistics:
+2025-05-25 05:20:22 - Total model calls: 6944
+2025-05-25 05:20:22 - Total generation time: 407.07s
+2025-05-25 05:20:22 - Average time per model call: 58.62ms
+2025-05-25 05:20:22 - Average model call speed: 17.06 calls/second
+2025-05-25 05:20:22 - === Ending session ===

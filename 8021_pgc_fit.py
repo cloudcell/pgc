@@ -5,6 +5,8 @@
 INIT_SCHEME_STATE_TRANSFORM = 'b'  # Change to 'b' for identity initialization
 INIT_SCHEME_ADDRESS_TRANSFORM = 'b'  # Change to 'b' for zero initialization
 
+PATHS_TO_SHOW_IN_STATS = 128
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -834,7 +836,7 @@ def analyze_brain_stats(model, epoch, stats_dir, phase='train', global_stats_agg
             block_usage_count[coords] += 1
     
     # Get the top 64 most used blocks
-    top_blocks = heapq.nlargest(64, block_usage_count.items(), key=lambda x: x[1])
+    top_blocks = heapq.nlargest(PATHS_TO_SHOW_IN_STATS, block_usage_count.items(), key=lambda x: x[1])
     
     # Print summary to console
     logger.info(f"Brain usage statistics for epoch {epoch}:")
@@ -861,7 +863,7 @@ def analyze_brain_stats(model, epoch, stats_dir, phase='train', global_stats_agg
         pathway_counts[pathway] = max(counter_count, labels_count)
     
     # Get the top 64 most common pathways
-    top_pathways = heapq.nlargest(64, pathway_counts.items(), key=lambda x: x[1])
+    top_pathways = heapq.nlargest(PATHS_TO_SHOW_IN_STATS, pathway_counts.items(), key=lambda x: x[1])
     
     # Prepare stats dictionary
     stats = {

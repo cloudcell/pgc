@@ -1,6 +1,9 @@
 # Design: Alexander Bikeyev
 # Date: 2025-04-20 
 
+# Initialization scheme: 'a' = current, 'b' = identity for embeddings & processor blocks
+INIT_SCHEME = 'b'  # Change to 'b' for identity initialization
+
 
 import torch
 import torch.nn as nn
@@ -227,6 +230,11 @@ class SelfOrganizingBrain(nn.Module):
 
         # Initial embedding of input
         self.embedding = nn.Linear(input_size, embedding_size)
+        if INIT_SCHEME == 'b' and input_size == embedding_size:
+            with torch.no_grad():
+                self.embedding.weight.copy_(torch.eye(embedding_size))
+                if self.embedding.bias is not None:
+                    self.embedding.bias.zero_()
         
         # Initialize brain blocks
         blocks_shape = tuple([brain_size] * address_dim)
@@ -250,6 +258,18 @@ class SelfOrganizingBrain(nn.Module):
                     nn.Linear(embedding_size, address_dim * brain_size)
                 )
             })
+            if INIT_SCHEME == 'b':
+                # Set state_transform Linear layers to identity weights, zero bias
+                st_layers = [m for m in block['state_transform'] if isinstance(m, nn.Linear)]
+                for l in st_layers:
+                    if l.in_features == l.out_features:
+                        with torch.no_grad():
+                            l.weight.copy_(torch.eye(l.in_features))
+                            if l.bias is not None:
+                                l.bias.zero_()
+                    else:
+                        # fallback: leave as is if not square
+                        pass
             self.brain_blocks.append(block)
         
         # Output layer

@@ -54,7 +54,7 @@ parser.add_argument('--train_loss_stop', type=float, default=0.001, required=Fal
 parser.add_argument('--train_incorrect_stop', type=int, default=0, required=False, help='Training incorrect predictions stopping criteria')
 parser.add_argument('--epochs_stop', type=int, default=1024, required=False, help='Epochs stopping criteria')
 parser.add_argument('--mode', type=str, default='fit', required=False, help='Mode: fit or jam')
-parser.add_argument('--input_size', type=int, default=128, required=False, help='Input size')
+parser.add_argument('--input_size', type=int, default=784, required=False, help='Input size')
 parser.add_argument('--address_space_dim', type=int, default=3, required=False, help='Address space dimension')
 parser.add_argument('--address_space_size', type=int, default=5, required=False, help='Address space size per dimension')
 
@@ -100,11 +100,11 @@ NUM_EPOCHS = 40
 BATCH_SIZE = 64 * len(CUDA_DEVICES) * 4
 CHUNK_SIZE = 32 * 4 * 4  # Adjust based on GPU memory
 
-input_size = 784  # Flatten the 28x28 images
-embedding_size = 784 # 784  #512  # Size of the embedding space
+input_size = args.input_size  # if 784, this number came from flatten the 28x28 images
+embedding_size = args.embedding_size
 num_heads = 1
-address_space_dim = 3  # Dimensionality of the address space (configurable)
-address_space_size = 5 # 8 # 14 # 8 #6  # Size of each dimension in the address space
+address_space_dim = args.address_space_dim  # Dimensionality of the address space (configurable)
+address_space_size = args.address_space_size # Size of each dimension in the address space
 brain_size = address_space_size  # Size of each dimension in the brain grid
 num_jumps = args.num_jumps  # Number of steps through the brain, now overridable via --num_jumps
 
@@ -1291,8 +1291,8 @@ def text_to_binary(text, input_size=None):
     # Convert text to binary, padding with spaces if needed
     # Always pad on the left side of the input text
     if len(text) < pad_to_length:
-        # Left padding with spaces
-        text = ' ' * (pad_to_length - len(text)) + text
+        # Left padding with zero ascii
+        text = '\0' * (pad_to_length - len(text)) + text
     elif len(text) > pad_to_length:
         # If text is too long, take the rightmost characters
         text = text[-pad_to_length:]

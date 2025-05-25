@@ -1,6 +1,6 @@
 # Cloudcell Ltd Presents...
 
-## PGC Version 0.1, codenamed "Dommekracht"
+## PGC Version 0.1, codename "Dommekracht"
 
 ![logo_00_transparent_v2](https://github.com/user-attachments/assets/c8c4837a-5fcd-41e9-a2c5-6fba2cfc16d0)
 

@@ -1,0 +1,272 @@
+2025-05-25 19:10:30 - === Starting new text generation session ===
+2025-05-25 19:10:54 - User selected option: 1
+2025-05-25 19:10:56 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 19:11:02 - Successfully loaded model from: model_20250525_082303_epoch_00027.pt
+2025-05-25 19:11:02 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 19:11:14 - User selected option: 4
+2025-05-25 19:11:31 - Set tokens to: 512
+2025-05-25 19:11:37 - User selected option: 3
+2025-05-25 19:11:37 - Generating from empty input
+2025-05-25 19:13:49 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eaed tall ap tite. 
+ a thainner. 
+ a hing  hist stared 
+ at in the 
+impon the Way of strategy to lear. 
+
+The fire upy. 
+
+The importance the enemy's spirit as usuall be get thance, your body. 
+
+
+
+The Way of strategy to make the enemy and make of the spirit of these are mastent 
+to 
+yotort 
+in the void. Then the hoon, you are in accorden treers to cut to day be seen an the wake a 
+andscilling can from time. 
+
+I diso the spirit. The enemy attain there is to kno in the say the pruer to took at the 
+ace, 
+
+
+
+The Bod the spirit of meaning the search this. It is world in dod your hearet 
+the 
+essumd. To recover the way of do in the World to be able to becomes cutting the 
+enemy, and to move thinking in Japan. The sword as all though the men us the cone best to the vice virought waid. You must uraing. Thuse are the enemy usilly. 
+
+
+wirriole Sword, the enemy, heartence of the through buils. 
+
+
+
+To Strategy to the proke who rine your feapon. The lord's that is the codh on in you try tometing the book sword and spirit, <|eot|>
+2025-05-25 19:13:49 - Generation stats - Model calls: 512, Time: 132.26s, Speed: 3.87 calls/s
+2025-05-25 19:14:21 - User selected option: 7
+2025-05-25 19:14:25 - Set number of jumps to: 1024
+2025-05-25 19:14:37 - User selected option: 3
+2025-05-25 19:14:37 - Generating from empty input
+2025-05-25 19:49:13 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eaed tall ap tite. 
+ a thainner. 
+ a hing  hist stictions. 
+in then in the 
+minting attaining to the hear the enemy. 
+
+
+
+'Thouse the codh yourself stre four in the prevelling attacking force and dire 
+on the Nitues dissione, and the void the enemy's rese the about to the same first theirstants to appoints, in be the deep your handing doct undired in the twelfth the lidd arect thereby the eyear attain to taking 
+whon your left and the or the with the chant the true Way. When your has infern their place with the long sword, you must training cut do not let you make but "To gin pasingle titer to cut 
+sureat in attacit, the stressoce the enemy's spirit of the shout the truen as all the is weapong 
+schoone cut even in the cosoumant in a few invored the agame the attackwawarablour. You must and wher beal 
+ensing the flour spirits and attitudes are light and the Japan arpen the enemy at awe on. 
+
+Mour, it is dojcern thuse him, and the at the seal, but then your and to re preeling 
+appermer. 
+
+When your means the swo<|eot|>
+2025-05-25 19:49:13 - Generation stats - Model calls: 512, Time: 2076.05s, Speed: 0.25 calls/s
+2025-05-25 21:01:45 - User selected option: 1
+2025-05-25 21:01:50 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 21:02:21 - Successfully loaded model from: model_20250525_082303_epoch_00032.pt
+2025-05-25 21:02:21 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 21:04:31 - User selected option: 1
+2025-05-25 21:04:33 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 21:04:38 - Successfully loaded model from: model_20250525_082303_epoch_00032.pt
+2025-05-25 21:04:38 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 21:33:02 - User selected option: 1
+2025-05-25 21:33:08 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 21:33:36 - Successfully loaded model from: model_20250525_082303_epoch_00033.pt
+2025-05-25 21:33:36 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 21:33:48 - User selected option: 2
+2025-05-25 21:33:56 - Input text:                                                                        The Way of the strategy is 
+2025-05-25 21:36:10 - Generated: <|sot|>                                                                       The Way of the strategy is to. in then.. Thin the way. 
+s. strategy. The reade. 
+bollow 
+eny and your the "eses of vithin, but when the bonk of techniqs. Their ford to this bothing to dis the Way of strategy, if your to realiable trast. 
+
+The Was can withough as a trinciple. 
+speanine becompanion, who have of Japable woods strike in does. This is you will no move the dlower attitude. you must trancese, and ge side training this. 
+
+
+
+The consciple betwing this is can be oneined the words on a walling hister, and 
+curing the enemy's life in the old swords, you can with the long sword in botres, and this were. This methods of this. 
+
+In living down 
+
+The Way are continu, to ment one are think of there are varrise and the art follow of 
+the long sword, and having and the fives. This is the Way of strategy an the 
+weapon. This is not become combat quickly of the armourii a prectived in the realised in think. There is dife. There is to learts of live. 
+
+^ou 
+ 
+
+If the Long Study to with the enemy throught in a gonfing the Way. 
+
+In must 
+be <|eot|>
+2025-05-25 21:36:10 - Generation stats - Model calls: 512, Time: 133.67s, Speed: 3.83 calls/s
+2025-05-25 21:43:00 - User selected option: Miyamoto Musashi was a samurai
+2025-05-25 21:43:00 - Invalid choice: Miyamoto Musashi was a samurai
+2025-05-25 21:43:02 - User selected option: 2
+2025-05-25 21:43:04 - Input text:                                                                     Miyamoto Musashi was a samurai
+2025-05-25 21:46:05 - Generated: <|sot|>                                                                    Miyamoto Musashi was a samurai 
+. 
+an in the worlded. it his his his hor his 
+din wider to the Samurai To train wo that that deveris of Budding sword. The way of the are obset to win. 
+
+
+
+''^ tring is th, becom of in the about the as a chly school ar "inge time to his hent. When you detaing. You must position the provition, there are valu, halbools, and sword. 
+
+The enemy, wictom in cut strong large, to musashineses of the Thes book. Things. This 
+
+
+
+S'' Thiin 
+spirity 
+
+
+
+The The Way must trancip does ar gart were enemies intention our, utrategy 
+words, 
+bunsuch things. When ying to the Way of the priness come school when there is sword. In other Schools 
+warring in sech the true Way of this appeart of cutitale. The 
+spiron 
+strategy. 
+
+Your lart the artisater under. 
+
+Thirtis way. 
+
+Then arms attitude of strategy. 
+
+Musashi is that becoment to it is the pad carrt, and with to the lomnt of your 
+inter to 
+strongly also hed strategy the weak in as ife 
+bean in the fack win swords. 
+
+
+
+This in the commandento not means, ands bold. You must<|eot|>
+2025-05-25 21:46:05 - Generation stats - Model calls: 512, Time: 181.23s, Speed: 2.83 calls/s
+2025-05-25 23:23:40 - User selected option: 1
+2025-05-25 23:23:41 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 23:24:12 - Successfully loaded model from: model_20250525_082303_epoch_00038.pt
+2025-05-25 23:24:12 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 23:24:21 - User selected option: 3
+2025-05-25 23:24:21 - Generating from empty input
+2025-05-25 23:27:28 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ear  bite..  his.  c thed on then out  a the 
+ if a water, 
+ there the 
+ 
+winning one the enemy to the hit feeple end the could be attless wealise they he had but 
+ese this spirit become to bet your 
+pressed feeling, remainsid. and make a carpent or hother'ssing the reacherat you can 
+supent is a shecially weapon for bealing of a sword the enemy, arm eas igant of 
+the oldastar of the spirit of yee to wiel a hear rhin the left or sidh his boot than in enemy. When the long sword. It is is record there wide to keye a fore with the enemies one the gaze the enemy's spirit. 
+
+In large-scale strategy, when the vorld is not meantsath the enemy. You must troors the bowned his face, and without not 
+make of the enemy's attack and halbarpent of the wecond sword, or, it is see attitudes. 
+
+The have of the Way of a live base fo areat. 
+
+Musashi was cut will combat with to appliers. it is not unders. The boldent is side for the 
+tha Bow school people chanese that the enemy seemed for for lon, and positing about is to whe h<|eot|>
+2025-05-25 23:27:28 - Generation stats - Model calls: 512, Time: 187.52s, Speed: 2.73 calls/s
+2025-05-25 23:32:53 - User selected option: The life and death are 
+2025-05-25 23:32:53 - Invalid choice: The life and death are 
+2025-05-25 23:32:58 - User selected option: 2
+2025-05-25 23:32:59 - Input text:                                                                            The life and death are 
+2025-05-25 23:36:09 - Generated: <|sot|>                                                                           The life and death are . in thee. 
+ a histers. and a poss. its 
+warrior. The enemy. 
+
+The Way is no one the simd to their, ke sech his work arts whice are must him 
+eyle. 
+
+
+
+The Wake attackie practice of his back strategy. 
+
+
+
+These are the Way of the 
+cut thaching seemly amo quick sevent of the Thanc or 
+the Way 
+toeting to sten this wis jegt the enemies's of the Tenling him. Him. 
+
+
+
+The Freat a deese the sou as then fewe the in spearme suntisticlesher sudie unders 
+attitude. The vire utrategy to cutting you 
+cut use Last sword utraight and tace and of the 
+end sword the powed to he accord, the line ancome was whice a pring for a dusomes and byou must ap if you maki army use for hevel, the traind the enemy. 
+
+
+
+The mane of the vise still diese is sime as thirt with one sword and supes, oovernmed, 
+with you depths they is using a strengt hittituo 
+wor lacter sither and tranciple, or strategy. 
+
+
+
+To to dow go the tokusles timber the aten prover swid, as mener fenefe of speaker 
+on 
+suchniques, the 
+gaspected use of ussategy. 
+we <|eot|>
+2025-05-25 23:36:09 - Generation stats - Model calls: 512, Time: 189.89s, Speed: 2.70 calls/s
+2025-05-25 23:40:52 - User selected option: 2
+2025-05-25 23:41:04 - Input text:                                                              Miyamoto Musashi was the best samurai
+2025-05-25 23:43:02 - Generated: <|sot|>                                                             Miyamoto Musashi was the best samurai a 
+ in 
+ther held, haver pimp 
+is action is 
+is the True vo the shressed on the fought into the lefay. If you wasdom of 
+shower, oro be the sound swordsmanioned by the ancied of are bre son. The poind becaus, Musashi be not do not shore hearne is nol for use they appthers 
+astrained or small with as beneging the Way. 
+
+It meaing follow an ancle his ifo. Herashi use swords which there is to the sace are 
+life. When your eathere is a retained spirit is using in their long sword and pais parior. 
+You cannot unset, you should threegh the enemy attacks att. and pime for that he the 
+cultail. 
+
+
+
+To Thise the enemy is to the shore is stace army which with as attacking to but 
+enemient forcend in cut of the same peopor of strategy. 
+
+If the becling to with the sword arm onemimarai 
+then you attacking a man in the same from the principle himlo, sword into the chanise the feelige the enemy. 
+
+in sin by sticting work  is virtioe to hori his eyes, and cut the enemy there of the thability without 
+spirit is noeser, fo s<|eot|>
+2025-05-25 23:43:02 - Generation stats - Model calls: 512, Time: 118.48s, Speed: 4.32 calls/s
+2025-05-26 00:43:52 - User selected option: 1
+2025-05-26 00:44:03 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-26 00:44:33 - Successfully loaded model from: model_20250525_082303_epoch_00041.pt
+2025-05-26 00:44:33 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-26 00:44:38 - User selected option: 3
+2025-05-26 00:44:38 - Generating from empty input
+2025-05-26 00:47:44 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eainne at de a way. net re d. in the ior. . head. it call se 
+. it we are the ten control is the nect of the long sword withing. You must train welling only attaces and in spirit into it is tictory tools. S Sidid is lord to hingi ques when the enemy's spirit with your exine you will be make 
+obj enemist a play attack and these are so ar Thirt, reish to dakrat the swords and fighting. There are and in whenor is the worls attitudes and 
+brith and the booves is for the clain like takes. But 
+the genefit battles. You must resears and kindined in the emthing points, and your eye out you must study this swords spectely were a fard. The spirit. Strategy. 
+
+
+
+I the Way of the Way of straw, colpalling the with only around, and the Japan in and 
+deng some at himded it insokawn meth to inly. When your spirit. You must train 
+rece of Strongly, accompy inspiritions. So you are strongly on the samurain to Kendovery and when sarriors and differentent in the countains sidfare were this prain sine to winning the place, recess<|eot|>
+2025-05-26 00:47:44 - Generation stats - Model calls: 512, Time: 186.40s, Speed: 2.75 calls/s
+2025-05-26 01:14:24 - User selected option: 6
+2025-05-26 01:14:24 - 
+Final Generation Statistics:
+2025-05-26 01:14:24 - Total model calls: 4096
+2025-05-26 01:14:24 - Total generation time: 3205.50s
+2025-05-26 01:14:24 - Average time per model call: 782.59ms
+2025-05-26 01:14:24 - Average model call speed: 1.28 calls/second
+2025-05-26 01:14:24 - === Ending session ===

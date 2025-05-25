@@ -67,3 +67,7 @@
 2025-05-25_06:31:26 python 8013_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 6 --address_space_size 2 --num_jumps 12
 2025-05-24_11:21:55 python 76762z_pgc.py --pickle /mnt/synology/brain/training_data/CHEMINFORMATICS/uspto/reactionSmilesFigShareUSPTO2023_filtered_trn_dataset_bigram.pkl --mode fit --cpu --num_classes 65536 --input_size 2048 --embedding_size 2048
 2025-05-24_16:42:54 python 76762z_pgc.py --pickle /mnt/synology/brain/training_data/CHEMINFORMATICS/uspto/reactionSmilesFigShareUSPTO2023_filtered_trn_dataset_bigram.pkl --mode fit --cpu --num_classes 65536 --input_size 2048 --embedding_size 2048 --address_space_dim 5 --address_space_size 2
+2025-05-25_07:24:44 python 8013_pgc.py --pickle /mnt/synology/brain/training_data/CHEMINFORMATICS/uspto/reactionSmilesFigShareUSPTO2023_filtered_trn_dataset_bigram.pkl --mode fit --cpu --num_classes 65536 --input_size 2048 --embedding_size 2048 --address_space_dim 5 --address_space_size 2
+2025-05-25_08:22:56 python 8013_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 7 --address_space_size 2 --num_jumps 12
+2025-05-25_22:21:53 python 8013_pgc.py
+2025-05-25_22:28:23 python 8013_pgc.py --cpu

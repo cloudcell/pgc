@@ -1,0 +1,399 @@
+2025-05-25 14:12:03 - === Starting new text generation session ===
+2025-05-25 14:12:16 - User selected option: 1
+2025-05-25 14:12:19 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 14:12:26 - Successfully loaded model from: model_20250525_082303_epoch_00015.pt
+2025-05-25 14:12:26 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 14:12:29 - User selected option: 3
+2025-05-25 14:12:29 - Generating from empty input
+2025-05-25 14:13:07 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                issialedy. 
+tsed. . he as thated. ant thate that the 
+them. and the 
+surving 
+this well. 
+
+The spirit of down the enemy's at the and at the enemy as a spirit of the 
+lousashing the 
+enemy's 
+the samur<|eot|>
+2025-05-25 14:13:07 - Generation stats - Model calls: 100, Time: 37.27s, Speed: 2.68 calls/s
+2025-05-25 14:13:32 - User selected option: 2
+2025-05-25 14:13:38 - Input text:                                                                               Miyamoto Musashi was
+2025-05-25 14:14:13 - Generated: <|sot|>                                                                              Miyamoto Musashi was. . he a wert . in the. in the warrior. The enemy are the 
+put 
+norsu the same to with at you will at the sall see will becomed at the same to 
+not be able to the will the long sword, you will not be <|eot|>
+2025-05-25 14:14:13 - Generation stats - Model calls: 100, Time: 35.55s, Speed: 2.81 calls/s
+2025-05-25 14:14:40 - User selected option: 4
+2025-05-25 14:14:47 - Set tokens to: 512
+2025-05-25 14:14:48 - User selected option: 2
+2025-05-25 14:14:55 - Input text:                                                                      The Way of the Strategy is to
+2025-05-25 14:17:50 - Generated: <|sot|>                                                                     The Way of the Strategy is to the 
+ it thated. and  and 
+the at his a 
+with the 
+deple. 
+
+Musashi will be able to defeat of the and allowing as actuations. 
+
+The ford techning of the long Sword when you must to the long sword in the long sword-f 
+
+The first appis defet the enemy is the Way of strategy the Wame for the enemy's long sword and the the enemy not will in the long sword, and the long sword, and with the sword, and the long sword-f 
+
+Musashing the enemy. 
+
+
+
+To Sendot the Warrior the long Sword in the long Sword in the Way of the same as a 
+for bet the enemy's of the 
+Wath as a living become a the enemy of the way of strategy. The 
+spirit of dethous to the lording to wine a was are mast and at is it is 
+place the 
+strategis, and even the sword in the enemy. The same a warrior is the samurain a long sword-fencing the same of the same to 
+ruell or the same of the 
+Wartions, and the long sword, and the enemy attacks, and the attain timing. 
+
+
+
+The "Attitudes, 
+
+In large-scale the enemy is the Way of the way of the Way of 
+the long<|eot|>
+2025-05-25 14:17:50 - Generation stats - Model calls: 512, Time: 174.67s, Speed: 2.93 calls/s
+2025-05-25 14:23:20 - User selected option: 2
+2025-05-25 14:23:25 - Input text:                                                                                Life and death are 
+2025-05-25 14:26:20 - Generated: <|sot|>                                                                               Life and death are thated. . he as he a 
+dest the 
+ it is nf the 
+struction. is 
+not with and the spirit of the way. 
+
+The same at the Way of 
+the long Sword in side the enemy is the long sword, and the enemy you are army and the True Way of the 
+was and this 
+the long and the sword-fencing musashing, and the enemy is and 
+meyashi lifeation to the 
+enemy is the same a faming. The bamings of dist with as a valling of the Way of the long sword in the long Sword-fighthe world is the same will the long sword and spirit. 
+
+The spirit of the Way of the long Sword in the Way of strategy. It is the fords of the Way of the fords. This is the long Sword, and the long Sword with the long sword in withous governown as 
+a 
+strategy. 
+
+The way of strategy in the lated method or the long sword in the long sword-fencing at the enemy attacking for the long sword-fightown The long Sword 
+
+The schoot means of Strategy this well. 
+
+The sam Not musashi was at the long sword is 
+the 
+long sword and for the same of the 
+Le 
+enemy as and with the long<|eot|>
+2025-05-25 14:26:20 - Generation stats - Model calls: 512, Time: 174.73s, Speed: 2.93 calls/s
+2025-05-25 14:27:15 - User selected option: 2
+2025-05-25 14:27:38 - Input text:                     Defeating the enemy is the primary objective. To defeat the enemy one must use
+2025-05-25 14:29:45 - Generated: <|sot|>                    Defeating the enemy is the primary objective. To defeat the enemy one must use 
+Tartued only of the long sword-f 
+
+The spirit of the 
+enemy's long sword-fay, and lacq rever the confucing your body not must not with the feeling. The Way of 
+
+
+
+If you the Way of the warrior is the long Sword, and the enemy at a struciated the 
+stretion, and the spartence, the 
+strategy your left Sighout the long Sword-fightown and the long sword, and with and the 
+the long Sword and strategy. The spirit the long Sword-feal the long sword. 
+
+In strategy your spirit is not the enemy, the long Sword-f 
+
+
+
+The Threed of Shown 
+
+The ford in the enemings off the long Sword is the long sword in 
+the way, a few the basing in the samuration. The long Sword in the long sword in the Way of the Way of the Way of strategy as the way of the long Swords. 
+
+
+
+The Ford Book of the Long Sword-f Short sword in the Way of strategy. The way of the long will benjs 
+
+Us, and the long Sword is the enemy into the sword, and the enemy off with a weak your spirit on the 
+beaturet, your spirit is strategy. In the Tokugawath the ene<|eot|>
+2025-05-25 14:29:45 - Generation stats - Model calls: 512, Time: 127.27s, Speed: 4.02 calls/s
+2025-05-25 15:24:47 - User selected option: 1
+2025-05-25 15:24:56 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 15:25:02 - Successfully loaded model from: model_20250525_082303_epoch_00018.pt
+2025-05-25 15:25:02 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 15:25:06 - User selected option: 3
+2025-05-25 15:25:06 - Generating from empty input
+2025-05-25 15:28:12 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ort  a tite. wis. . he a wart . in the. in the wart 
+i thee. 
+apanes a 
+walled 
+into 
+ 
+
+In large-scale strategy, when the enemy as the same for the enemy's as the 
+eart fredying 
+the small the comme way of strategy your his sword. 
+
+In the enemy's to the body as the Way of strategy. If you justing to this well. 
+
+
+
+Using the Way of the long sword is and the true Way. If you try to become of the 
+seations. 
+
+
+
+Other sword is importacking technique the spirit in the Way of strategy you will be train to comple of the seak. 
+
+There is not to agan the five. 
+
+The Way of my to attacks of the way of the warrior. You must approach the enemy. 
+
+The way of the way of strategy. 
+
+The way of the 
+est as the samults of as the well. 
+
+
+
+In the enemy's attitude wen by the 
+nese the enemy's sword, you must these things 
+and 
+the spirit of the Tokugawas spirit. 
+
+
+
+cenefished the enemy's lost sword and the artitudes of the way. I hand as weak as the 
+the way of strategy is the sament of the samurai of the attitudes and the 
+<|eot|>
+2025-05-25 15:28:12 - Generation stats - Model calls: 512, Time: 185.82s, Speed: 2.76 calls/s
+2025-05-25 15:30:10 - User selected option: 2
+2025-05-25 15:30:22 - Input text:                                                               The only true way to strategy is to 
+2025-05-25 15:33:59 - Generated: <|sot|>                                                              The only true way to strategy is to the . it a 
+ing 
+at thing the teacer. You 
+mant from and the enemy's left and the true Way to you are 
+ighered the attitudes of the 
+est as the sall. 
+
+
+
+the Body, and spirit of the Watch the comped the world in the samuration. The wall. 
+
+
+
+studing downting about the enemy's and to cut the enemy nind as the fight truer as 
+you 
+cannot the fefence through the true vay of cut they Is the 
+surtancoural the samurai life 
+havedus and the varingth as a was are well as the enemy becomes spirit of the 
+enemy's and sword-fighters and gut of single comply, the worling the Way of the 
+Water they to watch you must noth the spirit, and the longers and the long sword in accomping the Way of the warriorted in the 
+Was of the enemy's look swords, the same as the aropivional be able to give the was and the Way. If you are not with a feeling on the fingers of the firstance of the Way of strategy. If you are fighting as the sues 
+there is attain of as the same as the spirit. You must be abrariously able the enemy's as the was <|eot|>
+2025-05-25 15:33:59 - Generation stats - Model calls: 512, Time: 217.20s, Speed: 2.36 calls/s
+2025-05-25 15:36:34 - User selected option: 2
+2025-05-25 15:36:40 - Input text:                                                                            What is life and death?
+2025-05-25 15:39:17 - Generated: <|sot|>                                                                           What is life and death?. . he a wind be a 
+. ten sword . held. As these the 
+the technique. 
+with as the samurai, when the opportance, the samurai was a pirterceived is 
+neve is and companing the 
+enemy you must apprecin time and and the enemy, and with he 
+thrustally before the 
+hand. There are vay I master there is not willing. The enemy's lost train is defords. With the enemy as the Way of the face your sword, you must must puople the enemy. 
+
+In you are vighting you will be able to the could sond a sword, and the spirit, you 
+musashing the enemy, and the way of the warried in the true Way to reals in the 
+Walling the Way of the true Way. 
+
+
+
+The sword, and cut the time as a place, and the attain of the attacks. and can 
+wing 
+and the 
+enemies importan as the same as the method up the same the enemy as a true voil 
+they you 
+make the enemy you will be sons as that the true Wallowing his the Water life, you must the abover of the enemy's and strategy. 
+
+The spirit of the enemy, you willing the enemy in and so jumply to be ablies <|eot|>
+2025-05-25 15:39:17 - Generation stats - Model calls: 512, Time: 156.53s, Speed: 3.27 calls/s
+2025-05-25 15:46:33 - User selected option: 1
+2025-05-25 15:46:35 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 15:46:38 - Successfully loaded model from: model_20250525_082303_epoch_00019.pt
+2025-05-25 15:46:38 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 15:46:42 - User selected option: 3
+2025-05-25 15:46:42 - Generating from empty input
+2025-05-25 15:49:44 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ised. . r itt . . heve tall is a 
+. heve 
+. heven on the 
+ at it wister of the 
+enemy at a thereat and the man with a feressare the 
+sting the void. 
+
+In si 
+single combat, with the enemy, the sword. The spears and seak of these are no 
+attitudes of the Way of these are 
+many musashi joight is not be feel. 
+
+
+
+To Ren. The Way 
+
+
+
+The Fice the Loss of these in the enemy's of the Way of strategy. 
+
+
+
+me attack for this. 
+
+To the Way of strategy. 
+
+The merce of the Void. In this. 
+
+In the Ching sword. 
+
+When you are the Enemy. 
+
+The spirit of the Way of strategy arous of the ching the enemy. The spirit. 
+
+
+
+Or The the Long sword in bight-ly 
+
+I the five at think of the Way of the long sword 
+and the enemy is postructly in movement in the Way on the principle of the true Way of the 
+was long sword and spirit. Musashi's fewt ups feet to the long sword in order hand. 
+
+The Body of the Japal arch there is a place of the Way of the way of the way. 
+
+The 
+spirit ten 
+with the enemy are of the enemy's and watill and wa<|eot|>
+2025-05-25 15:49:44 - Generation stats - Model calls: 512, Time: 182.66s, Speed: 2.80 calls/s
+2025-05-25 16:07:40 - User selected option: 1
+2025-05-25 16:07:41 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 16:07:44 - Successfully loaded model from: model_20250525_082303_epoch_00020.pt
+2025-05-25 16:07:44 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 16:08:49 - User selected option: 3
+2025-05-25 16:08:49 - Generating from empty input
+2025-05-25 16:11:44 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ort  a tite. wis. . he mind .  
+cemp. . hest then 
+his wer at the ten ing long sword 
+ 
+
+2esearch of the Way of the enemy dimes not the strategicing the sword. The spirit of the samurai the 
+ever of the Way of the Way of the factory of the enemy's long sword with a valled the sword. The samura 
+cutting is the Way of the Confole the Ichi school of is the worl a prings are the enemy is the Way of strategy, according to the same from the cannot and the Way of strategy. 
+
+
+
+To Hone Sword with the twelfth dachly means the Way of strategy, who helds, there is 
+no Descid, and large the Way. 
+
+
+
+To Hold is differ the Way of the way of the sword the same footing upaction, somen in 
+the gar the Way slould to the Way of the most to the Way of strategy, and the enemy frome schools. 
+
+
+
+To Hold Decise the fifth movernate the fight of the carpenter-ctise thereishes long sword 
+theiving the Way of strategy, when the same of the Way of the spirit of the courain the enemy your spirit the cornd. 
+
+This is the taid forested the<|eot|>
+2025-05-25 16:11:44 - Generation stats - Model calls: 512, Time: 175.56s, Speed: 2.92 calls/s
+2025-05-25 17:34:17 - User selected option: 1
+2025-05-25 17:34:19 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 17:34:24 - Successfully loaded model from: model_20250525_082303_epoch_00023.pt
+2025-05-25 17:34:24 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 17:34:28 - User selected option: 3
+2025-05-25 17:34:28 - Generating from empty input
+2025-05-25 17:37:10 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eaed. . . het . . hea ar theed. . . heanner. 
+ap is in the 
+ in 
+the of his abilition to the planting his spirit. You must by the enemy in and 
+enemans 
+and your you to not musishi and smally, take spirit, and you him with he whent in eveashile to his a raeciate. 
+
+
+
+The First tee are the enemy by the same of seerching. Who warrior in swords. 
+
+In large-scale strategy, when the Way of strategy in large-scalle on a reall gerenty 
+your 
+s tweness, and wielt in such the enemy and , and ind on the Ways of is to attack the teaching on his chout and bontromed, in large-scale strategy. The regaremantly. 
+
+Everen it is the swords of spirit. 
+
+
+
+2'' The "if then an in the spirit, you will. 
+
+When you attack win by "attaing a 
+lear of 
+the blad. 
+
+
+
+The The speak of in the Chart a they and used on the legt of the and so 
+there was are 
+
+an this. 
+
+â¢ y the comptuall it is the and unsations and from the aniest and he 
+eneman. 
+
+
+
+To It 
+and the sword was and their and seen a ritude. Wath the enemy's spirit will 
+in ce <|eot|>
+2025-05-25 17:37:10 - Generation stats - Model calls: 512, Time: 162.09s, Speed: 3.16 calls/s
+2025-05-25 18:00:35 - User selected option: 1
+2025-05-25 18:00:36 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 18:00:38 - Successfully loaded model from: model_20250525_082303_epoch_00024.pt
+2025-05-25 18:00:38 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 18:00:48 - User selected option: 2
+2025-05-25 18:00:55 - Input text:                                                                The Weay of the strategy is to use 
+2025-05-25 18:03:01 - Generated: <|sot|>                                                               The Weay of the strategy is to use . ittel on the cale ased 
+attied. is weak at 
+is 
+is firsted if you try is dife, and to on the commander and his cutting postally 
+cut 
+dushing sword is no Musashi's grounds, when you must practice orders weret if is pland, also that ishing in the Tokugawas for the are the face points weenther strategy of the 
+reations. It is the sas of real with an exeshing the Way of the elemy's of the but go wrifd with 
+
+
+
+wpead the enemy's haviod townd. These are spirit. 
+
+In large-scale strategy, move to disch your by strategy. The true veraon of this is 
+all 
+and winning the best fighese for the quickly suicon Is strategy. This is the samurai 
+warrioris. You must approvition Broading in the same 
+Mover Jecaue for the greaped this. 
+
+The Condo MUsashi wreers of the time. 
+
+
+
+The Boldapting the way of the way as strategy as the warring the spirit of called 
+outing 
+wilding againter flent. 
+
+"Terulated and even the samurain differds with the feetting his edgecer or the 
+tessiners. 
+If you cannots and attacking of the bame <|eot|>
+2025-05-25 18:03:01 - Generation stats - Model calls: 512, Time: 125.74s, Speed: 4.07 calls/s
+2025-05-25 18:07:34 - User selected option: 6
+2025-05-25 18:07:34 - 
+Final Generation Statistics:
+2025-05-25 18:07:34 - Total model calls: 5320
+2025-05-25 18:07:34 - Total generation time: 1755.08s
+2025-05-25 18:07:34 - Average time per model call: 329.90ms
+2025-05-25 18:07:34 - Average model call speed: 3.03 calls/second
+2025-05-25 18:07:34 - === Ending session ===

@@ -3,7 +3,7 @@
 
 # Initialization scheme: 'a' = current, 'b' = identity for embeddings & processor blocks
 INIT_SCHEME_STATE_TRANSFORM = 'b'  # Change to 'b' for identity initialization
-INIT_SCHEME_ADDRESS_TRANSFORM = 'a'  # Change to 'b' for zero initialization
+INIT_SCHEME_ADDRESS_TRANSFORM = 'b'  # Change to 'b' for zero initialization
 
 import torch
 import torch.nn as nn

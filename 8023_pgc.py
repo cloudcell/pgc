@@ -6,7 +6,7 @@ This script processes files in the following order:
 1. Encode the input file (base64 or uuencode)
 2. Prepend 98 '@' characters to the encoded data
 3. Launch text_to_binary_dataset.py with the modified data as input
-4. Launch 8011_pgc_fit.py to train and copy the latest model from checkpoint
+4. Launch 8021_pgc_fit.py to train and copy the latest model from checkpoint
 
 Usage:
     pgc.py filename_to_pack [output_filename] [--encoding uuencode|base64]
@@ -77,7 +77,7 @@ def run_text_to_binary_dataset(input_file):
     output_dir = os.path.join(dataset_dir)
     os.makedirs(output_dir, exist_ok=True)
     
-    # The output path that 8011_pgc_fit.py expects
+    # The output path that 8021_pgc_fit.py expects
     output_file = os.path.join(output_dir, dataset_fname)
 
     
@@ -88,15 +88,15 @@ def run_text_to_binary_dataset(input_file):
 
 def run_pgc_jam(output_file, mode='jam', fit_args=None):
     """
-    Launch 8011_pgc_fit.py to train on the dataset and copy the latest model.
+    Launch 8021_pgc_fit.py to train on the dataset and copy the latest model.
     Includes all stopping criteria, including train_incorrect_stop.
     
     Args:
         output_file (str): Path to the output file
         mode (str): 'jam' or 'fit'
-        fit_args (list): Extra CLI args for 8011_pgc_fit.py
+        fit_args (list): Extra CLI args for 8021_pgc_fit.py
     """
-    print(f"Running 8011_pgc_fit.py with mode={mode}...")
+    print(f"Running 8021_pgc_fit.py with mode={mode}...")
     from datetime import datetime
     # Check if --checkpoints is in fit_args
     checkpoint_dir = None
@@ -112,7 +112,7 @@ def run_pgc_jam(output_file, mode='jam', fit_args=None):
         os.makedirs(checkpoint_dir, exist_ok=True)
     # Build base args
     base_args = [
-        sys.executable, '8011_pgc_fit.py', 
+        sys.executable, '8021_pgc_fit.py', 
         '--checkpoints', checkpoint_dir,
         '--mode', mode
     ]
@@ -164,7 +164,7 @@ def pack_file(input_file, output_file=None, encoding='base64', mode='jam', fit_a
     1. Encode the input file (base64 or uuencode)
     2. Prepend 98 '@' characters to the encoded data
     3. Launch text_to_binary_dataset.py with the modified data as input
-    4. Launch 8011_pgc_fit.py to train and copy the latest model
+    4. Launch 8021_pgc_fit.py to train and copy the latest model
     5. Supports all stopping criteria: val_acc_stop, train_acc_stop, train_loss_stop, epochs_stop, and train_incorrect_stop.
     
     Args:
@@ -172,7 +172,7 @@ def pack_file(input_file, output_file=None, encoding='base64', mode='jam', fit_a
         output_file (str, optional): Path to the output file
         encoding (str, optional): 'base64', 'uuencode', or 'verbatim'. Default is 'base64'.
         mode (str, optional): 'jam' or 'fit'. Default is 'jam'.
-        fit_args (list, optional): Extra CLI args for 8011_pgc_fit.py
+        fit_args (list, optional): Extra CLI args for 8021_pgc_fit.py
     """
     # Determine output_file default
     if output_file is None:
@@ -273,8 +273,8 @@ def pack_file(input_file, output_file=None, encoding='base64', mode='jam', fit_a
         # Step 3: Run text_to_binary_dataset.py on the modified file
         print("Step 3: Running text_to_binary_dataset.py...")
         run_text_to_binary_dataset(encoded_file)
-        # Step 4: Run 8011_pgc_fit.py and copy the latest model, passing any extra fit_args
-        print("Step 4: Running 8011_pgc_fit.py and copying latest model...")
+        # Step 4: Run 8021_pgc_fit.py and copy the latest model, passing any extra fit_args
+        print("Step 4: Running 8021_pgc_fit.py and copying latest model...")
         run_pgc_jam(output_file, mode=mode, fit_args=fit_args)
         print(f"Successfully packed file to {output_file}")
         print(f"Temporary file kept: {encoded_file}")
@@ -284,11 +284,11 @@ def pack_file(input_file, output_file=None, encoding='base64', mode='jam', fit_a
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="PGC Packer Utility\n\nThis script processes files in the following order:\n1. Encode the input file (base64 or uuencode)\n2. Prepend 98 '@' characters to the encoded data\n3. Launch text_to_binary_dataset.py with the modified data as input\n4. Launch 8011_pgc_fit.py to train and copy the latest model from checkpoint\n\nUSAGE: All arguments must be passed as --<argument> (e.g., --input file.txt). Positional arguments are not accepted.\n\nExample usage:\n    python pgc.py --input myfile.txt --output myfile.pgc --encoding base64 --mode jam --val_acc_stop 0.99 --epochs_stop 1024\n\nAll arguments after '--' will be passed to 8011_pgc_fit.py.\n")
+    parser = argparse.ArgumentParser(description="PGC Packer Utility\n\nThis script processes files in the following order:\n1. Encode the input file (base64 or uuencode)\n2. Prepend 98 '@' characters to the encoded data\n3. Launch text_to_binary_dataset.py with the modified data as input\n4. Launch 8021_pgc_fit.py to train and copy the latest model from checkpoint\n\nUSAGE: All arguments must be passed as --<argument> (e.g., --input file.txt). Positional arguments are not accepted.\n\nExample usage:\n    python pgc.py --input myfile.txt --output myfile.pgc --encoding base64 --mode jam --val_acc_stop 0.99 --epochs_stop 1024\n\nAll arguments after '--' will be passed to 8021_pgc_fit.py.\n")
     parser.add_argument('--input', required=False, help='Input file to pack (required unless --pickle is supplied)')
     parser.add_argument('--output', required=False, help='Output file (optional, defaults to input filename + .pgc)')
     parser.add_argument('--encoding', default='base64', choices=['base64', 'uuencode', 'verbatim'], help="Encoding method: base64, uuencode, or verbatim (default: base64)")
-    parser.add_argument('--mode', default='jam', choices=['jam', 'fit'], help="Mode for 8011_pgc_fit.py: jam or fit (default: jam)")
+    parser.add_argument('--mode', default='jam', choices=['jam', 'fit'], help="Mode for 8021_pgc_fit.py: jam or fit (default: jam)")
     # Remove fit_args positional argument
     args, fit_args = parser.parse_known_args()
 

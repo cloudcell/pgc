@@ -1,6 +1,6 @@
 # Cloudcell Ltd Presents...
 
-## PGC version 0.1, codename "Dommekracht"
+## PGC version 0.1.0, codename "Dommekracht"
 
 ![logo_00_transparent_v2](https://github.com/user-attachments/assets/c8c4837a-5fcd-41e9-a2c5-6fba2cfc16d0)
 
@@ -45,6 +45,14 @@ https://github.com/cloudcell/prj.pgc-paper-code-public
 
 ---
 # Research Log
+
+2025-05-26 08:33
+
+A key "load-bearing" pathway gets destroyed:
+![20250526_0829_gorinnosho_collapse_at_top](https://github.com/user-attachments/assets/6b45ecbe-27d0-455a-8f0c-d24fbb34d44b)
+
+![image](https://github.com/user-attachments/assets/f6165dfc-f769-4d34-9c76-6aa2e80f2b71)
+
 
 2025-05-26 06:24
 

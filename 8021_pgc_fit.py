@@ -2,8 +2,8 @@
 # Date: 2025-04-20 
 
 # Initialization scheme: 'a' = current, 'b' = identity for embeddings & processor blocks
-INIT_SCHEME = 'b'  # Change to 'b' for identity initialization
-
+INIT_SCHEME_STATE_TRANSFORM = 'b'  # Change to 'b' for identity initialization
+INIT_SCHEME_ADDRESS_TRANSFORM = 'a'  # Change to 'b' for zero initialization
 
 import torch
 import torch.nn as nn
@@ -230,7 +230,7 @@ class SelfOrganizingBrain(nn.Module):
 
         # Initial embedding of input
         self.embedding = nn.Linear(input_size, embedding_size)
-        if INIT_SCHEME == 'b' and input_size == embedding_size:
+        if INIT_SCHEME_STATE_TRANSFORM == 'b' and input_size == embedding_size:
             with torch.no_grad():
                 self.embedding.weight.copy_(torch.eye(embedding_size))
                 if self.embedding.bias is not None:
@@ -258,7 +258,7 @@ class SelfOrganizingBrain(nn.Module):
                     nn.Linear(embedding_size, address_dim * brain_size)
                 )
             })
-            if INIT_SCHEME == 'b':
+            if INIT_SCHEME_STATE_TRANSFORM == 'b':
                 # Set state_transform Linear layers to identity weights, zero bias
                 st_layers = [m for m in block['state_transform'] if isinstance(m, nn.Linear)]
                 for l in st_layers:
@@ -270,6 +270,14 @@ class SelfOrganizingBrain(nn.Module):
                     else:
                         # fallback: leave as is if not square
                         pass
+            # Address transform zeroing logic
+            if INIT_SCHEME_ADDRESS_TRANSFORM == 'b':
+                at_layers = [m for m in block['address_transform'] if isinstance(m, nn.Linear)]
+                for l in at_layers:
+                    with torch.no_grad():
+                        l.weight.zero_()
+                        if l.bias is not None:
+                            l.bias.zero_()
             self.brain_blocks.append(block)
         
         # Output layer

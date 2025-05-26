@@ -1,0 +1,41 @@
+2025-05-26 01:14:38 - === Starting new text generation session ===
+2025-05-26 01:18:25 - User selected option: 1
+2025-05-26 01:18:26 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-26 01:18:56 - Successfully loaded model from: model_20250525_082303_epoch_00042.pt
+2025-05-26 01:18:56 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-26 01:19:10 - User selected option: 2
+2025-05-26 01:19:26 - Input text:                                                                                       Miyamoto Mus
+2025-05-26 01:20:00 - Generated: <|sot|>                                                                                      Miyamoto Mus.  
+hast then out  a sonde. it in out reals, in 
+s utually 
+the sas 
+prepe fine, 
+
+
+
+Thi one is a words of parious with the realed to win. 
+
+The wrings of means study on gross the besting in the long <|eot|>
+2025-05-26 01:20:00 - Generation stats - Model calls: 100, Time: 33.92s, Speed: 2.95 calls/s
+2025-05-26 01:20:42 - User selected option: 7
+2025-05-26 01:20:45 - Set number of jumps to: 256
+2025-05-26 01:20:49 - User selected option: 2
+2025-05-26 01:20:51 - Input text:                                                                                       Miyamoto Mus
+2025-05-26 01:24:46 - Generated: <|sot|>                                                                                      Miyamoto Mus.  
+hast then out  a sonde. it in out reals, in 
+s utually 
+ not mended to butily is has becor the enemy's 
+and the changer. With  with the neneats to sim or touch this. 
+
+
+men not long the Way of 
+ir<|eot|>
+2025-05-26 01:24:46 - Generation stats - Model calls: 100, Time: 235.03s, Speed: 0.43 calls/s
+2025-05-26 01:29:07 - User selected option: 6
+2025-05-26 01:29:07 - 
+Final Generation Statistics:
+2025-05-26 01:29:07 - Total model calls: 200
+2025-05-26 01:29:07 - Total generation time: 268.94s
+2025-05-26 01:29:07 - Average time per model call: 1344.72ms
+2025-05-26 01:29:07 - Average model call speed: 0.74 calls/second
+2025-05-26 01:29:07 - === Ending session ===

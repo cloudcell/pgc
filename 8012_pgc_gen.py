@@ -106,7 +106,7 @@ num_heads = 1
 address_space_dim = 3  # Dimensionality of the address space (configurable)
 address_space_size = 5 # 8 # 14 # 8 #6  # Size of each dimension in the address space
 brain_size = address_space_size  # Size of each dimension in the brain grid
-num_jumps = 24 # 7 #5 # 3 # Number of steps through the brain
+num_jumps = args.num_jumps  # Number of steps through the brain, now overridable via --num_jumps
 
 JUMP_OUT_IF_REVISITED = False
 
@@ -379,7 +379,10 @@ class SelfOrganizingBrain(nn.Module):
         exit_addresses = torch.zeros_like(current_address)
 
         # Main processing loop (differentiable routing)
-        for i in range(self.num_jumps):
+        # for i in range(self.num_jumps):  # original
+        jumps_to_use = globals().get('num_jumps', None)
+        jumps = jumps_to_use if jumps_to_use is not None else self.num_jumps
+        for i in range(jumps):
             # Only update non-exited items
             active_mask = ~exited
             if not active_mask.any():
@@ -1463,6 +1466,8 @@ def print_menu():
     print("4. Set number of tokens to generate")
     print("5. Unpack specified file using the default header")
     print("6. Exit")
+    print("7. Change number of jumps")
+    print(f"   (Current number of jumps: {num_jumps})")
     print("=========================")
 
 def main():
@@ -1508,7 +1513,7 @@ def main():
             print(f"Model call speed: {calls_per_second:.2f} calls/second")
             
         try:
-            choice = session.prompt("\nEnter your choice (1-6): ")
+            choice = session.prompt("\nEnter your choice (1-7): ")
         except KeyboardInterrupt:
             print("\nOperation cancelled by user")
             continue
@@ -1559,19 +1564,19 @@ def main():
                 continue
                 
             try:
-                input_text = session.prompt(f"\nEnter your text (will use last {current_model.input_size} chars if longer): ")
+                input_text = session.prompt(f"\nEnter your text (will use last {current_model.input_size // 8} chars if longer): ")
             except (KeyboardInterrupt, EOFError):
                 print("\nOperation cancelled")
                 continue
 
             if len(input_text) > current_model.input_size:
                 input_text = input_text[-current_model.input_size:]
-                print(f"\nInput text was longer than {current_model.input_size} chars, using last {current_model.input_size} chars")
+                print(f"\nInput text was longer than {current_model.input_size} chars, using last {current_model.input_size // 8} chars")
 
-            # pad with spaces if shorter than input size before the text
+            # pad with null characters if shorter than input size before the text
             if len(input_text) < current_model.input_size//8:
-                input_text = " " * (current_model.input_size//8 - len(input_text)) + input_text
-                print(f"\nInput text was shorter than {current_model.input_size // 8} chars, padding with spaces")
+                input_text = "\0" * (current_model.input_size//8 - len(input_text)) + input_text
+                print(f"\nInput text was shorter than {current_model.input_size // 8} chars, padding with null characters (ASCII 0)")
                 
             record_interaction(f"Input text: {input_text}")
             print("\nGenerating text...")
@@ -1683,6 +1688,26 @@ def main():
             print("\nGoodbye!")
             break
         
+        elif choice == '7':
+            while True:
+                try:
+                    new_jumps = session.prompt("\nEnter new number of jumps: ")
+                    new_jumps = int(new_jumps)
+                    if new_jumps > 0:
+                        global num_jumps
+                        num_jumps = new_jumps
+                        record_interaction(f"Set number of jumps to: {num_jumps}")
+                        print(f"\nSet number of jumps to: {num_jumps}")
+                        break
+                    else:
+                        record_interaction(f"Invalid number of jumps: {new_jumps}")
+                        print("Number of jumps must be positive!")
+                except ValueError:
+                    record_interaction("Invalid jumps input")
+                    print("Please enter a valid number!")
+                except (KeyboardInterrupt, EOFError):
+                    print("\nOperation cancelled")
+                    break
         else:
             record_interaction(f"Invalid choice: {choice}")
             print("\nInvalid choice. Please try again.")

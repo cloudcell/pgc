@@ -1,0 +1,19 @@
+2025-05-25 18:08:49 - === Starting new text generation session ===
+2025-05-25 18:08:57 - User selected option: 1
+2025-05-25 18:08:59 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 18:09:06 - Successfully loaded model from: model_20250525_082303_epoch_00025.pt
+2025-05-25 18:09:06 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 18:09:17 - User selected option: 3
+2025-05-25 18:09:17 - Generating from empty input
+2025-05-25 18:10:00 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eaed. . . heed. . he his. . he his wind  i histed . heldinaly are all the enemy attacks. 
+d had you have the Warried with the sudding the Way of the 
+armoe the way of the farge of the enemy has ittil <|eot|>
+2025-05-25 18:10:00 - Generation stats - Model calls: 100, Time: 42.93s, Speed: 2.33 calls/s
+2025-05-25 18:13:42 - User selected option: 6
+2025-05-25 18:13:42 - 
+Final Generation Statistics:
+2025-05-25 18:13:42 - Total model calls: 100
+2025-05-25 18:13:42 - Total generation time: 42.93s
+2025-05-25 18:13:42 - Average time per model call: 429.27ms
+2025-05-25 18:13:42 - Average model call speed: 2.33 calls/second
+2025-05-25 18:13:42 - === Ending session ===

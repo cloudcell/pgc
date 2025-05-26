@@ -1,0 +1,71 @@
+2025-05-25 18:13:52 - === Starting new text generation session ===
+2025-05-25 18:14:16 - User selected option: 7
+2025-05-25 18:14:19 - Set number of jumps to: 128
+2025-05-25 18:14:26 - User selected option: 1
+2025-05-25 18:14:28 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 18:14:33 - Successfully loaded model from: model_20250525_082303_epoch_00025.pt
+2025-05-25 18:14:33 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 18:14:37 - User selected option: 7
+2025-05-25 18:14:40 - Set number of jumps to: 128
+2025-05-25 18:15:11 - User selected option: 3
+2025-05-25 18:15:11 - Generating from empty input
+2025-05-25 18:15:47 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eaed. . . heed. . he his. . he his wind  i histed . heldinaly is 
+is the 
+ 
+with the hearts. 
+
+Musashi's the Tokd intoshing the way of the Fesige, with a 
+resendection Was must them to the starts of J<|eot|>
+2025-05-25 18:15:47 - Generation stats - Model calls: 100, Time: 35.67s, Speed: 2.80 calls/s
+2025-05-25 18:16:13 - User selected option: 7
+2025-05-25 18:16:24 - Set number of jumps to: 32
+2025-05-25 18:16:34 - User selected option: 2
+2025-05-25 18:17:03 - Input text:                                                                         The way of the strategy is
+2025-05-25 18:17:38 - Generated: <|sot|>                                                                        The way of the strategy is a 
+. heed. . he mind  is ecse the a 
+with 
+d caed. it is heads to learnint gensur in Japaneed and the long sword in and the 
+enement of the This had yourselfuly abts the Thene is normy is the show of<|eot|>
+2025-05-25 18:17:38 - Generation stats - Model calls: 100, Time: 34.74s, Speed: 2.88 calls/s
+2025-05-25 18:19:15 - User selected option: 7
+2025-05-25 18:19:16 - Set number of jumps to: 8
+2025-05-25 18:19:21 - User selected option: 4
+2025-05-25 18:19:28 - Set tokens to: 256
+2025-05-25 18:19:36 - User selected option: 2
+2025-05-25 18:19:41 - Input text:                                                                                Miyamoto Musashi is
+2025-05-25 18:21:14 - Generated: <|sot|>                                                                               Miyamoto Musashi is 
+t thatteme 
+ 
+died. . heve then, 
+yotoriont  and we the 
+round, the enemy ree attal the Middle is fraining is study attaried the body of the 
+never this is to change of the late a surenged 
+sword and itterment. These are the armed the enemy's seth his ferted. You must these heaven, attack and have. If you are fighting. It issed in they all cento the sword. It is nothing is alportant to whe he sociti, with the long sword from toints, the enemy as posst, is the confinedgents. 
+
+Musashi was le become of meta<|eot|>
+2025-05-25 18:21:14 - Generation stats - Model calls: 256, Time: 92.54s, Speed: 2.77 calls/s
+2025-05-25 18:24:33 - User selected option: 7
+2025-05-25 18:24:42 - Set number of jumps to: 256
+2025-05-25 18:25:08 - User selected option: 3
+2025-05-25 18:25:08 - Generating from empty input
+2025-05-25 18:26:15 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eaed. . . heed. . he his. . he his wind  i histed . heldinaly are all the enemy attacks. 
+d had you have the Warried with the sudding the Way of the 
+arge of the Way of the 
+estance times the enemy's long sword from swords the with the Way of strategy is as if iild had become cantlement Chother the way of the warrior. 
+
+
+
+Other Schools 
+
+The Way of the sword in the more the with righere the enemy's as his lart, formars the is intoment is the first only inten and them with histised willed of over harmost. 
+
+<|eot|>
+2025-05-25 18:26:15 - Generation stats - Model calls: 256, Time: 67.31s, Speed: 3.80 calls/s
+2025-05-25 18:33:47 - User selected option: 6
+2025-05-25 18:33:47 - 
+Final Generation Statistics:
+2025-05-25 18:33:47 - Total model calls: 712
+2025-05-25 18:33:47 - Total generation time: 230.26s
+2025-05-25 18:33:47 - Average time per model call: 323.40ms
+2025-05-25 18:33:47 - Average model call speed: 3.09 calls/second
+2025-05-25 18:33:47 - === Ending session ===

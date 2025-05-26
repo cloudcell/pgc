@@ -1,0 +1,21 @@
+2025-05-25 05:21:08 - === Starting new text generation session ===
+2025-05-25 05:21:13 - User selected option: 1
+2025-05-25 05:21:50 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_033247
+2025-05-25 05:26:42 - Successfully loaded model from: model_20250525_033255_epoch_00004.pt
+2025-05-25 05:26:42 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-25 05:26:50 - User selected option: 1
+2025-05-25 05:26:52 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_033247
+2025-05-25 05:29:24 - Successfully loaded model from: model_20250525_033255_epoch_00005.pt
+2025-05-25 05:29:24 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}
+2025-05-25 05:31:31 - User selected option: 3
+2025-05-25 05:31:31 - Generating from empty input
+2025-05-25 05:31:37 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                isurh  at ont  at ont  at atory  and then the en then the enemy's the enemy's the enemy's of the enemy's, the enemy's the enemy's the enemy's the enemy of the sword the sword and the enemy's, 
+
+
+
+The <|eot|>
+2025-05-25 05:31:37 - Generation stats - Model calls: 100, Time: 6.31s, Speed: 15.84 calls/s
+2025-05-25 05:41:14 - User selected option: 1
+2025-05-25 05:41:17 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_033247
+2025-05-25 05:43:49 - Successfully loaded model from: model_20250525_033255_epoch_00006.pt
+2025-05-25 05:43:49 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 6, 'num_heads': 1, 'num_jumps': 10}

@@ -1,0 +1,153 @@
+{
+  "epoch": 0,
+  "phase": "val",
+  "top_blocks": [
+    {
+      "coords": [
+        0,
+        0,
+        0
+      ],
+      "count": 317012
+    },
+    {
+      "coords": [
+        0,
+        1,
+        0
+      ],
+      "count": 2
+    },
+    {
+      "coords": [
+        0,
+        0,
+        1
+      ],
+      "count": 1
+    }
+  ],
+  "top_pathways": [
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 317009
+    },
+    {
+      "pathway": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 2
+    },
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 1
+    }
+  ],
+  "pathway_stats": [
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 317009,
+      "top_labels": [
+        {
+          "label": 15683,
+          "count": 23392
+        },
+        {
+          "label": 17192,
+          "count": 22481
+        },
+        {
+          "label": 17219,
+          "count": 19403
+        }
+      ],
+      "accuracy": 0.498383326656341,
+      "correct_count": 157992,
+      "sample_count": 317009
+    },
+    {
+      "pathway": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 2,
+      "top_labels": [
+        {
+          "label": 15683,
+          "count": 1
+        },
+        {
+          "label": 10563,
+          "count": 1
+        }
+      ],
+      "accuracy": 0.5,
+      "correct_count": 1,
+      "sample_count": 2
+    },
+    {
+      "pathway": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 1,
+      "top_labels": [
+        {
+          "label": 15683,
+          "count": 1
+        }
+      ],
+      "accuracy": 1.0,
+      "correct_count": 1,
+      "sample_count": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+2025-05-25 09:16:08 - === Starting new text generation session ===
+2025-05-25 09:16:12 - User selected option: 1
+2025-05-25 09:16:15 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 09:16:21 - Successfully loaded model from: model_20250525_082303_epoch_00002.pt
+2025-05-25 09:16:21 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 09:16:27 - User selected option: 3
+2025-05-25 09:16:27 - Generating from empty input
+2025-05-25 09:17:10 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                e thngg the the thngg the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-25 09:17:10 - Generation stats - Model calls: 100, Time: 42.97s, Speed: 2.33 calls/s
+2025-05-25 14:11:40 - User selected option: 6
+2025-05-25 14:11:40 - 
+Final Generation Statistics:
+2025-05-25 14:11:40 - Total model calls: 100
+2025-05-25 14:11:40 - Total generation time: 42.97s
+2025-05-25 14:11:40 - Average time per model call: 429.71ms
+2025-05-25 14:11:40 - Average model call speed: 2.33 calls/second
+2025-05-25 14:11:40 - === Ending session ===

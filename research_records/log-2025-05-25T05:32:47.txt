@@ -1,0 +1,6 @@
+2025-05-25 05:32:47 - === Starting new text generation session ===
+2025-05-25 05:32:49 - User selected option: 1
+2025-05-25 05:32:51 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_043400
+2025-05-25 05:32:51 - Failed to load model
+2025-05-25 05:46:16 - User selected option: 1
+2025-05-25 05:46:18 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_043400

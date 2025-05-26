@@ -63,3 +63,5 @@
 2025-05-24_20:17:14 python 76762z_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 6 --address_space_size 2 --num_jumps 10
 2025-05-25_03:32:47 python 8003_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 6 --address_space_size 2 --num_jumps 10
 2025-05-25_04:34:00 python 8013_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 7 --address_space_size 2 --num_jumps 10
+2025-05-25_06:10:01 python 8013_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 6 --address_space_size 2 --num_jumps 16
+2025-05-25_06:47:53 python 8013_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 5 --address_space_size 2 --num_jumps 12

@@ -1,3 +1,10 @@
+# Cloudcell Ltd Presents...
+
+## PGC version 0.1.0, codename "Dommekracht"
+
+![logo_00_transparent_v2](https://github.com/user-attachments/assets/c8c4837a-5fcd-41e9-a2c5-6fba2cfc16d0)
+
+
 # Code for Paper: "Polymorphic Graph Classifier"
 ### http://dx.doi.org/10.13140/RG.2.2.15744.55041
 
@@ -38,6 +45,22 @@ https://github.com/cloudcell/prj.pgc-paper-code-public
 
 ---
 # Research Log
+
+2025-05-26 08:33
+
+A key "load-bearing" pathway gets destroyed:
+![20250526_0829_gorinnosho_collapse_at_top](https://github.com/user-attachments/assets/6b45ecbe-27d0-455a-8f0c-d24fbb34d44b)
+
+![image](https://github.com/user-attachments/assets/f6165dfc-f769-4d34-9c76-6aa2e80f2b71)
+
+
+2025-05-26 06:24
+
+ResNet features turned out to be harmful to the performance. Demo -- below.
+
+![resnet-collapse](https://github.com/user-attachments/assets/df55c256-22b6-40a4-9a35-d75603176adc)
+
+This is called "ResNet Collapse" (green) vs "Normal Accuracy" (blue).
 
 2025-05-16 02:43
 

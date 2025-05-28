@@ -254,3 +254,149 @@ priests, and the LORD said unto them, and the priests of the LORD.
 the LORD, and the son of the children of Israel the son of the son of
 their hands, and the LORD said, With the LORD, and the LORD, and the son of A<|eot|>
 2025-05-28 14:03:02 - Generation stats - Model calls: 256, Time: 128.19s, Speed: 2.00 calls/s
+2025-05-29 01:19:25 - User selected option: 2
+2025-05-29 01:19:29 - Input text:                                                                                     What art thou?
+2025-05-29 01:21:39 - Generated: <|sot|>                                                                                    What art thou? ter ter ter ter ter ter ter tan on then tere vere
+then the one of the LORD, and the LORD, and the LORD, and the people, and the son of the son of the LORD, and the son of
+the LORD said unto them, and the people of the children of the children of
+them, and the son of the hand of the house of the LORD, and the LORD.
+
+03:020:011 And the LORD said unto them, and the children of Israel, and
+the LORD, and the sons of the LORD, and the LORD, and the LORD, and the
+priests, and the son of Assyrians, and the <|eot|>
+2025-05-29 01:21:39 - Generation stats - Model calls: 256, Time: 130.00s, Speed: 1.97 calls/s
+2025-05-29 01:22:26 - User selected option: 2
+2025-05-29 01:22:40 - Input text:                                                 Research log: I guess one epoch is not enough, eh?
+2025-05-29 01:24:53 - Generated: <|sot|>                                                Research log: I guess one epoch is not enough, eh?
+
+13:002:002 And then the son of A to the LORD, and the son of Abraham,
+and the princes, and the LORD, and the LORD
+of the hand of the princes of the LORD, and the LORD.
+
+03:021:002 And the sons of the LORD said unto them, and the people,
+and the son of the children of the
+commandments of the LORD, and the
+princes, and the son of Assyrians, and the LORD, and the LORD, and the son of Assyrians, and the LORD, and the LORD.
+
+03:020:011 And the sons of the LORD, and the LORD, and the son of the
+the <|eot|>
+2025-05-29 01:24:53 - Generation stats - Model calls: 256, Time: 132.50s, Speed: 1.93 calls/s
+2025-05-29 01:25:39 - User selected option: 2
+2025-05-29 01:26:03 - Input text:                           Research log: 1 epoch and 41% accuracy is definitely not enough, lol :).
+2025-05-29 01:28:14 - Generated: <|sot|>                          Research log: 1 epoch and 41% accuracy is definitely not enough, lol :).
+
+13:002:010 And the congregation the LORD, and the sons of the LORD, and
+the son of the LORD, and the LORD, and the son of the children of the hand of the house of
+the son of
+therefore thereof.
+
+03:011:018 And the son of the congregation of the son of the LORD, and
+the son of the LORD, and the LORD, and the son of Assyrians, and
+in the son of Assyrians, and the LORD.
+
+20:001:021 And the LORD said unto them, and the son of the LORD, and
+thered the son of Assyrians, and the LORD, and the LORD, an<|eot|>
+2025-05-29 01:28:14 - Generation stats - Model calls: 256, Time: 131.65s, Speed: 1.94 calls/s
+2025-05-29 01:29:13 - User selected option: 2
+2025-05-29 01:29:15 - Input text:                                                                                      Ezekiel 25:17
+2025-05-29 01:31:27 - Generated: <|sot|>                                                                                     Ezekiel 25:17
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2aie t  the on the , in oure , and the servants of the
+perceen
+them, and the son of the children of Israel the LORD, and the
+priests
+the LORD, and the son of Assyrians, and the LORD.
+
+20:001:021 And the LORD said unto them, and the children of the
+cometh,
+and the priests of the LORD, and the LORD, and the LORD, and the LORD
+the LORD, and the son of Assyriad unto them, and there
+the LORD, and
+the hand of the children of Israel the son of the hand of
+the LORD, and <|eot|>
+2025-05-29 01:31:27 - Generation stats - Model calls: 256, Time: 131.90s, Speed: 1.94 calls/s
+2025-05-29 01:33:02 - User selected option: 2
+2025-05-29 01:33:06 - Input text: The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of the darkness. For he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy my brothers. And you will know I am the Lord when I lay my vengeance upon you.
+2025-05-29 01:35:17 - Generated: <|sot|>The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of the darkness. For he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy my brothers. And you will know I am the Lord when I lay my vengeance upon you.
+
+26:003:011 And they shall be the son of the LORD, and the son of the
+LORD, and the LORD, and the son of Assyrians, and the LORD, and the son
+of the LORD, and the son of the children of the hand of
+the LORD, and the son of
+the LORD, and the son of Assyrians, and the LORD, and the son of Assyrians, and the LORD, and the son of Assyrians, and the LORD, and the son of Assyrians, and the son of the hand of the children of
+the LORD, and the son of Assyriad the LORD, and the son of Assyrians, and
+therefo<|eot|>
+2025-05-29 01:35:17 - Generation stats - Model calls: 256, Time: 130.76s, Speed: 1.96 calls/s
+2025-05-29 01:37:21 - User selected option: Research log: amazingly, the number from which the quote was just made points to Ezekiel, correct book!
+2025-05-29 01:37:21 - Invalid choice: Research log: amazingly, the number from which the quote was just made points to Ezekiel, correct book!
+2025-05-29 01:37:26 - User selected option: 2
+2025-05-29 01:37:32 - Input text: 26:025:017 And I will execute great vengeance upon them with furious
+rebukes; and they shall know that I am the LORD, when I shall lay my
+vengeance upon them.
+2025-05-29 01:39:42 - Generated: <|sot|>26:025:017 And I will execute great vengeance upon them with furious
+rebukes; and they shall know that I am the LORD, when I shall lay my
+vengeance upon them.
+
+26:003:011 And they shall be the son of the LORD, and the son of the
+LORD, and the LORD, and the son of Assyrians, and the LORD, and the son
+of the LORD, and the son of Assyrians, and the son of the children of
+Israel, and the son of Assyriad the LORD, and the son of the children of
+the LORD, and the LORD.
+
+20:001:028 And the LORD said unto them, and the people of the LORD, and
+the LORD, and the LORD, and the son of Assembly the LORD, and the LORD
+of the hand of the
+children of Israel, and the <|eot|>
+2025-05-29 01:39:42 - Generation stats - Model calls: 256, Time: 130.13s, Speed: 1.97 calls/s
+2025-05-29 01:40:19 - User selected option: 2
+2025-05-29 01:40:34 - Input text:                                               Research log: I guess we need more training still...
+2025-05-29 01:42:45 - Generated: <|sot|>                                              Research log: I guess we need more training still...
+
+13:002:002 And then the son of Assyriad the son of the sons of the
+LORD, and the son of the children of Israel the LORD, and the LORD, and
+thered the LORD, and the son of Assembled to the
+princes, and the
+priest the LORD.
+
+03:011:023 And the LORD said unto them, and there was thereof, and
+percept there was thereof.
+
+19:119:023 And the LORD said unto them, and the people, and there was
+the LORD, and the LORD.
+
+19:119:021 And the LORD said unto them, and the children of Israel, and
+the LORD, <|eot|>
+2025-05-29 01:42:45 - Generation stats - Model calls: 256, Time: 131.02s, Speed: 1.95 calls/s
+2025-05-29 01:49:14 - User selected option: 7
+2025-05-29 01:49:18 - Set number of jumps to: 25
+2025-05-29 01:49:22 - User selected option: 2
+2025-05-29 01:53:27 - Input text:                                                                                                  2
+2025-05-29 01:56:45 - Generated: <|sot|>                                                                                                 2it on s ,  ten per on s  war ter ter ter ter ter ter ter
+vereer,
+ander there was tert of the words of the LORD, and the LORD.
+
+20:001:023 And the LORD said unto them, and the son of the LORD, and
+priest the LORD, and the son of the children of the priests, and
+therefore there
+thee, and the son of the children of the children of
+the LORD, and the
+priests, and the LORD, and the son of Assyrians, and
+therefore thereof.
+
+20:005:018 And the sons of the LORD, and the son of Assyrians, and the
+priests<|eot|>
+2025-05-29 01:56:45 - Generation stats - Model calls: 256, Time: 197.96s, Speed: 1.29 calls/s

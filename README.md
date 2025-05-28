@@ -43,6 +43,10 @@ python3 675_pgc_reader.py
 ### More Info:
 
 https://github.com/cloudcell/prj.pgc-paper-code-public
+https://github.com/cloudcell/pgc-datasets (preparation of data for training)
+https://github.com/cloudcell/pgc-analysis (analytical packages)
+https://github.com/cloudcell/pgc-multi-d  (demos)
+
 
 ---
 # Research Log

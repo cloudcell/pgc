@@ -6,16 +6,26 @@
 
 
 # Code for Paper: "Polymorphic Graph Classifier"
-### http://dx.doi.org/10.13140/RG.2.2.15744.55041
+### http://dx.doi.org/10.13140/RG.2.2.15744.55041 (paper)
+### http://dx.doi.org/10.13140/RG.2.2.29337.53608 (theory)
 
 | Author |   Dates | License |
 | ------ |   ---- | ------- |
 | Alexander Bikeyev | 2025-04-17/present | AGPL v3 |
 
-### Help
+# Help
 [Discord](https://discord.gg/daTSuB2z)
 
-### Running the Example
+# Important Resources:
+
+### https://github.com/cloudcell/prj.pgc-paper-code-public
+### https://github.com/cloudcell/pgc-datasets (preparation of data for training)
+### https://github.com/cloudcell/pgc-analysis (analytical packages)
+### https://github.com/cloudcell/pgc-multi-d  (demos)
+
+
+
+### Training & Inference (We are currently focusing on building a chat, hence, we are using inference to predict bigrams)
 ```
 # Create a virtual environment
 python3 -m venv venv
@@ -32,16 +42,10 @@ sudo apt-get install sharutils
 # Start TensorBoard
 tensorboard --logdir ./runs/ --port 6006
 
-# Encode a file
-python3 pcg.py any_file_to_pack
-
-# Decode a file using standard header (98 '@'s)
-python3 675_pgc_reader.py
+# To train a model, look into the file pgc_runs.log -- there are plenty of examples inside
+# To use inference, use 8023_pgc.py -- run it with option --cpu, the load is so small, cpu is usually enough
  
 ```
-### More Info:
-
-https://github.com/cloudcell/prj.pgc-paper-code-public
 
 ---
 # Research Log

@@ -6,7 +6,8 @@
 
 
 # Code for Paper: "Polymorphic Graph Classifier"
-### http://dx.doi.org/10.13140/RG.2.2.15744.55041
+### http://dx.doi.org/10.13140/RG.2.2.15744.55041 (paper)
+### http://dx.doi.org/10.13140/RG.2.2.29337.53608 (theory)
 
 | Author |   Dates | License |
 | ------ |   ---- | ------- |

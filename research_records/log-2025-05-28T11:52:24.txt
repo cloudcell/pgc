@@ -400,3 +400,141 @@ therefore thereof.
 20:005:018 And the sons of the LORD, and the son of Assyrians, and the
 priests<|eot|>
 2025-05-29 01:56:45 - Generation stats - Model calls: 256, Time: 197.96s, Speed: 1.29 calls/s
+2025-05-29 02:09:43 - User selected option: 7
+2025-05-29 02:09:47 - Set number of jumps to: 128
+2025-05-29 02:11:13 - User selected option: 2
+2025-05-29 02:11:15 - Input text:                                                                                       Ecclesiastes
+2025-05-29 02:25:08 - Generated: <|sot|>                                                                                      Ecclesiastes ter ter ter ter ter ter ter ter tan on then
+ther
+tere
+there there the LORD, and the LORD, and the son of the children of
+the LORD, and the LORD
+the LORD.
+
+03:020:011 And the LORD said unto them, and the children of Israel, and
+the LORD, and the sons of the LORD, and the LORD, and the son of Assyrians, and the LORD, and the LORD
+offering the
+the LORD, and the LORD, and the son of the children of
+the LORD, and the
+priests, and the
+priest the LORD, and the LORD shall
+the LORD, and the LORD said <|eot|>
+2025-05-29 02:25:08 - Generation stats - Model calls: 256, Time: 832.89s, Speed: 0.31 calls/s
+2025-05-29 02:26:13 - User selected option: 7
+2025-05-29 02:26:15 - Set number of jumps to: 16
+2025-05-29 03:19:28 - User selected option: 2
+2025-05-29 03:19:34 - Input text: 66:001:001 The Revelation of Jesus Christ, which God
+gave unto him, to shew unto his servants things which must shortly come
+to pass; and he sent and signified it by his angel unto his servant
+John:
+2025-05-29 03:21:47 - Generated: <|sot|>66:001:001 The Revelation of Jesus Christ, which God
+gave unto him, to shew unto his servants things which must shortly come
+to pass; and he sent and signified it by his angel unto his servant
+John: and they shall be the son of the LORD, and the LORD, and the son of Abraham, and the son of Assyriad the LORD.
+
+03:021:028 And the son of Assembled the son of the LORD, and the LORD
+the LORD said unto them, and there was thereof, and the
+priest the
+princes, and the LORD, and the LORD said unto them, and there was thereof, and the LORD, and
+the son of
+Israel, and the priests and the people of the LORD, and the
+commandments of the LORD, and the LORD, and the LORD shall be the LORD
+the LORD.
+
+03:00<|eot|>
+2025-05-29 03:21:47 - Generation stats - Model calls: 256, Time: 133.27s, Speed: 1.92 calls/s
+2025-05-29 03:22:23 - User selected option: 2
+2025-05-29 03:22:26 - Input text: 66:001:008 I am Alpha and Omega, the beginning and the ending, saith the
+Lord, which is, and which was, and which is to come, the Almighty.
+
+2025-05-29 03:24:40 - Generated: <|sot|>66:001:008 I am Alpha and Omega, the beginning and the ending, saith the
+Lord, which is, and which was, and which is to come, the Almighty.
+
+
+26:011:007 And they shall be the son of the LORD, and the sons of the
+princes, and the son of Assyrians, and the LORD
+of the hands of the LORD, and the LORD, and the son of Assyrians, and
+therefore there was thereof, and the
+princes, and the LORD shall be the
+people the LORD, and the LORD, and the son of Assyrians.
+
+02:019:028 And the LORD said unto them, and the children of Israel the
+LORD the LORD, and the children of Israel, and the LORD, and the LORD
+offering the
+the priest thereof.
+
+20:<|eot|>
+2025-05-29 03:24:40 - Generation stats - Model calls: 256, Time: 134.84s, Speed: 1.90 calls/s
+2025-05-29 03:25:47 - User selected option: 2
+2025-05-29 03:25:50 - Input text: 66:022:019 And if any man shall take away from the words of the book of
+this prophecy, God shall take away his part out of the book of life, and
+out of the holy city, and from the things which are written in this
+book.
+2025-05-29 03:28:06 - Generated: <|sot|>66:022:019 And if any man shall take away from the words of the book of
+this prophecy, God shall take away his part out of the book of life, and
+out of the holy city, and from the things which are written in this
+book.
+
+26:003:007 And the LORD said unto the LORD, and the son of Abraham, and
+therefore thereof.
+
+19:119:021 And the LORD said unto them, and the people, and the son of
+the princes, and the LORD, and the LORD shall be the LORD, and the LORD
+the LORD, and the LORD
+of the son of the LORD.
+
+03:001:021 And the LORD said unto them, and the priests, and the
+people, and the priests of the LORD, and the LORD, and the son of the
+LORD, and the LORD, and the LORD.
+
+03:020:011 And the LORD said unto them, and<|eot|>
+2025-05-29 03:28:06 - Generation stats - Model calls: 256, Time: 135.30s, Speed: 1.89 calls/s
+2025-05-29 03:29:01 - User selected option: 2
+2025-05-29 03:29:04 - Input text: 66:022:010 And he saith unto me, Seal not the sayings of the prophecy of
+this book: for the time is at hand.
+2025-05-29 03:31:18 - Generated: <|sot|>66:022:010 And he saith unto me, Seal not the sayings of the prophecy of
+this book: for the time is at hand.
+
+26:041:007 And they shall be an the LORD, and the son of Abraham to the
+hear the son of the son of the LORD.
+
+03:011:008 And the sons of the LORD said unto them, and the priests of
+the son of the LORD, and the LORD.
+
+20:007:011 And the LORD said unto them, and the people, and the
+cometh,
+and the priests and the priests, and the LORD said, With the
+princes, and the LORD, and the son of the children of
+the LORD, and the son of Assyrian of
+the LORD, and the son of Assyrians
+the LORD, and the LO<|eot|>
+2025-05-29 03:31:18 - Generation stats - Model calls: 256, Time: 134.06s, Speed: 1.91 calls/s
+2025-05-29 03:42:04 - User selected option: 2
+2025-05-29 03:42:11 - Input text:            66:022:010 66:022:010 66:022:010 66:022:010 66:022:010 66:022:010 66:022:010 66:022:010
+2025-05-29 03:44:26 - Generated: <|sot|>           66:022:010 66:022:010 66:022:010 66:022:010 66:022:010 66:022:010 66:022:010 66:022:010 There went the sons of the son of the congregation of the countains, and the son of the people of the cities of the house of the LORD, and the LORD, and the son of the people of the LORD of the son of the
+princes, and
+in the son of Assyriad unto them, and the priests of the LORD, and the son of Abraham the son of the LORD, and the son of the
+commandments of the LORD, and the son of Assyrians, and the son of Ammon, and the LORD, and the LORD thereof, and the LORD said, With the LORD.
+
+04:021:008 And th<|eot|>
+2025-05-29 03:44:26 - Generation stats - Model calls: 256, Time: 135.02s, Speed: 1.90 calls/s
+2025-05-29 03:48:16 - User selected option: 2
+2025-05-29 03:48:18 - Input text: 66:019:012 His eyes were as a flame of fire, and on his head were many
+crowns; and he had a name written, that no man knew, but he himself.
+
+2025-05-29 03:50:32 - Generated: <|sot|>66:019:012 His eyes were as a flame of fire, and on his head were many
+crowns; and he had a name written, that no man knew, but he himself.
+
+
+26:003:010 And they shall be the son of the LORD, and the sons of the
+princes, and the LORD, and the LORD shall be the
+people the LORD, and the LORD, and the LORD.
+
+03:019:028 And the LORD said unto them, and the children of Israel in
+the LORD, and the LORD.
+
+20:007:011 And the LORD said unto them, and the priests, and the
+people, and the priests of the LORD, and the LORD, and the LORD shall be the son of Assyrians, and the LORD.
+
+20:001:028 And the LORD said unto them, and the children of Isr<|eot|>
+2025-05-29 03:50:32 - Generation stats - Model calls: 256, Time: 133.72s, Speed: 1.91 calls/s

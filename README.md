@@ -22,10 +22,9 @@
 ### https://github.com/cloudcell/pgc-datasets (preparation of data for training)
 ### https://github.com/cloudcell/pgc-analysis (analytical packages)
 ### https://github.com/cloudcell/pgc-multi-d  (demos)
+### https://huggingface.co/cloudcell/pgc (sample model)
 
-
-
-### Training & Inference (We are currently focusing on building a chat, hence, we are using inference to predict bigrams)
+# Training & Inference (We are currently focusing on building a chat, hence, we are using inference to predict bigrams)
 ```
 # Create a virtual environment
 python3 -m venv venv

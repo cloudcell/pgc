@@ -1,0 +1,143 @@
+2025-05-25 18:34:03 - === Starting new text generation session ===
+2025-05-25 18:36:58 - User selected option: 7
+2025-05-25 18:37:39 - Set number of jumps to: 512
+2025-05-25 18:38:01 - User selected option: 3
+2025-05-25 18:38:01 - Attempted to generate text without model
+2025-05-25 18:38:05 - User selected option: 1
+2025-05-25 18:38:06 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 18:38:11 - Successfully loaded model from: model_20250525_082303_epoch_00026.pt
+2025-05-25 18:38:11 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 18:38:12 - User selected option: 3
+2025-05-25 18:38:12 - Generating from empty input
+2025-05-25 18:38:48 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eainne a wart  a tited. . ceve his.  
+score . in theed, 
+the win with a seart of you 
+a strongly, and the sword of this spirit. 
+
+Inthe becomed that is realling and defetery quickly die be compat in a<|eot|>
+2025-05-25 18:38:48 - Generation stats - Model calls: 100, Time: 35.71s, Speed: 2.80 calls/s
+2025-05-25 18:39:25 - User selected option: 4
+2025-05-25 18:39:26 - Set tokens to: 512
+2025-05-25 18:39:30 - User selected option: 3
+2025-05-25 18:39:30 - Generating from empty input
+2025-05-25 18:42:29 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eainne a wart  a tited. . ceve his.  
+score . head. As that ter . all takee to chande the contests and righting to coan. The 
+deepain of Their at the same to be graspose of Benefition town a with expreciage, but by the firstedly cand of this. 
+
+In the schools Japanes. In the hand of the enemy's from their to parry by this and haver by the cutack, ind companine of we comp drive colowing and place fightear. This weaknd practere in then the reall people and not 
+exanther eyen 
+
+There is and his and cut of the timing of the samurai of this that them always charan the 
+laddle to helberd in the sarpuer and when your body. 
+
+
+
+The Way of the Firstiried the enemy's with a fore when the attack to cen bat. 
+
+This is the bource shof he his concern an the hand'sing sword in theirient of this woremy 
+think of the say thise was for this and the prodibe stirit, and your long sword. They 
+weakiri the pry to learn think of the long swords. Without godfater those of the strongly, and the to schools with a strategy the controm <|eot|>
+2025-05-25 18:42:29 - Generation stats - Model calls: 512, Time: 179.47s, Speed: 2.85 calls/s
+2025-05-25 18:43:24 - User selected option: 7
+2025-05-25 18:43:26 - Set number of jumps to: 256
+2025-05-25 18:43:38 - User selected option: 3
+2025-05-25 18:43:38 - Generating from empty input
+2025-05-25 18:46:37 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eainne a word . in the. in theed then 
+hanmes  and 
+there things. As a histers the nature in accordicial with the between and hat you called the 
+two sword ase carried to duenting 
+and crushed attaces and dise, permssed by this weakhe with the lord and their schools 
+sword-fencin with the enemy the true Way of their collaps. Foightly, to move the formsional thinking the Way of the long sword and the vand of advantageously, and their of the Foremawa and the death a standing sword. We shing is not all this well eve nine sword attitudes. You must in this 
+canno Maturain 
+
+
+
+Sonceptacking that is is the first then the samurai there is at the 
+With the sas thant this is the comm strategy. The light, and the enemy. 
+
+The heid come strategy 
+
+"To whise is to become croun of there is not all this Way of the 
+way of the first as the same and to knowledg a gaztageth a posite the completen 
+aftitude and this in the 
+should the contest and to stary it the corribe busy as the stretegy, nor the vielt in a 
+sword-fencing fo<|eot|>
+2025-05-25 18:46:37 - Generation stats - Model calls: 512, Time: 178.23s, Speed: 2.87 calls/s
+2025-05-25 18:54:43 - User selected option: 1
+2025-05-25 18:54:45 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_082256
+2025-05-25 18:54:49 - Successfully loaded model from: model_20250525_082303_epoch_00027.pt
+2025-05-25 18:54:49 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 7, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 18:54:56 - User selected option: 3
+2025-05-25 18:54:56 - Generating from empty input
+2025-05-25 18:57:57 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eaed tall ap tite. 
+ a titing out  a tite. 
+ a tite. 
+ at the enemy in tha 
+your 
+d the movernice to the direent treat there is noth head this up the spirit, it. 
+
+In the Way of the sword agai. The the abcentent of the way to the spirit of unch as hed ince, thisting to have the 
+apanesisland with the enorit' strategy. 
+
+
+
+The forentain the spirit, we clames foot usearch these thousance, and the enemy 
+asst they 
+the blart in a little of strategy. 
+
+
+
+The Sword. The enemy, you must train falling one workword. you inten the attitude. When you will 
+adving the spirit of the field the able to for mind. The tokund you must bearide-y, there is the Way of the sword, and the enemy's ground you must appringly. 
+
+To tool the carrictor long sword tooking the enemy in harchand the spirit, there are not to attitude of the long sworat. 
+
+In single and attitudes the viewe the spirit and these is poace. The companion a 
+
+attain the abour attitude, hous are the body of the cappoints. When your body to the surping the larger o<|eot|>
+2025-05-25 18:57:57 - Generation stats - Model calls: 512, Time: 180.91s, Speed: 2.83 calls/s
+2025-05-25 18:58:29 - User selected option: 7
+2025-05-25 18:58:34 - Set number of jumps to: 512
+2025-05-25 18:58:38 - User selected option: 3
+2025-05-25 18:58:38 - Generating from empty input
+2025-05-25 19:01:36 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eaed tall ap tite. 
+ a that  a thed in thee. 
+ a pur hise. 
+ap his armed 
+ 
+into the homt who teach the of Kents are it is impored a little peopt indire 
+the livici. 
+
+unward the fesistall look sword the preven, down an the shout the enemy's calm 
+ple tower. In the enemy. 
+
+
+
+In the enemy of the principle is nourat the enemy take upaching in the prody call 
+athat is poseatial think your 
+swording to the long sword lifenstressed in 
+is diffing the Way, sprictice using the enemy's discused and used a techniques with your learning 
+and is not in other a tokugh sword inter and the blaning of sten you can the true Way. 
+When the fecepting the enemy's long sword in they all the Kod foressing to meanaly in Zen 
+apannows. 
+
+If you deay lird of your and in strategy to the Hoart suickly relaxe is the gut 
+sword-f 
+
+
+
+23 Re Book of Knocking the enemy arounder mense are in in lare in after to attack that 
+he ways 
+ag that is recorders. 
+
+The satchinginers to 
+the arch thes are in every are are in such a points and minds <|eot|>
+2025-05-25 19:01:36 - Generation stats - Model calls: 512, Time: 177.45s, Speed: 2.89 calls/s
+2025-05-25 19:08:17 - User selected option: 6
+2025-05-25 19:08:17 - 
+Final Generation Statistics:
+2025-05-25 19:08:17 - Total model calls: 2148
+2025-05-25 19:08:17 - Total generation time: 751.78s
+2025-05-25 19:08:17 - Average time per model call: 349.99ms
+2025-05-25 19:08:17 - Average model call speed: 2.86 calls/second
+2025-05-25 19:08:17 - === Ending session ===

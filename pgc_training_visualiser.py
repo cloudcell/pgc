@@ -14,7 +14,7 @@ This script visualizes data from brain_stats_train_epoch_*.json files in a selec
 It ensures correct numerical ordering of the epoch files.
 """
 
-MAX_TOP_PATHWAYS = 20
+MAX_TOP_PATHWAYS = 64
 
 import os
 import json

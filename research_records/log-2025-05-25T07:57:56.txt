@@ -1,0 +1,17 @@
+2025-05-25 07:57:56 - === Starting new text generation session ===
+2025-05-25 07:58:02 - User selected option: 1
+2025-05-25 07:58:08 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/go-rin-no-sho/checkpoints_20250525_064753
+2025-05-25 07:58:20 - Successfully loaded model from: model_20250525_064804_epoch_00003.pt
+2025-05-25 07:58:20 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 5, 'num_heads': 1, 'num_jumps': 12}
+2025-05-25 07:58:29 - User selected option: 3
+2025-05-25 07:58:29 - Generating from empty input
+2025-05-25 07:58:42 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                e ing .  ther ing . the  ther ing . the  as the  and ther the . the end the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the <|eot|>
+2025-05-25 07:58:42 - Generation stats - Model calls: 100, Time: 13.03s, Speed: 7.67 calls/s
+2025-05-25 07:58:59 - User selected option: 2
+2025-05-25 07:59:03 - Input text:                                                                                      Miyamoto Musa
+2025-05-25 07:59:15 - Generated: <|sot|>                                                                                     Miyamoto Musa. the  ther ing . the  ther the  and ther the end the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-25 07:59:15 - Generation stats - Model calls: 100, Time: 11.38s, Speed: 8.79 calls/s
+2025-05-25 07:59:25 - User selected option: 2
+2025-05-25 07:59:42 - Input text:                                                      The Way of the Strategy, of Life and Death is
+2025-05-25 07:59:55 - Generated: <|sot|>                                                     The Way of the Strategy, of Life and Death is ther the ing the the ing the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the th<|eot|>
+2025-05-25 07:59:55 - Generation stats - Model calls: 100, Time: 12.20s, Speed: 8.20 calls/s

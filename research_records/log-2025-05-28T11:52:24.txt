@@ -538,3 +538,790 @@ people, and the priests of the LORD, and the LORD, and the LORD shall be the son
 
 20:001:028 And the LORD said unto them, and the children of Isr<|eot|>
 2025-05-29 03:50:32 - Generation stats - Model calls: 256, Time: 133.72s, Speed: 1.91 calls/s
+2025-06-02 17:22:30 - User selected option: 2
+2025-06-02 17:22:33 - Input text:                                                                                               LORD
+2025-06-02 17:32:42 - Generated: <|sot|>                                                                                              LORD s ter ter ter ter ter ter ter ter ter ter ter ter ter
+vere
+then
+there the temple, and the people, and the LORD, and the LORD
+the LORD
+the LORD, and the LORD God, and the LORD God, and the LORD
+of the
+chould, and the people of the LORD, and the LORD, and the LORD
+of the hand of the children of Israel the LORD, and the
+priese the
+princes, and the LORD, and the LORD shall be the
+princes, and the LORD
+of the son of the LORD, and the LORD, and the LORD, and the son of Ass
+the LORD, and the sons of <|eot|>
+2025-06-02 17:32:42 - Generation stats - Model calls: 256, Time: 609.09s, Speed: 0.42 calls/s
+2025-06-03 01:53:48 - User selected option: 2
+2025-06-03 01:53:56 - Input text:                                                                                       King Solomon
+2025-06-03 02:04:55 - Generated: <|sot|>                                                                                      King Solomonn , , s en ter tes ter ter ter tan on then tere vere
+of,
+and the sons of the children of the son of the LORD, and the son of
+the LORD, and the son of Assyriad the LORD, and the
+priest the LORD.
+
+03:011:023 And the LORD said unto them, and there was there was the
+thee, and the congregation, and the LORD, and the son of Assyrians, and
+therefore thereof, and the LORD, and
+priests and the priests of the LORD, and the LORD, and the LORD
+the LORD, and the LORD, and the son of Assyrians, and the LORD, an<|eot|>
+2025-06-03 02:04:55 - Generation stats - Model calls: 256, Time: 658.78s, Speed: 0.39 calls/s
+2025-06-04 16:57:28 - User selected option: 2
+2025-06-04 16:57:35 - Input text:                                                                                      Jesus Christ 
+2025-06-04 17:08:07 - Generated: <|sot|>                                                                                     Jesus Christ  w ter ter ter ter ter ter ter ter ter ter
+vereer,
+and
+there there the LORD, and the people, and the people, and the son
+of the LORD, and the LORD.
+
+20:001:021 And the LORD said unto them, and the children of Israel,
+and
+in the son of Ammon, and the LORD, and the son of Abraham, and the
+princes, and the LORD, and the LORD
+of the hand of the children of the
+commandments of the LORD, and
+priests, and the LORD said unto them, and
+the LORD, and the LORD said,
+
+01:003:003 And the LORD said unto Mo<|eot|>
+2025-06-04 17:08:07 - Generation stats - Model calls: 256, Time: 632.70s, Speed: 0.40 calls/s
+2025-06-04 17:09:49 - User selected option: 4
+2025-06-04 17:09:56 - Set tokens to: 1024
+2025-06-04 17:10:20 - User selected option: 2
+2025-06-04 17:10:25 - Input text:                                                                                      Jesus Christ 
+2025-06-04 18:00:06 - Generated: <|sot|>                                                                                     Jesus Christ  w ter ter ter ter ter ter ter ter ter ter
+vereer,
+and
+there there the LORD, and the people, and the people, and the son
+of the LORD, and the
+princes, and the LORD said unto them, and there
+the LORD, and the LORD
+of the son of the LORD, and the son of Assyrians, and the LORD, and
+perceptest the LORD, and the son of the children of the hand of
+the LORD, and the LORD
+of the son of the LORD, and the son of Assyrians
+the LORD, and the
+people of the children of Israel the LORD, and the
+princes of the LORD
+the LORD, and the LORD.
+
+03:011:028 And the LORD said unto them, and the children of Israel,
+
+13:002:010 And the LORD of the hand of the children of Israel the LORD
+of the son of the LORD.
+
+03:011:021 And the LORD said unto them, and the priests, and the
+priests of the LORD, and the son of the children of the hands of the LORD, and the LORD
+offering the hand of the children of Israel the LORD
+the son of A
+willed the son of Israel, and the son of Abraham the
+priest therefore
+the LORD, and the son of Abraham the son of the LORD
+of the son of the
+princes, and the son of Assyriad the LORD, and the
+priest the LORD, and the LORD, and the LORD, and the LORD.
+
+03:019:028 And the LORD said unto them, and the son of the LORD, and
+priest the LORD, and the son of Assyrians, and the LORD, and the
+priests, and the LORD saith the LORD of the hand of the
+commandments:
+
+03:020:016 And the LORD said unto them, and the people, and there was
+the LORD, and the LORD.
+
+19:001:006 And the LORD said unto them, and the children of Israel the
+LORD the LORD, and the son of Assyriad unto them, and there was there
+thee, and the
+princes, and the LORD shall be the LORD, and the LORD shall be the LORD
+the LORD.
+
+03:011:021 And the LORD said unto them, and there was thereof, and
+priests of the LORD, and the LORD, and the LORD, and the LORD, and the LORD, and the LORD
+of the son of the LORD.
+
+03:001:028 And the LORD said unto them, and the priests, and the
+priests, and the LORD, and the LORD said, Wit<|eot|>
+2025-06-04 18:00:06 - Generation stats - Model calls: 1024, Time: 2980.91s, Speed: 0.34 calls/s
+2025-06-05 00:15:38 - User selected option: 2
+2025-06-05 00:15:51 - Input text:                                                                                  The priests were 
+2025-06-05 00:46:14 - Generated: <|sot|>                                                                                 The priests were  winn , 
+se te s it te, our ter tere vere
+then the one of the eater of the words of the LORD, and the LORD, and the LORD said unto them, and the priests of the LORD.
+
+20:001:028 And the LORD said unto them, and the people, and the
+cometh,
+and the priests and the priests, and the LORD said, With the
+princes, and the LORD, and the son of the children of
+the LORD, and the people of the LORD.
+
+03:011:021 And the LORD said unto them, and the people, and the
+cometh
+the LORD, and the LORD, and the LORD.
+
+04:010:018 And the LORD said unto them, and the sons of the children of
+the LORD, and the LORD, and the LORD, and the son of Assyrians, and the
+priests, and the LORD said unto them, and there was of the LORD, and the LORD, and the LORD.
+
+03:020:016 And the LORD said unto them, and the children of Israel,
+and
+in the son of A
+willed, and the LORD, and the son of Assembled the
+commandments, and
+therefore thereof.
+
+19:119:023 And the LORD said unto them, and the people, and the son of
+the princes, and the LORD, and the LORD, and the LORD, and the LORD.
+
+03:021:001 And the LORD said unto them, and there was there was
+mountains of the house of the LORD, and the LORD, and the son of the
+LORD, and the LORD, and the LORD.
+
+03:020:011 And the LORD said unto them, and the children of Israel,
+and
+in the son of Ammon, and the LORD, and the LORD, and the LORD, and
+priest the LORD, and the son of Assyrians, and the LORD, and the
+priests, and the LORD saith the LORD of the hand of the
+commandments of the LORD, and the LORD, and the
+priests, and the LORD
+the LORD, and the LORD.
+
+03:020:011 And the LORD said unto them, and the children of Israel, and
+the LORD, and the sons of the LORD, and the LORD, and the LORD shall be
+and the con of the LORD.
+
+03:011:028 And the sons of the LORD said unto them, and the priests of
+the son of the LORD, and the LORD.
+
+20:005:011 And the LORD said unto them, and the children of the
+cometh,
+and the priests of the LORD, and the LORD, and the son of the
+chil<|eot|>
+2025-06-05 00:46:14 - Generation stats - Model calls: 1024, Time: 1823.66s, Speed: 0.56 calls/s
+2025-06-05 02:27:35 - User selected option: 2
+2025-06-05 02:27:38 - Input text:                                                                                              Devil
+2025-06-05 02:55:43 - Generated: <|sot|>                                                                                             Devil on s ,  ten pin on  our ter ter ter ter ter tan on then
+ther
+there there the LORD, and the son of the children of the hand of
+the LORD, and the sons of
+the LORD God of the children of Israel the LORD.
+
+03:021:001 And the sons of the LORD said unto them, and the priests of
+the sons of the children of the
+cometh therefore the son of the LORD.
+
+20:001:021 And the LORD said unto them, and the son of the LORD, and
+priest the LORD, and the son of Assyrians, and the LORD, and the
+priests, and the LORD saith the LORD of the hand of the
+covenant of the
+princes, and the LORD, and the
+priests, and the LORD
+the LORD, and the LORD said unto them, and there
+the LORD, and the
+people that there was there was thereof, and the LORD
+thee, and the LORD, and the son of the children of the sons of the
+LORD, and the LORD
+of the son of the LORD, and the son of Assyrians, and
+the hand of the
+children of Israel, and the son of Assyriad the LORD.
+
+20:001:023 And the LORD said unto them, and the people of the LORD, and
+the LORD, and the LORD, and the son of the children of Israel the
+priests, and
+the LORD the LORD, and the son of Assyrians, and the LORD
+of the LORD of the LORD of the son of the LORD.
+
+03:001:021 And the LORD said unto them, and the people, and the
+cometh
+the LORD, and the LORD, and the LORD therefore there was there
+the LORD
+thee, and the LORD
+of the son of the LORD, and the LORD, and the LORD
+of the sin of the
+priest the LORD, and the son of Assyrians, and the
+priest the LORD, and the LORD.
+
+20:001:021 And the LORD said unto them, and the children of Israel,
+and
+in the son of Assyrians, and the LORD, and the son of Assyrians, and
+therefore thereof.
+
+23:005:018 And the sons of the LORD, and the LORD, and the son of the
+LORD, and the son of the children of the hand of the house of the LORD,
+and the son of the LORD, and the son of Assyrians, and the LORD, and
+priests, and the LORD.
+
+03:020:001 And the LORD said unto them, and there was thereof, and
+perity the LORD, and the <|eot|>
+2025-06-05 02:55:43 - Generation stats - Model calls: 1024, Time: 1684.19s, Speed: 0.61 calls/s
+2025-06-05 06:02:38 - User selected option: 1
+2025-06-05 06:02:42 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/kjv-bigrams/checkpoints_20250526_160825
+2025-06-05 06:03:33 - Successfully loaded model from: model_20250529_142654_epoch_00002.pt
+2025-06-05 06:03:33 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 8, 'num_heads': 1, 'num_jumps': 16}
+2025-06-05 06:03:50 - User selected option: 4
+2025-06-05 06:03:54 - Set tokens to: 128
+2025-06-05 06:05:15 - User selected option: 3
+2025-06-05 06:05:15 - Generating from empty input
+2025-06-05 06:06:30 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <|eot|>
+2025-06-05 06:06:30 - Generation stats - Model calls: 128, Time: 75.35s, Speed: 1.70 calls/s
+2025-06-05 06:06:53 - User selected option: 2
+2025-06-05 06:07:07 - Input text:                                                                                   the LORD thy god
+2025-06-05 06:08:20 - Generated: <|sot|>                                                                                  the LORD thy god oin, s , 
+ner in, 
+se tinne tes, vellin, and that thou dest, and the children of
+Israel.
+
+12:002:004 And they that therefore the LORD thy God of the
+children of
+Israel the son of Shall be the LORD.
+
+13:009:001 And the LORD said unto Moses, and th<|eot|>
+2025-06-05 06:08:20 - Generation stats - Model calls: 128, Time: 73.57s, Speed: 1.74 calls/s
+2025-06-05 06:09:17 - User selected option: 4
+2025-06-05 06:09:19 - Set tokens to: 1024
+2025-06-05 06:09:56 - User selected option: 2
+2025-06-05 06:10:15 - Input text:                                                                           the LORD thy God of the 
+2025-06-05 06:26:39 - Generated: <|sot|>                                                                          the LORD thy God of the , y , 
+ner in, 
+se tinne ten fro tes, and reen unter, and the children of
+Judah, and
+shall be the LORD.
+
+19:009:001 And the LORD said unto Moses, and the LORD, and the LORD of
+he hath seek him that he hath seek him that thou shalt be an the
+shalt
+the LORD.
+
+24:007:006 And the LORD said unto Moses, and the LORD, and the sons of
+Judah, and the children of Israel, and the king of the LORD, and the LORD shall be the son of Shall be the son of Zebubbather, and
+shall be the
+shalt be the LORD.
+
+13:008:001 And the LORD said unto Moses, and the children of Israel, and
+shall be the LORD.
+
+19:009:001 And the LORD said unto Moses, and the LORD, and the LORD of
+he hath seek him that he hath seek him that thou shalt be an the
+shalt.
+
+18:024:001 And the LORD shall be the LORD, and the son of Shallum, and
+shall be the LORD, and the son of Shall be the LORD.
+
+13:009:001 And the LORD said unto Moses, and the LORD, and the sons of
+Judah, and the children of Israel, and the word of the LORD, and the son
+of the LORD, and the LORD shall be the LORD, and the sons of the LORD.
+
+13:009:001 And the LORD spake unto Moses told the children of Israel,
+and the children of
+Judah, and the son of Shall be the LORD.
+
+13:009:001 And the LORD said unto Moses, and the LORD, and the LORD of
+hand of the children of Shall be the LORD.
+
+04:024:001 And the LORD spake unto Moses that the LORD thy God of the
+the earth, and the children of Israel the son of
+
+24:031:001 And they were all the people of the children of the
+children
+the children of Israel, and the children of Israel, and the king of the
+shall be the LORD.
+
+05:007:001 And the LORD spake unto Moses, and the children of Israel the
+son of the LORD.
+
+19:119:001 And the LORD said unto Moses, and the LORD, and the LORD of
+he hath seek him that he hath seek him that thou shalt be an the
+shalt
+the LORD.
+
+24:007:006 And the LORD said unto Moses, and the LORD, and the sons of
+Judah, and the children of Israel, and the king of the LORD, and the LORD sha<|eot|>
+2025-06-05 06:26:39 - Generation stats - Model calls: 1024, Time: 984.22s, Speed: 1.04 calls/s
+2025-06-05 06:42:58 - User selected option: 2
+2025-06-05 06:43:06 - Input text:                                                                                     Revelations of
+2025-06-05 07:02:44 - Generated: <|sot|>                                                                                    Revelations ofin,  win oin, s e , er wart in, in, in, then there was
+of the children of Israel the son of Ammon, and the LORD shall be the LORD.
+
+19:009:001 And the LORD said unto Moses, and the LORD, and the LORD of
+his father, and the sons of Shall be the LORD.
+
+13:008:001 And the LORD said unto Moses, and the LORD, and the sons of
+Jesus, and the children of Israel, and the king of the LORD, and the LORD.
+
+13:008:001 And the LORD spake unto Moses that the LORD thy God of the
+the LORD, and the LORD shall be the LORD.
+
+24:048:001 And the LORD said unto Moses, and the LORD, and the children
+the children of Israel, and the children of Israel.
+
+13:008:001 And the LORD said unto Moses, and the LORD, and the LORD of
+his father, and the sons of Shall be the LORD.
+
+13:007:001 And the LORD spake unto Moses, and the children of Israel the
+son of the LORD.
+
+19:119:001 And the LORD said unto Moses, and the LORD, and the LORD of
+he hath seek him that he hath seek him that thou shalt be an the
+shalt
+the LORD.
+
+24:007:006 And the LORD said unto Moses, and the LORD, and the LORD of
+he hath seek in the son of Israel, and the children of Israel, and the
+people of the children of Israel the son of Shall be the LORD.
+
+13:007:001 And the LORD spake unto Moses, and the children of Israel,
+and the word of the LORD.
+
+19:009:001 And the LORD said unto Moses, and the LORD, and the LORD of
+he hath seek him that he hath seek him that thou shalt be an the
+shalt
+the LORD.
+
+24:007:006 And the LORD said unto Moses, and the LORD, and the LORD of
+his father, and the sons of Judah, and the king of Babylon, and the
+child the son of Zebahel, and the word of the LORD.
+
+13:007:001 And the LORD spake unto Moses that the LORD hath seed them
+the children of Israel, and the children of Israel, and the king of the
+shall be the LORD.
+
+05:007:001 And the LORD spake unto Moses, and the children of Israel,
+and the children of Israel, and the king's shall be the LORD.
+
+13:007:006 And the LORD said unto Moses, and the LORD, an<|eot|>
+2025-06-05 07:02:44 - Generation stats - Model calls: 1024, Time: 1178.77s, Speed: 0.87 calls/s
+2025-06-05 17:04:15 - User selected option: 2
+2025-06-05 17:04:22 - Input text:                                                                           Children of Israel were 
+2025-06-05 17:24:14 - Generated: <|sot|>                                                                          Children of Israel were  win oin, anin, anin, anind, and
+then the
+right in the sin of Jehoiadad the son of Sheshem, and the king of Babylon.
+
+12:002:004 And he said, Whose that were the LORD, and the children of
+Jesus, and the children of the children of
+Judah.
+
+13:008:001 And the LORD shall be the LORD, and the son of Zebahel, and
+shall be the LORD, and the son of Shall
+the son of Shall be the LORD.
+
+13:007:001 And the LORD said unto Moses, and the LORD, and the LORD of
+his father, and the sons of Judah, and the king of Babylon, and the
+child the son of Zebahel, and the woman of the house of the LORD, and the son of Shall be the LORD, and the son of Shall be the LORD.
+
+13:009:001 And the LORD said unto Moses, and the LORD, and the son of
+the LORD shall be the LORD shall be the LORD, and the son of Shall be
+shall be the son of Shall be the king of Babylon, and the people that
+the LORD.
+
+13:007:006 And the LORD shall be the LORD shall be the LORD, and the son
+of the LORD, and the LORD shall be the LORD.
+
+13:009:001 And the LORD said unto Moses, and the child that thou shalt
+shall be the LORD.
+
+19:119:001 And the LORD said unto them, and shall be the LORD, and the
+shalt offering that they shall be an the LORD.
+
+13:007:001 And the LORD said unto Moses, and the LORD, and the LORD of
+his father, and the sons of Judah, and the children of Israel, and the
+shalt offering the LORD.
+
+13:007:001 And the LORD said unto Moses, and the LORD, and the LORD of
+his father, and the sons of Judah, and the word of the LORD.
+
+13:007:001 And the LORD said unto Moses, and the LORD, and the LORD of
+hand of the children of Shall be the LORD.
+
+04:024:001 And the LORD spake unto Moses that the LORD thy God of the
+the eaters, and the LORD shall be the LORD.
+
+19:007:001 And the LORD said unto Moses, and the children of Israel, and
+the son of Israel, and the children of Israel, and the king of Babylon,
+and the sons of the LORD, and the LORD shall be the son of Zebulon, and
+shall be the LORD, and the son of Zeborn, and the<|eot|>
+2025-06-05 17:24:14 - Generation stats - Model calls: 1024, Time: 1192.24s, Speed: 0.86 calls/s
+2025-06-07 05:34:27 - User selected option: 1
+2025-06-07 05:34:29 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/kjv-bigrams/checkpoints_20250526_160825
+2025-06-07 05:35:35 - Successfully loaded model from: model_20250529_142654_epoch_00003.pt
+2025-06-07 05:35:35 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 8, 'num_heads': 1, 'num_jumps': 16}
+2025-06-07 05:35:41 - User selected option: 3
+2025-06-07 05:35:41 - Generating from empty input
+2025-06-07 05:50:30 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <|eot|>
+2025-06-07 05:50:30 - Generation stats - Model calls: 1024, Time: 888.87s, Speed: 1.15 calls/s
+2025-06-07 05:50:44 - User selected option: 4
+2025-06-07 05:50:54 - Set tokens to: 64
+2025-06-07 05:51:06 - User selected option: 2
+2025-06-07 05:51:14 - Input text:                                                                                       The LORD thy
+2025-06-07 05:52:27 - Generated: <|sot|>                                                                                      The LORD thy oeresind  ware  waresind 
+un then thes wert instesed
+thening that hade that he may before the
+covenanted them that he may
+k<|eot|>
+2025-06-07 05:52:27 - Generation stats - Model calls: 64, Time: 72.96s, Speed: 0.88 calls/s
+2025-06-07 05:52:44 - User selected option: 4
+2025-06-07 05:52:47 - Set tokens to: 1024
+2025-06-07 05:52:50 - User selected option: 2
+2025-06-07 05:53:03 - Input text:                                                                                           the LORD
+2025-06-07 06:10:50 - Generated: <|sot|>                                                                                          the LORDer w tererines waresind  andind 
+sear, and 
+caveered
+theninab, and of the children of Israel said, and
+they have
+of the
+covenant of the LORD, and the sons of the LORD, and the king's
+the LORD.
+
+01:025:012 And the LORD said unto Moses, and the sons of the LORD, and
+the LORD God of Israel, and the children of Israel said unto him, and
+the LORD
+gar from thee, and they shall be the children of Israel the
+children of
+the king's so the king's house, and the children of Israel.
+
+01:025:025 And the LORD spake unto Moses, and they were and the
+covenanted them that were in the land of the LORD of the LORD God of Israel said unto them, and the people them that he
+down unto
+the LORD.
+
+01:025:005 And the LORD spake unto Moses, and they were and the
+covenanted them that were in
+the LORD.
+
+26:021:005 Then they came to pass, when the LORD God of Israel, and the
+set of the LORD God of Israel said, The LORD God of Israel.
+
+01:015:032 And the LORD spake unto Moses, and the children of Israel is
+of the LORD God of Israel said, The LORD, and the sons of Shimon's
+houses, and the king of Babylon, and they shall be the LORD of the
+LORD's house of the LORD, and the sons of the LORD, and the king's
+houses, and the children of Israel.
+
+01:025:025 And the LORD said unto Moses, and the king's stead, and the
+commanded them in the son of man of the children of Israel said, and the
+LORD hath spoken the king's sons, and they shall be the LORD God of the
+LORD, and the sons of Jerusalem; and they shall be unto the king's
+household, and they shall be the LORD of the LORD God of Israel said
+unto them, and they shall be the LORD of the LORD
+GOD.
+
+03:001:012 And the LORD said unto Moses, and the king of Babylon, and
+the LORD, and the sons of the LORD, and the sons of the LORD, and the sons of the LORD, and the LORD
+commanded Moses.
+
+04:001:009 And they came to pass, when they had made
+thee, and the LORD
+of the LORD God of Israel, and the children of Israel, and the
+covenant
+the LORD.
+
+01:025:010 And <|eot|>
+2025-06-07 06:10:50 - Generation stats - Model calls: 1024, Time: 1066.15s, Speed: 0.96 calls/s
+2025-06-07 06:12:36 - User selected option: 4
+2025-06-07 06:12:38 - Set tokens to: 512
+2025-06-07 06:12:40 - User selected option: 2
+2025-06-07 06:12:46 - Input text:                                                                                        Revelations
+2025-06-07 06:20:45 - Generated: <|sot|>                                                                                       Revelations a win w terer ier oind, And tes, calestes it, and
+cave
+the sons of Jerusalem; and they shall be the LORD of hosts, and the children of Israel.
+
+01:025:025 And the LORD spake unto Moses, and the children of Israel is
+the LORD, and the sons of the LORD, and the LORD spake unto Moses, and
+the LORD.
+
+02:021:032 And the LORD spake unto Moses, and the children of Israel to
+the children of Israel.
+
+01:041:005 And the LORD said unto Moses, and the children of Israel, and
+they came to pass, who is the son of many of the LORD, and the LORD spake unto Moses, and they were thee that were numbered of the LORD.
+
+01:049:005 And the LORD said unto Moses, and the children of Israel, and
+the LORD God of Israel, and the children of Israel said unto them, and
+the LORD thy God of Israel, and they shall be the LORD of the LORD God
+of the sons of Shemon's house, and the children of Israel.
+
+01:015:005 And the LORD spake unto Moses, and the son of Sheceat, and
+the LORD.
+
+19:119:002 Then they came to pass, when<|eot|>
+2025-06-07 06:20:45 - Generation stats - Model calls: 512, Time: 478.50s, Speed: 1.07 calls/s
+2025-06-07 06:25:50 - User selected option: 2
+2025-06-07 06:25:55 - Input text:                                                                                       Jesus Christ
+2025-06-07 06:35:20 - Generated: <|sot|>                                                                                      Jesus Christin A win win oeresind  andind 
+sear on the tillines of
+Israel, and the children of Israel the son of
+the LORD shall be the LORD
+of the LORD God of Israel, and the children of Israel the sons of the LORD, and the king's sake unto them, and they shall be the LORD of the
+covenanted them that he may before the LORD thy God of the
+children of
+Israel, and the children of Israel the son of Asher, and they shall be
+all the people that he hath shall be the LORD shall be the LORD thy God
+the king of Judah, and the children of Israel the sons of the LORD, and
+the son of Shemon.
+
+02:021:025 And the LORD said unto Moses, and the children of Israel, and
+they came to pass, who is the son of the LORD, and the sons of the LORD.
+
+02:021:032 And the LORD said unto Moses, and the children of Israel, and
+the children of Israel the son of Asham, and the LORD shall be the LORD
+of the LORD God of Israel, and the children of Israel the sons of the
+LORD of the LORD thy God of Israel the son of Asham, and the sons of <|eot|>
+2025-06-07 06:35:20 - Generation stats - Model calls: 512, Time: 565.09s, Speed: 0.91 calls/s
+2025-06-07 06:39:40 - User selected option: 2
+2025-06-07 06:39:49 - Input text:                                                                            The son of man shall be
+2025-06-07 06:47:22 - Generated: <|sot|>                                                                           The son of man shall been wit on thin, in, 
+sear tent till
+cave and
+the way in the land of the LORD God of Israel,
+
+13:006:009 And they came to pass, when they had made them in the
+children of Israel.
+
+19:049:005 Then they came to pass, when the LORD of the LORD God of the
+serve the LORD, and the sons of the LORD, and the king's
+houses, and the children of Israel.
+
+01:025:025 And the LORD spake unto Moses, and they had made them that
+that they may before thee in the land of the LORD of the LORD of the LORD of the LORD God of Israel, and the children of Israel was one of the
+serve the LORD, and the king's house, and the LORD, and the king's house
+the sons of the LORD, and the king's house, and the king's house, and the children of Israel.
+
+02:021:025 And the LORD spake unto Moses, and the sons of the LORD God
+of the LORD, and the sons of the LORD, and the sons of the LORD, and the sons of the LORD, and the LORD.
+
+02:021:032 And the LORD spake unto Moses, and the children of Israel to
+the children of Israel.
+
+0<|eot|>
+2025-06-07 06:47:22 - Generation stats - Model calls: 512, Time: 452.84s, Speed: 1.13 calls/s
+2025-06-07 07:06:44 - User selected option: 2
+2025-06-07 07:07:03 - Input text:                                                                           they cast a golden calf 
+2025-06-07 07:17:23 - Generated: <|sot|>                                                                          they cast a golden calf s et ten wites wes tes oveerines,
+and
+callinab, and the children of Israel.
+
+02:021:025 And the LORD spake unto Moses, and the sons of the LORD thy
+God, and the LORD
+commanded the sons of the LORD, and the king's
+covenant of the LORD.
+
+01:025:005 There is not them that were numbered them that thou hast shall be the LORD shall be the LORD thy God.
+
+01:025:025 And the children of Israel, and the children of Israel, and
+they shall be the LORD God of Israel, and the children of Israel said,
+and the children of Israel in the son of Shecheth.
+
+02:021:025 And the LORD spake unto Moses, and the children of Israel was
+all the people of the LORD thy God of Israel, and the children of Israel, and the children of Israel the sons of the LORD, and the king's house, and the children of Israel.
+
+01:041:005 And the LORD spake unto Moses, and they were and the
+covenanted them that were in the land of the LORD of the LORD of the
+servant thou shalt shall be the LORD shall be the
+concerning the king's
+house <|eot|>
+2025-06-07 07:17:23 - Generation stats - Model calls: 512, Time: 620.61s, Speed: 0.82 calls/s
+2025-06-08 23:18:35 - User selected option: 1
+2025-06-08 23:18:38 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/kjv-bigrams/checkpoints_20250526_160825
+2025-06-08 23:20:51 - Successfully loaded model from: model_20250529_142654_epoch_00004.pt
+2025-06-08 23:20:51 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 8, 'num_heads': 1, 'num_jumps': 16}
+2025-06-08 23:22:25 - User selected option: 3
+2025-06-08 23:22:25 - Generating from empty input
+2025-06-08 23:32:43 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <|eot|>
+2025-06-08 23:32:43 - Generation stats - Model calls: 512, Time: 618.37s, Speed: 0.83 calls/s
+2025-06-08 23:33:47 - User selected option: 2
+2025-06-08 23:33:54 - Input text:                                                                           they cast a golden calf 
+2025-06-08 23:44:29 - Generated: <|sot|>                                                                          they cast a golden calf  tener tener tenin
+erines tent,
+that our
+vess, and began to the children of Israel the
+people that
+shall be
+thee, and the people.
+
+01:030:007 And the LORD said, I will giveth thee, and they shall be
+through the son of Judah.
+
+19:038:005 And he said, I will given the sons of the children of Israel,
+the LORD, and they that he shall be taken of the children of Israel,
+therefore.
+
+01:030:015 And the children of Israel, and the people, and the people
+the LORD shall be for the children of Israel, and the people of the
+people, and the people of the LORD thy God of Israel, and the children
+of the king of Babylon, and the
+children of Israel, and the sons of
+Jerusalem, and the people of the
+LORD God of Israel, and Samah, and
+Jerusalem, and the people.
+
+01:014:022 And he said, I will given the sons of the children of Israel,
+and the children of Israel the son of Judah, and the people of the
+son,
+
+04:023:022 And the LORD said, I will given the children of Israel, and
+the LORD, and Shebal,
+
+<|eot|>
+2025-06-08 23:44:29 - Generation stats - Model calls: 512, Time: 634.83s, Speed: 0.81 calls/s
+2025-06-08 23:46:05 - User selected option: 2
+2025-06-08 23:46:14 - Input text:                                                                Revelations Revelations Revelations
+2025-06-08 23:57:10 - Generated: <|sot|>                                                               Revelations Revelations Revelations, anin, loureserery one that
+wereeted unto the king of Babylon, and they shall be shall be the LORD
+will do the LORD.
+
+04:023:010 And he said, I will given the son of
+the son of Judah, and
+the LORD hath said, I will not bear they shall be
+the king of Babylon,
+which the son of Judah, and the sons of Elless
+Christ, and the king of
+Judah, and Azariah, and Samuel, and the
+children of Israel, and the
+son of Nebai, and Shebal, and Shebal, and
+the king of Babylon, and
+their father, and the people of the LORD, and
+shall be the LORD shall
+because the son of Judah, and the king of
+Judah, and Azariah,
+and the
+son of Nebai, and Shebai, and Shebal,
+
+13:006:007 And the LORD said unto Moses, and the LORD hath said, I will
+with the sons of the children of Israel, and the
+people of the
+LORD.
+
+04:023:010 And he said, I will given the son of Josiah the son of
+Israel, and the people of the LORD, and the sons of the LORD, and the
+king of Judah, and the people of the LORD, and the sons of
+Jerusalem,
+w<|eot|>
+2025-06-08 23:57:10 - Generation stats - Model calls: 512, Time: 656.29s, Speed: 0.78 calls/s
+2025-06-09 04:41:52 - User selected option: 2
+2025-06-09 04:41:56 - Input text:                                                                                       King Solomon
+2025-06-09 04:51:44 - Generated: <|sot|>                                                                                      King Solomoner, s e teer, 
+er tenin, 
+kins, ca
+turiete,
+then were vell, and the people of the LORD, and the
+son of
+Judah, and
+Jerusalem, and the people.
+
+01:030:007 And he said, I will give them in the son of Ahikam, and the
+son of Nephan, and the people of the LORD, and the sons of Eleazar the
+people that were in the children of Israel.
+
+01:014:018 And the LORD said unto Moses, and they shall be shall be a
+said, I will giveth their sons and the LORD, and the sons of Elless the
+LORD.
+
+04:023:015 And the sons of Elkanah the son of Judah, and the sons of
+Jerusalem, and the people, and the people.
+
+02:023:022 And he said, I
+will say, The son of Joshua saw that he had
+shall be a great the sons,
+and the children of Israel the son of Judah,
+and the son of Ahikah,
+
+01:003:005 And the king of Babylon, and Samuel, and Samuel, and Sheph
+the son of Judah, and the sons of the children of Israel, and the people
+of the LORD God of the LORD God of Israel, and Shebal, and Samuel,
+
+13:002:007 And the LORD sa<|eot|>
+2025-06-09 04:51:44 - Generation stats - Model calls: 512, Time: 587.94s, Speed: 0.87 calls/s
+2025-06-11 00:23:17 - User selected option: 1
+2025-06-11 00:23:22 - Selected checkpoint folder: /mnt/synology/brain/training_data/NLP/kjv-bigrams/checkpoints_20250526_160825
+2025-06-11 00:24:15 - Successfully loaded model from: model_20250529_142654_epoch_00005.pt
+2025-06-11 00:24:15 - Loaded model config: {'input_size': 784, 'num_classes': 65536, 'embedding_size': 784, 'brain_size': 2, 'address_dim': 8, 'num_heads': 1, 'num_jumps': 16}
+2025-06-11 00:24:23 - User selected option: 3
+2025-06-11 00:24:23 - Generating from empty input
+2025-06-11 00:33:18 - Generated: <|sot|>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <|eot|>
+2025-06-11 00:33:18 - Generation stats - Model calls: 512, Time: 535.44s, Speed: 0.96 calls/s
+2025-06-11 00:34:27 - User selected option: 2
+2025-06-11 00:34:32 - Input text:                                                                                       King Solomon
+2025-06-11 00:46:23 - Generated: <|sot|>                                                                                      King Solomoner,  Jerin A
+ed, 
+
+un her her, 
+
+13:001:001 And he saith the son of Abide, and the sons of the children
+of the LORD hath said, I will not bear their sing of the city of the
+children of Israel, and the
+congregation of the LORD said unto them.
+
+05:010:013 And the LORD said unto Moses, and the children of Israel, and
+the LORD said, The LORD God of Israel, and the children of Israel, and
+therefore the LORD, and of the children of Israel, and the children of
+Israel.
+
+13:006:009 And the LORD said unto Moses, and they shall be a stranger
+the LORD hath said, I will not bear their sing of the LORD said unto the
+children of Israel.
+
+13:001:010 And they shall be at the LORD, and the children of Israel
+that he may be consumed thee, and the children of Israel, and the children of Israel.
+
+09:015:013 And the sons of the LORD, and the sons of the children of
+Israel, and they shall bear the
+congregation.
+
+04:010:013 And the LORD said unto Moses, and the sons of the LORD, and
+the LORD said unto Mose<|eot|>
+2025-06-11 00:46:23 - Generation stats - Model calls: 512, Time: 711.06s, Speed: 0.72 calls/s
+2025-06-11 01:11:20 - User selected option: 2
+2025-06-11 01:13:12 - Input text:                                                    In the beginning was the Word, and the Word was
+2025-06-11 01:24:08 - Generated: <|sot|>                                                   In the beginning was the Word, and the Word wases
+us and
+rale, and
+fount out and the LORD said unto them, and the people
+of the
+children of Israel, and the children of Israel.
+
+05:015:015 And the LORD said unto Moses, and the sons of the LORD, and
+the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto them, and the children of Israel, and the children of Israel.
+
+09:015:013 And the LORD said unto him, Thus saith the Lord GOD; and he
+shall be forgiven unto the LORD, and the sons of the LORD, and
+the LORD
+commanded Moses.
+
+04:015:012 And the LORD said unto Moses, and the children of Israel, and
+the LORD said unto them, and the people of the LORD, and the children of
+Israel.
+
+13:001:010 And the LORD said unto Moses, and the LORD said unto Moses,
+and the children of Israel, and the children of Israel, and the
+children, and their shall be not the LORD, and the sons of the LORD hath
+commanded Moses, and the children of Israel, and the children of Israel
+to<|eot|>
+2025-06-11 01:24:08 - Generation stats - Model calls: 512, Time: 655.94s, Speed: 0.78 calls/s
+2025-06-11 01:33:59 - User selected option: 2
+2025-06-11 01:34:51 - Input text:                                         it seems that trigram-encoding should be the next step... 
+2025-06-11 01:47:00 - Generated: <|sot|>                                        it seems that trigram-encoding should be the next step... 
+01:001:001 And the LORD said unto them, and the children of Israel, and
+the LORD hath said, The LORD hath spoken unto me, and they shall be
+servant of the LORD hath said, I will not bear their shall be the LORD
+willages, and
+the LORD hath shewed thee, and the children of Israel, an
+the people
+hath sinned against the son of Ammon, and the LORD shall be
+all the
+children of Israel, and the priest of the children of Israel.
+
+09:012:013 And the LORD said unto Moses, and the sons of the LORD, and
+the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto them, and the children of Israel, and the children of Israel.
+
+09:015:013 And the LORD said unto Moses, and the sons of the LORD, and
+the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto Moses, and the LORD said unto them, and <|eot|>
+2025-06-11 01:47:00 - Generation stats - Model calls: 512, Time: 729.45s, Speed: 0.70 calls/s
+2025-06-11 01:48:19 - User selected option: 6
+2025-06-11 01:48:19 - 
+Final Generation Statistics:
+2025-06-11 01:48:19 - Total model calls: 24740
+2025-06-11 01:48:19 - Total generation time: 26608.92s
+2025-06-11 01:48:19 - Average time per model call: 1075.54ms
+2025-06-11 01:48:19 - Average model call speed: 0.93 calls/second
+2025-06-11 01:48:19 - === Ending session ===

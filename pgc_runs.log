@@ -82,3 +82,5 @@
 2025-06-15_19:40:31 python 8023_pgc.py -h
 2025-06-15_19:45:09 python 8023_pgc.py --mode jam --encoding verbatim
 2025-06-15_19:45:28 python 8023_pgc.py --mode jam --encoding verbatim --input pi-1k.txt
+2025-06-15_20:01:04 python 8023_pgc.py --mode jam --encoding verbatim --input pi-1k.txt --cpu
+2025-06-15_20:01:51 python 8023_pgc.py --mode jam --encoding verbatim --input pi-1k.txt --cpu

@@ -77,3 +77,8 @@
 2025-05-25_06:10:01 python 8013_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 6 --address_space_size 2 --num_jumps 16
 2025-05-25_06:47:53 python 8013_pgc.py --pickle /mnt/synology/brain/training_data/NLP/go-rin-no-sho/go-rin-no-sho.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 5 --address_space_size 2 --num_jumps 12
 2025-05-29_14:26:32 python 8023_pgc.py --pickle /mnt/synology/brain/training_data/NLP/kjv-bigrams/kjv_bigrams.pkl --mode jam --cpu --num_classes 65536 --address_space_dim 8 --address_space_size 2 --num_jumps 16 --checkpoints /mnt/synology/brain/training_data/NLP/kjv-bigrams/checkpoints_20250526_160825/
+2025-06-15_19:38:13 python 8023_pgc.py
+2025-06-15_19:38:33 python 8023_pgc.py --input pi-1k.txt --mode jam
+2025-06-15_19:40:31 python 8023_pgc.py -h
+2025-06-15_19:45:09 python 8023_pgc.py --mode jam --encoding verbatim
+2025-06-15_19:45:28 python 8023_pgc.py --mode jam --encoding verbatim --input pi-1k.txt

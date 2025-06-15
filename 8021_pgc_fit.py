@@ -114,6 +114,8 @@ if not args.cpu and torch.cuda.is_available():
     else:
         logger.warning('No CUDA devices available from specified list. Falling back to CPU.')
 else:
+    # if cpu, set number of threads equal to number of cores * 2
+    torch.set_num_threads(2 * os.cpu_count())
     logger.info('Using CPU')
 
 # --- Utility to retrieve model config and set globals ---
